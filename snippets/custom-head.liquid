@@ -1,0 +1,62 @@
+{% if page.metafields.custom.noindex %}
+  <meta name="robots" content="noindex nofollow">
+{% endif %}
+
+{% comment %}
+{% if customer and template == 'customers/login' or template == 'customers/register'  %}
+<script type="text/javascript">
+  window.location = "/account";
+</script>
+{% endif %}
+{% endcomment %}
+
+{% if customer %}
+  {%  for tag in customer.tags %}
+    {%  if settings.wholesale_tags contains tag %}
+      {%  assign wholesale = true %}
+    {% endif %}
+
+    {%  if tag == "draft order" or tag == "superzoo" %}
+      {%  assign draft_order = true %}
+    {% endif %}
+
+    {% if tag == "pending" %}
+      <!--
+      <style>
+        #wholesale-form {
+          height: 50vh;
+          position: relative;
+        }
+        #wholesale-form > * {
+          visibility: hidden;
+        }
+        #wholesale-form:after {
+            content: "Thank you for registering. Your wholesale account is pending approval from our team before your wholesale discount is activated. We\'ll notify you via email within two business days if your account is approved or if we need more information.";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 1.5em;
+            text-align: center;
+        }
+      </style>
+      -->
+    {% endif %}
+  {%  endfor %}
+{% endif %}
+
+<style>
+  .rc_popup__learn_more, .rc_popup__block__footer {
+    display: none !important;
+  }
+  
+  body.wholesale shopify-payment-terms, body.wholesale .recharge-subscription-widget, body.wholesale .shopify-payment-button {
+    display: none !important;
+  }
+  
+  body.draft-order .Cart__Recap > .Cart__Taxes, body.draft-order .Cart__Recap > .Cart__Checkout {
+    visibility: hidden;
+    height: 0;
+  }
+</style>
