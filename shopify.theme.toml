@@ -1,0 +1,4 @@
+[environments.development]
+store = "mushroom-matrix-m2.myshopify.com"
+theme = "145984258307"
+password = "shptka_599ec22a7cdef1290f3af57d1841116b"
