@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "run-p -sr \"shopify:dev -- {@}\" \"vite:dev\" --",
     "deploy": "run-s \"vite:build\" \"shopify:push -- {@}\" --",
-    "shopify:dev": "shopify theme dev",
+    "shopify:dev": "shopify theme dev -s mushroom-matrix-m2.myshopify.com --theme-editor-sync --notify /tmp/theme.update",
     "shopify:push": "shopify theme push",
     "vite:dev": "vite",
     "vite:build": "vite build"
