@@ -104,11 +104,6 @@
                 >
               {%- endif -%}
             </div>
-            {% if card_product.metafields.custom.bagde != blank %}
-              <div class="product-badge {% if template.name == 'index' %}homepage {% elsif template.name == 'collection' %}collection{% endif %}">
-                {{ card_product.metafields.custom.bagde | image_url: width: 200 | image_tag }}
-              </div>
-            {% endif %}
           </div>
         {%- endif -%}
         <div class="card__content">
