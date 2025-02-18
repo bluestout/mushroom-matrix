@@ -20,18 +20,10 @@
             "text": "Subscribe and save $ plus FREE U.S. shipping* on every order",
             "link": "https://mushroommatrix.com/collections/all"
           }
-        },
-        "announcement_89CtPw": {
-          "type": "announcement",
-          "settings": {
-            "text": "Cyber Monday Sale Ends TONIGHT Dec 2nd at 12:59 - 20% Off All orders - Discount Shows in Cart",
-            "link": ""
-          }
         }
       },
       "block_order": [
-        "announcement-bar-0",
-        "announcement_89CtPw"
+        "announcement-bar-0"
       ],
       "settings": {
         "color_scheme": "accent-1",
