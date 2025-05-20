@@ -1,0 +1,34 @@
+{
+  "name": "mushroom-matrix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "vite.config.js",
+  "scripts": {
+    "dev": "run-p -sr \"shopify:dev -- {@}\" \"vite:dev\" --",
+    "deploy": "run-s \"vite:build\" \"shopify:push -- {@}\" --",
+    "shopify:dev": "shopify theme dev -s mushroom-matrix-m2.myshopify.com --theme-editor-sync --notify /tmp/theme.update",
+    "shopify:push": "shopify theme push",
+    "vite:dev": "vite",
+    "vite:build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluestout/mushroom-matrix.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/bluestout/mushroom-matrix/issues"
+  },
+  "homepage": "https://github.com/bluestout/mushroom-matrix#readme",
+  "devDependencies": {
+    "vite": "^6.3.5",
+    "vite-plugin-shopify": "^4.0.1"
+  },
+  "dependencies": {
+    "@by-association-only/vite-plugin-shopify-clean": "^2.2.0",
+    "vite-plugin-page-reload": "^0.2.1"
+  }
+}
