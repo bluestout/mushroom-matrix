@@ -37,6 +37,17 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "menu_k9q7HV": {
+          "type": "menu",
+          "settings": {
+            "mobile_menu_link": "new-mobile-menu"
+          }
+        }
+      },
+      "block_order": [
+        "menu_k9q7HV"
+      ],
       "settings": {
         "logo_position": "middle-center",
         "mobile_logo_position": "left",

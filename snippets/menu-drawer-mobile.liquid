@@ -1,0 +1,119 @@
+<ul class="menu-drawer__menu has-submenu list-menu" role="list">
+  {%- for sub_menu in link.links -%}
+    {% assign has_submenu = false %}
+    {% if sub_menu.links and sub_menu.links.size > 0 %}
+      {% assign has_submenu = true %}
+    {% endif %}
+
+    <li class="menu-drawer__item {% if has_submenu %} has-children {% endif %}">
+      {% if has_submenu %}
+        <div class="menu-drawer__nav-link toggle-submenu">
+          <span>{{ sub_menu.title }}</span>
+          <span class="submenu-icon">+</span>
+        </div>
+        <ul class="menu-drawer__submenu-container">
+          <div class="submenu-image-links">
+            {% for sub_link in sub_menu.links %}
+              <a href="{{ sub_link.url }}" class="mobile-sub-menu-link--item">
+                {% if sub_link.type == 'collection_link' %}
+                  {% assign object = sub_link.object %}
+                  {%- assign img = object.metafields.custom.menu_image -%}
+                  {%- if img != blank -%}
+                    <div class="mobile-sub-menu-link--image-cover">
+                      <img
+                        class=""
+                        alt="{% if img.alt != blank %}{{ img.alt }}{% else %}{{link.title}}{% endif %}"
+                        src="{{ img | img_url: '360x383', crop: 'center' }}"
+                        srcset="
+                          {{ img | img_url: '180x192', crop: 'center' }} 180w,
+                          {{ img | img_url: '360x383', crop: 'center' }} 360w,
+                          {{ img | img_url: '540x574', crop: 'center' }} 540w,
+                          {{ img | img_url: '720x766', crop: 'center' }} 720w,
+                          {{ img | img_url: '1200x1277', crop: 'center' }} 1200w
+                        "
+                        sizes="
+                          (max-width: 1199px) 20vw,
+                          (min-width: 1200px) 250px
+                        "
+                        loading="lazy"
+                        height="162px"
+                        width="174px"
+                      >
+                    </div>
+                  {%- endif -%}
+                {% endif %}
+
+                {% assign link_title = sub_link.title %}
+                <div class="submenu-image-label">{{ link_title | escape }}</div>
+              </a>
+            {% endfor %}
+          </div>
+        </ul>
+      {% else %}
+        <a href="{{ sub_menu.url }}" class="menu-drawer__nav-link">
+          {% assign link_title = sub_menu.title %}
+
+          <span>{{ link_title | escape }}</span>
+        </a>
+      {% endif %}
+      <div class="menu-drawer__item-divider"></div>
+    </li>
+  {% endfor %}
+</ul>
+
+<style>
+  .menu-drawer__submenu-container {
+    display: none;
+    padding-left: 15px;
+  }
+  .has-children .toggle-submenu {
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  .submenu-icon {
+    transition: transform 0.3s ease;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'TT NORMS PRO';
+  }
+  .menu-drawer__submenu-container.active {
+    display: block;
+  }
+  .toggle-submenu.active .submenu-icon {
+    transform: rotate(0deg);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggles = document.querySelectorAll('.toggle-submenu');
+
+    toggles.forEach((toggle) => {
+      toggle.addEventListener('click', function () {
+        const submenu = this.nextElementSibling;
+        const icon = this.querySelector('.submenu-icon');
+
+        // Close all other open submenus
+        document.querySelectorAll('.menu-drawer__submenu-container').forEach((menu) => {
+          if (menu !== submenu) {
+            menu.classList.remove('active');
+            menu.previousElementSibling.classList.remove('active');
+            menu.previousElementSibling.querySelector('.submenu-icon').textContent = '+';
+          }
+        });
+
+        // Toggle clicked submenu
+        submenu.classList.toggle('active');
+        this.classList.toggle('active');
+
+        // Toggle + and - icon
+        icon.textContent = submenu.classList.contains('active') ? '-' : '+';
+      });
+    });
+  });
+</script>
