@@ -19,7 +19,7 @@
 <style>
   header-drawer {
     justify-self: start;
-    margin-left: -1.2rem;
+    {% comment %} margin-left: -1.2rem; {% endcomment %}
   }
 
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
@@ -68,10 +68,28 @@
     line-height: calc(1 + 0.8 / var(--font-body-scale));
   }
 
+  .header__text {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
   @media screen and (min-width: 750px) {
     .list-menu__item--link {
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .header{
+      padding: 10px 1rem 10px 1rem;
+      grid-template-columns: 0fr 2fr 1fr;
+    }
+    .header__heading-link{
+      padding: 0;
+    }
+    .header__heading-logo-wrapper{
+      padding-bottom: 5px;
     }
   }
 </style>
@@ -96,6 +114,11 @@
     .header {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .header{
+      padding: 10px 1rem 10px 1rem;
     }
   }
 {%- endstyle -%}
@@ -249,6 +272,14 @@
       </div>
       {% render 'header-search', input_id: 'Search-In-Modal' %}
 
+      <a href="/subscription" class="header__text header__text--subscription link focus-inset small-hide">
+        Subscription
+      </a>
+
+      <a href="/store-locator" class="header__icon header__icon--locator link focus-inset">
+        {% render 'icon-locator' %}
+      </a>
+
       {%- if shop.customer_accounts_enabled -%}
         <a
           href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
@@ -260,11 +291,13 @@
               {%- if customer and customer.has_avatar? -%}
                 {{ customer | avatar }}
               {%- else -%}
-                <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
+                {% comment %} <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span> {% endcomment %}
+                {% render 'icon-profile' %}
               {%- endif -%}
             </account-icon>
           {%- else -%}
-            <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
+            {% comment %} <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span> {% endcomment %}
+            {% render 'icon-profile' %}
           {%- endif -%}
           <span class="visually-hidden">
             {%- liquid
@@ -287,9 +320,11 @@
 
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         {% if cart == empty %}
-          <span class="svg-wrapper">{{ 'icon-cart-empty.svg' | inline_asset_content }}</span>
+          {% comment %} <span class="svg-wrapper">{{ 'icon-cart-empty.svg' | inline_asset_content }}</span> {% endcomment %}
+          {% render 'icon-cart' %}
         {% else %}
-          <span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>
+          {% comment %} <span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span> {% endcomment %}
+          {% render 'icon-cart' %}
         {% endif %}
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         {%- if cart != empty -%}
