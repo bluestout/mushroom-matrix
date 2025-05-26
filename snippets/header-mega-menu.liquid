@@ -23,7 +23,7 @@
                 >
                   {{- link.title | escape -}}
                 </span>
-                {{- 'icon-caret.svg' | inline_asset_content -}}
+                {% comment %} {{- 'icon-caret.svg' | inline_asset_content -}} {% endcomment %}
               </summary>
               <div
                 id="MegaMenu-Content-{{ forloop.index }}"
@@ -44,26 +44,57 @@
                           aria-current="page"
                         {% endif %}
                       >
-                        {{ childlink.title | escape }}
-                      </a>
-                      {%- if childlink.links != blank -%}
-                        <ul class="list-unstyled" role="list">
-                          {%- for grandchildlink in childlink.links -%}
-                            <li>
-                              <a
-                                id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                href="{{ grandchildlink.url }}"
-                                class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                {% if grandchildlink.current %}
-                                  aria-current="page"
-                                {% endif %}
+                        {% if childlink.type == 'collection_link' %}
+                          {% assign object = childlink.object %}
+                          {%- assign img = object.metafields.custom.menu_image -%}
+                          {%- if img != blank -%}
+                            <div class="mega-sub-menu-link--image-cover">
+                              <img
+                                class=""
+                                alt="{% if img.alt != blank %}{{ img.alt }}{% else %}{{link.title}}{% endif %}"
+                                src="{{ img | img_url: '360x383', crop: 'center' }}"
+                                srcset="
+                                  {{ img | img_url: '180x192', crop: 'center' }} 180w,
+                                  {{ img | img_url: '360x383', crop: 'center' }} 360w,
+                                  {{ img | img_url: '540x574', crop: 'center' }} 540w,
+                                  {{ img | img_url: '720x766', crop: 'center' }} 720w,
+                                  {{ img | img_url: '1200x1277', crop: 'center' }} 1200w
+                                "
+                                sizes="
+                                  (max-width: 1199px) 20vw,
+                                  (min-width: 1200px) 250px
+                                "
+                                loading="lazy"
+                                height="231px"
+                                width="271px"
                               >
-                                {{ grandchildlink.title | escape }}
-                              </a>
-                            </li>
-                          {%- endfor -%}
-                        </ul>
-                      {%- endif -%}
+                            </div>
+                          {%- endif -%}
+                        {% endif %}
+
+                        <p class="mega-sub-menu-title">{{ childlink.title | escape }}</p>
+                      </a>
+                      {% comment %} not acceptable grand sub menus {% endcomment %}
+                      {% comment %}
+                        {%- if childlink.links != blank -%}
+                          <ul class="list-unstyled" role="list">
+                            {%- for grandchildlink in childlink.links -%}
+                              <li>
+                                <a
+                                  id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                  href="{{ grandchildlink.url }}"
+                                  class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                  {% if grandchildlink.current %}
+                                    aria-current="page"
+                                  {% endif %}
+                                >
+                                  {{ grandchildlink.title | escape }}
+                                </a>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        {%- endif -%}
+                      {% endcomment %}
                     </li>
                   {%- endfor -%}
                 </ul>
