@@ -1,0 +1,100 @@
+.collection-list-wrapper.page-width {
+    padding: 1rem 6rem;
+}
+
+.collection-list {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.collection-list-mobile .slider__slide {
+    width: calc(25% - 2px) !important;
+    max-width: 25% !important;
+    min-width: 20% !important;
+    margin-left: 0 !important;
+}
+
+.collection-list-mobile .card__media .media {
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.collection-list-mobile .card__content .card__information .card__heading {
+    color: var(--2, #284734);
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "TT Norms Pro Expanded";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 12px;
+    /* 120% */
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.collection-list-mobile .card__content .card__heading .icon-wrap .icon-arrow {
+    display: none;
+}
+
+.collection-list-mobile.slider.slider--tablet {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 749px) {
+    .collection-list-wrapper.page-width {
+        padding: 1rem;
+    }
+
+    .collection-list:not(.slider) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .section-collection-list .page-width {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .section-collection-list .collection-list:not(.slider) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+.collection-list__item:only-child {
+    max-width: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 749px) {
+    .slider.collection-list--1-items {
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+
+    .slider.collection-list--1-items,
+    .slider.collection-list--2-items,
+    .slider.collection-list--3-items,
+    .slider.collection-list--4-items {
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .collection-list__item a:hover {
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width: 989px) {
+    .collection-list.slider .collection-list__item {
+        max-width: 100%;
+    }
+}
+
+.collection-list-view-all {
+    margin-top: 2rem;
+}

@@ -9,217 +9,89 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "slideshow_DddfyJ": {
+      "type": "slideshow",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "slide_HjAeDh": {
+          "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/Hero-banner-desktop.jpg",
+            "mobile_image": "shopify://shop_images/Hero-banner-mobile.jpg",
+            "image_overlay_opacity": 0,
             "heading": "The best in mushroom supplements for man’s best friends.",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "heading_size": "h0",
+            "subheading": "",
+            "button_label": "Shop All",
+            "link": "shopify://collections",
+            "review_text": "237 Reviews",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "color_scheme": ""
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "slide_HjAeDh"
       ],
+      "name": "t:sections.slideshow.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Hero-banner-desktop.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
         "image_behavior": "none",
-        "desktop_content_position": "middle-left",
-        "desktop_content_alignment": "left",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
       }
     },
-    "rich_text": {
-      "type": "rich-text",
+    "collection_list_desktop_CigTqP": {
+      "type": "collection-list-desktop",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "featured_collection_zDHGCe": {
+          "type": "featured_collection",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "collection": "horsesshop-all"
           }
         },
-        "text": {
-          "type": "text",
+        "featured_collection_yJJtch": {
+          "type": "featured_collection",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "collection": "for-dogs"
+          }
+        },
+        "featured_collection_X9AqML": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-cats"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "featured_collection_zDHGCe",
+        "featured_collection_yJJtch",
+        "featured_collection_X9AqML"
       ],
+      "name": "Collection list desktop",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "collection": "all",
-        "products_to_show": 8,
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
+        "title": "Mushrooms Work Wonders",
         "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
+        "image_ratio": "square",
         "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "scheme-1",
+        "color_scheme": "",
+        "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 36
       }
     }
   },
   "order": [
-    "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "slideshow_DddfyJ",
+    "collection_list_desktop_CigTqP"
   ]
 }

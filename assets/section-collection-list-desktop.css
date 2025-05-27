@@ -1,0 +1,104 @@
+.collection-list {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.collection-list-title {
+    margin: 0 auto;
+    /* text-align: center;
+    width: 100%; */
+
+    color: #242833;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Anuphan;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 65px;
+    /* 135.417% */
+    letter-spacing: -1px;
+    text-transform: capitalize;
+
+
+}
+
+/* .collection-list-title::before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    z-index: -1;
+    top: 0px;
+    left: 2.5%;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    background: radial-gradient(50% 50% at 50% 50%, #FF9016 50.4%, rgba(255, 144, 22, 0.00) 100%);
+  } */
+
+.section-collection-list-desktop {
+    padding-top: 4.5rem;
+}
+
+.collection-list .card__media .media {
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+slider-component {
+    max-width: 100% !important;
+
+}
+
+@media screen and (max-width: 749px) {
+    .collection-list:not(.slider) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .section-collection-list .page-width {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .section-collection-list .collection-list:not(.slider) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+.collection-list__item:only-child {
+    max-width: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 749px) {
+    .slider.collection-list--1-items {
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+
+    .slider.collection-list--1-items,
+    .slider.collection-list--2-items,
+    .slider.collection-list--3-items,
+    .slider.collection-list--4-items {
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .collection-list__item a:hover {
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width: 989px) {
+    .collection-list.slider .collection-list__item {
+        max-width: 100%;
+    }
+}
+
+.collection-list-view-all {
+    margin-top: 2rem;
+}
