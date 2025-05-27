@@ -55,3 +55,9 @@
     display: block;
   }
 }
+
+@media screen and (max-width: 749px) {
+  .rating-star {
+    font-size: 20px;
+  }
+}

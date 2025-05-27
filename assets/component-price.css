@@ -5,7 +5,7 @@
   color: rgb(var(--color-foreground));
 }
 
-.price > * {
+.price>* {
   display: inline-block;
   vertical-align: top;
 }
@@ -98,4 +98,10 @@
   margin-top: 0.2rem;
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 0.7);
+}
+
+@media screen and (max-width: 749px) {
+  .price__regular .price-item--regular {
+    font-size: 13px;
+  }
 }
