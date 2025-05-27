@@ -84,6 +84,12 @@
   padding: 0 6rem;
 }
 
+@media screen and (max-width: 749px) {
+  .page-width {
+    padding: 0 1rem;
+  }
+}
+
 body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   max-width: 100%;
 }

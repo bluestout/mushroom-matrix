@@ -8,9 +8,9 @@
 }
 
 .collection-list-mobile .slider__slide {
-    width: calc(25% - 2px) !important;
-    max-width: 25% !important;
-    min-width: 20% !important;
+    width: calc(33% - 2px) !important;
+    max-width: 33% !important;
+    min-width: 30% !important;
     margin-left: 0 !important;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .collection-list-mobile .card__content .card__information .card__heading {
-    color: var(--2, #284734);
+    color: var(--Test-mid, #282828);
     text-align: center;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: "TT Norms Pro Expanded";
@@ -59,6 +59,12 @@
     .section-collection-list .collection-list:not(.slider) {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
+    }
+
+
+
+    .collection-list-mobile .card__inner {
+        --ratio-percent: 63% !important;
     }
 }
 

@@ -1,0 +1,138 @@
+{{ 'section-logo-bar.css' | asset_url | stylesheet_tag }}
+
+<div
+  class="icon_bar_main {% if section.settings.hide_desktop %} large-up-hide {% endif %} {{ section.settings.custom_class }}"
+  {% if section.settings.use_gradient %}
+    style="background: linear-gradient(180deg, #FBF8F4 0%, #FFF 100%);"
+  {% endif %}
+>
+  <div class="page-width icon_bar_head">
+    {% if section.blocks.size > 0 %}
+      <ul class="icon-bar-slider icon-bar">
+        {% for block in section.blocks %}
+          <li class="icon-bar__item">
+            <div class="image-wrapper mx-auto">
+              {% if block.settings.image != blank %}
+                <div class="abs-wrap">
+                  {{
+                    block.settings.image
+                    | image_url: width: master
+                    | image_tag: class: 'icon-bar__image abs', format: 'jpg', preload: true
+                  }}
+                </div>
+              {% else %}
+                {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+              {% endif %}
+            </div>
+            {% if block.settings.icon_title != blank %}
+              <p class="h6 expanded">{{ block.settings.icon_title | newline_to_br }}</p>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+    {% comment %} $(document).ready(function(){
+        $('.icon-bar-slider').slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+        });
+        $('.icon-bar-slider').on('init', function(event, slick){
+            if (slick.slideCount === slick.options.slidesToShow) {
+                console.log("add a clone div");
+                slick.slickAdd('<div class="icon-bar__item clone-item"></div>'); // Add a clone
+            }
+        });
+    }) {% endcomment %}
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Select all icon-bar-slider elements
+      let sliders = document.querySelectorAll('.icon-bar-slider');
+
+      sliders.forEach(slider => {
+          new Flickity(slider, {
+              cellAlign: 'left',      // Align cells to the left
+              contain: true,          // Keep items inside the container
+              wrapAround: true,       // Enable infinite scroll
+              autoPlay: 5000,         // Autoplay every 5 seconds
+              pauseAutoPlayOnHover: false,
+              prevNextButtons: false, // Hide arrows
+              pageDots: false,        // Hide pagination dots
+              draggable: true,        // Enable touch/mouse dragging
+              groupCells: 1,          // Scroll one item at a time
+              freeScroll: false       // Disable free scrolling
+              {% comment %} percentPosition: false {% endcomment %}
+          });
+      });
+  });
+</script>
+{% schema %}
+{
+  "name": "Icon bar",
+  "class": "icon-bar",
+  "max_blocks": 20,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "use_gradient",
+      "label": "Use gradient background"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_desktop",
+      "label": "Hide on desktop view",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom CSS Class",
+      "info": "Add a custom CSS class for this section."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon_image",
+      "name": "Icon",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "icon_title",
+          "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo bar",
+      "category": "Icon",
+      "blocks": [
+        {
+          "type": "icon_image"
+        },
+        {
+          "type": "icon_image"
+        },
+        {
+          "type": "icon_image"
+        },
+        {
+          "type": "icon_image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

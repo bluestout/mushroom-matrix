@@ -49,6 +49,47 @@ slider-component {
 
 }
 
+.collection-list .card__media .media img {
+    width: 100%;
+    height: auto;
+}
+
+.collection-list .card__inner {
+    /* --ratio-percent: 63% !important; */
+}
+
+.collection-list .card .icon-wrap {
+    display: none;
+}
+
+.collection-list .card__heading {
+    color: var(--Test-mid, #282828);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "TT Norms Pro Expanded";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    /* 95% */
+    text-transform: uppercase;
+}
+
+.collection-list .slick-track {
+    width: 100% !important;
+    display: flex !important;
+
+    justify-content: space-between;
+
+}
+
+.collection-list .slider__slide {
+    width: calc(33% - 2px) !important;
+    max-width: 33% !important;
+    min-width: 30% !important;
+    margin-left: 0 !important;
+}
+
+
 @media screen and (max-width: 749px) {
     .collection-list:not(.slider) {
         padding-left: 0;

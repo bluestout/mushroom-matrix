@@ -9,6 +9,47 @@
  */
 {
   "sections": {
+    "collection_list_mobile_kzdi89": {
+      "type": "collection-list-mobile",
+      "blocks": {
+        "featured_collection_rWN7jt": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "horsesshop-all"
+          }
+        },
+        "featured_collection_qanpph": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-dogs"
+          }
+        },
+        "featured_collection_aGA8bW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "for-cats"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_rWN7jt",
+        "featured_collection_qanpph",
+        "featured_collection_aGA8bW"
+      ],
+      "name": "Collection list mobile",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "slideshow_DddfyJ": {
       "type": "slideshow",
       "blocks": {
@@ -79,7 +120,7 @@
       "settings": {
         "title": "Mushrooms Work Wonders",
         "heading_size": "h1",
-        "image_ratio": "square",
+        "image_ratio": "adapt",
         "columns_desktop": 3,
         "color_scheme": "",
         "show_view_all": false,
@@ -88,10 +129,95 @@
         "padding_top": 0,
         "padding_bottom": 36
       }
+    },
+    "icon_bar_zVH9iY": {
+      "type": "icon-bar",
+      "blocks": {
+        "icon_image_9CJKBL": {
+          "type": "icon_image",
+          "settings": {
+            "icon_title": "California Grown",
+            "image": "shopify://shop_images/icon1.svg"
+          }
+        },
+        "icon_image_4CarbA": {
+          "type": "icon_image",
+          "settings": {
+            "icon_title": "Certified USDA Organic",
+            "image": "shopify://shop_images/icon2.svg"
+          }
+        },
+        "icon_image_4iQQna": {
+          "type": "icon_image",
+          "settings": {
+            "icon_title": "3rd Party Lab Tested",
+            "image": "shopify://shop_images/icon3.svg"
+          }
+        },
+        "icon_image_4NzkCj": {
+          "type": "icon_image",
+          "settings": {
+            "icon_title": "California Grown",
+            "image": "shopify://shop_images/icon1.svg"
+          }
+        },
+        "icon_image_ecBzMi": {
+          "type": "icon_image",
+          "settings": {
+            "icon_title": "Certified USDA Organic",
+            "image": "shopify://shop_images/icon2.svg"
+          }
+        }
+      },
+      "block_order": [
+        "icon_image_9CJKBL",
+        "icon_image_4CarbA",
+        "icon_image_4iQQna",
+        "icon_image_4NzkCj",
+        "icon_image_ecBzMi"
+      ],
+      "name": "Logo bar",
+      "settings": {
+        "use_gradient": false,
+        "hide_desktop": false,
+        "custom_class": "section-five-icons"
+      }
+    },
+    "featured_collection_tfGwa9": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8,
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
+    "collection_list_mobile_kzdi89",
     "slideshow_DddfyJ",
-    "collection_list_desktop_CigTqP"
+    "collection_list_desktop_CigTqP",
+    "icon_bar_zVH9iY",
+    "featured_collection_tfGwa9"
   ]
 }
