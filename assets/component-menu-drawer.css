@@ -78,7 +78,7 @@ details[open].menu-opening>.menu-drawer__submenu {
 }
 
 .menu-drawer__menu li.menu-drawer__item:has(.menu-drawer__nav-link.toggle-submenu.active) {
-  background: #FBF8F4;
+  background: #FFF;
 }
 
 .menu-drawer__menu li.menu-drawer__item .menu-drawer__nav-link {
@@ -115,8 +115,7 @@ details[open].menu-opening>.menu-drawer__submenu {
 
 .menu-drawer__menu .menu-drawer__item-divider {
   display: block;
-  border-bottom: solid 1px #D3B9A9;
-  border-bottom-style: dashed;
+  border-bottom: solid 1px #DBE6E9;
   padding: 0 10px;
 }
 
@@ -320,7 +319,7 @@ details[open].menu-opening>.menu-drawer__submenu {
 
 .menu-drawer__utility-links {
   padding: 0;
-  background-color: rgba(var(--color-foreground), 0.03);
+  /* background-color: rgba(var(--color-foreground), 0.03); */
   position: relative;
 }
 
@@ -417,6 +416,6 @@ details[open].menu-opening>.menu-drawer__submenu {
   }
 
   #menu-drawer {
-    background: #f1e7db;
+    background: #F6F7F8;
   }
 }
