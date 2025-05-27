@@ -70,6 +70,19 @@
               {% comment %} percentPosition: false {% endcomment %}
           });
       });
+
+      // Check if the viewport width is less than 750px (mobile view)
+        if (window.matchMedia("(max-width: 749px)").matches) {
+            // Select the elements
+            const iconBarSection = document.querySelector(".shopify-section.icon-bar");
+            const featuredCollectionSection = document.querySelector(".shopify-section.featured-collection");
+
+            // Ensure both elements exist
+            if (iconBarSection && featuredCollectionSection) {
+                // Move the icon-bar section to be after the featured-collection section
+                featuredCollectionSection.parentNode.insertBefore(iconBarSection, featuredCollectionSection.nextSibling);
+            }
+        }
   });
 </script>
 {% schema %}
