@@ -42,44 +42,61 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer-0": {
+        "link_list_r3J4Qx": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "heading": "Company",
+            "menu": "new-company-menu"
           }
         },
-        "footer-1": {
+        "link_list_6LQUEK": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
-            "menu": "footer"
+            "heading": "About",
+            "menu": "new-about-menu"
           }
         },
-        "footer-2": {
+        "link_list_XePKfr": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Supports",
+            "menu": "new-support-menu"
+          }
+        },
+        "text_dVEiGF": {
           "type": "text",
+          "disabled": true,
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
+            "heading": "Mushroom Matrix",
+            "subtext": "<p>Bringing the powerful health benefits of mushrooms to horses, pets and the people that love them.</p>"
+          }
+        },
+        "brand_information_T8Mrfa": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
           }
         }
       },
       "block_order": [
-        "footer-0",
-        "footer-1",
-        "footer-2"
+        "link_list_r3J4Qx",
+        "link_list_6LQUEK",
+        "link_list_XePKfr",
+        "text_dVEiGF",
+        "brand_information_T8Mrfa"
       ],
       "settings": {
         "color_scheme": "scheme-1",
+        "fineprint": "<br>‡These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.<br><span class=\"block pt-2\"></span>\n*Orders that qualify for free shipping are applicable only to delivery locations located in the <span class=\"sub-free-shipping\">contiguous </span> United States.",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": false,
-        "show_social": true,
+        "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": false,
         "show_policy": false,
-        "margin_top": 48,
+        "margin_top": 0,
         "padding_top": 36,
         "padding_bottom": 36
       }
