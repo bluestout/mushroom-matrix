@@ -1,0 +1,103 @@
+{{ 'component-reviews.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'component-reviews.js' | asset_url }}" async></script>
+{% schema %}
+{
+  "name": "Reviews",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "img",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reviews"
+    }
+  ]
+}
+{% endschema %}
+{% style %}
+  .species-spotlight {
+    background-color: {{ section.settings.bg_color }}
+  }
+{% endstyle %}
+
+<section class="species-spotlight">
+  <div class="species-spotlight__container">
+    <h3 class="species-spotlight__title bst-title-with-gradient">
+      {% assign main_title = section.settings.title
+        | replace: '*',
+          '<svg width="23" height="23" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: -1px;"><path d="M7 0L9.26297 3.88528L13.6574 4.83688L10.6616 8.18972L11.1145 12.6631L7 10.85L2.8855 12.6631L3.33843 8.18972L0.342604 4.83688L4.73703 3.88528L7 0Z" fill="#E79C43"/></svg>'
+      %}
+      <span class="main">{{ main_title }}</span>
+      {% if section.settings.subtitle != blank %}
+        <span class="alt">{{ section.settings.subtitle | strip }}</span>
+      {% endif %}
+    </h3>
+    <div class="reviews_divider large-up-hide medium-hide"></div>
+    <div class="species-spotlight__slider">
+      {% for block in section.blocks %}
+        <div class="species-spotlight__cell">
+          <div class="species-spotlight__card">
+            <div class="species-spotlight__image-wrapper">
+              {{ block.settings.img | image_url: width: 224, height: 295 | image_tag }}
+            </div>
+            <div class="species-spotlight__content">
+              <h3 class="species-spotlight__title">{{ block.settings.title | strip }}</h3>
+              <div class="species-spotlight__text">{{ block.settings.text | strip }}</div>
+              <div class="species-spotlight__author_reviews">
+                <span class="species-spotlight__author">{{ block.settings.author }}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="85" height="15" viewBox="0 0 85 15" fill="none">
+                  <path d="M42.5 0L44.7924 4.34483L49.6329 5.18237L46.2091 8.70517L46.9084 13.5676L42.5 11.4L38.0916 13.5676L38.7909 8.70517L35.3671 5.18237L40.2076 4.34483L42.5 0Z" fill="#E79C43"/>
+                  <path d="M25 0L27.2924 4.34483L32.133 5.18237L28.7091 8.70517L29.4084 13.5676L25 11.4L20.5916 13.5676L21.2909 8.70517L17.8671 5.18237L22.7076 4.34483L25 0Z" fill="#E79C43"/>
+                  <path d="M60 0L62.2924 4.34483L67.1329 5.18237L63.7091 8.70517L64.4084 13.5676L60 11.4L55.5916 13.5676L56.2909 8.70517L52.867 5.18237L57.7076 4.34483L60 0Z" fill="#E79C43"/>
+                  <path d="M7.50002 0L9.79239 4.34483L14.633 5.18237L11.2091 8.70517L11.9084 13.5676L7.50002 11.4L3.09162 13.5676L3.79089 8.70517L0.367077 5.18237L5.20765 4.34483L7.50002 0Z" fill="#E79C43"/>
+                  <path d="M77.5 0L79.7924 4.34483L84.6329 5.18237L81.2091 8.70517L81.9084 13.5676L77.5 11.4L73.0916 13.5676L73.7909 8.70517L70.367 5.18237L75.2076 4.34483L77.5 0Z" fill="#E79C43"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

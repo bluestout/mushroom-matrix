@@ -212,6 +212,49 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "reviews_xQyARe": {
+      "type": "reviews",
+      "blocks": {
+        "review_YJUhAf": {
+          "type": "review",
+          "settings": {
+            "img": "shopify://shop_images/review-image1.jpg",
+            "title": "Love it",
+            "text": "<p>Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor.</p>",
+            "author": "Alexys A."
+          }
+        },
+        "review_GK9yDd": {
+          "type": "review",
+          "settings": {
+            "img": "shopify://shop_images/review-image2.jpg",
+            "title": "Best product out there",
+            "text": "<p>Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor.</p>",
+            "author": "Alexys A."
+          }
+        },
+        "review_93nxYr": {
+          "type": "review",
+          "settings": {
+            "img": "shopify://shop_images/review-image1.jpg",
+            "title": "Love it",
+            "text": "<p>Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor.</p>",
+            "author": "Alexys A."
+          }
+        }
+      },
+      "block_order": [
+        "review_YJUhAf",
+        "review_GK9yDd",
+        "review_93nxYr"
+      ],
+      "name": "Reviews",
+      "settings": {
+        "bg_color": "",
+        "title": "Over 6,000 ***** Reviews",
+        "subtitle": ""
+      }
     }
   },
   "order": [
@@ -219,6 +262,7 @@
     "slideshow_DddfyJ",
     "collection_list_desktop_CigTqP",
     "icon_bar_zVH9iY",
-    "featured_collection_tfGwa9"
+    "featured_collection_tfGwa9",
+    "reviews_xQyARe"
   ]
 }
