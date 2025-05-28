@@ -11,6 +11,35 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "newsletter_bG3M4i": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_VrkLfF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sign up today and get 10% off your first order.",
+            "heading_size": "h1"
+          }
+        },
+        "email_form_eHrUJy": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_VrkLfF",
+        "email_form_eHrUJy"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "title": "Unlock Exclusive Perks!",
+        "text": "<p>Be the first to know about special offers, exciting events, and new product launches.</p>",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -32,7 +61,7 @@
           "type": "text",
           "settings": {
             "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
           }
         }
       },
@@ -45,6 +74,7 @@
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
@@ -57,6 +87,7 @@
     }
   },
   "order": [
+    "newsletter_bG3M4i",
     "footer"
   ]
 }

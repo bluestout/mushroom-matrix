@@ -15,7 +15,11 @@
   }
 {%- endstyle -%}
 
-<div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
+<div class="newsletter center page-width {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
+  <div class="newsletter__text-content">
+    <h3 class="newsletter-content-title">{{ section.settings.title }}</h3>
+    <div class="newsletter-content-text">{{ section.settings.text }}</div>
+  </div>
   <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
@@ -72,12 +76,10 @@
                     {% elsif form.posted_successfully? %}
                       aria-describedby="Newsletter-success--{{ section.id }}"
                     {% endif %}
-                    placeholder="{{ 'newsletter.label' | t }}"
+                    placeholder="Enter your email"
                     required
                   >
-                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                    {{ 'newsletter.label' | t }}
-                  </label>
+                  <label class="field__label" for="NewsletterForm--{{ section.id }}"> Enter your email </label>
                   <button
                     type="submit"
                     class="newsletter-form__button field__button"
@@ -85,9 +87,12 @@
                     id="Subscribe"
                     aria-label="{{ 'newsletter.button_label' | t }}"
                   >
-                    <span class="svg-wrapper">
-                      {{- 'icon-arrow.svg' | inline_asset_content -}}
-                    </span>
+                    {% comment %}
+                      <span class="svg-wrapper">
+                        {{- 'icon-arrow.svg' | inline_asset_content -}}
+                      </span>
+                    {% endcomment %}
+                    Sign up
                   </button>
                 </div>
                 {%- if form.errors -%}
@@ -115,6 +120,8 @@
               {%- endif -%}
             {% endform %}
           </div>
+
+          {% comment %} <div class="klaviyo-form-THzbpA"></div> {% endcomment %}
       {%- endcase -%}
     {%- endfor -%}
   </div>
@@ -130,10 +137,6 @@
   },
   "settings": [
     {
-      "type": "paragraph",
-      "content": "t:sections.newsletter.settings.paragraph.content"
-    },
-    {
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
@@ -144,6 +147,20 @@
       "id": "full_width",
       "default": true,
       "label": "t:sections.newsletter.settings.full_width.label"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.newsletter.settings.paragraph.content"
     },
     {
       "type": "header",
