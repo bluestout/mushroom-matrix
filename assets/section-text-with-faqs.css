@@ -1,0 +1,196 @@
+.text-with-faqs {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    background: #242833;
+    position: relative;
+    overflow: hidden;
+
+    padding-top: 80px;
+    padding-bottom: 55px;
+}
+
+.text-with-faqs--background {
+    display: block !important;
+    width: 1057px;
+    height: 696.269px;
+    flex-shrink: 0;
+    position: absolute;
+    border-radius: 1057px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(24, 120, 180, 0.26) 50.4%, rgba(181, 199, 205, 0.00) 100%);
+    top: 50%;
+    left: -1%;
+}
+
+.text-with-faqs--text-content {
+    z-index: 2;
+}
+
+.text-with-faqs--list-content {
+    z-index: 2;
+}
+
+.text-with-faqs--text-content {
+    flex-basis: 40%;
+}
+
+.text-with-faqs--list-content {
+    flex-basis: 60%;
+}
+
+.text-with-faqs--text-content .text-content--heading,
+.text-with-faqs--text-content .text-content--text {
+    color: var(--4, #FFF);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Anuphan;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 65px;
+    /* 125% */
+    letter-spacing: -1px;
+    margin-bottom: 0;
+}
+
+.text-with-faqs--text-content .text-content--text {
+
+    margin-top: 0;
+}
+
+.text-with-faqs--list-content .list-content--question {
+    color: var(--4, #FFF);
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/Caption */
+    font-family: "TT Norms Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    /* 150% */
+    /* 150% */
+}
+
+.text-with-faqs--list-content .list-content--answer {
+    color: var(--4, #FFF);
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/body */
+    font-family: "TT Norms Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 26px;
+    /* 162.5% */
+}
+
+.list-content--wrapper {
+    list-style: none;
+    padding: 0;
+}
+
+.list-content--item {
+    border-bottom: 1px solid #B5C7CD;
+    padding: 20px 0;
+}
+
+.list-content--question {
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle-icon {
+    font-size: 18px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.list-content--item-content {
+    display: none;
+    padding: 20px 15px 10px 0px;
+}
+
+.list-content--item.active .list-content--item-content {
+    display: block;
+}
+
+.list-content--item.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.text-with-faqs--button {
+    margin-top: 5rem;
+}
+
+.text-with-faqs--button a {
+    color: var(--4, #FFF);
+    leading-trim: both;
+    text-edge: cap;
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/CTA/Button Regular */
+    font-family: "TT Norms Pro Expanded";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    /* 146.154% */
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.text-with-faqs--button a svg {
+    /* fill: var(--2, #284734); */
+    /* stroke-width: 1.5px;
+    stroke: var(--2, #284734); */
+}
+
+@media screen and (max-width: 750px) {
+    .text-with-faqs {
+        flex-direction: column;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .text-with-faqs--background {
+        top: 20rem;
+        left: -70rem;
+    }
+
+    .text-with-faqs--text-content .text-content--heading {
+        font-size: 26px;
+        margin-top: 0;
+    }
+
+    .text-with-faqs--text-content .text-content--text {
+        font-size: 26px;
+        margin-bottom: 0;
+        margin-top: -2.5rem;
+    }
+
+    .text-with-faqs--list-content .list-content--question {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .text-with-faqs {
+        gap: 3rem;
+    }
+
+    .text-with-faqs--text-content .text-content--heading {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .text-with-faqs--text-content .text-content--text {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}

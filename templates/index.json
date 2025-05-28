@@ -282,7 +282,6 @@
         "text_xAwUiy",
         "button_C6HRLz"
       ],
-      "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/ourstory-image.jpg",
         "height": "adapt",
@@ -298,6 +297,44 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "text_with_faqs_9DyGAN": {
+      "type": "text-with-faqs",
+      "blocks": {
+        "text_faq_bJcYCi": {
+          "type": "text_faq",
+          "settings": {
+            "question": "What are mushrooms good for?",
+            "answer": "Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor."
+          }
+        },
+        "text_faq_xy6yje": {
+          "type": "text_faq",
+          "settings": {
+            "question": "What are the beneficial Ingredients in mushrooms?",
+            "answer": "Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor."
+          }
+        },
+        "text_faq_mRf6fU": {
+          "type": "text_faq",
+          "settings": {
+            "question": "What is “mycelial biomass”? How much of it is in the powder?",
+            "answer": "Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor."
+          }
+        }
+      },
+      "block_order": [
+        "text_faq_bJcYCi",
+        "text_faq_xy6yje",
+        "text_faq_mRf6fU"
+      ],
+      "name": "Text with FAQs",
+      "settings": {
+        "title": "Have Questions?",
+        "text": "We are here to help!",
+        "button_label": "Read more",
+        "button_url": "shopify://pages/faq"
+      }
     }
   },
   "order": [
@@ -307,6 +344,7 @@
     "icon_bar_zVH9iY",
     "featured_collection_tfGwa9",
     "reviews_xQyARe",
-    "image_with_text_AQ34mb"
+    "image_with_text_AQ34mb",
+    "text_with_faqs_9DyGAN"
   ]
 }

@@ -1,0 +1,132 @@
+{{ 'section-text-with-faqs.css' | asset_url | stylesheet_tag }}
+
+<div class="text-with-faqs page-width">
+  <div class="text-with-faqs--background"></div>
+  <div class="text-with-faqs--text-content">
+    <div class="text-content--wrapper">
+      <h2 class="text-content--heading">
+        {{ section.settings.title }}
+      </h2>
+      <p class="text-content--text">{{ section.settings.text }}</p>
+    </div>
+  </div>
+  <div class="text-with-faqs--list-content">
+    <ul class="list-content--wrapper">
+      {% for block in section.blocks %}
+        <li class="list-content--item">
+          <div class="list-content--question">
+            {{ block.settings.question }}
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="list-content--item-content">
+            <div class="list-content--answer">
+              {{ block.settings.answer }}
+            </div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+    {% if section.settings.button_label != blank %}
+      <div class="text-with-faqs--button">
+        <a href="{{ section.settings.button_url }}">
+          {{ section.settings.button_label }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="37" height="16" viewBox="0 0 37 16" fill="none">
+            <path d="M36.7071 8.70711C37.0976 8.31659 37.0976 7.68342 36.7071 7.2929L30.3431 0.928937C29.9526 0.538413 29.3195 0.538413 28.9289 0.928937C28.5384 1.31946 28.5384 1.95263 28.9289 2.34315L34.5858 8.00001L28.9289 13.6569C28.5384 14.0474 28.5384 14.6805 28.9289 15.0711C29.3195 15.4616 29.9526 15.4616 30.3431 15.0711L36.7071 8.70711ZM0 8L-1.74846e-07 9L36 9.00001L36 8.00001L36 7.00001L1.74846e-07 7L0 8Z" fill="url(#paint0_linear_9365_2023)"/>
+            <defs>
+              <linearGradient id="paint0_linear_9365_2023" x1="-8.74228e-08" y1="8.5" x2="36" y2="8.50001" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#209ACA"/>
+                <stop offset="0.509202" stop-color="#5AAD41"/>
+                <stop offset="0.944785" stop-color="#E79C43"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.list-content--question').forEach((question) => {
+      question.addEventListener('click', function () {
+        let parent = this.parentElement;
+
+        // Toggle active class
+        parent.classList.toggle('active');
+
+        // Change + to - and vice versa
+        let icon = this.querySelector('.toggle-icon');
+        icon.textContent = parent.classList.contains('active') ? '-' : '+';
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Text with FAQs",
+  "class": "index-section section-text-with-faqs",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Have Questions?"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "We are here to help"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Read more"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_faq",
+      "name": "Question and Answer",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text with FAQs",
+      "category": "Text",
+      "blocks": [
+        {
+          "type": "text_faq"
+        },
+        {
+          "type": "text_faq"
+        },
+        {
+          "type": "text_faq"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
