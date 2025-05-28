@@ -102,6 +102,11 @@
 }
 
 @media screen and (min-width: 768px) {
+    .species-spotlight {
+        background: linear-gradient(160deg, #FFF 30.25%, #F6F7F8 88.06%);
+
+    }
+
     .species-spotlight__cell {
         width: 40%;
         margin-right: 16px;

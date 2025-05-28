@@ -42,6 +42,11 @@
 }
 
 @media screen and (min-width: 750px) {
+  .collection {
+    background: linear-gradient(180deg, rgba(246, 247, 248, 0.00) -18.71%, rgba(138, 168, 179, 0.10) 84.94%);
+    box-shadow: 0px 10px 12.2px 0px rgba(199, 226, 235, 0.20) inset;
+  }
+
   .collection .loading-overlay {
     padding-left: 5rem;
     padding-right: 5rem;
@@ -123,6 +128,11 @@
 }
 
 @media screen and (max-width: 749px) {
+  .collection {
+    background: linear-gradient(180deg, rgba(246, 247, 248, 0.00) -18.71%, rgba(138, 168, 179, 0.10) 84.94%);
+    box-shadow: 0px 10px 12.2px 0px rgba(199, 226, 235, 0.20) inset;
+  }
+
   .collection .collection__title .title {
     font-size: 24px;
   }
