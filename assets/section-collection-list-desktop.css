@@ -36,7 +36,7 @@
   } */
 
 .section-collection-list-desktop {
-    padding-top: 4.5rem;
+    padding-top: 2.5rem;
 }
 
 .collection-list .card__media .media {
@@ -72,6 +72,8 @@ slider-component {
     line-height: 19px;
     /* 95% */
     text-transform: uppercase;
+    text-align: left;
+    ;
 }
 
 .collection-list .slick-track {

@@ -203,7 +203,7 @@ form.klaviyo-form {
   gap: 10px;
   flex-shrink: 0;
   border-radius: 4px;
-  background: #000;
+  background: #000 !important;
   position: relative;
   z-index: 1;
 
@@ -279,5 +279,13 @@ form.klaviyo-form {
 
   .newsletter .klaviyo-form button[type="button"] {
     width: 114px !important;
+  }
+
+  .newsletter-form__button {
+    width: 114px !important;
+  }
+
+  .footer-block__brand-info {
+    display: none;
   }
 }

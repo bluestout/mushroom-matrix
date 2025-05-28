@@ -591,10 +591,17 @@ footer.footer {
     padding-top: 2rem;
   }
 
+  .footer-block__heading {
+    font-size: 16px;
+    line-height: 19px;
+    /* 118.75% */
+  }
+
   .footer-block__details-content .list-menu__item--link {
     font-size: 16px;
     line-height: 16px;
   }
+
 }
 
 @media screen and (min-width: 750px) {

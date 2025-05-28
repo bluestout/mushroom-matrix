@@ -61,7 +61,7 @@
             "heading": "The best in mushroom supplements for man’s best friends.",
             "heading_size": "h0",
             "subheading": "",
-            "button_label": "Shop All",
+            "button_label": "Shop Now",
             "link": "shopify://collections",
             "review_text": "237 Reviews",
             "button_style_secondary": false,
@@ -328,7 +328,6 @@
         "text_faq_xy6yje",
         "text_faq_mRf6fU"
       ],
-      "name": "Text with FAQs",
       "settings": {
         "title": "Have Questions?",
         "text": "We are here to help!",

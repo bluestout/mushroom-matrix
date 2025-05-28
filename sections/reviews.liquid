@@ -64,10 +64,12 @@
 <section class="species-spotlight">
   <div class="species-spotlight__container">
     <h3 class="species-spotlight__title bst-title-with-gradient">
-      {% assign main_title = section.settings.title
+      {% assign main_title1 = section.settings.title | replace: ' ', '&nbsp;' %}
+      {% assign main_title = main_title1
         | replace: '*',
           '<svg width="23" height="23" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: -1px;"><path d="M7 0L9.26297 3.88528L13.6574 4.83688L10.6616 8.18972L11.1145 12.6631L7 10.85L2.8855 12.6631L3.33843 8.18972L0.342604 4.83688L4.73703 3.88528L7 0Z" fill="#E79C43"/></svg>'
       %}
+
       <span class="main">{{ main_title }}</span>
       {% if section.settings.subtitle != blank %}
         <span class="alt">{{ section.settings.subtitle | strip }}</span>
