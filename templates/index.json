@@ -164,6 +164,13 @@
             "icon_title": "Certified USDA Organic",
             "image": "shopify://shop_images/icon2.svg"
           }
+        },
+        "icon_image_LcYHcq": {
+          "type": "icon_image",
+          "settings": {
+            "icon_title": "3rd Party Lab Tested",
+            "image": "shopify://shop_images/icon3.svg"
+          }
         }
       },
       "block_order": [
@@ -171,7 +178,8 @@
         "icon_image_4CarbA",
         "icon_image_4iQQna",
         "icon_image_4NzkCj",
-        "icon_image_ecBzMi"
+        "icon_image_ecBzMi",
+        "icon_image_LcYHcq"
       ],
       "settings": {
         "use_gradient": false,
