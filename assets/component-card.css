@@ -276,7 +276,8 @@
 
 .card__media .media img {
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
+  object-fit: contain;
   object-position: center center;
   width: 100%;
 }
@@ -301,6 +302,9 @@
   line-height: 19px;
   /* 135.714% */
   text-transform: uppercase;
+
+  width: 80%;
+  margin: 0 auto;
 }
 
 .card__heading:last-child {
@@ -597,6 +601,7 @@
     font-weight: 700;
     line-height: 15px;
     /* 136.364% */
+    width: 90%;
   }
 
 }

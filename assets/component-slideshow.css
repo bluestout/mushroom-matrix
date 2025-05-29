@@ -220,7 +220,7 @@ slideshow-component:not(.page-width) .slider-buttons {
   letter-spacing: -1px;
 }
 
-.button {
+.button:not([type='submit']) {
   display: flex;
   width: 134px;
   height: 43px;
@@ -239,7 +239,7 @@ slideshow-component:not(.page-width) .slider-buttons {
   z-index: 1;
 }
 
-.button::before {
+.button:not([type='submit'])::before {
   content: '';
   position: absolute;
   top: 0;

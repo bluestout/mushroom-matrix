@@ -1,19 +1,28 @@
 .predictive-search {
   display: none;
   position: absolute;
-  top: calc(100% + 0.1rem);
+  top: 2.5rem;
   left: -0.1rem;
-  border-width: var(--popup-border-width);
+  padding-top: 2.5rem;
+  /* border-width: var(--popup-border-width);
   border-style: solid;
-  border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
-  background-color: rgb(var(--color-background));
+  border-color: rgba(var(--color-foreground), var(--popup-border-opacity)); */
+  /* background-color: rgb(var(--color-background)); */
   z-index: 3;
-  border-bottom-right-radius: var(--popup-corner-radius);
+  /* border-bottom-right-radius: var(--popup-corner-radius);
   border-bottom-left-radius: var(--popup-corner-radius);
-  box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
-    rgba(var(--color-shadow), var(--popup-shadow-opacity));
+  box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow), var(--popup-shadow-opacity)); */
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  background-color: #FFF;
+  filter: drop-shadow(0px 0px 8.7px rgba(0, 0, 0, 0.10));
+
+}
+
+@media screen and (max-width: 749px) {
+  .predictive-search {
+    padding-top: 0;
+  }
 }
 
 .predictive-search--search-template {
@@ -74,27 +83,44 @@ predictive-search[loading] .predictive-search {
 }
 
 @media screen and (min-width: 750px) {
+
   .predictive-search__results-groups-wrapper--no-products .predictive-search__result-group:nth-child(2),
   .predictive-search__result-group:last-child .predictive-search__pages-wrapper {
     display: none;
   }
+
   .predictive-search__result-group:first-child .predictive-search__pages-wrapper {
     display: initial;
   }
+
   .predictive-search__result-group:first-child {
     flex: 0 0 26.4rem;
   }
+
   .predictive-search__results-groups-wrapper--no-products .predictive-search__result-group:first-child,
   .predictive-search__result-group:only-child {
     flex-grow: 1;
   }
 }
 
+
 .predictive-search__heading {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
   margin: 0 2rem;
   padding: 1.5rem 0 0.75rem;
   color: rgba(var(--color-foreground), 0.7);
+}
+
+.predictive-search__heading {
+  color: var(--Text-black, #000);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Anuphan;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19px;
+  /* 135.714% */
+  text-transform: capitalize;
 }
 
 predictive-search .spinner {
@@ -118,16 +144,16 @@ predictive-search[loading] .predictive-search__search-for-button {
   display: none;
 }
 
-predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predictive-search__loading-state {
+predictive-search[loading] .predictive-search__results-groups-wrapper~.predictive-search__loading-state {
   display: none;
 }
 
-predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predictive-search__search-for-button {
+predictive-search[loading] .predictive-search__results-groups-wrapper~.predictive-search__search-for-button {
   display: initial;
 }
 
-.predictive-search__list-item[aria-selected='true'] > *,
-.predictive-search__list-item:hover > *,
+.predictive-search__list-item[aria-selected='true']>*,
+.predictive-search__list-item:hover>*,
 .predictive-search__item[aria-selected='true'],
 .predictive-search__item:hover {
   color: rgb(var(--color-foreground));
@@ -171,6 +197,15 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
 
 .predictive-search__item-heading {
   margin: 0;
+
+  color: var(--Test-mid, #282828);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: "TT Norms Pro";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+  /* 135.714% */
 }
 
 .predictive-search__item-query-result *:not(mark) {
@@ -190,7 +225,7 @@ predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predict
   font-size: 1.2rem;
 }
 
-.predictive-search__item-vendor + .predictive-search__item-heading,
+.predictive-search__item-vendor+.predictive-search__item-heading,
 .predictive-search .price {
   margin-top: 0.5rem;
 }

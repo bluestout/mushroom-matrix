@@ -2,6 +2,7 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-search.css' | asset_url | stylesheet_tag }}
+{{ 'quick-add.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
   {{ 'component-facets.css' | asset_url | stylesheet_tag }}
@@ -13,6 +14,8 @@
 {%- endif -%}
 
 <script src="{{ 'main-search.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
 <style>
   .template-search__header {
@@ -61,19 +64,63 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .template-search{
+    background: #F6F7F8;
+  }
+
+  .template-search__header h1{
+    color: #242833;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 65px; /* 135.417% */
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    position: relative;
+    margin-top: 0;
+  }
+
+  .template-search__header h1::after{
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 202px;
+    height: 2px;
+    background: linear-gradient(90deg, #209aca, #5aad41, #e79c43);
+  }
+
+  @media screen and (max-width: 749px) {
+    .template-search__header h1{
+      font-size: 24px;
+      line-height: 45px;
+    }
+  }
+
+  {% if search.performed %}
+    p[role="status"]{
+      display: none;
+    }
+  {% endif %}
+
+  .collection{
+    background: transparent;
+    box-shadow: none;
+  }
 {%- endstyle -%}
 
 {% paginate search.results by 24 %}
   <div class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding">
     <div class="template-search__header page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-      <h1 class="h2 center">
+      <h1 class="h2 left">
         {%- if search.performed -%}
           {{- 'templates.search.title' | t -}}
+          : {{ search.terms | escape }}
         {%- else -%}
           {{- 'general.search.search' | t -}}
         {%- endif -%}
       </h1>
-      <div class="template-search__search">
+      <div class="template-search__search" style="display: {% if search.performed %} none; {% endif %}">
         {%- if settings.predictive_search_enabled -%}
           <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
         {%- endif -%}
@@ -272,6 +319,18 @@
                     {%- case item.object_type -%}
                       {%- when 'product' -%}
                         {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
+                        {% comment %}
+                          {% render 'card-product',
+                            card_product: item,
+                            media_aspect_ratio: section.settings.image_ratio,
+                            image_shape: section.settings.image_shape,
+                            show_secondary_image: section.settings.show_secondary_image,
+                            show_vendor: section.settings.show_vendor,
+                            show_rating: section.settings.show_rating,
+                            lazy_load: lazy_load,
+                            skip_styles: skip_card_product_styles
+                          %}
+                        {% endcomment %}
                         {% render 'card-product',
                           card_product: item,
                           media_aspect_ratio: section.settings.image_ratio,
@@ -280,6 +339,8 @@
                           show_vendor: section.settings.show_vendor,
                           show_rating: section.settings.show_rating,
                           lazy_load: lazy_load,
+                          quick_add: 'standard',
+                          section_id: section.id,
                           skip_styles: skip_card_product_styles
                         %}
                         {%- assign skip_card_product_styles = true -%}
@@ -363,7 +424,7 @@
           "label": "t:sections.main-search.settings.columns_mobile.options__2.label"
         }
       ]
-    },    
+    },
     {
       "type": "header",
       "content": "t:sections.main-search.settings.header__1.content"

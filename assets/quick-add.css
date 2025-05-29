@@ -140,12 +140,13 @@
   padding-left: 1rem;
 }
 
-.quick-add-modal__content-info--bulk-details > a:hover {
+.quick-add-modal__content-info--bulk-details>a:hover {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
 }
 
 @media screen and (min-width: 990px) {
+
   .quick-add-modal__content-info--bulk .quick-add__product-media,
   .quick-add-modal__content-info--bulk .quick-add__product-container,
   .quick-add-modal__content-info--bulk .quick-add__info {
@@ -219,14 +220,14 @@
   height: 100%;
 }
 
-.quick-add-modal__content-info > * {
+.quick-add-modal__content-info>* {
   height: auto;
   margin: 0 auto;
   max-width: 100%;
   width: 100%;
 }
 
-.quick-add-modal__content-info > product-info {
+.quick-add-modal__content-info>product-info {
   padding: 0;
 }
 
@@ -240,7 +241,7 @@
     bottom: var(--modal-height-offset);
   }
 
-  .quick-add-modal__content-info > * {
+  .quick-add-modal__content-info>* {
     max-height: 100%;
   }
 
@@ -335,16 +336,16 @@ quick-add-modal .page-width {
   padding: 0;
 }
 
-quick-add-modal .product__title > h1 {
+quick-add-modal .product__title>h1 {
   display: none;
 }
 
-quick-add-modal .product__title > a {
+quick-add-modal .product__title>a {
   display: block;
   text-decoration: none;
 }
 
-quick-add-modal .product__title > a:hover {
+quick-add-modal .product__title>a:hover {
   color: rgb(var(--color-foreground));
   text-decoration: underline;
   text-underline-offset: 0.2rem;
@@ -356,9 +357,41 @@ quick-add-modal .product-form__buttons {
 }
 
 .quick-add__submit {
-  padding: 0.8rem;
-  min-width: 100%;
-  box-sizing: border-box;
+  display: flex;
+  padding: 9px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 4px;
+  border: 2px solid var(--Test-mid, #282828);
+
+  color: var(--Test-mid, #282828);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  text-transform: uppercase;
+
+  min-width: 20rem;
+  width: 20rem;
+  height: 40px;
+  min-height: 40px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 749px) {
+  .quick-add__submit {
+    padding: 9px 10px;
+    font-size: 11px;
+    min-width: 12rem;
+    width: 12rem;
+    height: 32px;
+    min-height: 30px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
 }
 
 quick-add-modal .product-media-container.constrain-height {

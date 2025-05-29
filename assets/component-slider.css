@@ -395,7 +395,7 @@ slider-component.slider-component-full-width {
 }
 
 @media screen and (max-width: 749px) {
-  .collection .product-grid .grid__item:nth-child(n+5) {
+  .featured-collection .collection .product-grid .grid__item:nth-child(n+5) {
     display: none;
     /* Hides the 5th and subsequent items */
   }
