@@ -310,6 +310,7 @@ a.button {
     padding: 2.4rem 1rem;
     max-width: 54.5rem;
     align-content: flex-end;
+    align-items: center;
   }
 
   .banner__buttons,
@@ -319,6 +320,6 @@ a.button {
 
   .banner__review-text {
     padding-left: 1rem;
-    ;
+    margin-top: 2rem;
   }
 }

@@ -394,6 +394,12 @@ slider-component.slider-component-full-width {
   height: 32px;
 }
 
+.collection .slider-button:disabled {
+  opacity: .3;
+  cursor: auto;
+  pointer-events: none;
+}
+
 @media screen and (max-width: 749px) {
   .featured-collection .collection .product-grid .grid__item:nth-child(n+5) {
     display: none;
