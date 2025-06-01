@@ -282,7 +282,26 @@ a.button {
   font-size: 13px;
 }
 
-@media screen and (max-width: 749px) {
+/* iPad */
+@media screen and (min-width: 810px) {}
+
+/* iPad Pro */
+@media screen and (min-width: 1024px) {
+  .banner--desktop-transparent .banner__box {
+    padding-top: 0;
+  }
+
+  .banner__heading {
+    font-size: 32px;
+    line-height: 40px;
+    max-width: 34rem;
+  }
+}
+
+
+
+/* Mobile */
+@media screen and (max-width: 820px) {
   .slideshow__slide {
     position: relative;
   }

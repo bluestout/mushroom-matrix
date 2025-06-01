@@ -400,7 +400,7 @@ slider-component.slider-component-full-width {
   pointer-events: none;
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 820px) {
   .featured-collection .collection .product-grid .grid__item:nth-child(n+5) {
     display: none;
     /* Hides the 5th and subsequent items */

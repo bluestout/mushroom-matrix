@@ -533,6 +533,13 @@ footer.footer {
   height: 42px;
 }
 
+@media screen and (max-width: 820px) {
+  .footer-block__brand-info .list-social__item .svg-wrapper {
+    width: 35px;
+    height: 35px;
+  }
+}
+
 .footer__list-social .list-social__item:first-child .list-social__link {
   padding-left: 0;
 }

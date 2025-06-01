@@ -65,3 +65,11 @@
 .stamped-badge-caption {
   text-transform: capitalize;
 }
+
+.stamped-badge-starrating {
+  color: #E79C43 !important;
+}
+
+.stamped-badge-starrating .stamped-fa {
+  color: #E79C43 !important;
+}

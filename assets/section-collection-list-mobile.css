@@ -19,6 +19,10 @@
     overflow: hidden;
 }
 
+.collection-list-mobile .card__media .media img {
+    object-fit: cover;
+}
+
 .collection-list-mobile .card__content .card__information .card__heading {
     color: var(--Test-mid, #282828);
     text-align: center;
@@ -31,6 +35,8 @@
     /* 120% */
     text-transform: uppercase;
     margin: 0;
+    width: 100%;
+    ;
 }
 
 .collection-list-mobile .card__content .card__heading .icon-wrap .icon-arrow {
@@ -98,6 +104,11 @@
 @media screen and (max-width: 989px) {
     .collection-list.slider .collection-list__item {
         max-width: 100%;
+    }
+
+    .collection-list-mobile .card__content .card__information .card__heading {
+        font-size: 14px;
+
     }
 }
 

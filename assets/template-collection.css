@@ -133,7 +133,7 @@
   text-transform: capitalize;
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 820px) {
   .collection {
     background: linear-gradient(180deg, rgba(246, 247, 248, 0.00) -18.71%, rgba(138, 168, 179, 0.10) 84.94%);
     box-shadow: 0px 10px 12.2px 0px rgba(199, 226, 235, 0.20) inset;

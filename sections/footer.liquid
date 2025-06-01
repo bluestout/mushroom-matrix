@@ -78,7 +78,7 @@
                 {%- if block.settings.heading != blank -%}
                   <h2 class="footer-block__heading footer-block__mobile-heading inline-richtext">
                     <span>{{- block.settings.heading -}}</span>
-                    <span class="toggle-icon large-up-hide">+</span>
+                    <span class="toggle-icon large-up-hide medium-hide">+</span>
                   </h2>
                 {%- endif -%}
 
@@ -131,7 +131,7 @@
                       {%- if settings.brand_headline != blank -%}
                         <h2 class="footer-block__heading footer-block__mobile-heading rte">
                           <span>{{ settings.brand_headline }}</span>
-                          <span class="toggle-icon large-up-hide">+</span>
+                          <span class="toggle-icon large-up-hide medium-hide">+</span>
                         </h2>
                       {%- endif -%}
                       <div class="rte_content footer-block__details-mobile-content">
@@ -168,7 +168,9 @@
               </div>
             {%- endfor -%}
             {%- if has_social_icons -%}
-              {%- render 'social-icons', class: 'footer__list-social footer__mobile-social-icons large-up-hide' -%}
+              {%- render 'social-icons',
+                class: 'footer__list-social footer__mobile-social-icons large-up-hide medium-hide'
+              -%}
             {%- endif -%}
           </div>
         {%- endif -%}
