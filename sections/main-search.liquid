@@ -18,32 +18,87 @@
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
 <style>
-  .template-search__header {
-    margin-bottom: 3rem;
-  }
-
-  .template-search__search {
-    margin: 0 auto 3.5rem;
-    max-width: 74.1rem;
-  }
-
-  .template-search__search .search {
-    margin-top: 3rem;
-  }
-
-  .template-search--empty {
-    padding-bottom: 18rem;
-  }
-
-  @media screen and (min-width: 750px) {
     .template-search__header {
-      margin-bottom: 5rem;
+      margin-bottom: 3rem;
     }
+
+    .template-search__search {
+      margin: 0 auto 3.5rem;
+      max-width: 74.1rem;
+    }
+
+    .template-search__search .search {
+      margin-top: 3rem;
+    }
+
+    .template-search--empty {
+      padding-bottom: 18rem;
+    }
+
+    @media screen and (min-width: 750px) {
+      .template-search__header {
+        margin-bottom: 5rem;
+      }
+    }
+
+    .search__button .icon {
+      height: 1.8rem;
+    }
+
+
+    #load-more {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 4px;
+      background: var(--3, #F6F7F8);
+      color: var(--2, #284734);
+
+      font-family: 'TT Norms Pro Expanded';
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 19px;
+      text-transform: uppercase;
+      padding: 12px 40px;
+      border: unset;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+    }
+    #load-more:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 4px;
+      padding: 2px;
+      background: linear-gradient(90deg, #209aca, #5aad41, #e79c43);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      z-index: -1;
   }
 
-  .search__button .icon {
-    height: 1.8rem;
-  }
+    #load-more:hover {
+      {% comment %} background-color: #1E3A3A; {% endcomment %}
+    }
+
+    #load-info {
+      color: var(--2, #284734);
+
+      font-family: 'TT Norms Pro Expanded';
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 19px;
+      text-transform: uppercase;
+      width: 100%;
+      margin-top: 10px;
+      text-align: center;
+    }
 </style>
 
 {%- liquid
@@ -108,7 +163,7 @@
     box-shadow: none;
   }
 {%- endstyle -%}
-
+{% comment %} {%- assign product_results = search.results | where: 'object_type', 'product' -%} {% endcomment %}
 {% paginate search.results by 24 %}
   <div class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding">
     <div class="template-search__header page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
@@ -149,6 +204,8 @@
               >
               <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
               <input name="options[prefix]" type="hidden" value="last">
+              <input name="type" type="hidden" value="product">
+              <!-- Add this hidden input to filter by product type -->
 
               {%- if settings.predictive_search_enabled -%}
                 <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
@@ -374,8 +431,19 @@
                   {%- endif -%}
                 {%- endfor -%}
               </ul>
-              {%- if paginate.pages > 1 -%}
-                {% render 'pagination', paginate: paginate %}
+              {% comment %}
+                {%- if paginate.pages > 1 -%}
+                  {% render 'pagination', paginate: paginate %}
+                {%- endif -%}
+              {% endcomment %}
+
+              <p id="load-info">
+                <span id="current-count">{{ search.results.size }}</span> /
+                <span id="total-count">{{ search.results_count }}</span>
+              </p>
+
+              {%- if paginate.next -%}
+                <button id="load-more" class="btn" data-next-url="{{ paginate.next.url }}">Show More</button>
               {%- endif -%}
             </div>
           {%- endif -%}
@@ -387,6 +455,50 @@
 {% if section.settings.image_shape == 'arch' %}
   {{ 'mask-arch.svg' | inline_asset_content }}
 {%- endif -%}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const loadMoreBtn = document.getElementById('load-more');
+    if (!loadMoreBtn) return;
+
+    let currentCount = parseInt(document.getElementById('current-count').textContent);
+    const totalCount = parseInt(document.getElementById('total-count').textContent);
+
+    loadMoreBtn.addEventListener('click', function () {
+      const nextUrl = loadMoreBtn.getAttribute('data-next-url');
+      if (!nextUrl) return;
+
+      fetch(nextUrl)
+        .then((response) => response.text())
+        .then((data) => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(data, 'text/html');
+
+          // Extract only the product grid items (ignore footer, header, etc.)
+          const newProductsContainer = doc.querySelector('.product-grid');
+          if (!newProductsContainer) return;
+
+          const newProducts = newProductsContainer.querySelectorAll('.grid__item');
+          document.querySelector('.product-grid').append(...newProducts);
+
+          // Update the count properly
+          currentCount += newProducts.length;
+          if (currentCount > totalCount) {
+            currentCount = totalCount; // Prevent incorrect count
+          }
+          document.getElementById('current-count').textContent = currentCount;
+
+          // Update next page URL or hide button if no more pages
+          const newNextButton = doc.querySelector('#load-more');
+          if (newNextButton) {
+            loadMoreBtn.setAttribute('data-next-url', newNextButton.getAttribute('data-next-url'));
+          } else {
+            loadMoreBtn.style.display = 'none'; // Hide button if no more pages
+          }
+        });
+    });
+  });
+</script>
 
 {% schema %}
 {

@@ -209,15 +209,17 @@ predictive-search[loading] .predictive-search__results-groups-wrapper~.predictiv
 }
 
 .predictive-search__item-query-result *:not(mark) {
-  font-weight: bolder;
+  /* font-weight: bolder; */
+  font-weight: normal;
 }
 
 .predictive-search__item-query-result mark {
-  color: rgba(var(--color-foreground), 0.75);
+  /* color: rgba(var(--color-foreground), 0.75); */
 }
 
 .predictive-search__item-query-result mark {
   background-color: transparent;
+  font-weight: bolder;
 }
 
 .predictive-search__item .price {
