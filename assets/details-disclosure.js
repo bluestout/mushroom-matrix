@@ -41,6 +41,14 @@ class HeaderMenu extends DetailsDisclosure {
   onToggle() {
     if (!this.header) return;
     this.header.preventHide = this.mainDetailsToggle.open;
+    console.log("header menu open= " + this.mainDetailsToggle.hasAttribute('open'));
+
+    if (this.mainDetailsToggle.hasAttribute('open')) {
+      document.body.classList.add('overflow-hidden');
+    }
+    else{
+      document.body.classList.remove('overflow-hidden');
+    }
 
     if (document.documentElement.style.getPropertyValue('--header-bottom-position-desktop') !== '') return;
     document.documentElement.style.setProperty(
