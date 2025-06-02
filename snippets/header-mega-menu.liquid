@@ -44,7 +44,7 @@
                           aria-current="page"
                         {% endif %}
                       >
-                        {% if childlink.type == 'collection_link' %}
+                        {% if childlink.type == 'collection_link' or childlink.type == 'product_link' %}
                           {% assign object = childlink.object %}
                           {%- assign img = object.metafields.custom.menu_image -%}
                           {%- if img != blank -%}

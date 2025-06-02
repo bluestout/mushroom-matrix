@@ -15,7 +15,7 @@
           <div class="submenu-image-links">
             {% for sub_link in sub_menu.links %}
               <a href="{{ sub_link.url }}" class="mobile-sub-menu-link--item">
-                {% if sub_link.type == 'collection_link' %}
+                {% if sub_link.type == 'collection_link' or sub_link.type == 'product_link' %}
                   {% assign object = sub_link.object %}
                   {%- assign img = object.metafields.custom.menu_image -%}
                   {%- if img != blank -%}
