@@ -99,6 +99,12 @@
       margin-top: 10px;
       text-align: center;
     }
+    .icon_bar_main{
+      background: #F6F7F8!important;
+    }
+    .icon-bar .icon-bar__item .h6{
+      color: #282828!important;
+    }
 </style>
 
 {%- liquid
@@ -164,7 +170,7 @@
   }
 {%- endstyle -%}
 {% comment %} {%- assign product_results = search.results | where: 'object_type', 'product' -%} {% endcomment %}
-{% paginate search.results by 24 %}
+{% paginate search.results by 8 %}
   <div class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding">
     <div class="template-search__header page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       <h1 class="h2 left">

@@ -27,9 +27,63 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "icon_bar_4PMRUt": {
+      "type": "icon-bar",
+      "blocks": {
+        "icon_image_rG9DDb": {
+          "type": "icon_image",
+          "settings": {
+            "icon_title": "California Grown",
+            "image": "shopify://shop_images/icon1_black.svg"
+          }
+        },
+        "icon_image_M6GHkn": {
+          "type": "icon_image",
+          "settings": {
+            "icon_title": "Certified USDA Organic",
+            "image": "shopify://shop_images/icon2.svg"
+          }
+        },
+        "icon_image_mFmaBy": {
+          "type": "icon_image",
+          "settings": {
+            "icon_title": "3rd Party Lab Tested",
+            "image": "shopify://shop_images/icon1_black.svg"
+          }
+        },
+        "icon_image_wHcrj8": {
+          "type": "icon_image",
+          "settings": {
+            "icon_title": "California Grown",
+            "image": "shopify://shop_images/icon1_black.svg"
+          }
+        },
+        "icon_image_xrL9Tc": {
+          "type": "icon_image",
+          "settings": {
+            "icon_title": "Certified USDA Organic",
+            "image": "shopify://shop_images/icon2.svg"
+          }
+        }
+      },
+      "block_order": [
+        "icon_image_rG9DDb",
+        "icon_image_M6GHkn",
+        "icon_image_mFmaBy",
+        "icon_image_wHcrj8",
+        "icon_image_xrL9Tc"
+      ],
+      "name": "Logo bar",
+      "settings": {
+        "use_gradient": false,
+        "hide_desktop": true,
+        "custom_class": "section-five-icons"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "icon_bar_4PMRUt"
   ]
 }
