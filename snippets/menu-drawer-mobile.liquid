@@ -59,6 +59,17 @@
       <div class="menu-drawer__item-divider"></div>
     </li>
   {% endfor %}
+
+  {% comment %} Custom mobile menu items {% endcomment %}
+  <li class="menu-drawer__item">
+    <a
+      href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+      class="menu-drawer__nav-link"
+    >
+      <span>Subscription</span>
+    </a>
+    <div class="menu-drawer__item-divider"></div>
+  </li>
 </ul>
 
 <style>

@@ -27,6 +27,7 @@ class DetailsDisclosure extends HTMLElement {
   close() {
     this.mainDetailsToggle.removeAttribute('open');
     this.mainDetailsToggle.querySelector('summary').setAttribute('aria-expanded', false);
+    document.body.classList.remove('overflow-hidden');
   }
 }
 
@@ -41,7 +42,6 @@ class HeaderMenu extends DetailsDisclosure {
   onToggle() {
     if (!this.header) return;
     this.header.preventHide = this.mainDetailsToggle.open;
-    console.log("header menu open= " + this.mainDetailsToggle.hasAttribute('open'));
 
     if (this.mainDetailsToggle.hasAttribute('open')) {
       document.body.classList.add('overflow-hidden');

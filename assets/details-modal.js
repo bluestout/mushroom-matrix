@@ -18,6 +18,7 @@ class DetailsModal extends HTMLElement {
   onSummaryClick(event) {
     event.preventDefault();
     event.target.closest('details').hasAttribute('open') ? this.close() : this.open(event);
+    console.log('summary click - isOpen:', this.isOpen());
   }
 
   onBodyClick(event) {
@@ -29,7 +30,7 @@ class DetailsModal extends HTMLElement {
     event.target.closest('details').setAttribute('open', true);
     document.body.addEventListener('click', this.onBodyClickEvent);
     document.body.classList.add('overflow-hidden');
-
+console.log('open search modal');
     trapFocus(
       this.detailsContainer.querySelector('[tabindex="-1"]'),
       this.detailsContainer.querySelector('input:not([type="hidden"])')
@@ -41,6 +42,7 @@ class DetailsModal extends HTMLElement {
     this.detailsContainer.removeAttribute('open');
     document.body.removeEventListener('click', this.onBodyClickEvent);
     document.body.classList.remove('overflow-hidden');
+    console.log('close search modal');
   }
 }
 
