@@ -1,0 +1,112 @@
+{% comment %}
+  Enhanced Breadcrumb Navigation for Product Detail Pages
+  - Shows: Home > Collection > Product
+  - Uses localStorage to remember the collection context
+  - Falls back to first product collection if saved collection not available
+{% endcomment %}
+
+<nav
+  class="breadcrumb page-width"
+  aria-label="breadcrumb"
+  style="opacity: 0;"
+>
+  <ol class="breadcrumb__list">
+    {% comment %} Home link {% endcomment %}
+    <li class="breadcrumb__item">
+      <a class="breadcrumb__link" href="/">Home</a>
+      <span>/</span>
+    </li>
+
+    {% comment %} Collection link (using localStorage or fallback) {% endcomment %}
+    <li class="breadcrumb__item collection-link" style="display: none;">
+      <a class="breadcrumb__link collection-link-anchor" href=""></a>
+      <span>/</span>
+    </li>
+
+    {% comment %} Current product (no link) {% endcomment %}
+    <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">
+      {{ product.title }}
+    </li>
+  </ol>
+</nav>
+
+<style>
+  .breadcrumb {
+    font-family: var(--bst-font-primary);
+    font-size: 1.3rem;
+    font-weight: 450;
+    line-height: 1.8rem;
+    background-color: #fbf8f4;
+    color: var(--color-secondary-cordyceps);
+    font-size: 14px;
+    padding-top: 0.9rem;
+  }
+  @media screen and (min-width: 768px) {
+    .breadcrumb {
+      padding-top: 2.2rem;
+    }
+  }
+
+  .breadcrumb__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .breadcrumb__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-right: 4px;
+  }
+  .breadcrumb__item:last-child {
+    margin-right: 0;
+  }
+
+  .breadcrumb__link {
+    color: var(--color-secondary-cordyceps);
+    text-decoration: none;
+  }
+
+  .breadcrumb__link:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  .breadcrumb__divider {
+    margin: 0 8px;
+    display: inline-block;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // For product pages: retrieve stored collection information
+    if (window.location.pathname.includes('/products/')) {
+      let storedCollection = JSON.parse(localStorage.getItem('lastViewedCollection') || '{}');
+
+      if (storedCollection && storedCollection.url && storedCollection.title) {
+        // Show the collection link with stored data
+        let collectionLink = document.querySelector('.collection-link');
+        let collectionAnchor = document.querySelector('.collection-link-anchor');
+
+        if (collectionLink && collectionAnchor) {
+          collectionAnchor.href = storedCollection.url;
+          collectionAnchor.textContent = storedCollection.title;
+          collectionLink.style.display = 'inline-flex';
+
+          // Hide the fallback collection
+          var fallbackCollection = document.querySelector('.fallback-collection');
+          if (fallbackCollection) {
+            fallbackCollection.style.display = 'none';
+          }
+        }
+      }
+    }
+
+    // Show the breadcrumb as it takes a minute for the localStorage to be read
+    document.querySelector('.breadcrumb').style.opacity = '1';
+  });
+</script>
