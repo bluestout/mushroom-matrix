@@ -73,3 +73,35 @@
 .stamped-badge-starrating .stamped-fa {
   color: #E79C43 !important;
 }
+
+.stamped-starrating .stamped-fa.stamped-fa-star {
+  padding-top: 0.2rem;
+}
+
+.stamped-badge-caption[data-reviews][data-version="2"] {
+  position: relative;
+}
+
+.stamped-badge .stamped-badge-caption[data-reviews][data-version="2"]::after {
+  content: "(" attr(data-reviews) ")" !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+.stamped-badge-caption[data-reviews][data-label][data-version="2"]>span {
+  display: none !important;
+  /* Hide the original "reviews" text */
+}
+
+.stamped-badge-caption[data-reviews][data-label][data-version="2"] {
+  visibility: hidden;
+  /* Hide the original text */
+}
+
+.stamped-badge-caption[data-reviews][data-label][data-version="2"]::after {
+  visibility: visible;
+  /* Ensure only the dynamically generated text is visible */
+}
