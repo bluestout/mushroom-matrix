@@ -405,6 +405,9 @@
     onScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
+      // Prevent scroll logic if the search modal is open
+      if (this.searchModal && this.searchModal.hasAttribute('open')) return;
+
       if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
 
       if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
@@ -434,6 +437,10 @@
 
     hide() {
       if (this.headerIsAlwaysSticky) return;
+
+      // Prevent hiding the header if the search modal is open
+      if (this.searchModal && this.searchModal.hasAttribute('open')) return;
+
       this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
       this.closeMenuDisclosure();
       this.closeSearchModal();
