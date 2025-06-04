@@ -277,7 +277,7 @@ product-info {
   font-size: 1.3rem;
   line-height: 1.9rem;
   text-transform: uppercase;
-  background-color: var(--color-primary-tangerine);
+  background: var(--MM-3, #5AAD41);
   color: var(--color-primary-forest);
   padding: 1.2rem 1rem;
   gap: 0.4rem;
@@ -287,7 +287,7 @@ product-info {
 }
 
 .product-form__submit:hover {
-  background-color: var(--color-primary-forest);
+  background: var(--MM-3, #5AAD41);
   color: var(--color-primary-tangerine);
 }
 
@@ -398,7 +398,7 @@ a.product__text {
 
 .product__title {
   word-break: break-word;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.0rem;
 }
 
 .product__title>* {
@@ -409,6 +409,7 @@ a.product__text {
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 1.9rem;
+  color: #000;
 }
 
 @media screen and (min-width: 1024px) {
@@ -2605,4 +2606,59 @@ body.template-product .fancybox-can-zoomIn .fancybox-content {
     font-size: 14px;
     line-height: 18px;
   }
+}
+
+product-info.gradient {
+  background: #F6F7F8;
+}
+
+.product__media-list.contains-media {
+  background: white;
+}
+
+.product-media-container {
+  border: none;
+}
+
+/* Stamped review's custom style */
+product-info .stamped-badge-caption[data-reviews][data-label][data-version="2"]>span {
+  display: inline-block !important;
+  margin-left: 0.5rem;
+}
+
+product-info .stamped-badge-caption[data-reviews][data-label][data-version="2"] {
+  visibility: visible !important;
+  color: #000;
+}
+
+product-info .stamped-badge-caption[data-reviews][data-label][data-version="2"]::after {
+  visibility: hidden !important;
+}
+
+product-info .product__info-wrapper {
+  color: #000;
+}
+
+/* Custom image with text section  */
+.section-image-with-text {
+  background: #F6F7F8;
+}
+
+.related-products {
+  background: #F6F7F8;
+}
+
+/* Custom icon bar */
+.icon_bar_main {
+  background: linear-gradient(180deg, #F6F7F8 0%, #FFF 100%) !important;
+  padding-top: 5rem;
+}
+
+.icon-bar .icon-bar__item .h6 {
+  color: var(--Test-mid, #282828) !important;
+}
+
+.section-five-icons .icon-bar-slider .icon-bar__item {
+  margin-left: 4% !important;
+  margin-right: 4% !important;
 }

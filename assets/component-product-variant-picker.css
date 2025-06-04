@@ -30,7 +30,7 @@ variant-selects fieldset {
 
 :is(.product-form__input--pill, .product-form__input--swatch) .form__label {
   margin-bottom: 0.2rem;
-  color: var(--color-primary-forest);
+  color: #000;
   font-family: var(--bst-font-primary);
   text-transform: uppercase;
   font-weight: 700;
@@ -73,8 +73,8 @@ variant-selects fieldset {
 .product-form__input--pill input[type="radio"]+label,
 .product-form__input--pill a.btn--tertiary {
   font-family: var(--bst-font-primary);
-  background-color: var(--color-primary-beige);
-  color: var(--color-primary-forest);
+  background-color: #FFF;
+  color: #000;
   display: inline-block;
   text-transform: uppercase;
   padding: 1.1rem 2rem;
@@ -106,8 +106,8 @@ variant-selects fieldset {
 }
 
 .product-form__input--pill input[type="radio"]:checked+label {
-  background-color: var(--color-primary-forest);
-  color: var(--color-primary-beige);
+  background-color: #000;
+  color: #F1E7DB;
 }
 
 @media screen and (forced-colors: active) {

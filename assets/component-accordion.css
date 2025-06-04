@@ -4,6 +4,13 @@
   position: relative;
   line-height: 1;
   padding: 1.5rem 0;
+  border-top: 1px solid #B5C7CD;
+}
+
+
+.product__info-container .product__accordion:last-of-type summary {
+  border-bottom: 1px solid #B5C7CD;
+  /* Ensure the bottom border is applied */
 }
 
 .accordion .summary__title {
@@ -36,6 +43,7 @@
   word-break: break-word;
   text-transform: uppercase;
   color: var(--color-primary-forest);
+  font-family: "TT Norms Pro Expanded";
   font-size: 1.1rem;
   font-weight: 700;
 }
@@ -63,4 +71,9 @@
 
 .accordion__content img {
   max-width: 100%;
+}
+
+.product__accordion .accordion__content .metafield-rich_text_field p,
+.product__accordion .accordion__content .metafield-rich_text_field ul {
+  margin: 0;
 }

@@ -4,4 +4,19 @@
 
 .related-products__heading {
   margin: 0 0 3rem;
+  color: #242833;
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Anuphan;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 65px;
+  /* 135.417% */
+  letter-spacing: -1px;
+  text-transform: capitalize;
+}
+
+.related-products .card__inner {
+  background: transparent;
 }
