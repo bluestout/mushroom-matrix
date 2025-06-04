@@ -779,8 +779,10 @@
     }
   });
 </script>
-<script src="{{ 'stay-ai-update-atc-price.js' |  asset_url }}" defer></script>
-<script src="{{ 'auto-format-selection.js' | asset_url }}" defer="defer"></script>
+{% comment %}
+  <script src="{{ 'stay-ai-update-atc-price.js' |  asset_url }}" defer></script>
+  <script src="{{ 'auto-format-selection.js' | asset_url }}" defer="defer"></script>
+{% endcomment %}
 
 {% schema %}
 {

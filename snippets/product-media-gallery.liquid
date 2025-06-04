@@ -40,6 +40,19 @@
   elsif section.settings.media_size == 'small'
     assign media_width = 0.45
   endif
+
+  assign is_new = false
+  assign is_bestseller = false
+  assign is_limited = false
+  for tag in product.tags
+    if tag contains 'new'
+      assign is_new = true
+    elsif tag contains 'bestseller'
+      assign is_bestseller = true
+    elsif tag contains 'limited'
+      assign is_limited = false
+    endif
+  endfor
 -%}
 
 <media-gallery
@@ -51,7 +64,11 @@
   aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
   data-desktop-layout="{{ section.settings.gallery_layout }}"
 >
-  <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
+  <div
+    id="GalleryStatus-{{ section.id }}"
+    class="visually-hidden"
+    role="status"
+  ></div>
   <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
     <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
       {{ 'accessibility.skip_to_product_info' | t }}
@@ -153,6 +170,12 @@
         </span>
       </button>
     </div>
+    <div class="product-tag-container">
+      {% if product.metafields.custom.bagde != blank %}
+        {% assign badge_image = product.metafields.custom.bagde %}
+        <img src="{{ badge_image | image_url: height: 27 }}" alt="Product Badge">
+      {% endif %}
+    </div>
   </slider-component>
   {%- if first_3d_model -%}
     <button
@@ -194,7 +217,7 @@
         data-step="3"
       >
         <span class="svg-wrapper">
-          {{- 'icon-caret.svg' | inline_asset_content -}}
+          {{- 'icon-thumbnails-arrow.svg' | inline_asset_content -}}
         </span>
       </button>
       <ul
@@ -207,7 +230,6 @@
           (min-width: 750px) calc((100vw - 15rem) / 8),
           calc((100vw - 8rem) / 3)
         {%- endcapture -%}
-
         {%- if featured_media != null -%}
           {%- liquid
             capture media_index
@@ -324,7 +346,7 @@
         data-step="3"
       >
         <span class="svg-wrapper">
-          {{- 'icon-caret.svg' | inline_asset_content -}}
+          {{- 'icon-thumbnails-arrow.svg' | inline_asset_content -}}
         </span>
       </button>
     </slider-component>

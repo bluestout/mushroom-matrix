@@ -99,9 +99,3 @@
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 0.7);
 }
-
-@media screen and (max-width: 749px) {
-  .price__regular .price-item--regular {
-    font-size: 13px;
-  }
-}

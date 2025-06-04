@@ -53,6 +53,10 @@
             "swatch_shape": "square"
           }
         },
+        "recharge_subscriptions_subscription_widget_v2_EdAtcc": {
+          "type": "shopify://apps/recharge-subscriptions/blocks/subscription-widget-v2/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {}
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
@@ -75,7 +79,7 @@
           "settings": {
             "heading": "Ingredients",
             "icon": "none",
-            "content": "",
+            "content": "{{ product.metafields.custom.ingredients | metafield_tag }}",
             "page": "",
             "liquid": ""
           }
@@ -83,9 +87,9 @@
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
+            "heading": "Recommended Support for",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.recommended_support_for | metafield_tag }}",
             "page": "",
             "liquid": ""
           }
@@ -93,25 +97,16 @@
         "collapsible-row-2": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
-            "page": "",
-            "liquid": ""
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
+            "heading": "Directions for Use",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.directions_for_use | metafield_tag }}",
             "page": "",
             "liquid": ""
           }
         },
         "share": {
           "type": "share",
+          "disabled": true,
           "settings": {
             "share_label": "Share"
           }
@@ -124,13 +119,13 @@
         "caption",
         "price",
         "variant_picker",
+        "recharge_subscriptions_subscription_widget_v2_EdAtcc",
         "quantity_selector",
         "buy_buttons",
         "description",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
-        "collapsible-row-3",
         "share"
       ],
       "settings": {
