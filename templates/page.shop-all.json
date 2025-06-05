@@ -11,13 +11,40 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "shop_all_t7HfiY": {
+      "type": "shop-all",
+      "name": "Shop All Section",
+      "settings": {
+        "mushroom_blends_list_title": "Mushroom Blends",
+        "mushroom_blends_products": "{{ page.metafields.custom.mushroom_blends_products.value }}",
+        "single_species_list_title": "Single Species",
+        "single_species_products": "{{ page.metafields.custom.single_species_products.value }}",
+        "products_to_show": 20,
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "full_width": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "shop_all_t7HfiY"
   ]
 }

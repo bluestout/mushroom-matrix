@@ -1,0 +1,150 @@
+.section.shop-all-section {
+    background: #F6F7F8;
+}
+
+.shop-all-header {
+    padding-top: 5rem;
+}
+
+.shop-all-header .shop-all-header__title {
+    margin-top: 0;
+    color: #242833;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Anuphan;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 65px;
+    /* 135.417% */
+    letter-spacing: -1px;
+    text-transform: capitalize;
+}
+
+.shop-all-header__description {
+    display: flex;
+    align-items: center;
+    /* gap: 2.6rem; */
+    border-top: 1px solid #CDD3D5;
+    margin-bottom: 3rem;
+}
+
+.shop-all-header__image {
+    width: 100%;
+    flex-basis: 33%;
+    height: auto;
+    padding-bottom: 21%;
+    border-radius: 3px;
+    overflow: hidden;
+    outline: solid;
+    outline-color: #F6F7F8;
+}
+
+.shop-all-header__image-wrapper {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.shop-all-header__image-wrapper img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.shop-all-header__text {
+    flex-basis: 67%;
+    width: 100%;
+    padding-left: 2.6rem;
+    /* border-top: 1px solid; */
+    height: 100%;
+}
+
+.shop-all-header__text p {
+    color: var(--Test-mid, #282828);
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/Caption */
+    font-family: "TT Norms Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    /* 150% */
+}
+
+
+.shop-all-product-lists .collection__title.title-wrapper {
+    margin: 0;
+}
+
+.shop-all-product-lists .collection .collection__title .title {
+    text-align: left;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    /* 270.833% */
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.shop-all-mushroom-blends-product-list.collection {
+    background: #F6F7F8;
+    box-shadow: none;
+}
+
+.shop-all-product-lists .collection .slider-buttons {
+    top: 50%;
+}
+
+
+@media screen and (max-width: 749px) {
+    .shop-all-header {
+        padding-top: 2rem;
+    }
+
+    .shop-all-header__image {
+        padding-bottom: 0;
+        height: 100%;
+    }
+
+    .shop-all-header__image-wrapper {
+        height: 100%;
+    }
+
+    .shop-all-header__image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+    }
+
+    .shop-all-header__text {
+        padding-left: 0;
+    }
+
+    .shop-all-header .shop-all-header__title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .shop-all-header__description {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .shop-all-header__text p {
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    .shop-all-product-lists .collection .collection__title .title {
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 0.5rem;
+    }
+}
