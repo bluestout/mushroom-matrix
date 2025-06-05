@@ -185,7 +185,7 @@
     border: none;
     background-size: 58px;
     top: -5rem;
-    z-index: 5;
+    z-index: 1;
 }
 
 .species-spotlight__container .flickity-prev-next-button.previous {
