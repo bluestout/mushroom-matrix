@@ -1,0 +1,204 @@
+<style>
+  .generic-collection-header {
+    padding-top: 5rem;
+    background: #f6f7f8;
+  }
+
+  .generic-collection-header .generic-collection-header__title {
+    margin-top: 0;
+    color: #242833;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Anuphan;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 65px;
+    /* 135.417% */
+    letter-spacing: -1px;
+    text-transform: capitalize;
+  }
+
+  .generic-collection-header__description {
+    display: flex;
+    align-items: center;
+    /* gap: 2.6rem; */
+    border-top: 1px solid #cdd3d5;
+    {% comment %} margin-bottom: 3rem; {% endcomment %}
+  }
+
+  .generic-collection-header__image {
+    width: 100%;
+    flex-basis: 33%;
+    height: auto;
+    padding-bottom: 21%;
+    border-radius: 3px;
+    overflow: hidden;
+    outline: solid;
+    outline-color: #f6f7f8;
+  }
+
+  .generic-collection-header__image-wrapper {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .generic-collection-header__image-wrapper img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .generic-collection-header__text {
+    flex-basis: 67%;
+    width: 100%;
+    padding-left: 2.6rem;
+    /* border-top: 1px solid; */
+    height: 100%;
+  }
+
+  .generic-collection-header__text p {
+    color: var(--Test-mid, #282828);
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/Caption */
+    font-family: 'TT Norms Pro';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    /* 150% */
+  }
+
+  @media screen and (max-width: 749px) {
+    .generic-collection-header {
+      padding-top: 2rem;
+    }
+
+    .generic-collection-header__image {
+      padding-bottom: 0;
+      height: 100%;
+    }
+
+    .generic-collection-header__image-wrapper {
+      height: 100%;
+    }
+
+    .generic-collection-header__image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+    }
+
+    .generic-collection-header__text {
+      padding-left: 0;
+    }
+
+    .generic-collection-header .generic-collection-header__title {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    .generic-collection-header__description {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+
+    .generic-collection-header__text p {
+      font-size: 15px;
+      line-height: 20px;
+      text-align: center;
+    }
+  }
+</style>
+
+{%- liquid
+  assign full_width = '100vw'
+  assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+
+  if section.settings.image_behavior == 'ambient'
+    assign half_width = '60vw'
+    assign full_width = '120vw'
+    assign stacked_sizes = '(min-width: 750px) 60vw, 120vw'
+    assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
+  elsif section.settings.image_behavior == 'fixed' or section.settings.image_behavior == 'zoom-in'
+    assign half_width = '100vw'
+    assign stacked_sizes = '100vw'
+  else
+    assign half_width = '50vw'
+    assign stacked_sizes = '(min-width: 750px) 50vw, 100vw'
+  endif
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+
+  assign heading = section.settings.heading | default: collection.title
+  assign description = section.settings.description | default: collection.description
+-%}
+
+<div class="generic-collection-header page-width">
+  <h1 class="generic-collection-header__title">
+    {{ heading | escape }}
+  </h1>
+  <div class="generic-collection-header__description">
+    <div class="generic-collection-header__image">
+      {% assign featured_image = section.settings.image %}
+      {% if featured_image %}
+        {% assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio %}
+        <div class="generic-collection-header__image-wrapper">
+          {{
+            featured_image
+            | image_url: width: 1080
+            | image_tag:
+              width: section.settings.image.width,
+              height: image_height,
+              widths: widths,
+              fetchpriority: fetch_priority
+          }}
+        </div>
+      {% endif %}
+    </div>
+    <div class="generic-collection-header__text">
+      {{ description }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Generic Collection Banner",
+  "tag": "section",
+  "class": "section section--generic-collection-banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Generic Collection Banner Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Add a heading for the banner."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "info": "Add a description for the banner."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Generic Collection Banner"
+    }
+  ]
+}
+{% endschema %}

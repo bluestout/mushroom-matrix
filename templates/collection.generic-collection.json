@@ -11,24 +11,60 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
-        "show_collection_image": false,
+        "show_collection_image": true,
         "color_scheme": "scheme-1"
       }
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "settings": {
-        "products_per_page": 16,
+        "products_per_page": 8,
         "columns_desktop": 4,
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_filtering": true,
-        "enable_sorting": true,
         "columns_mobile": "2",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "standard",
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "generic_collection_banner_XXU9dY": {
+      "type": "generic-collection-banner",
+      "name": "Generic Collection Banner",
+      "settings": {
+        "image": "{{ collection.image }}",
+        "heading": "{{ collection.metafields.custom.collection_title.value }}",
+        "description": "{{ collection.description }}"
+      }
+    },
+    "generic_collection_product_grid_wUBcRP": {
+      "type": "generic-collection-product-grid",
+      "name": "Generic Product Grid",
+      "settings": {
+        "products_per_page": 8,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "standard",
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -36,6 +72,8 @@
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "generic_collection_banner_XXU9dY",
+    "generic_collection_product_grid_wUBcRP"
   ]
 }

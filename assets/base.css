@@ -2831,6 +2831,7 @@ details[open]>.header__menu-item {
 
 details[open]:hover>.header__menu-item {
   text-decoration-thickness: 0.2rem;
+  g
 }
 
 details[open]>.header__menu-item .icon-caret {
@@ -2838,14 +2839,14 @@ details[open]>.header__menu-item .icon-caret {
 }
 
 .header__active-menu-item {
-  transition: text-decoration-thickness var(--duration-short) ease;
+  /* transition: text-decoration-thickness var(--duration-short) ease;
   color: rgb(var(--color-foreground));
   text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  text-underline-offset: 0.3rem; */
 }
 
 .header__menu-item:hover .header__active-menu-item {
-  text-decoration-thickness: 0.2rem;
+  /* text-decoration-thickness: 0.2rem; */
 }
 
 .header__submenu {

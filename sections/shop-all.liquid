@@ -69,13 +69,13 @@
     <div class="shop-all-header__image">
       {% assign featured_image = page.metafields.custom.featured_image.value %}
       {% if featured_image %}
-        {% assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio %}
+        {% assign image_height = featured_image.width | divided_by: featured_image.aspect_ratio %}
         <div class="shop-all-header__image-wrapper">
           {{
             featured_image
             | image_url: width: 1080
             | image_tag:
-              width: section.settings.image.width,
+              width: featured_image.width,
               height: image_height,
               widths: widths,
               fetchpriority: fetch_priority

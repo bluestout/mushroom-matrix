@@ -594,6 +594,23 @@
   }
 }
 
+.card__media .product-badge {
+  position: absolute;
+  height: 2.7rem;
+  width: auto;
+  top: 1.5rem;
+  right: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.card__media .product-badge img {
+  width: auto;
+  height: 27px;
+  object-fit: contain;
+}
+
 @media screen and (max-width: 749px) {
   .card__heading {
     font-size: 11px;
@@ -604,4 +621,8 @@
     width: 90%;
   }
 
+  .card__media .product-badge {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
 }
