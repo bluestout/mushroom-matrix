@@ -147,4 +147,8 @@
         line-height: 24px;
         padding-left: 0.5rem;
     }
+
+    .shop-all-single-species-product-list {
+        padding-top: 0 !important;
+    }
 }
