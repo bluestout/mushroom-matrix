@@ -18,6 +18,7 @@
   border: 1px solid #FFF;
   background: #F6F7F8;
   box-shadow: 0px 26px 34.4px 0px rgba(126, 106, 93, 0.22);
+  z-index: 100;
 }
 
 .shopify-section-header-sticky .mega-menu__content {
