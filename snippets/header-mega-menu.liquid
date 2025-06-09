@@ -123,3 +123,37 @@
     {%- endfor -%}
   </ul>
 </nav>
+
+<script>
+  let items = document.querySelectorAll('.mega-menu');
+  items.forEach((item) => {
+    const content = item.querySelector('.mega-menu__content');
+    item.addEventListener('mouseover', () => {
+      $('.mega-menu').removeAttr('open');
+      item.setAttribute('open', true);
+      console.log('mouse over item');
+    });
+
+    item.addEventListener('mouseleave', () => {
+      let close = true;
+      if (content) {
+        content.addEventListener('mouseover', () => {
+          close = false;
+        });
+      }
+
+      setTimeout(300, () => {
+        if (close) item.removeAttribute('open');
+      });
+
+      if (!content) {
+        if (close) item.removeAttribute('open');
+      }
+    });
+    if (content) {
+      content.addEventListener('mouseleave', () => {
+        item.removeAttribute('open');
+      });
+    }
+  });
+</script>

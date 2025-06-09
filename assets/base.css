@@ -3615,3 +3615,11 @@ details-disclosure>details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+@media (prefers-reduced-motion: reduce),
+(forced-colors: active) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
