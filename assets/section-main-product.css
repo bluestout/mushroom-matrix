@@ -2635,6 +2635,11 @@ product-info .stamped-badge-caption[data-reviews][data-label][data-version="2"]:
   visibility: hidden !important;
 }
 
+product-info .stamped-product-reviews-badge {
+  display: flex !important;
+  align-items: center;
+}
+
 product-info .stamped-product-reviews-badge::after {
   content: 'Read More' !important;
   color: var(--Test-mid, #282828);
@@ -2647,7 +2652,10 @@ product-info .stamped-product-reviews-badge::after {
   line-height: 19px;
   /* 146.154% */
   text-transform: capitalize;
+  margin-left: 7px;
 }
+
+
 
 product-info .product__info-wrapper {
   color: #000;
