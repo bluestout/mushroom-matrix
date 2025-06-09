@@ -2635,6 +2635,20 @@ product-info .stamped-badge-caption[data-reviews][data-label][data-version="2"]:
   visibility: hidden !important;
 }
 
+product-info .stamped-product-reviews-badge::after {
+  content: 'Read More' !important;
+  color: var(--Test-mid, #282828);
+
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: "TT Norms Pro Expanded";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  /* 146.154% */
+  text-transform: capitalize;
+}
+
 product-info .product__info-wrapper {
   color: #000;
 }

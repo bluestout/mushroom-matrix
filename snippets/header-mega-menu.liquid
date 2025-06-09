@@ -30,6 +30,8 @@
                 class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
                 tabindex="-1"
               >
+                <div class="mega-menu__content-overlay"></div>
+                <!-- Add this overlay -->
                 <ul
                   class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
                   role="list"
@@ -124,36 +126,76 @@
   </ul>
 </nav>
 
-<script>
-  let items = document.querySelectorAll('.mega-menu');
-  items.forEach((item) => {
-    const content = item.querySelector('.mega-menu__content');
-    item.addEventListener('mouseover', () => {
-      $('.mega-menu').removeAttr('open');
-      item.setAttribute('open', true);
-      console.log('mouse over item');
-    });
+<style>
+  .mega-menu__content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent interaction with the pseudo-element */
+  }
 
-    item.addEventListener('mouseleave', () => {
-      let close = true;
-      if (content) {
-        content.addEventListener('mouseover', () => {
-          close = false;
+  .mega-menu__content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent; /* Invisible overlay */
+    z-index: 1; /* Ensure it is above the content */
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.mega-menu');
+
+    items.forEach((item) => {
+      const content = item.querySelector('.mega-menu__content');
+      const overlay = item.querySelector('.mega-menu__content-overlay');
+
+      item.addEventListener('mouseover', () => {
+        // Close all other mega menus
+        items.forEach((otherItem) => otherItem.removeAttribute('open'));
+
+        // Open the current mega menu
+        item.setAttribute('open', true);
+      });
+
+      item.addEventListener('mouseleave', () => {
+        let close = true;
+
+        // Check if the mouse is still over the content
+        if (content) {
+          const onContentMouseOver = () => {
+            close = false;
+            content.removeEventListener('mouseover', onContentMouseOver);
+          };
+          content.addEventListener('mouseover', onContentMouseOver);
+        }
+
+        // Close the menu after a delay if the mouse is not over the content
+        setTimeout(() => {
+          if (close) {
+            item.removeAttribute('open');
+          }
+        }, 300);
+      });
+
+      if (overlay) {
+        overlay.addEventListener('mouseover', () => {
+          // Close the menu when hovering over the overlay
+          item.removeAttribute('open');
         });
       }
 
-      setTimeout(300, () => {
-        if (close) item.removeAttribute('open');
-      });
-
-      if (!content) {
-        if (close) item.removeAttribute('open');
+      if (content) {
+        content.addEventListener('mouseleave', () => {
+          item.removeAttribute('open');
+        });
       }
     });
-    if (content) {
-      content.addEventListener('mouseleave', () => {
-        item.removeAttribute('open');
-      });
-    }
   });
 </script>
