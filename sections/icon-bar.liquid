@@ -34,55 +34,106 @@
   </div>
 </div>
 
+<style>
+  .icon-bar__item {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    padding: 0; /* Remove any default padding */
+    margin: 0; /* Margins will be dynamically calculated */
+    white-space: nowrap; /* Prevent content from wrapping */
+    gap: 2rem;
+  }
+  @media screen and (max-width: 820px) {
+    .icon-bar__item {
+      margin-right: 3rem !important;
+    }
+  }
+</style>
+
 <script>
-    {% comment %} $(document).ready(function(){
-        $('.icon-bar-slider').slick({
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            infinite: true,
-            autoplay: true,
-            autoplaySpeed: 2000,
+  document.addEventListener('DOMContentLoaded', function () {
+    const sliders = document.querySelectorAll('.icon-bar-slider');
+
+    function adjustItemMargins() {
+      sliders.forEach((slider) => {
+        const items = slider.querySelectorAll('.icon-bar__item');
+        const sliderWidth = slider.offsetWidth;
+        let totalItemsWidth = 0;
+
+        // Reset margins before recalculating
+        items.forEach((item) => {
+          item.style.marginLeft = '0';
+          item.style.marginRight = '0';
         });
-        $('.icon-bar-slider').on('init', function(event, slick){
-            if (slick.slideCount === slick.options.slidesToShow) {
-                console.log("add a clone div");
-                slick.slickAdd('<div class="icon-bar__item clone-item"></div>'); // Add a clone
+
+        // Calculate the total width of all items
+        items.forEach((item) => {
+          totalItemsWidth += item.offsetWidth;
+        });
+
+        // Calculate the remaining space in the slider
+        const remainingSpace = sliderWidth - totalItemsWidth;
+
+        if (remainingSpace > 0 && items.length > 1) {
+          // Calculate the margin for each item
+          const margin = remainingSpace / (items.length - 1); // Divide by (items.length - 1) for gaps between items
+
+          // Apply the calculated margin to each item except the last one
+          items.forEach((item, index) => {
+            if (index < items.length - 1) {
+              item.style.marginRight = `${margin}px`;
             }
-        });
-    }) {% endcomment %}
-
-    document.addEventListener("DOMContentLoaded", function () {
-      // Select all icon-bar-slider elements
-      let sliders = document.querySelectorAll('.icon-bar-slider');
-
-      sliders.forEach(slider => {
-          new Flickity(slider, {
-              cellAlign: 'left',      // Align cells to the left
-              contain: true,          // Keep items inside the container
-              wrapAround: true,       // Enable infinite scroll
-              autoPlay: 5000,         // Autoplay every 5 seconds
-              pauseAutoPlayOnHover: false,
-              prevNextButtons: false, // Hide arrows
-              pageDots: false,        // Hide pagination dots
-              draggable: true,        // Enable touch/mouse dragging
-              groupCells: 1,          // Scroll one item at a time
-              freeScroll: false       // Disable free scrolling
-              {% comment %} percentPosition: false {% endcomment %}
           });
-      });
 
-      // Check if the viewport width is less than 750px (mobile view)
-        if (window.matchMedia("(max-width: 820px)").matches) {
-            // Select the elements
-            const iconBarSection = document.querySelector(".shopify-section.icon-bar");
-            const featuredCollectionSection = document.querySelector(".shopify-section.featured-collection");
-
-            // Ensure both elements exist
-            if (iconBarSection && featuredCollectionSection) {
-                // Move the icon-bar section to be after the featured-collection section
-                featuredCollectionSection.parentNode.insertBefore(iconBarSection, featuredCollectionSection.nextSibling);
-            }
+          // Add margin to the last item to ensure spacing between the last and first items
+          items[items.length - 1].style.marginRight = `${margin}px`;
+        } else if (items.length === 1) {
+          // Center the single item if there's only one
+          items[0].style.margin = '0 auto';
         }
+      });
+    }
+
+    // Initial adjustment
+    adjustItemMargins();
+
+    // Recalculate item margins on window resize
+    window.addEventListener('resize', adjustItemMargins);
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const sliders = document.querySelectorAll('.icon-bar-slider');
+
+    sliders.forEach((slider) => {
+      new Flickity(slider, {
+        cellAlign: 'left', // Align cells to the left
+        contain: true, // Keep items inside the container
+        wrapAround: true, // Enable infinite scroll
+        autoPlay: 5000, // Autoplay every 5 seconds
+        pauseAutoPlayOnHover: false,
+        prevNextButtons: false, // Hide arrows
+        pageDots: false, // Hide pagination dots
+        draggable: true, // Enable touch/mouse dragging
+        groupCells: 1, // Scroll one item at a time
+        freeScroll: false, // Disable free scrolling
+        percentPosition: true, // Ensure proper positioning of items
+      });
+    });
+
+    // Check if the viewport width is less than 750px (mobile view)
+    if (window.matchMedia('(max-width: 820px)').matches) {
+      // Select the elements
+      const iconBarSection = document.querySelector('.shopify-section.icon-bar');
+      const featuredCollectionSection = document.querySelector('.shopify-section.featured-collection');
+
+      // Ensure both elements exist
+      if (iconBarSection && featuredCollectionSection) {
+        // Move the icon-bar section to be after the featured-collection section
+        featuredCollectionSection.parentNode.insertBefore(iconBarSection, featuredCollectionSection.nextSibling);
+      }
+    }
   });
 </script>
 {% schema %}

@@ -647,6 +647,7 @@ a.product__text {
 
   .product__media-list {
     padding-right: calc(var(--media-shadow-horizontal-offset) * var(--media-shadow-visible));
+    margin-bottom: 1.2rem;
   }
 
   .product--thumbnail .product__media-item:not(.is-active),
@@ -2681,6 +2682,12 @@ product-info .product__info-wrapper {
 }
 
 .section-five-icons .icon-bar-slider .icon-bar__item {
-  margin-left: 4% !important;
-  margin-right: 4% !important;
+  /* margin-left: 4% !important;
+  margin-right: 4% !important; */
+}
+
+
+.product__media-wrapper .thumbnail-slider .svg-wrapper>svg {
+  width: auto;
+  height: auto;
 }
