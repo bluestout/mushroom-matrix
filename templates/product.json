@@ -36,7 +36,7 @@
         "text_azteUE": {
           "type": "text",
           "settings": {
-            "text": "“Love this adaptogenic matcha blend! Been a loyal customer for two years—it's delicious and perfect for travel”",
+            "text": "{{ product.metafields.custom.featured_review.value }}",
             "text_style": "body"
           }
         },
