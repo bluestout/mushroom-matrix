@@ -1,0 +1,388 @@
+{% style %}
+  div.stamped-container[data-widget-style],
+  div[data-widget-style] div.stamped-container {
+    max-width: 100%;
+  }
+
+  #stamped-main-widget {
+    margin: 1rem 0;
+  }
+
+  .stamped-summary-text-1 {
+    color: var(--Text-black, #000);
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/Heading 1 */
+    font-family: 'TT Norms Pro Expanded';
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 65px; /* 125% */
+    letter-spacing: -1px;
+  }
+
+  .summary-overview {
+    width: 250px !important;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  div[data-widget-style*='standard'] .stamped-summary-ratings {
+    border: none;
+  }
+
+  .stamped-summary-photos.stamped-summary-photos-container {
+    max-width: fit-content;
+    width: auto;
+  }
+
+  .stamped-photos-carousel > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .stamped-photos-carousel .photo.stamped-photo {
+    width: 74px;
+    height: 74px;
+    background: none !important;
+    border: none;
+  }
+  .stamped-summary-photos-container .stamped-photos-carousel .photo.stamped-photo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+
+  div[data-widget-style*='standard'] .summary-rating .summary-rating-title::before {
+    content: none !important;
+  }
+
+  div[data-widget-style*='standard'] .summary-rating-title {
+    color: #030303;
+    font-size: 10px !important;
+    line-height: 12px; /* 120% */
+    width: auto !important;
+    white-space: nowrap;
+  }
+  .summary-rating {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .summary-rating-bar-content {
+    align-items: center;
+  }
+  div[data-widget-style*='standard'] .summary-rating-bar > div {
+    font-size: 10px !important;
+    color: #000 !important;
+  }
+  div[data-widget-style*='standard'] .summary-rating-count {
+    color: #030303 !important;
+  }
+  div[data-widget-style*='standard'] .summary-rating-count::before,
+  div[data-widget-style*='standard'] .summary-rating-count::after {
+    content: none;
+  }
+
+  div[data-widget-style*='standard'] .stamped-summary-ratings {
+    width: auto !important;
+  }
+
+  .stamped-summary-actions-newreview::before,
+  .stamped-summary-actions-newquestion::before {
+    content: none;
+  }
+
+  div[data-widget-style*='standard'] .stamped-summary-actions {
+    margin-top: 2.5rem;
+  }
+
+  .stamped-summary-actions-newquestion,
+  .stamped-summary-actions-newreview {
+    color: var(--4, #fff);
+    leading-trim: both;
+    text-edge: cap;
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/CTA/Button Regular */
+    font-family: 'TT Norms Pro Expanded';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px; /* 146.154% */
+    text-transform: uppercase;
+    border-radius: 4px;
+    background: var(--Text-black, #000);
+
+    box-shadow: none !important;
+    padding: 1rem 6rem;
+  }
+
+  div[data-widget-style*='standard'] .stamped-tab-container ul.stamped-tabs {
+    display: flex;
+    justify-content: center;
+  }
+
+  .stamped-container ul.stamped-tabs li.active {
+    font-weight: normal;
+    color: black !important;
+    border-color: #808080 !important;
+  }
+  li#tab-questions[data-count][data-new-tab]::after,
+  li#tab-reviews[data-count]::after {
+    border-radius: 10px;
+  }
+
+  .stamped-reviews-filter {
+    display: none;
+  }
+
+  .stamped-review {
+    padding-top: 5.8rem;
+  }
+  .stamped-review[data-verified='buyer'] .stamped-review-avatar::before {
+    content: none;
+  }
+  .stamped-review-avatar-content {
+  }
+  .stamped-review-header .created,
+  .stamped-review-header-byline .created {
+    color: var(--Text-black, #000);
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/body */
+    font-family: 'TT Norms Pro';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 26px; /* 162.5% */
+  }
+  .stamped-review .author {
+    color: var(--Text-black, #000);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: 'TT Norms Pro Expanded';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px; /* 135.714% */
+  }
+  .stamped-review > .stamped-review-header {
+    position: absolute;
+  }
+  .stamped-review-header .stamped-verified-badge {
+    display: block;
+    color: var(--Text-black, #000);
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/body */
+    font-family: 'TT Norms Pro';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 26px; /* 162.5% */
+
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .stamped-review-header .review-location {
+    display: none;
+  }
+  .stamped-review-header-title {
+    color: var(--Text-black, #000);
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/Heading 4 */
+    font-family: 'TT Norms Pro Expanded';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px; /* 135.714% */
+    text-transform: uppercase;
+  }
+  p.stamped-review-content-body {
+    color: var(--Text-black, #000);
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/body */
+    font-family: 'TT Norms Pro';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 26px; /* 162.5% */
+    max-width: 60rem;
+  }
+  .stamped-container .stamped-review-image img {
+    height: 74px !important;
+    border: none;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+  .stamped-review-footer .stamped-review-share {
+    display: none;
+  }
+  .stamped-rating-holder {
+    color: gray;
+  }
+  .stamped-rating-holder .stamped-thumbs-up .stamped-fa-thumbs-up,
+  .stamped-rating-holder .stamped-thumbs-down .stamped-fa-thumbs-down {
+    color: gray !important;
+  }
+  .stamped-review-header .stamped-verified-badge[data-type='buyer'][data-verified-label]::before {
+    content: '';
+    width: 14px;
+    position: absolute;
+    background: #5aad41;
+    height: 14px;
+    border-radius: 7px;
+  }
+  .stamped-review-header .stamped-verified-badge[data-type='buyer'][data-verified-label]::after {
+    margin-left: 2rem;
+    color: var(--Text-black, #000);
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/body */
+    font-family: 'TT Norms Pro';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 26px; /* 162.5% */
+  }
+  .stamped-review-body {
+    margin-left: 40%;
+  }
+  @media screen and (max-width: 820px) {
+    div.stamped-container[data-widget-style],
+    div[data-widget-style] div.stamped-container {
+      margin-top: 0rem !important;
+    }
+    .stamped-summary-text-1 {
+      font-size: 26px;
+    }
+    .stamped-content,
+    div[data-widget-style*='standard'] .stamped-summary {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .summary-overview {
+      width: 175px !important;
+    }
+    .stamped-summary-caption.stamped-summary-caption-2 {
+      margin-top: -4rem !important;
+    }
+    [data-widget-type='minimal'] .stamped-summary-starrating i::before,
+    div[data-widget-style*='standard'] .stamped-summary-starrating i::before {
+      font-size: 16px !important;
+    }
+    .stamped-summary-caption .stamped-summary-text {
+      margin-top: 0;
+    }
+    .stamped-photos-carousel > div {
+      flex-wrap: nowrap;
+      overflow-x: scroll !important;
+    }
+    div[data-widget-style*='standard'] .stamped-summary-actions {
+      width: auto !important;
+      margin: 0 auto !important;
+    }
+    .stamped-summary-actions-newquestion,
+    .stamped-summary-actions-newreview {
+      padding: 1rem 4rem;
+    }
+    div[data-widget-style*='standard'] .stamped-tab-container,
+    .stamped-tab-container[style='display:none;'] {
+      width: 100%;
+      height: 45px !important;
+      display: block !important;
+    }
+    div[data-widget-style*='standard'] .stamped-tab-container ul.stamped-tabs {
+      height: 45px !important;
+    }
+
+    div.stamped-container ul.stamped-tabs li {
+      display: inline-block !important;
+    }
+
+    div.stamped-container ul.stamped-tabs li,
+    li#tab-questions[data-count][data-new-tab]::after,
+    li#tab-reviews[data-count]::after {
+      color: var(--Text-black, #000);
+      font-family: 'TT Norms Pro';
+      font-size: 13px;
+      line-height: 26px; /* 162.5% */
+    }
+    .stamped-review {
+      padding-top: 3.2rem;
+    }
+    .stamped-review > .stamped-review-header {
+      position: relative;
+    }
+    .stamped-review-body {
+      margin-top: 2.5rem;
+      margin-left: 0.5rem;
+    }
+    .stamped-review-avatar-content {
+      width: 62px;
+      height: 62px;
+    }
+    .stamped-review-header .stamped-verified-badge {
+      margin-top: 0.5rem;
+    }
+    .stamped-review-footer .stamped-review-vote {
+      float: left !important;
+    }
+    .stamped-review .created {
+      font-size: 12px;
+      line-height: 18px;
+      margin-left: 1.4rem;
+    }
+    .stamped-review-header-starratings {
+      display: flex;
+      align-items: center;
+    }
+  }
+{% endstyle %}
+
+<script>
+  function moveCreatedToStarsMobileOnly() {
+    // Only run on mobile view
+    if (window.innerWidth > 768) return;
+
+    document.querySelectorAll('.stamped-review').forEach((review) => {
+      const created = review.querySelector('.created');
+      const stars = review.querySelector('.stamped-review-header-starratings');
+
+      if (created && stars && !stars.contains(created)) {
+        stars.appendChild(created);
+      }
+    });
+  }
+
+  (function waitForStampedReviews() {
+    const reviews = document.querySelectorAll('.stamped-review');
+
+    if (reviews.length === 0) {
+      // Try again after a short delay
+      setTimeout(waitForStampedReviews, 300);
+      return;
+    }
+
+    reviews.forEach((review) => {
+      const stars = review.querySelector('.stamped-review-header-starratings');
+      const title = review.querySelector('.stamped-review-header-title');
+
+      if (stars && title && stars !== title.previousElementSibling) {
+        title.parentNode.insertBefore(stars, title);
+      }
+    });
+    moveCreatedToStarsMobileOnly();
+  })();
+
+  window.addEventListener('resize', () => {
+    moveCreatedToStarsMobileOnly();
+  });
+</script>
