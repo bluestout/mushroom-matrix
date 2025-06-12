@@ -379,6 +379,44 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "text_with_faqs_GrKthn": {
+      "type": "text-with-faqs",
+      "blocks": {
+        "text_faq_mXj44M": {
+          "type": "text_faq",
+          "settings": {
+            "question": "What are mushrooms good for?",
+            "answer": "Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor."
+          }
+        },
+        "text_faq_jUV4h8": {
+          "type": "text_faq",
+          "settings": {
+            "question": "What are the beneficial Ingredients in mushrooms?",
+            "answer": "Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor."
+          }
+        },
+        "text_faq_XWrBrR": {
+          "type": "text_faq",
+          "settings": {
+            "question": "What is “mycelial biomass”? How much of it is in the powder?",
+            "answer": "Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor."
+          }
+        }
+      },
+      "block_order": [
+        "text_faq_mXj44M",
+        "text_faq_jUV4h8",
+        "text_faq_XWrBrR"
+      ],
+      "name": "Text with FAQs",
+      "settings": {
+        "title": "Have Questions?",
+        "text": "We are here to help!",
+        "button_label": "Read more",
+        "button_url": "shopify://pages/faq"
+      }
     }
   },
   "order": [
@@ -388,6 +426,7 @@
     "image-with-text",
     "image_with_text_MdDMBL",
     "related-products",
-    "1749049680ad1608d5"
+    "1749049680ad1608d5",
+    "text_with_faqs_GrKthn"
   ]
 }

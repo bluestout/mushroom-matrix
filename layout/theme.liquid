@@ -390,7 +390,22 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
+    {% if template.name == 'collection' and collection %}
+      <script>
+        // Store current collection information for breadcrumb persistence
+        document.addEventListener('DOMContentLoaded', function() {
+          let collectionData = {
+            url: {{ collection.url | json }},
+            title: {{ collection.title | json }},
+            handle: {{ collection.handle | json }}
+          };
+
+          localStorage.setItem('lastViewedCollection', JSON.stringify(collectionData));
+        });
+      </script>
+    {% endif %}
     {% render 'rebuy-cart-recommendations' %}
+
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
@@ -404,6 +419,9 @@
       src="https://cdn1.stamped.io/files/widget.min.js"
     ></script>
     <!-- End Stamped -->
-    {% render 'stamped-reviews-customization' %}
+
+    {% if template.name == 'product' and product %}
+      {% render 'stamped-reviews-customization' %}
+    {% endif %}
   </body>
 </html>

@@ -26,6 +26,8 @@ class CartDrawer extends HTMLElement {
   }
 
   open(triggeredBy) {
+    return; // Will open the Rebuy smart cart
+
     if (triggeredBy) this.setActiveElement(triggeredBy);
     const cartDrawerNote = this.querySelector('[id^="Details-"] summary');
     if (cartDrawerNote && !cartDrawerNote.hasAttribute('role')) this.setSummaryAccessibility(cartDrawerNote);

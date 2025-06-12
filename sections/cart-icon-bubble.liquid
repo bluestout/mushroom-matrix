@@ -1,7 +1,23 @@
 {% if cart == empty %}
-  <span class="svg-wrapper">{{ 'icon-cart-empty.svg' | inline_asset_content }}</span>
+  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="25" viewBox="0 0 23 25" fill="none">
+    <path d="M2.37695 15.2969V20.9996C2.37695 22.6564 3.7201 23.9996 5.37695 23.9996H18.0256C19.6825 23.9996 21.0256 22.6564 21.0256 20.9996V15.2969" stroke="black" stroke-width="1.5"/>
+    <mask id="path-2-inside-1_9753_934" fill="white">
+      <rect x="0.512207" y="12.1895" width="22.3784" height="3.72973" rx="1"/>
+    </mask>
+    <rect x="0.512207" y="12.1895" width="22.3784" height="3.72973" rx="1" stroke="black" stroke-width="3" mask="url(#path-2-inside-1_9753_934)"/>
+    <path d="M18.7554 13V8C18.7554 4.13401 15.6214 1 11.7554 1V1C7.88938 1 4.75537 4.13401 4.75537 8V13" stroke="black" stroke-width="1.5"/>
+  </svg>
+  {% comment %} <span class="svg-wrapper">{{ 'icon-cart-empty.svg' | inline_asset_content }}</span> {% endcomment %}
 {% else %}
-  <span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>
+  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="25" viewBox="0 0 23 25" fill="none">
+    <path d="M2.37695 15.2969V20.9996C2.37695 22.6564 3.7201 23.9996 5.37695 23.9996H18.0256C19.6825 23.9996 21.0256 22.6564 21.0256 20.9996V15.2969" stroke="black" stroke-width="1.5"/>
+    <mask id="path-2-inside-1_9753_934" fill="white">
+      <rect x="0.512207" y="12.1895" width="22.3784" height="3.72973" rx="1"/>
+    </mask>
+    <rect x="0.512207" y="12.1895" width="22.3784" height="3.72973" rx="1" stroke="black" stroke-width="3" mask="url(#path-2-inside-1_9753_934)"/>
+    <path d="M18.7554 13V8C18.7554 4.13401 15.6214 1 11.7554 1V1C7.88938 1 4.75537 4.13401 4.75537 8V13" stroke="black" stroke-width="1.5"/>
+  </svg>
+  {% comment %} <span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span> {% endcomment %}
 {% endif %}
 
 <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
