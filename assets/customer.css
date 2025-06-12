@@ -12,7 +12,7 @@
   }
 }
 
-.customer > h1,
+.customer>h1,
 .customer__title {
   margin-top: 0;
 }
@@ -22,7 +22,29 @@
 }
 
 .customer button {
-  margin: 4rem 0 1.5rem;
+  /* margin: 4rem 0 1.5rem; */
+  margin: 2rem 0;
+  width: 100%;
+
+  color: #000;
+  font-family: "TT Norms Pro Expanded";
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 19px;
+  /* 146.154% */
+  text-transform: uppercase;
+
+  border-radius: 4px;
+  background: #5AAD41;
+}
+
+.customer button::before,
+.customer button::after {
+  content: none;
+}
+
+.customer button:hover:after {
+  box-shadow: none;
 }
 
 .customer ul {
@@ -43,6 +65,26 @@
 
 .customer h2.form__message {
   font-size: calc(var(--font-heading-scale) * 1.8rem);
+  color: var(--2, #000);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/body */
+  font-family: "TT Norms Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 26px;
+  /* 162.5% */
+}
+
+.errors li {
+  /* Typography/body */
+  font-family: "TT Norms Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 26px;
+  /* 162.5% */
 }
 
 @media only screen and (min-width: 750px) {
@@ -122,6 +164,7 @@
 }
 
 @media screen and (min-width: 750px) {
+
   .customer th,
   .customer td:first-of-type {
     text-align: left;
@@ -190,6 +233,7 @@
 }
 
 @media screen and (min-width: 750px) {
+
   .customer tfoot tr:first-of-type td,
   .customer tfoot tr:first-of-type th {
     padding-top: 2.4rem;
@@ -201,6 +245,7 @@
 }
 
 @media screen and (min-width: 750px) {
+
   .customer tfoot tr:last-of-type td,
   .customer tfoot tr:last-of-type th {
     padding-bottom: 2.4rem;
@@ -220,6 +265,7 @@
 }
 
 @media screen and (forced-colors: active) {
+
   .customer thead::after,
   .customer tfoot::before {
     background: CanvasText;
@@ -228,6 +274,7 @@
 
 /* mobile table overrides */
 @media screen and (max-width: 749px) {
+
   .customer thead,
   .customer th,
   .customer tfoot td:first-of-type {
@@ -240,13 +287,13 @@
   }
 
   .customer td::before {
-    color: rgba(var(--color-foreground), 0.75);
+    /* color: rgba(var(--color-foreground), 0.75);
     content: attr(data-label);
     font-size: 1.4rem;
     padding-right: 2rem;
     text-transform: uppercase;
     flex-grow: 1;
-    text-align: left;
+    text-align: left; */
   }
 
   .customer td:first-of-type {
@@ -329,10 +376,108 @@
 }
 
 /* Login */
+/* .account-login-content{
+  padding-left: 2rem;
+} */
+
+.customer.login,
+.customer.register {
+  width: 100%;
+  max-width: 100% !important;
+  display: flex;
+  align-items: center;
+  padding: 0 !important;
+  background: #F6F7F8;
+  box-shadow: 0px 10px 12.2px 0px rgba(199, 226, 235, 0.20) inset;
+}
+
+.account-form-content form {
+  padding-left: 5px;
+}
+
+.account-banner-image-wrapper {
+  flex-basis: 50%;
+  width: 50%;
+}
+
+.account-form-content {
+  flex-basis: 50%;
+  width: 50%;
+  padding: 0;
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+.account-image-wrap__desktop {
+  width: 100%;
+}
+
+.account-image-wrap__desktop img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 .login a {
   display: block;
-  margin: 0 auto;
+  margin: 0;
   width: fit-content;
+
+  color: var(--2, #000);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/body */
+  font-family: "TT Norms Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 26px;
+  /* 162.5% */
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+
+  margin-bottom: 1.6rem;
+}
+
+.account_login_link {
+  color: var(--2, #000);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/body */
+  font-family: "TT Norms Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 26px;
+  /* 162.5% */
+
+  text-align: left;
+  display: block;
+  width: 100%;
+}
+
+.account_login_link a {
+  color: var(--2, #000);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/body */
+  font-family: "TT Norms Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 26px;
+  /* 162.5% */
+  display: inline-block;
+}
+
+.customer a:hover {
+  text-decoration-thickness: auto;
 }
 
 .login a[href='#recover'] {
@@ -340,7 +485,7 @@
   margin-right: 0;
 }
 
-.login .field + a {
+.login .field+a {
   margin-top: 1rem;
 }
 
@@ -359,7 +504,7 @@
 }
 
 #recover,
-#recover + div {
+#recover+div {
   display: none;
 }
 
@@ -367,12 +512,12 @@
   display: block;
 }
 
-#recover:target + div {
+#recover:target+div {
   display: block;
 }
 
-#recover:target ~ #login,
-#recover:target ~ #login + div {
+#recover:target~#login,
+#recover:target~#login+div {
   display: none;
 }
 
@@ -386,16 +531,172 @@
 }
 
 .activate button[name='decline'],
-.addresses li > button,
+.addresses li>button,
 .addresses form button[type] {
   background-color: rgba(var(--color-background), var(--alpha-button-background));
   color: rgb(var(--color-link));
 }
 
+.customer #login,
+.customer #recover,
+.customer #register {
+  color: #242833;
+  font-family: Anuphan;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 65px;
+  letter-spacing: -1px;
+  text-transform: capitalize;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.customer .field::before {
+  content: none;
+}
+
+.customer .field::after {
+  content: none;
+}
+
+.customer .field {
+  border-radius: 2px;
+  border: 1px solid var(--Text-Light, #808080);
+  background: #FFF;
+}
+
+.customer .field input:focus {
+  box-shadow: none;
+}
+
+.customer .field label {
+  /* display: none; */
+  color: var(--Test-mid, #282828);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/body */
+  font-family: "TT Norms Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 26px;
+  /* 162.5% */
+}
+
+/* .customer .field input:focus + label{
+  top: 0rem;
+} */
+
+.customer .field input {
+  color: var(--Test-mid, #282828);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/body */
+  font-family: "TT Norms Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 26px;
+  /* 162.5% */
+
+  /* padding: 1rem; */
+}
+
+.customer .field input::placeholder {
+  color: #282828 !important;
+}
+
+.customer .field input:-ms-input-placeholder {
+  color: #282828 !important;
+}
+
+/* Internet Explorer */
+.customer .field input::-ms-input-placeholder {
+  color: #282828 !important;
+}
+
+/* Edge */
+.customer .field input::-webkit-input-placeholder {
+  color: #282828 !important;
+}
+
+/* Chrome, Safari */
+.customer .field input::-moz-placeholder {
+  color: #282828 !important;
+}
+
+/* Firefox */
+
 @media only screen and (min-width: 750px) {
   .activate button[name='decline'] {
     margin-top: inherit;
     margin-left: 1rem;
+  }
+}
+
+.account-recover-content p {
+  text-align: left;
+  margin: 0;
+  color: var(--2, #000);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/body */
+  font-family: "TT Norms Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 26px;
+  /* 162.5% */
+
+  padding-left: 2rem;
+}
+
+@media screen and (max-width: 750px) {
+
+  .customer.login,
+  .customer.register {
+    flex-direction: column;
+  }
+
+  .account-banner-image-wrapper {
+    width: 100%;
+  }
+
+  .account-image-wrap__mobile img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: cover;
+  }
+
+  .account-form-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 3.8rem;
+  }
+
+  .account-login-content {
+    padding: 0;
+  }
+
+  .customer #login,
+  .customer #recover,
+  .customer #register {
+    font-size: 26px;
+    background-size: 35px 35px;
+    padding: 0px;
+    line-height: 56px;
+  }
+
+  .customer form {
+    margin-top: 1.5rem;
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+
+  .account-recover-content p {
+    padding-left: 1.5rem;
   }
 }
 
@@ -415,25 +716,25 @@
 }
 
 @media screen and (min-width: 990px) {
-  :is(.account, .order) > div:nth-of-type(2) {
+  :is(.account, .order)>div:nth-of-type(2) {
     display: flex;
     margin-top: 5rem;
   }
 }
 
 @media screen and (min-width: 990px) {
-  :is(.account, .order) > div:nth-of-type(2) > div:first-of-type {
+  :is(.account, .order)>div:nth-of-type(2)>div:first-of-type {
     flex-grow: 1;
     padding-right: 3.2rem;
   }
 }
 
 @media screen and (min-width: 750px) and (max-width: 989px) {
-  .order > div:nth-of-type(2) > div:last-of-type {
+  .order>div:nth-of-type(2)>div:last-of-type {
     display: flex;
   }
 
-  .order > div:nth-of-type(2) > div:last-of-type div {
+  .order>div:nth-of-type(2)>div:last-of-type div {
     padding-right: 3.2rem;
   }
 }
@@ -458,7 +759,7 @@
   }
 }
 
-.account h1 + a {
+.account h1+a {
   display: inline-flex;
   align-items: center;
 }
@@ -470,6 +771,7 @@
 }
 
 @media screen and (min-width: 750px) {
+
   .account thead th:last-child,
   .account td:last-child {
     text-align: right;
@@ -498,6 +800,7 @@
 }
 
 @media screen and (min-width: 750px) {
+
   .order thead th:nth-last-child(-n + 3),
   .order td:nth-last-child(-n + 3) {
     text-align: right;
@@ -512,6 +815,7 @@
 }
 
 @media screen and (min-width: 750px) {
+
   .order tfoot tr:last-of-type td,
   .order tfoot tr:last-of-type th {
     padding-bottom: 2.4rem;
@@ -519,21 +823,21 @@
 }
 
 .order tfoot tr:last-of-type td:before {
-  font-size: 2.2rem;
+  /* font-size: 2.2rem; */
 }
 
 .order table p,
-.order > div:nth-of-type(2) > div:first-of-type h2,
-.order > div:nth-of-type(2) > div:last-of-type h2 + p {
+.order>div:nth-of-type(2)>div:first-of-type h2,
+.order>div:nth-of-type(2)>div:last-of-type h2+p {
   margin-bottom: 0;
 }
 
-.order > div:nth-of-type(2) > div:first-of-type h2 ~ p {
+.order>div:nth-of-type(2)>div:first-of-type h2~p {
   margin-bottom: 0;
-  font-size: 1.4rem;
+  /* font-size: 1.4rem; */
 }
 
-.order > div:nth-of-type(2) > div:first-of-type h2 ~ p:last-of-type {
+.order>div:nth-of-type(2)>div:first-of-type h2~p:last-of-type {
   margin-bottom: 3rem;
 }
 
@@ -544,7 +848,7 @@
   flex-direction: column;
 }
 
-.order .item-props > span {
+.order .item-props>span {
   word-break: break-all;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
 }
@@ -598,14 +902,14 @@
   line-height: calc(1 + 0.3 / var(--font-body-scale));
 }
 
-.order tbody tr:first-of-type td:first-of-type > div {
+.order tbody tr:first-of-type td:first-of-type>div {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
 @media screen and (min-width: 750px) {
-  .order tbody tr:first-of-type td:first-of-type > div {
+  .order tbody tr:first-of-type td:first-of-type>div {
     align-items: flex-start;
   }
 }
@@ -653,18 +957,18 @@
 }
 
 /* Addresses */
-.addresses li > button {
+.addresses li>button {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
 
-.addresses li > button + button,
-.addresses form button + button {
+.addresses li>button+button,
+.addresses form button+button {
   margin-top: 0rem;
 }
 
 @media screen and (min-width: 750px) {
-  .addresses li > button:first-of-type {
+  .addresses li>button:first-of-type {
     margin-top: 3rem;
   }
 }
@@ -685,7 +989,7 @@ label[for='AddressProvinceNew'] {
   flex-flow: row wrap;
 }
 
-.addresses form > div {
+.addresses form>div {
   width: 100%;
   text-align: left;
 }
@@ -700,11 +1004,11 @@ li[data-address] {
   margin-top: 5rem;
 }
 
-.addresses [aria-expanded='false'] ~ div[id] {
+.addresses [aria-expanded='false']~div[id] {
   display: none;
 }
 
-.addresses [aria-expanded='true'] ~ div[id] {
+.addresses [aria-expanded='true']~div[id] {
   display: block;
 }
 
@@ -712,14 +1016,14 @@ li[data-address] {
   text-align: left;
 }
 
-li[data-address] > h2 {
+li[data-address]>h2 {
   text-align: center;
   font-size: calc(var(--font-heading-scale) * 1.8rem);
   margin-bottom: 0;
 }
 
 @media only screen and (min-width: 750px) {
-  li[data-address] > h2 {
+  li[data-address]>h2 {
     font-size: calc(var(--font-heading-scale) * 2.2rem);
   }
 }
@@ -734,22 +1038,655 @@ li[data-address] > h2 {
 }
 
 @media only screen and (min-width: 750px) {
-  .addresses form > div:nth-of-type(1) {
+  .addresses form>div:nth-of-type(1) {
     margin-right: 2rem;
   }
 
-  .addresses form > div:nth-of-type(2) {
+  .addresses form>div:nth-of-type(2) {
     margin-top: 0;
   }
 
-  .addresses form > div:nth-of-type(1),
-  .addresses form > div:nth-of-type(2) {
+  .addresses form>div:nth-of-type(1),
+  .addresses form>div:nth-of-type(2) {
     box-sizing: border-box;
     flex-basis: calc(50% - 1rem);
   }
 }
 
-.addresses form > div:nth-of-type(7),
-.addresses form > div:nth-of-type(7) + div[id] {
+.addresses form>div:nth-of-type(7),
+.addresses form>div:nth-of-type(7)+div[id] {
   margin-top: 1.5rem;
+}
+
+/* Custom account pages */
+.customer.account.profile,
+.account-orders-section,
+.customer.order {
+  display: flex;
+  background: var(--very-light-bg, #FBF8F4);
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  padding: 3rem 12rem;
+  gap: 7rem;
+}
+
+.account-banner--image-content {
+  padding: 3rem 6rem;
+  background: var(--very-light-bg, #FBF8F4);
+}
+
+.account-banner--image-wrap {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.account-banner--image-wrap img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.account_head {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 15%;
+}
+
+.account_name_hello {
+  margin: 0 !important;
+  padding: 0;
+  border-bottom: 1px dashed #D3B9A9;
+  padding-right: 1rem;
+  margin-bottom: 1.5rem !important;
+  padding-bottom: 1rem;
+  color: var(--2, #284734);
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: TT Norms Pro Expanded;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+a.account_head_item {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 1rem;
+
+  color: var(--2, #284734);
+  text-align: left;
+  font-family: "TT Norms Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  /* 168.75% */
+}
+
+.account_head_item.active {
+  font-weight: 700;
+}
+
+.account_inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  flex-basis: 85%;
+  margin-top: 3rem;
+}
+
+.account_inner_left {
+  flex-basis: 50%;
+  width: 100%;
+
+}
+
+.account_detail.myaccount__order-history {
+  flex-basis: 50%;
+}
+
+.grid__item.account_detail {
+  flex-basis: 100%;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 3rem;
+}
+
+.acnt_h {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  justify-content: space-between;
+}
+
+.acnt_h .h4.account-section-title,
+.account_detail.myaccount__order-history h2,
+.grid__item.account_detail .inner_subscription h2,
+.account-orders-section .acnt_order h2 {
+  color: var(--2, #284734);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/Caption */
+  font-family: "TT Norms Pro Medium";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  /* 150% */
+
+  margin: 0;
+}
+
+.acnt_h .edit-link {
+  margin: 0;
+}
+
+.acnt_h .edit-link a,
+.account_details_subscription_content a.btn {
+  color: var(--2, #284734);
+  text-align: left;
+  font-family: "TT Norms Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  /* 168.75% */
+}
+
+.account_inner {
+  margin-top: 0rem !important;
+}
+
+.account_user_info_content,
+.account_detail_order_content,
+.account_details_subscription_content {
+  border-top: 1px dashed #D3B9A9;
+  border-bottom: 1px dashed #D3B9A9;
+  background: white;
+  padding: 1rem;
+}
+
+.account_detail_order_content {
+  height: 78%;
+  overflow-y: auto;
+}
+
+.account_user_info_content p,
+.account_detail_order_content p {
+  color: var(--2, #284734);
+  text-align: left;
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/Body_M */
+  font-family: "TT Norms Pro";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 20px;
+  /* 133.333% */
+  margin: 1rem 0;
+}
+
+.account_user_info_content strong {
+  color: var(--2, #284734);
+  /* Typography/Heading 4 */
+  font-family: "TT Norms Pro Expanded";
+  font-size: 14px;
+
+  font-weight: 700;
+  line-height: 19px;
+  /* 135.714% */
+  text-transform: uppercase;
+}
+
+.account_details_subscription_content a.btn {
+  border-radius: 4px;
+  border: 2px solid var(--2, #284734);
+  text-decoration: none;
+
+  color: var(--2, #284734);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: "TT Norms Pro Expanded";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  /* 146.154% */
+  text-transform: uppercase;
+
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 750px) {
+  .account-banner--image-content {
+    padding: 0rem;
+  }
+
+  .customer.account.profile,
+  .account-orders-section {
+    padding: 2rem;
+  }
+
+  .account_inner,
+  .account_inner_left,
+  .account_detail.myaccount__order-history {
+    flex-basis: 100%;
+  }
+
+  .account_detail.myaccount__order-history {
+    margin-top: 3rem;
+  }
+}
+
+.account-edit-section {
+  background: var(--very-light-bg, #FBF8F4);
+  padding: 3rem;
+}
+
+.account-edit-section .edit_sec {
+  text-align: center;
+}
+
+.account-edit-section .edit_sec h1 {
+  color: var(--2, #284734);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/Heading 1 */
+  font-family: "TT Norms Pro Expanded";
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 65px;
+  /* 125% */
+  letter-spacing: -1px;
+
+  margin-top: 0;
+}
+
+.account-edit-section .edit_sec p,
+.account-orders-section .acnt_order p {
+  color: var(--2, #284734);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/body */
+  font-family: "TT Norms Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 26px;
+  /* 162.5% */
+}
+
+.account-edit-section .edit_sec p a {
+  color: var(--2, #284734);
+}
+
+@media only screen and (max-width: 750px) {
+  .account-edit-section .edit_sec h1 {
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    /* 250% */
+    letter-spacing: -1px;
+  }
+}
+
+.account-orders-section .acnt_order {
+  width: 100%;
+}
+
+.account-orders-section .acnt_order h2 {
+  margin-bottom: 1rem;
+  font-family: "TT Norms Pro Medium";
+  font-weight: 300;
+
+}
+
+.account-orders-section .acnt_order p {}
+
+.account-orders-section table.order-history {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.order-details {
+  border: none;
+  box-shadow: none;
+}
+
+table.order-history thead,
+table.order-details thead {
+  text-align: left;
+  background: white;
+  border-top: 1px dashed #D3B9A9;
+  border-bottom: 1px dashed #D3B9A9;
+}
+
+table.order-history tr th,
+table.order-details tr th {
+  padding: 2rem;
+
+  color: var(--2, #284734);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/Heading 4_M */
+  font-family: "TT Norms Pro Expanded";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15px;
+  /* 136.364% */
+  text-transform: uppercase;
+  text-align: left !important;
+}
+
+table.order-history tbody tr,
+table.order-details tbody tr {
+  border-bottom: 1px dashed #D3B9A9;
+  border-top: none;
+}
+
+table.order-history tbody tr td,
+table.order-details tbody tr td {
+  padding: 2rem !important;
+
+  color: var(--2, #284734);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/Body_M */
+  font-family: "TT Norms Pro Medium";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 20px;
+  /* 133.333% */
+  text-align: left !important;
+  vertical-align: middle;
+}
+
+table.order-history tbody tr td#RowOrder {
+  padding-left: 0 !important;
+}
+
+table.order-history tbody tr td[data-label="Total"] {
+  text-align: right !important;
+}
+
+table.order-history tbody tr td#RowOrder a {
+  display: inline-flex;
+  padding: 11px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 3px;
+  background: var(--2, #284734);
+  color: var(--3, #F1E7DB);
+  leading-trim: both;
+  text-edge: cap;
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/CTA/Button Regular */
+  font-family: "TT Norms Pro Expanded";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  /* 146.154% */
+  text-transform: uppercase;
+
+  text-decoration: none;
+}
+
+.customer.order .account-order-detail--inner {
+  width: 100%;
+  margin-top: 0;
+}
+
+.customer.order .account-order-detail--wrapper {
+  padding: 0;
+}
+
+.account-order-detail--wrapper>h2 {
+  color: var(--2, #284734);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/Caption */
+  font-family: "TT Norms Pro Medium";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  /* 150% */
+}
+
+.account-order-detail--wrapper>p {
+  color: var(--2, #284734);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/body */
+  font-family: "TT Norms Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 26px;
+  /* 162.5% */
+
+}
+
+table.order-details td .order_product_title,
+table.order-details td[data-label="SKU"] {
+  color: var(--2, #284734);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/Heading 4 */
+  font-family: "TT Norms Pro Expanded";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  /* 135.714% */
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  text-decoration: none;
+}
+
+table.order-details td .order_product_variants {
+
+  color: var(--Text-Light, #808080);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/Label */
+  font-family: "TT Norms Pro";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 18px;
+  /* 138.462% */
+}
+
+table.order-details td[data-label="Total"],
+th#ColumnTotal {
+  text-align: right !important;
+}
+
+table.order-details tfoot tr td {
+  color: var(--2, #284734);
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/Body_M */
+  font-family: "TT Norms Pro";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 20px;
+  /* 133.333% */
+}
+
+table.order-details tfoot tr td[role="rowheader"] {
+  color: var(--2, #284734);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/Heading 4_M */
+  font-family: "TT Norms Pro Expanded";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15px;
+  /* 136.364% */
+  text-transform: uppercase;
+}
+
+table.order-details tfoot tr td[data-label="Total"] {
+  font-size: 15px;
+  font-weight: 600;
+
+}
+
+table.order-details tfoot tr:last-child {
+  background: #fff;
+  border-top: 1px dashed #D3B9A9;
+
+}
+
+table.order-details tfoot tr:last-child td {
+  padding: 2rem;
+}
+
+.order-details-bottom--button {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.order-details-bottom--button a {
+  color: var(--2, #284734);
+  font-feature-settings: 'liga' off, 'clig' off;
+
+  /* Typography/Heading 4 */
+  font-family: "TT Norms Pro Expanded";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 19px;
+  /* 135.714% */
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Responsive Table for Mobile */
+@media (max-width: 768px) {
+  .order-history thead {
+    display: none;
+    /* Hide table headers */
+  }
+
+  .order-history tr {
+    display: block;
+    margin-bottom: 10px;
+    background: #fff;
+    /* border: 1px solid #ddd; */
+    padding: 1rem 0;
+  }
+
+  .order-history td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    /* border-bottom: 1px solid #ddd; */
+    text-align: right;
+  }
+
+  .order-history td:last-child {
+    border-bottom: none;
+  }
+
+  .order-history td::before,
+  .order-details td::before {
+    content: attr(data-label);
+    color: var(--2, #284734);
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/Heading 4_M */
+    font-family: "TT Norms Pro Expanded";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    /* 136.364% */
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .order-history a {
+    display: inline-block;
+    background: #2d3b2f;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  table.order-history tbody tr,
+  table.order-details tbody tr {
+    border-bottom: 1px dashed #D3B9A9;
+    border-top: 1px dashed #D3B9A9;
+  }
+
+  table.order-history tr td:first-child,
+  table.order-details tr td:first-child {
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  table.order-history tbody tr td#RowOrder {
+    padding-left: 2rem !important;
+  }
+
+  table.order-history tbody tr td,
+  table.order-details tbody tr td {
+    padding: 1rem 2rem !important;
+  }
+
+  table.order-details tbody tr {
+    padding: 1rem 0;
+    background: white;
+  }
+
+  .customer.order {
+    padding: 2rem;
+  }
+
+  .account-order-detail--wrapper>h2 {
+    margin-top: 0;
+  }
+
+  .order-details td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    /* border-bottom: 1px solid #ddd; */
+    text-align: right;
+  }
+
+  .order tbody tr:first-of-type td:first-of-type>div {
+    align-items: flex-start;
+  }
+
+  .customer tfoot tr:first-of-type td {
+    padding-top: 2rem;
+  }
+
+  table.order-details tfoot tr td {
+    padding: 1rem 2rem;
+  }
 }

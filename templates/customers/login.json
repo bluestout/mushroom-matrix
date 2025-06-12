@@ -11,7 +11,13 @@
   "sections": {
     "main": {
       "type": "main-login",
-      "settings": {}
+      "settings": {
+        "image": "shopify://shop_images/account-page-desktop-image_jpg.jpg",
+        "mobile_image": "shopify://shop_images/account-page-mobile-image.jpg",
+        "enable_shop_login_button": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [

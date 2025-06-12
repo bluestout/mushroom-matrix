@@ -11,7 +11,12 @@
   "sections": {
     "main": {
       "type": "main-register",
-      "settings": {}
+      "settings": {
+        "image": "shopify://shop_images/account-page-desktop-image_jpg.jpg",
+        "mobile_image": "shopify://shop_images/account-page-mobile-image.jpg",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
