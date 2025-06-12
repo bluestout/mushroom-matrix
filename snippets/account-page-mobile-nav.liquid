@@ -1,0 +1,240 @@
+{% liquid
+  if nav_title == blank
+    assign nav_title = 'Account'
+  endif
+%}
+
+<div class="account-page-navigation">
+  <button
+    class="account-nav__trigger"
+    aria-haspopup="true"
+    aria-expanded="false"
+    aria-controls="account-nav-menu"
+  >
+    {{ nav_title }}
+
+    <svg
+      class="account-nav__icon"
+      xmlns="http://www.w3.org/2000/svg"
+      width="17"
+      height="10"
+      viewBox="0 0 17 10"
+      fill="none"
+    >
+      <path
+        d="M1 1L8.27222 8L15.5444 1"
+        stroke="white"
+        stroke-width="2" />
+    </svg>
+  </button>
+
+  <div
+    class="account-nav__menu"
+    id="account-nav-menu"
+    role="menu"
+    hidden
+  >
+    <a
+      href="{{ routes.account_url }}"
+      class="account-nav__link"
+      role="menuitem"
+      >Account</a
+    >
+    <a
+      href="{{ routes.account_url | append: '?view=orders' }}"
+      class="account-nav__link"
+      role="menuitem"
+      >Orders</a
+    >
+    {% comment %}
+      <a
+        href="{{ routes.account_url | append: '?view=details' }}"
+        class="account-nav__link"
+      role="menuitem">Account details</a>
+    {% endcomment %}
+    {% comment %}
+      <a
+      href="#"
+      class="account-nav__link"
+      role="menuitem">Wishlist</a>
+    {% endcomment %}
+    <a
+      href="{{ routes.account_logout_url }}"
+      class="account-nav__link"
+      role="menuitem"
+      >Log out</a
+    >
+  </div>
+</div>
+
+<style>
+  .account-page-navigation {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  @media screen and (min-width: 1024px) {
+    .account-page-navigation {
+      display: none;
+    }
+  }
+
+  .account-nav__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background: #242833;
+    cursor: pointer;
+    border: none;
+  }
+
+  .account-nav__trigger,
+  .account-nav__link {
+    color: var(--4, #fff);
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/Heading 4 */
+    font-family: 'TT Norms Pro Expanded';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px; /* 135.714% */
+    text-transform: uppercase;
+
+    padding: 1.5rem 2rem;
+  }
+
+  .account-nav__icon {
+    transition: transform 0.2s ease;
+  }
+
+  .account-nav__trigger[aria-expanded='true'] .account-nav__icon {
+    transform: rotate(180deg);
+  }
+
+  .account-nav__menu {
+    position: absolute;
+    top: 99%;
+    right: 0;
+    min-width: 200px;
+    width: 100%;
+    background: #000;
+    z-index: 100;
+  }
+
+  .account-nav__menu:not([hidden]) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .account-nav__link {
+    padding: 1rem 2rem;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    background: #242833;
+  }
+  .account-nav__link--current {
+    display: none;
+  }
+
+  .account-nav__link:hover {
+    background-color: #f5f5f5;
+  }
+
+  /* Focus states for accessibility */
+  .account-nav__trigger:focus-visible,
+  .account-nav__link:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 1px;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const trigger = document.querySelector('.account-nav__trigger');
+    const menu = document.querySelector('.account-nav__menu');
+    const links = menu.querySelectorAll('.account-nav__link');
+    const pageTitle = document.getElementById('account-page-title');
+
+    // Function to update button text
+    const updateButtonText = (text) => {
+      const icon = trigger.querySelector('.account-nav__icon');
+      trigger.textContent = text;
+      trigger.appendChild(icon);
+    };
+
+    // Function to set initial button text based on page title
+    const setInitialButtonText = () => {
+      if (pageTitle && pageTitle.textContent) {
+        const matchingLink = Array.from(links).find((link) => {
+          const linkText = link.textContent.trim();
+          const titleText = pageTitle.textContent.trim();
+          if (linkText === titleText) {
+            link.classList.add('account-nav__link--current');
+            return true;
+          }
+          return false;
+        });
+
+        if (matchingLink) {
+          updateButtonText(matchingLink.textContent);
+        }
+      }
+    };
+
+    // Toggle menu
+    trigger.addEventListener('click', (e) => {
+      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+      trigger.setAttribute('aria-expanded', !isExpanded);
+      menu.hidden = isExpanded;
+    });
+
+    links.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        updateButtonText(link.textContent);
+        trigger.setAttribute('aria-expanded', 'false');
+        menu.hidden = true;
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!trigger.contains(e.target) && !menu.contains(e.target)) {
+        trigger.setAttribute('aria-expanded', 'false');
+        menu.hidden = true;
+      }
+    });
+
+    // Handle keyboard navigation
+    menu.addEventListener('keydown', (e) => {
+      const items = Array.from(links);
+      const currentIndex = items.indexOf(document.activeElement);
+
+      switch (e.key) {
+        case 'ArrowDown':
+          e.preventDefault();
+          if (currentIndex < items.length - 1) {
+            items[currentIndex + 1].focus();
+          }
+          break;
+        case 'ArrowUp':
+          e.preventDefault();
+          if (currentIndex > 0) {
+            items[currentIndex - 1].focus();
+          }
+          break;
+        case 'Escape':
+          trigger.setAttribute('aria-expanded', 'false');
+          menu.hidden = true;
+          trigger.focus();
+          break;
+      }
+    });
+
+    // Set initial button text on page load
+    setInitialButtonText();
+  });
+</script>

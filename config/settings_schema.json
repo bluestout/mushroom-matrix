@@ -8,6 +8,21 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
+    "name": "Account",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "account_banner_image",
+        "label": "Account banner image"
+      },
+      {
+        "type": "image_picker",
+        "id": "account_banner_mobile_image",
+        "label": "Account banner mobile image"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {

@@ -9,6 +9,8 @@
  */
 {
   "current": {
+    "account_banner_image": "shopify://shop_images/account-profile-desktop-image.jpg",
+    "account_banner_mobile_image": "shopify://shop_images/account-profile-mobile-image_jpg.jpg",
     "logo": "shopify://shop_images/logo-header.jpg",
     "logo_width": 300,
     "favicon": "shopify://shop_images/favicon_4acba398-a5a8-4b09-beff-a7a838354c4e.png",

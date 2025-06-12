@@ -1,0 +1,141 @@
+<p class="rtxn_customer_portal_login" data-customer-id="{% if customer %} {{customer.id}}{% endif %}">
+  <a class="rtxn_manage_subscriptions_btn" href="#">{{ title | default: 'Manage Subscriptions' }}</a>
+</p>
+
+<style>
+  .rtxn_customer_portal_login {
+    margin: 0;
+  }
+  a.rtxn_manage_subscriptions_btn {
+    display: inline-flex;
+    padding: 12px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    border: 2px solid var(--2, #284734);
+    color: var(--2, #284734);
+    font-family: 'TT Norms Pro Expanded';
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19px; /* 146.154% */
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+</style>
+
+<script>
+    function loginRetextionCustomerPortal(event) {
+      event.preventDefault(); // Prevent default behavior of the link
+  
+      const appName = "retextion";
+      const customerId = document.querySelector('.rtxn_customer_portal_login')?.getAttribute('data-customer-id') || null;
+
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  
+      if (customerId) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/apps/" + appName + "/login", true);
+        xhr.setRequestHeader("Accept", "application/json; charset=utf-8");
+        xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+  
+        xhr.send(JSON.stringify({ customerId }));
+        xhr.onloadend = function(response) {
+          if (response.target.status === 200) {
+            const data = JSON.parse(xhr.responseText);
+            if (data.token) {
+              const oneHour = 60 * 60 * 1000;
+              localStorage.setItem("customer-portal-token", data.token);
+              localStorage.setItem("customer-portal-token-expiration", new Date().getTime() + oneHour);
+              
+              // Open in a new tab
+              {% comment %} window.open("/apps/" + appName + "/#/shop/subscriptions", "_blank"); {% endcomment %}
+              const targetUrl = `/apps/${appName}/#/shop/subscriptions`;
+
+              // Open in new tab (desktop) or same tab (mobile)
+              if (isMobile) {
+                window.location.href = targetUrl;
+              } else {
+                window.open(targetUrl, "_blank");
+              }
+            }
+          }
+        };
+      } else {
+        {% comment %} window.open("/apps/" + appName + "/#/login"); {% endcomment %}
+        const loginUrl = `/apps/${appName}/#/login`;
+        if (isMobile) {
+          window.location.href = loginUrl;
+        } else {
+          window.open(loginUrl, "_blank");
+        }
+
+      }
+    }
+  
+    function checkShowCustomerPortalStatus() {
+      {% comment %} if (localStorage.getItem("customer-portal-token")) { {% endcomment %}
+        document.querySelectorAll('.rtxn_customer_portal_login').forEach((login) => login.style.display = "block");
+        document.querySelectorAll('.rtxn_manage_subscriptions_btn').forEach((btn) => {
+          btn.addEventListener("click", loginRetextionCustomerPortal);
+        });
+      {% comment %} } {% endcomment %}
+    }
+  
+    document.addEventListener('DOMContentLoaded', function() {
+      checkShowCustomerPortalStatus();
+    });
+  
+    {% comment %} window.addEventListener("load", loginRetextionCustomerPortal); {% endcomment %}
+</script>
+
+{% comment %}
+  <script>
+    function loginRetextionCustomerPortal() {
+      const appName = "retextion";
+      const customerId = {% if customer.id %}
+        {{ customer.id }}
+      {% else %}
+        null
+      {% endif %};
+      if (customerId) { // Construct an HTTP request
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/apps/" + appName + "/login", true);
+        xhr.setRequestHeader("Accept", "application/json; charset=utf-8");
+        xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+
+  // Send the collected data as JSON
+        const data = {
+          customerId
+        };
+        xhr.send(JSON.stringify(data));
+        xhr.onloadend = function(response) {
+          if (response.target.status === 200) {
+            const data = JSON.parse(xhr.responseText);
+            if (data.token) {
+              const oneHour = 60 * 60 * 1000;
+              localStorage
+                .setItem('customer-portal-token', data.token)
+                localStorage
+                .setItem('customer-portal-token-expiration', new Date().getTime() + oneHour)
+                window
+                .location
+                .replace("/apps/" + appName + "/#/shop/subscriptions");
+            }
+          }
+        };
+      } else {
+        window.location.replace("/apps/" + appName + "/#/login");
+      }
+      window.addEventListener("load", loginRetextionCustomerPortal);
+    }
+    function checkShowCustomerPortalStatus() {
+      document.querySelectorAll('.rtxn_customer_portal_login').forEach((login) => login.style.display = "block");
+      document.querySelectorAll('.rtxn_manage_subscriptions_btn').forEach((btn) => btn.addEventListener("click", loginRetextionCustomerPortal));
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      checkShowCustomerPortalStatus();
+    })
+  </script>
+{% endcomment %}

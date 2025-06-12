@@ -60,7 +60,7 @@
 
 .customer strong {
   font-weight: normal;
-  color: rgb(var(--color-foreground));
+  color: #000;
 }
 
 .customer h2.form__message {
@@ -127,7 +127,7 @@
 }
 
 .customer tbody {
-  color: rgb(var(--color-foreground));
+  color: #000;
 }
 
 .customer th,
@@ -1063,7 +1063,7 @@ li[data-address]>h2 {
 .account-orders-section,
 .customer.order {
   display: flex;
-  background: var(--very-light-bg, #FBF8F4);
+  background: #F6F7F8;
   margin: 0;
   width: 100%;
   max-width: 100%;
@@ -1073,7 +1073,7 @@ li[data-address]>h2 {
 
 .account-banner--image-content {
   padding: 3rem 6rem;
-  background: var(--very-light-bg, #FBF8F4);
+  background: #F6F7F8;
 }
 
 .account-banner--image-wrap {
@@ -1097,11 +1097,11 @@ li[data-address]>h2 {
 .account_name_hello {
   margin: 0 !important;
   padding: 0;
-  border-bottom: 1px dashed #D3B9A9;
+  /* border-bottom: 1px dashed #D3B9A9; */
   padding-right: 1rem;
   margin-bottom: 1.5rem !important;
   padding-bottom: 1rem;
-  color: var(--2, #284734);
+  color: var(--Text-black, #000);
   font-feature-settings: "liga" off, "clig" off;
   font-family: TT Norms Pro Expanded;
   font-size: 14px !important;
@@ -1116,7 +1116,7 @@ a.account_head_item {
   text-decoration: none;
   margin-bottom: 1rem;
 
-  color: var(--2, #284734);
+  color: var(--Text-black, #000);
   text-align: left;
   font-family: "TT Norms Pro";
   font-size: 16px;
@@ -1167,7 +1167,7 @@ a.account_head_item {
 .account_detail.myaccount__order-history h2,
 .grid__item.account_detail .inner_subscription h2,
 .account-orders-section .acnt_order h2 {
-  color: var(--2, #284734);
+  color: var(--Text-black, #000);
   font-feature-settings: 'liga' off, 'clig' off;
 
   /* Typography/Caption */
@@ -1187,7 +1187,7 @@ a.account_head_item {
 
 .acnt_h .edit-link a,
 .account_details_subscription_content a.btn {
-  color: var(--2, #284734);
+  color: var(--Text-black, #000);
   text-align: left;
   font-family: "TT Norms Pro";
   font-size: 16px;
@@ -1204,8 +1204,8 @@ a.account_head_item {
 .account_user_info_content,
 .account_detail_order_content,
 .account_details_subscription_content {
-  border-top: 1px dashed #D3B9A9;
-  border-bottom: 1px dashed #D3B9A9;
+  /* border-top: 1px dashed #D3B9A9;
+  border-bottom: 1px dashed #D3B9A9; */
   background: white;
   padding: 1rem;
 }
@@ -1217,7 +1217,7 @@ a.account_head_item {
 
 .account_user_info_content p,
 .account_detail_order_content p {
-  color: var(--2, #284734);
+  color: var(--Text-black, #000);
   text-align: left;
   font-feature-settings: 'liga' off, 'clig' off;
 
@@ -1232,7 +1232,7 @@ a.account_head_item {
 }
 
 .account_user_info_content strong {
-  color: var(--2, #284734);
+  color: var(--Text-black, #000);
   /* Typography/Heading 4 */
   font-family: "TT Norms Pro Expanded";
   font-size: 14px;
@@ -1245,10 +1245,10 @@ a.account_head_item {
 
 .account_details_subscription_content a.btn {
   border-radius: 4px;
-  border: 2px solid var(--2, #284734);
+  border: 2px solid var(--2, #000);
   text-decoration: none;
 
-  color: var(--2, #284734);
+  color: var(--Text-black, #000);
   font-feature-settings: 'liga' off, 'clig' off;
   font-family: "TT Norms Pro Expanded";
   font-size: 13px;
@@ -1283,7 +1283,7 @@ a.account_head_item {
 }
 
 .account-edit-section {
-  background: var(--very-light-bg, #FBF8F4);
+  background: #F6F7F8;
   padding: 3rem;
 }
 
@@ -1292,7 +1292,7 @@ a.account_head_item {
 }
 
 .account-edit-section .edit_sec h1 {
-  color: var(--2, #284734);
+  color: var(--Text-black, #000);
   font-feature-settings: 'liga' off, 'clig' off;
 
   /* Typography/Heading 1 */
@@ -1309,7 +1309,7 @@ a.account_head_item {
 
 .account-edit-section .edit_sec p,
 .account-orders-section .acnt_order p {
-  color: var(--2, #284734);
+  color: var(--Text-black, #000);
   font-feature-settings: 'liga' off, 'clig' off;
 
   /* Typography/body */
@@ -1322,7 +1322,7 @@ a.account_head_item {
 }
 
 .account-edit-section .edit_sec p a {
-  color: var(--2, #284734);
+  color: var(--Text-black, #000);
 }
 
 @media only screen and (max-width: 750px) {
@@ -1364,15 +1364,15 @@ table.order-history thead,
 table.order-details thead {
   text-align: left;
   background: white;
-  border-top: 1px dashed #D3B9A9;
-  border-bottom: 1px dashed #D3B9A9;
+  /* border-top: 1px dashed #D3B9A9;
+  border-bottom: 1px dashed #D3B9A9; */
 }
 
 table.order-history tr th,
 table.order-details tr th {
   padding: 2rem;
 
-  color: var(--2, #284734);
+  color: var(--Text-black, #000);
   font-feature-settings: 'liga' off, 'clig' off;
 
   /* Typography/Heading 4_M */
@@ -1388,7 +1388,7 @@ table.order-details tr th {
 
 table.order-history tbody tr,
 table.order-details tbody tr {
-  border-bottom: 1px dashed #D3B9A9;
+  /* border-bottom: 1px dashed #D3B9A9; */
   border-top: none;
 }
 
@@ -1396,7 +1396,7 @@ table.order-history tbody tr td,
 table.order-details tbody tr td {
   padding: 2rem !important;
 
-  color: var(--2, #284734);
+  color: var(--Text-black, #000);
   font-feature-settings: 'liga' off, 'clig' off;
 
   /* Typography/Body_M */
@@ -1426,7 +1426,7 @@ table.order-history tbody tr td#RowOrder a {
   gap: 10px;
 
   border-radius: 3px;
-  background: var(--2, #284734);
+  background: var(--2, #000);
   color: var(--3, #F1E7DB);
   leading-trim: both;
   text-edge: cap;
@@ -1454,7 +1454,7 @@ table.order-history tbody tr td#RowOrder a {
 }
 
 .account-order-detail--wrapper>h2 {
-  color: var(--2, #284734);
+  color: var(--Text-black, #000);
   font-feature-settings: 'liga' off, 'clig' off;
 
   /* Typography/Caption */
@@ -1467,7 +1467,7 @@ table.order-history tbody tr td#RowOrder a {
 }
 
 .account-order-detail--wrapper>p {
-  color: var(--2, #284734);
+  color: var(--Text-black, #000);
   font-feature-settings: 'liga' off, 'clig' off;
 
   /* Typography/body */
@@ -1482,7 +1482,7 @@ table.order-history tbody tr td#RowOrder a {
 
 table.order-details td .order_product_title,
 table.order-details td[data-label="SKU"] {
-  color: var(--2, #284734);
+  color: var(--Text-black, #000);
   font-feature-settings: 'liga' off, 'clig' off;
 
   /* Typography/Heading 4 */
@@ -1517,7 +1517,7 @@ th#ColumnTotal {
 }
 
 table.order-details tfoot tr td {
-  color: var(--2, #284734);
+  color: var(--Text-black, #000);
   text-align: center;
   font-feature-settings: 'liga' off, 'clig' off;
 
@@ -1531,7 +1531,7 @@ table.order-details tfoot tr td {
 }
 
 table.order-details tfoot tr td[role="rowheader"] {
-  color: var(--2, #284734);
+  color: var(--Text-black, #000);
   font-feature-settings: 'liga' off, 'clig' off;
 
   /* Typography/Heading 4_M */
@@ -1552,7 +1552,7 @@ table.order-details tfoot tr td[data-label="Total"] {
 
 table.order-details tfoot tr:last-child {
   background: #fff;
-  border-top: 1px dashed #D3B9A9;
+  /* border-top: 1px dashed #D3B9A9; */
 
 }
 
@@ -1568,7 +1568,7 @@ table.order-details tfoot tr:last-child td {
 }
 
 .order-details-bottom--button a {
-  color: var(--2, #284734);
+  color: var(--Text-black, #000);
   font-feature-settings: 'liga' off, 'clig' off;
 
   /* Typography/Heading 4 */
@@ -1612,7 +1612,7 @@ table.order-details tfoot tr:last-child td {
   .order-history td::before,
   .order-details td::before {
     content: attr(data-label);
-    color: var(--2, #284734);
+    color: var(--Text-black, #000);
     font-feature-settings: 'liga' off, 'clig' off;
 
     /* Typography/Heading 4_M */
@@ -1638,8 +1638,8 @@ table.order-details tfoot tr:last-child td {
 
   table.order-history tbody tr,
   table.order-details tbody tr {
-    border-bottom: 1px dashed #D3B9A9;
-    border-top: 1px dashed #D3B9A9;
+    /* border-bottom: 1px dashed #D3B9A9;
+    border-top: 1px dashed #D3B9A9; */
   }
 
   table.order-history tr td:first-child,

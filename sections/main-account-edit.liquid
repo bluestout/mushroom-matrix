@@ -1,0 +1,37 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+<div class="account-banner--image-content">
+  {% if settings.account_banner_image %}
+    <div class="account-banner--image-wrap small-hide">
+      {{
+        settings.account_banner_image
+        | image_url: width: master
+        | image_tag: class: 'account-banner--image', format: 'jpg', preload: true
+      }}
+    </div>
+  {% endif %}
+  {% if settings.account_banner_mobile_image %}
+    <div class="account-banner--image-wrap large-up-hide medium-hide">
+      {{
+        settings.account_banner_mobile_image
+        | image_url: width: master
+        | image_tag: class: 'account-banner--mobile-image', format: 'jpg', preload: true
+      }}
+    </div>
+  {% endif %}
+</div>
+
+<div class="account-edit-section page-width text-center">
+  <div class="edit_sec">
+    <h1>Update Account Details</h1>
+    <p class="">To change your account email address or name, please <a href="/pages/contact">contact us here</a></p>
+    <p class=""><a href="/account/login#recover">Reset your password here</a></p>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Account edit",
+  "settings": []
+}
+{% endschema %}

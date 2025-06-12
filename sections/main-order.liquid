@@ -14,14 +14,42 @@
   }
 {%- endstyle -%}
 
+<div class="account-banner--image-content">
+  {% if settings.account_banner_image %}
+    <div class="account-banner--image-wrap small-hide">
+      {{
+        settings.account_banner_image
+        | image_url: width: master
+        | image_tag: class: 'account-banner--image', format: 'jpg', preload: true
+      }}
+    </div>
+  {% endif %}
+  {% if settings.account_banner_mobile_image %}
+    <div class="account-banner--image-wrap large-up-hide medium-hide">
+      {{
+        settings.account_banner_mobile_image
+        | image_url: width: master
+        | image_tag: class: 'account-banner--mobile-image', format: 'jpg', preload: true
+      }}
+    </div>
+  {% endif %}
+</div>
+
+<div>
+  {% render 'account-page-mobile-nav', nav_title: 'Orders' %}
+</div>
+
 <div class="customer order section-{{ section.id }}-padding">
-  <div>
-    <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>
-    <a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a>
+  <div class="account_head small-hide">
+    {% comment %} <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1> {% endcomment %}
+    <p class="account_name_hello">Hello {{ customer.first_name }}!</p>
+    <a href="{{ routes.account_url }}" class="account_head_item "> Account </a>
+    <a href="/account?view=orders" class="account_head_item active"> Orders </a>
+    <a href="{{ routes.account_logout_url }}" class="account_head_item"> Log out </a>
   </div>
 
-  <div>
-    <div>
+  <div class="account-order-detail--inner">
+    <div class="account-order-detail--wrapper">
       <h2>{{ 'customer.order.title' | t: name: order.name }}</h2>
       {%- assign order_date = order.created_at | time_tag: format: 'date_at_time' -%}
       <p>{{ 'customer.order.date_html' | t: date: order_date }}</p>
@@ -55,10 +83,18 @@
                 data-label="{{ 'customer.order.product' | t }}"
               >
                 <div>
+                  {% assign product_title = line_item.title | split: ' - ' | first %}
+                  {% assign product_variants = line_item.title | split: ' - ' | last %}
                   {%- if line_item.url != blank -%}
-                    <a href="{{ line_item.url }}">{{ line_item.title | escape }}</a>
+                    <a href="{{ line_item.url }}" class="order_product_title">{{ product_title | escape }}</a>
+                    {% if product_variants %}
+                      <p class="order_product_variants">{{ product_variants }}</p>
+                    {% endif %}
                   {%- else -%}
-                    <p>{{ line_item.title | escape }}</p>
+                    <p class="order_product_title">{{ product_title | escape }}</p>
+                    {% if product_variants %}
+                      <p class="order_product_variants">{{ product_variants }}</p>
+                    {% endif %}
                   {%- endif -%}
                   {%- assign property_size = line_item.properties | size -%}
                   {%- unless line_item.selling_plan_allocation == null and property_size == 0 -%}
@@ -317,8 +353,14 @@
           </tr>
         </tfoot>
       </table>
+      <div class="order-details-bottom--button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="37" height="12" viewBox="0 0 37 12" fill="none">
+          <path d="M0.469669 5.46967C0.176777 5.76256 0.176777 6.23743 0.469669 6.53033L5.24264 11.3033C5.53553 11.5962 6.01041 11.5962 6.3033 11.3033C6.59619 11.0104 6.59619 10.5355 6.3033 10.2426L2.06066 6L6.3033 1.75736C6.59619 1.46446 6.59619 0.98959 6.3033 0.696696C6.01041 0.403803 5.53553 0.403803 5.24264 0.696696L0.469669 5.46967ZM37 6L37 5.25L1 5.25L1 6L1 6.75L37 6.75L37 6Z" fill="black"/>
+        </svg>
+        <a href="/account?view=orders">GO BACK</a>
+      </div>
     </div>
-    <div>
+    <div style="display:none;">
       <div>
         <h2>{{ 'customer.order.billing_address' | t }}</h2>
         <p>
