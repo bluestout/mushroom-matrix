@@ -1,0 +1,170 @@
+<style>
+  recharge-subscription-widget {
+    max-width: 100% !important;
+  }
+</style>
+
+<script>
+  console.log('Recharge widget customization........');
+  document.addEventListener('DOMContentLoaded', function () {
+    // Initialize the global flag
+    window.isRechargeWidgetLoaded = false;
+
+    function waitForRechargeWidget() {
+      const widgetSelector = 'recharge-subscription-widget';
+      console.log('Waiting for Recharge Subscription Widget to load...');
+
+      // Use setInterval to check for the widget every 300ms
+      const intervalId = setInterval(() => {
+        const widget = document.querySelector(widgetSelector);
+        if (widget && widget.shadowRoot) {
+          const isLoaded = widget.shadowRoot.querySelector('.rc-selection__root'); // Replace with actual class inside
+          if (isLoaded) {
+            console.log('Recharge Subscription Widget is fully rendered!');
+
+            // Set the global flag to true
+            window.isRechargeWidgetLoaded = true;
+
+            // Call functions to move the badge, apply styles, and add click event
+            moveBadge(widget.shadowRoot);
+            applyCustomStyles(widget.shadowRoot);
+            applySellingPlansStyles(widget.shadowRoot);
+            addClickCallback(widget.shadowRoot);
+
+            // Stop the interval once the widget is detected
+            clearInterval(intervalId);
+          }
+        }
+      }, 300);
+    }
+
+    // Function to move the badge
+    function moveBadge(shadowRoot) {
+      const badge = shadowRoot.querySelector('.rc-purchase-option__badge');
+      const target = shadowRoot.querySelector('.rc-purchase-option__subscription .rc-purchase-option__selector');
+
+      if (badge && target) {
+        target.appendChild(badge);
+        console.log('Badge moved successfully!');
+      }
+    }
+
+    // Function to apply custom styles
+    function applyCustomStyles(shadowRoot) {
+      const subscriptionWidgetStyles = `
+        label.rc-purchase-option__label {
+          display: flex !important;
+          flex-direction: row !important;
+          justify-content: space-between !important;
+          align-items: flex-start !important;
+          padding: 16px 21px 13px 15px!important;
+        }
+        .rc-purchase-option__sub-container {
+          padding: 10px 16px !important;
+          border-top: 1px solid rgba(181, 199, 205, 0.30);
+        }
+        .rc-purchase-option__badge {
+          position: inherit !important;
+        }
+        .rc-purchase-option:not(:last-child) {
+          margin-bottom: 1rem !important;
+        }
+        .rc-purchase-option {
+          border: none !important;
+          border-radius: 4px !important;
+          background: #FFF !important;
+        }
+        .rc-purchase-option__selector {
+          font-size: 16px !important;
+          font-weight: 450 !important;
+          line-height: 26px !important;
+        }
+        .rc-purchase-option__badge {
+          font-size: 15px !important;
+          font-weight: 600 !important;
+          line-height: 26px !important;
+          margin-left: 0.5rem !important;
+          padding: 0.1rem 0.5rem !important;
+          border-radius: 3px !important;
+          background: rgba(32, 154, 202, 0.30) !important;
+        }
+        .rc-price {
+          text-align: right !important;
+          font-size: 14px !important;
+          font-weight: 500 !important;
+          line-height: 14px !important;
+          letter-spacing: 0.5px !important;
+        }
+      `;
+
+      const styleElement = document.createElement('style');
+      styleElement.textContent = subscriptionWidgetStyles;
+      shadowRoot.appendChild(styleElement);
+      console.log('Custom styles applied successfully!');
+    }
+
+    // Function to apply styles to rc-selling-plans shadowRoot
+    function applySellingPlansStyles(shadowRoot) {
+      const sellingPlans = shadowRoot.querySelector('rc-selling-plans');
+      if (sellingPlans && sellingPlans.shadowRoot) {
+        const sellingPlansStyles = `
+          .rc-plans-dropdown {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+          }
+          .rc-plans-dropdown .rc-plans__label + div {
+            width: 70% !important;
+          }
+          .rc-plans__label {
+            font-family: "TT Norms Pro Expanded" !important;
+            font-size: 11px !important;
+            font-weight: 700 !important;
+            line-height: 15px !important;
+            text-transform: uppercase !important;
+          }
+          .rc-plans-dropdown__select {
+            border-radius: 2px !important;
+            border: 1px solid #282828 !important;
+            background: #FFF !important;
+
+            font-family: "TT Norms Pro" !important;
+            font-size: 14px !important;
+            font-weight: 500 !important;
+            line-height: 14px !important;
+            letter-spacing: 0.5px !important;
+            text-transform: capitalize !important;
+          }
+        `;
+
+        const styleElement = document.createElement('style');
+        styleElement.textContent = sellingPlansStyles;
+        sellingPlans.shadowRoot.appendChild(styleElement);
+        console.log('Custom styles applied to rc-selling-plans successfully!');
+      }
+    }
+
+    // Function to add a click callback to rc-purchase-option__label
+    function addClickCallback(shadowRoot) {
+      const labels = shadowRoot.querySelectorAll('.rc-purchase-option__label');
+      labels.forEach((label) => {
+        label.addEventListener('click', function () {
+          console.log('Label clicked:', label.textContent.trim());
+          // Add your custom logic here
+          // Call applySellingPlansStyles after 0.5 seconds
+          setTimeout(() => {
+            applySellingPlansStyles(shadowRoot);
+          }, 100);
+        });
+      });
+      console.log('Click event listeners added to labels!');
+    }
+
+    // Call the function to start monitoring
+    try {
+      waitForRechargeWidget();
+    } catch (error) {
+      console.error('Error initializing Recharge widget:', error);
+    }
+  });
+</script>
