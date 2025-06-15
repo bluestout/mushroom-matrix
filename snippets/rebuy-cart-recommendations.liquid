@@ -1,4 +1,58 @@
 {% style %}
+  /* Empty cart customization */
+  .rebuy-cart__flyout-empty-cart a {
+    display: flex;
+    width: 100%;
+    height: 43px;
+    padding: 12px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #000;
+    position: relative;
+    z-index: 1;
+
+    color: var(--4, #fff);
+    font-family: 'TT Norms Pro';
+    font-size: 13px !important;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px; /* 146.154% */
+    text-transform: uppercase;
+
+    text-decoration: none;
+  }
+  .rebuy-cart__flyout-empty-cart a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 4px;
+    padding: 2px;
+    background: linear-gradient(90deg, #209aca, #5aad41, #e79c43);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+  }
+
+  .rebuy-button.rebuy-cart__checkout-button > span:last-of-type {
+    margin-left: 0;
+    gap: 2rem;
+  }
+  .rebuy-cart__checkout-subtotal-label {
+    display: flex;
+  }
+  .rebuy-button.rebuy-cart__checkout-button > span:last-of-type .rebuy-cart__flyout-subtotal-final-amount {
+    color: #fff !important;
+  }
+  .rebuy-button.rebuy-cart__checkout-button > span:last-of-type .rebuy-cart__flyout-subtotal-compare-amount {
+    font-weight: 450;
+  }
 {% endstyle %}
 
 {% comment %}REBUY CART RECOMMENDATIONS{% endcomment %}
