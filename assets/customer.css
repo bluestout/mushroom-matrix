@@ -581,6 +581,7 @@
   font-weight: 450;
   line-height: 26px;
   /* 162.5% */
+  text-transform: capitalize;
 }
 
 /* .customer .field input:focus + label{
@@ -648,7 +649,7 @@
   line-height: 26px;
   /* 162.5% */
 
-  padding-left: 2rem;
+  padding-left: 0.5rem;
 }
 
 @media screen and (max-width: 750px) {
@@ -687,6 +688,8 @@
     background-size: 35px 35px;
     padding: 0px;
     line-height: 56px;
+    outline: none;
+
   }
 
   .customer form {
@@ -1580,6 +1583,10 @@ table.order-details tfoot tr:last-child td {
   /* 135.714% */
   text-transform: uppercase;
   text-decoration: none;
+}
+
+#rc_login {
+  display: none !important;
 }
 
 /* Responsive Table for Mobile */
