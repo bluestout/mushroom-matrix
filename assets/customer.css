@@ -699,7 +699,7 @@
   }
 
   .account-recover-content p {
-    padding-left: 1.5rem;
+    padding-left: 0.1rem;
   }
 }
 
@@ -1112,6 +1112,7 @@ li[data-address]>h2 {
   font-weight: 700;
   line-height: 19px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 a.account_head_item {
@@ -1179,7 +1180,7 @@ a.account_head_item {
   font-style: normal;
   font-weight: 500;
   line-height: 36px;
-  /* 150% */
+  text-transform: capitalize;
 
   margin: 0;
 }
@@ -1696,4 +1697,42 @@ table.order-details tfoot tr:last-child td {
   table.order-details tfoot tr td {
     padding: 1rem 2rem;
   }
+}
+
+/* Smaller screen */
+@media screen and (max-width:1024px) and (min-width:821px) {
+
+  .customer.account.profile,
+  .account-orders-section,
+  .customer.order {
+    gap: 4rem;
+  }
+
+}
+
+/* iPad view */
+@media screen and (max-width:820px) and (min-width:769px) {
+
+  .account-banner--image-content {
+    padding: 3rem 3rem;
+  }
+
+  .customer.account.profile,
+  .account-orders-section,
+  .customer.order {
+    padding: 3rem 4rem;
+  }
+
+  .account_head {
+    display: none;
+  }
+
+  .account_inner {
+    flex-basis: 100%;
+  }
+
+  .account_inner_left {
+    padding-right: 2rem;
+  }
+
 }
