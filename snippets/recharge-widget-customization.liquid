@@ -21,7 +21,6 @@
           const isLoaded = widget.shadowRoot.querySelector('.rc-selection__root'); // Replace with actual class inside
           if (isLoaded) {
             console.log('Recharge Subscription Widget is fully rendered!');
-
             // Set the global flag to true
             window.isRechargeWidgetLoaded = true;
 
@@ -29,7 +28,14 @@
             moveBadge(widget.shadowRoot);
             applyCustomStyles(widget.shadowRoot);
             applySellingPlansStyles(widget.shadowRoot);
+            {% comment %} applyRadioIconStyles(widget.shadowRoot); {% endcomment %}
             addClickCallback(widget.shadowRoot);
+
+            // Add variant change listener
+            {% comment %} addVariantChangeListener(widget.shadowRoot); {% endcomment %}
+
+            // Update the ATC price initially
+            updateATCPriceWithRecharge(widget.shadowRoot);
 
             // Stop the interval once the widget is detected
             clearInterval(intervalId);
@@ -135,13 +141,66 @@
             letter-spacing: 0.5px !important;
             text-transform: capitalize !important;
           }
+          @media screen and (max-width: 820px) {
+            .rc-plans-dropdown{
+                flex-wrap: wrap !important;
+                gap: 1.2rem !important;
+            }
+            .rc-plans-dropdown .rc-plans__label + div{
+                width: 100% !important;
+            }
+          }
         `;
 
         const styleElement = document.createElement('style');
         styleElement.textContent = sellingPlansStyles;
         sellingPlans.shadowRoot.appendChild(styleElement);
         console.log('Custom styles applied to rc-selling-plans successfully!');
+
+        cleanSellingPlansOptions(sellingPlans.shadowRoot);
       }
+      applyRadioIconStyles(shadowRoot);
+    }
+
+    function applyRadioIconStyles(shadowRoot) {
+      const radioIcons = shadowRoot.querySelectorAll('rc-radio-icon'); // Select all rc-radio-icon elements
+      if (radioIcons.length > 0) {
+        const radioIconStyles = `
+          svg.rc-checked-icon rect {
+            fill: #000 !important;
+          }
+          svg.rc-checked-icon circle {
+            fill: #FFF !important;
+            r: 3 !important;
+          }
+        `;
+
+        radioIcons.forEach((radioIcon) => {
+          if (radioIcon.shadowRoot) {
+            const styleElement = document.createElement('style');
+            styleElement.textContent = radioIconStyles;
+            radioIcon.shadowRoot.appendChild(styleElement);
+            console.log('Custom styles applied to rc-radio-icon successfully!');
+          } else {
+            console.warn('rc-radio-icon does not have a shadowRoot.');
+          }
+        });
+      } else {
+        console.warn('No rc-radio-icon elements found.');
+      }
+    }
+
+    // Function to clean up rc-selling-plans options
+    function cleanSellingPlansOptions(shadowRoot) {
+      const options = shadowRoot.querySelectorAll('[name="rc_plan"] option');
+
+      if (!options.length) {
+        return;
+      }
+
+      options.forEach((option) => {
+        option.textContent = option.textContent.trim().replace(/: save \d+%/, '');
+      });
     }
 
     // Function to add a click callback to rc-purchase-option__label
@@ -150,15 +209,72 @@
       labels.forEach((label) => {
         label.addEventListener('click', function () {
           console.log('Label clicked:', label.textContent.trim());
-          // Add your custom logic here
+
           // Call applySellingPlansStyles after 0.5 seconds
           setTimeout(() => {
             applySellingPlansStyles(shadowRoot);
+            updateATCPriceWithRecharge(shadowRoot);
           }, 100);
         });
       });
       console.log('Click event listeners added to labels!');
     }
+
+    // Function to update the ATC price with the Recharge discounted price
+    function updateATCPriceWithRecharge(shadowRoot) {
+      {% comment %} console.log('Updating ATC price with Recharge discounted price...'); {% endcomment %}
+
+      // Directly find the price element inside the selected option
+      const priceElement = shadowRoot.querySelector('[rc-selected] .rc-price');
+
+      if (priceElement) {
+        // Extract only the visible price value
+        const price = Array.from(priceElement.childNodes)
+          .filter((node) => node.nodeType === Node.TEXT_NODE)
+          .map((node) => node.textContent.trim())
+          .join('');
+
+        if (price) {
+          const formattedPrice = `• ${price}`; // Append "•" before the price
+          console.log('Recharge price found:', formattedPrice);
+
+          // Update the ATC button price
+          const atcPriceElement = document.querySelector('.product-form__submit--price');
+          if (atcPriceElement) {
+            atcPriceElement.textContent = formattedPrice;
+            {% comment %} console.log('ATC button price updated with Recharge price:', formattedPrice); {% endcomment %}
+          } else {
+            console.warn('ATC price element not found.');
+          }
+        } else {
+          console.warn('Price is empty after filtering visible content.');
+        }
+      } else {
+        console.warn('Price element not found inside the selected option.');
+      }
+    }
+{% comment %} 
+    // Function to add a variant change listener
+    function addVariantChangeListener(shadowRoot) {
+      console.log('Adding variant change listener...');
+
+      // Select the variant-selects element
+      const variantSelects = document.querySelector('variant-selects');
+      if (!variantSelects) {
+        console.warn('Variant-selects element not found.');
+        return;
+      }
+
+      // Add a change event listener to the variant-selects element
+      variantSelects.addEventListener('change', () => {
+        console.log('Variant changed. Updating ATC price...');
+        setTimeout(() => {
+            updateATCPriceWithRecharge(shadowRoot);
+        }, 100);
+      });
+
+      console.log('Variant change listener added successfully!');
+    } {% endcomment %}
 
     // Call the function to start monitoring
     try {

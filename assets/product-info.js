@@ -230,47 +230,36 @@ if (!customElements.get("product-info")) {
 					const currentPriceElement = this.querySelector(".product-form__submit--price");
 					const newPriceElement = html.querySelector(".product-form__submit--price");
 
-					if (currentPriceElement) {
-						if (window.isRechargeWidgetLoaded) {
-							// Access the Recharge widget's shadow DOM
+					if (currentPriceElement && newPriceElement) {
+						currentPriceElement.innerHTML = newPriceElement.innerHTML;
+					}
+
+					// Update ATC price with Recharge price if Recharge widget is loaded
+					if (window.isRechargeWidgetLoaded) {
+						setTimeout(() => {
 							const rechargeWidget = document.querySelector("recharge-subscription-widget");
-
 							if (rechargeWidget && rechargeWidget.shadowRoot) {
+								const priceElement = rechargeWidget.shadowRoot.querySelector('[rc-selected] .rc-price');
+								if (priceElement) {
+									// Extract only the visible price value
+									const price = Array.from(priceElement.childNodes)
+										.filter((node) => node.nodeType === Node.TEXT_NODE)
+										.map((node) => node.textContent.trim())
+										.join('');
 
-								// Attempt to retrieve the discounted price
-								const subscriptionOption = rechargeWidget.shadowRoot.querySelector(
-									".rc-purchase-option__subscription.rc-purchase-option__selected"
-								);
-								console.log("Subscription Option Element: ", subscriptionOption);
-
-								setTimeout(() => {
-									const subscriptionOption = rechargeWidget.shadowRoot.querySelector(
-										".rc-purchase-option__subscription.rc-purchase-option__selected"
-									);
-									console.log("Subscription Option Element after delay: ", subscriptionOption);
-								}, 500); // Wait for 500ms
-
-								if (subscriptionOption) {
-									const priceElement = subscriptionOption.querySelector(".rc-price");
-									console.log("Price Element: ", priceElement);
-
-									if (priceElement) {
-										currentPriceElement.innerHTML = priceElement.innerHTML;
-										console.log("ATC button price updated with Recharge discounted price:", priceElement.innerHTML);
+									if (price) {
+										currentPriceElement.textContent = `• ${price}`;
+										console.log("ATC button price updated with Recharge price:", price);
 									} else {
-										console.warn("Price element not found inside the selected subscription option.");
+										console.warn("Recharge price is empty after filtering visible content.");
 									}
 								} else {
-									console.warn("Selected subscription option not found.");
+									console.warn("Recharge price element not found.");
 								}
 							} else {
-								console.warn("Recharge widget is loaded, but shadowRoot is not accessible.");
+								console.warn("Recharge widget or shadowRoot not found.");
 							}
-						} else if (newPriceElement) {
-							// Fallback to the regular price
-							currentPriceElement.innerHTML = newPriceElement.innerHTML;
-							console.log("ATC button price updated with regular price:", newPriceElement.innerHTML);
-						}
+						}, 100); // Delay of 100ms
 					}
 
 					this.updateMedia(html, variant?.featured_media?.id);
