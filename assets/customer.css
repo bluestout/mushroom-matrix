@@ -1717,6 +1717,14 @@ table.order-details tfoot tr:last-child td {
   .customer #recover,
   .customer #register {
     margin-top: 0;
+    margin-bottom: 0rem;
+
+    line-height: 40px;
+    font-size: 36px;
+  }
+
+  .account-form-content form {
+    margin-top: 2rem;
   }
 
   .account-banner--image-content {
