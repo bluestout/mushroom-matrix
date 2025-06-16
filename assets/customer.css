@@ -1713,8 +1713,14 @@ table.order-details tfoot tr:last-child td {
 /* iPad view */
 @media screen and (max-width:820px) and (min-width:769px) {
 
+  .customer #login,
+  .customer #recover,
+  .customer #register {
+    margin-top: 0;
+  }
+
   .account-banner--image-content {
-    padding: 3rem 3rem;
+    padding: 0;
   }
 
   .customer.account.profile,

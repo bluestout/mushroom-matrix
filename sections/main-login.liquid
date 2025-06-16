@@ -1,6 +1,9 @@
 {% if customer %}
   <script>
-    window.location.href = '/account';
+    // Check if the current URL hash is not "#recover"
+    if (window.location.hash !== '#recover') {
+      window.location.href = '/account';
+    }
   </script>
 {% endif %}
 
