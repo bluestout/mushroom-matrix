@@ -7,6 +7,51 @@
   </script>
 {% endif %}
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const loginContent = document.querySelector('.account-login-content');
+    const recoverContent = document.querySelector('.account-recover-content');
+    const loginHeading = document.querySelector('h1#login');
+    const recoverHeading = document.querySelector('h1#recover');
+    const loginLink = document.querySelector('.show-login');
+    const recoverLink = document.querySelector('.show-recover');
+
+    // Function to show login content and hide recover content
+    function showLoginContent() {
+      loginContent.style.display = 'block';
+      recoverContent.style.display = 'none';
+      loginHeading.style.display = 'block';
+      recoverHeading.style.display = 'none';
+    }
+
+    // Function to show recover content and hide login content
+    function showRecoverContent() {
+      loginContent.style.display = 'none';
+      recoverContent.style.display = 'block';
+      loginHeading.style.display = 'none';
+      recoverHeading.style.display = 'block';
+    }
+
+    // Add event listeners to the links
+    if (loginLink) {
+      loginLink.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+        showLoginContent();
+      });
+    }
+
+    if (recoverLink) {
+      recoverLink.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+        showRecoverContent();
+      });
+    }
+
+    // Initialize the view (default to login content)
+    showLoginContent();
+  });
+</script>
+
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
@@ -94,7 +139,7 @@
           {{ 'customer.login_page.submit' | t }}
         </button>
 
-        <a href="#login">
+        <a href="javascript:void(0);" class="show-login">
           {{ 'customer.login_page.cancel' | t }}
         </a>
       {%- endform -%}
@@ -183,7 +228,7 @@
           Log in
         </button>
 
-        <a href="#recover">
+        <a href="javascript:void(0);" class="show-recover">
           {{ 'customer.login_page.forgot_password' | t }}
         </a>
 
