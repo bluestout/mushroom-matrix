@@ -36,13 +36,13 @@
   >
     <a
       href="{{ routes.account_url }}"
-      class="account-nav__link"
+      class="account-nav__link nav-menu-item-account"
       role="menuitem"
       >Account</a
     >
     <a
       href="{{ routes.account_url | append: '?view=orders' }}"
-      class="account-nav__link"
+      class="account-nav__link nav-menu-item-orders"
       role="menuitem"
       >Orders</a
     >
@@ -60,7 +60,7 @@
     {% endcomment %}
     <a
       href="{{ routes.account_logout_url }}"
-      class="account-nav__link"
+      class="account-nav__link nav-menu-item-logout"
       role="menuitem"
       >Log out</a
     >
@@ -185,6 +185,23 @@
       }
     };
 
+    // Function to hide specific links based on trigger title
+    const hideLinksBasedOnTriggerTitle = () => {
+      const triggerTitle = trigger.textContent.trim();
+
+      // Hide "Account" menu item if the title is "Account"
+      if (triggerTitle === 'Account') {
+        const accountLink = menu.querySelector('.nav-menu-item-account');
+        if (accountLink) accountLink.style.display = 'none';
+      }
+
+      // Hide "Orders" menu item if the title is "Orders"
+      if (triggerTitle === 'Orders') {
+        const ordersLink = menu.querySelector('.nav-menu-item-orders');
+        if (ordersLink) ordersLink.style.display = 'none';
+      }
+    };
+
     // Toggle menu
     trigger.addEventListener('click', (e) => {
       const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
@@ -197,6 +214,9 @@
         updateButtonText(link.textContent);
         trigger.setAttribute('aria-expanded', 'false');
         menu.hidden = true;
+
+        // Recheck and hide links based on the new title
+        hideLinksBasedOnTriggerTitle();
       });
     });
 
@@ -236,5 +256,8 @@
 
     // Set initial button text on page load
     setInitialButtonText();
+
+    // Hide specific links based on the initial trigger title
+    hideLinksBasedOnTriggerTitle();
   });
 </script>

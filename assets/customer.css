@@ -1214,6 +1214,10 @@ a.account_head_item {
   padding: 1rem;
 }
 
+.account_details_subscription_content p {
+  margin: 0;
+}
+
 .account_detail_order_content {
   height: 78%;
   overflow-y: auto;
