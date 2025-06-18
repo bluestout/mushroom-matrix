@@ -606,4 +606,21 @@
         line-height: 30px;
         font-size: 26px;
     }
+
+    .image-with-text__content h2::after {
+        display: block;
+        margin: 1rem 0;
+    }
+
+    .image-with-text__content {
+        margin: 0;
+    }
+
+    .image-with-text__grid {
+        align-items: flex-start;
+    }
+
+    .image-with-text__grid--odd .image-with-text__media-item {
+        margin-top: 0;
+    }
 }

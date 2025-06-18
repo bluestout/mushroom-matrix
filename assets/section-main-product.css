@@ -2691,3 +2691,10 @@ product-info .product__info-wrapper {
   width: auto;
   height: auto;
 }
+
+@media screen and (max-width: 1024px) and (min-width: 820px) {
+  .page-width {
+    padding: 0 3rem !important;
+  }
+
+}
