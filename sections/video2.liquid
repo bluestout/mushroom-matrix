@@ -306,10 +306,20 @@
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.video-media-play-icon--wrapper').addEventListener('click', function () {
       document.querySelector('.video-section__poster').click();
-      document.querySelector('.video-section-overlay').style.display = 'none';
+      if (window.innerWidth > 820) {
+        const overlay = document.querySelector('.video-section-overlay');
+        if (overlay) {
+          overlay.style.display = 'none';
+        }
+      }
     });
     document.querySelector('.video-section__poster').addEventListener('click', function () {
-      document.querySelector('.video-section-overlay').style.display = 'none';
+      if (window.innerWidth > 820) {
+        const overlay = document.querySelector('.video-section-overlay');
+        if (overlay) {
+          overlay.style.display = 'none';
+        }
+      }
     });
   });
 </script>
