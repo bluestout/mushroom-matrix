@@ -92,6 +92,62 @@
     .multicolumn-list .rte ul {
       margin-bottom: 2rem !important;
     }
+
+    @media screen and (max-width: 768px){
+        .mushroom101-banner{
+            padding-top: 1rem;
+        }
+        .mushroom101-banner-container {
+            display: flex;
+              flex-direction: column-reverse;
+        }
+        .mushroom101-banner__content{
+            padding: 1.5rem;
+            padding-bottom: 4rem;
+        }
+        .mushroom101-banner__heading{
+            text-align: left;
+            font-size: 2.4rem;
+            line-height: 3.6rem;
+            margin: 0;
+            margin-top: 1rem;
+        }
+        .mushroom101-banner__heading::after{
+            max-width: 156px;
+            margin: 1.4rem 0;
+        }
+        .mushroom101-banner__text{
+            font-size: 15px;
+            line-height: 20px;
+            text-align: left;
+        }
+
+        .multicolumn .page-width{
+            padding: 1.0rem !important;
+            padding-top: 0 !important;
+        }
+
+        .multicolumn-list .rte{
+            column-count: 1 !important;
+        }
+        .multicolumn-card__info{
+            padding: 2.2rem 1.7rem 2.2rem 1.3rem!important;
+        }
+
+        .multicolumn-list:not(.slider){
+            padding: 0 !important;
+        }
+    }
+    @media screen and (max-width: 1024px) and (min-width:769px) {
+        .mushroom101-banner__heading{
+            font-size: 3.4rem;
+            line-height: 4.6rem;
+        }
+        .mushroom101-banner__text{
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
 </style>
 
 {% schema %}

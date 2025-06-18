@@ -1,0 +1,95 @@
+{% schema %}
+{
+  "name": "Our Species",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "species",
+      "name": "Species",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name"
+        },
+        {
+          "type": "text",
+          "id": "sci_name",
+          "label": "Scientific Name"
+        },
+        {
+          "type": "text",
+          "id": "benefit",
+          "label": "Benefit"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "header",
+          "content": "Button"
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "collection",
+          "id": "btn_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our Species"
+    }
+  ]
+}
+{% endschema %}
+{{ 'our-species.css' | asset_url | stylesheet_tag }}
+<section class="our-species-wrapper">
+  <div class="our-species-inner">
+    <div class="our-species__content">
+      <div class="our-species__items">
+        {% for block in section.blocks %}
+          <div class="our-species__item">
+            <div class="our-species__item-header">
+              <div class="our-species__item-image-wrapper">
+                {{ block.settings.image | image_url: width: 450 | image_tag: class: 'our-species__item-image' }}
+              </div>
+              <div>
+                <h2 class="our-species__item-title">{{ block.settings.name | strip }}</h2>
+                <p class="our-species__item-scientific-name">{{ block.settings.sci_name }}</p>
+                <p class="our-species__item-benefit">{{ block.settings.benefit }}</p>
+                {% if block.settings.btn_link.url != blank %}
+                  <a href="{{ block.settings.btn_link.url }}" class="our-species__item-button desktop-show">
+                    {{- block.settings.btn_text.title | default: 'shop' -}}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+            <div class="our-species__item-description">{{ block.settings.description }}</div>
+            {% if block.settings.btn_link.url != blank %}
+              <a
+                href="{{ block.settings.btn_link.url }}"
+                class="our-species__item-button mobile-show {{ block.settings.btn_link }}"
+              >
+                {{- block.settings.btn_text.title | default: 'shop' -}}
+              </a>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
