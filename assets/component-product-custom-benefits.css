@@ -610,6 +610,7 @@
     .image-with-text__content h2::after {
         display: block;
         margin: 1rem 0;
+        max-width: 107px;
     }
 
     .image-with-text__content {
