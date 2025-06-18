@@ -266,6 +266,10 @@
         "text_faq_Azyxnf",
         "text_faq_nxx7X9"
       ],
+      "custom_css": [
+        ".text-with-faqs--text-content .text-content--text {font-family: \"TT Norms Pro\"; font-size: 22px; line-height: 36px; font-weight: 450; max-width: 38rem;}",
+        "@media screen and (max-width: 750px) {.text-with-faqs--text-content .text-content--text {font-size: 18px; line-height: 26px; margin-bottom: 0; margin-top: 0.5rem; }}"
+      ],
       "name": "Text with FAQs",
       "settings": {
         "title": "Benefits",
