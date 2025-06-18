@@ -443,6 +443,7 @@
   line-height: 36px;
   margin-top: 1.5rem;
   display: block;
+  text-transform: none;
 }
 
 .about-us-image-with-text-quality .image-with-text__block-image {

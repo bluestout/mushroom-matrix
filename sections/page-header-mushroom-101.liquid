@@ -1,0 +1,137 @@
+<section class="mushroom101-banner">
+  <div class="mushroom101-banner-container page-width">
+    <div class="mushroom101-banner__image">
+      <img
+        src="{{ section.settings.banner_image | img_url: '1920x' }}"
+        alt="{{ section.settings.banner_alt_text }}"
+        class="mushroom101-banner__image small-hide"
+      >
+      <img
+        src="{{ section.settings.mobile_banner_image | img_url: '1080x' }}"
+        alt="{{ section.settings.banner_alt_text }}"
+        class="mushroom101-banner__image--mobile large-up-hide medium-hide"
+      >
+    </div>
+    <div class="mushroom101-banner__content">
+      <h1 class="mushroom101-banner__heading">{{ section.settings.banner_heading }}</h1>
+      <p class="mushroom101-banner__text">{{ section.settings.banner_text }}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+    .mushroom101-banner {
+      background: #f6f7f8;
+      padding-top: 5rem;
+    }
+    .mushroom101-banner__image {
+      display: flex;
+    }
+    .mushroom101-banner__image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .mushroom101-banner__content {
+      padding: 2.5rem 15rem;
+      background: #242833;
+    }
+    .mushroom101-banner__heading {
+      color: #fff;
+      font-family: Anuphan;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 65px; /* 135.417% */
+      letter-spacing: -1px;
+      text-transform: capitalize;
+      text-align: center;
+      margin: 0;
+    }
+    .mushroom101-banner__heading::after {
+      content: '';
+      position: relative;
+      display: block;
+      width: 100%;
+      max-width: 202px;
+      margin: 1.5rem auto;
+      height: 2px;
+      background: linear-gradient(90deg, #209aca, #5aad41, #e79c43);
+    }
+    .mushroom101-banner__text {
+      color: var(--13, #f6f7f8);
+      text-align: center;
+      font-family: 'TT Norms Pro';
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 450;
+      line-height: 36px; /* 163.636% */
+
+      max-width: 932px;
+      margin: 0 auto;
+    }
+
+    {% comment %} Custom multicolumn section {% endcomment %}
+    .multicolumn .page-width{
+      padding-bottom: 0!important;
+  }
+    .multicolumn slider-component {
+      background: unset !important;
+      background-color: #FFF !important;
+    }
+    .multicolumn-list__item:only-child {
+      max-width: 100% !important;
+    }
+    .multicolumn-card__info {
+      padding-right: 11rem !important;
+    }
+    .multicolumn-list .rte {
+      column-count: 2 !important;
+      column-gap: 9.8rem !important;
+    }
+    .multicolumn-list .rte ul {
+      margin-bottom: 2rem !important;
+    }
+</style>
+
+{% schema %}
+{
+  "name": "Mushroom 101 Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_banner_image",
+      "label": "Mobile Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "banner_alt_text",
+      "label": "Image Alt Text",
+      "default": "Mushroom 101 Banner"
+    },
+    {
+      "type": "text",
+      "id": "banner_heading",
+      "label": "Banner Heading",
+      "default": "Welcome to Mushroom 101"
+    },
+    {
+      "type": "textarea",
+      "id": "banner_text",
+      "label": "Banner Text",
+      "default": "Learn everything about mushrooms in this comprehensive guide."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mushroom 101 Banner",
+      "category": "Banners"
+    }
+  ]
+}
+{% endschema %}

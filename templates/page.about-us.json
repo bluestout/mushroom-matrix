@@ -197,7 +197,7 @@
           "type": "column",
           "settings": {
             "title": "Growing & Testing",
-            "text": "<p>Our mushroom powders adhere to strict FDA standards and are produced in M2 Ingredients certified GMP facility, ensuring that each step is carefully controlled and documented. The exceptional quality is verified by third-party lab testing of each batch of our functional mushrooms. In fact, we DNA test each batch for an added layer of confidence that our mushroom powders are exactly what we say they are.</p><p>Mushrooms are “bio-accumulators” meaning they can absorb and accumulate toxins or heavy metals if they are present during their growing stages. Our clean-room environment, organic process and strict testing ensures that our mushroom powders meet the highest standards of purity.</p>",
+            "text": "<ul><li>Our mushroom powders adhere to strict FDA standards and are produced in M2 Ingredients certified GMP facility, ensuring that each step is carefully controlled and documented. The exceptional quality is verified by third-party lab testing of each batch of our functional mushrooms. In fact, we DNA test each batch for an added layer of confidence that our mushroom powders are exactly what we say they are.</li><li>Mushrooms are “bio-accumulators” meaning they can absorb and accumulate toxins or heavy metals if they are present during their growing stages. Our clean-room environment, organic process and strict testing ensures that our mushroom powders meet the highest standards of purity.</li></ul>",
             "link_label": "",
             "link": ""
           }
@@ -206,7 +206,7 @@
           "type": "column",
           "settings": {
             "title": "Born, Raised & Packaged in Vista, California",
-            "text": "<p>All the mushrooms in our products are grown, processed and packaged at our Vista, California facility, free from potential contamination that can occur in third party manufacturing facilities.</p><p>No outsourced ingredients from other countries, no fillers, no flavorings, no sugars or molasses, no wheat, no corn, no soy, no additives, no gluten.</p><p>We keep a watchful eye on our products every step of the way to ensure you are getting the best mushroom powders money can buy. Certified Organic by Organic Certifiers.</p>",
+            "text": "<ul><li>All the mushrooms in our products are grown, processed and packaged at our Vista, California facility, free from potential contamination that can occur in third party manufacturing facilities.</li><li>No outsourced ingredients from other countries, no fillers, no flavorings, no sugars or molasses, no wheat, no corn, no soy, no additives, no gluten.</li><li>We keep a watchful eye on our products every step of the way to ensure you are getting the best mushroom powders money can buy. Certified Organic by Organic Certifiers.</li></ul>",
             "link_label": "",
             "link": ""
           }
