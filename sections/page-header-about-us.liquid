@@ -123,6 +123,49 @@
     position: relative;
     margin: 0;
   }
+
+  @media screen and (max-width: 820px) {
+    .aup-header-banner-container {
+      padding: 2rem;
+    }
+
+    .aup-header-title {
+      font-size: 32px;
+      line-height: 42px;
+      margin-bottom: 1rem;
+    }
+
+    .aup-header-text {
+      font-size: 18px;
+      line-height: 28px;
+      max-width: 100%;
+    }
+
+    .aup-header-founder-container {
+      flex-direction: column;
+    }
+
+    .aup-founder-image-wrapper {
+      flex-basis: 100%;
+      border-radius: 3px 3px 0 0;
+    }
+
+    .aup-founder-right-content {
+      flex-basis: 100%;
+      padding: 2rem;
+      padding-right: 2rem;
+      border-radius: 0 0 3px 3px;
+    }
+
+    .aup-founder-right-content::before {
+      backdrop-filter: blur(50px);
+    }
+
+    .aup-founder-right-content p {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
 {% endstyle %}
 
 <section class="about-us-page-header-section">

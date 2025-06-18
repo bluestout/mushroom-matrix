@@ -408,6 +408,109 @@
   position: relative;
 }
 
+.about-us-image-with-text-home,
+.about-us-image-with-text-quality {
+  background: #F6F7F8;
+}
+
+.about-us-image-with-text-home .image-with-text__content h2:after {
+  display: block;
+  position: relative;
+  max-width: 202px;
+  margin: 4rem 0 0.5rem;
+  bottom: 0;
+}
+
+.about-us-image-with-text-quality .image-with-text__media img {
+  right: auto !important;
+
+}
+
+.about-us-image-with-text-quality .image-with-text__content h2:after {
+  content: none;
+}
+
+.about-us-image-with-text-quality .image-with-text__heading {
+  padding-left: 0;
+}
+
+.about-us-image-with-text-quality .image-with-text__heading span {
+  color: #232323;
+  font-family: "TT Norms Pro";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 36px;
+  margin-top: 1.5rem;
+  display: block;
+}
+
+.about-us-image-with-text-quality .image-with-text__block-image {
+  width: 100%;
+  max-width: 65%;
+  display: flex;
+}
+
+.about-us-image-with-text-quality .image-with-text__block-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.about-us-image-with-text-quality .image-with-text__text.rte {
+  margin-top: 2rem;
+}
+
+
+@media screen and (max-width: 820px) {
+  .about-us-image-with-text-home .image-with-text__content h2:after {
+    max-width: 133px;
+    margin: 1.6rem 0 1.3rem;
+  }
+
+  .about-us-image-with-text-home {
+    padding-top: 1.3rem;
+  }
+
+  .about-us-image-with-text-home .image-with-text__content h2 {
+    margin-top: 0;
+    line-height: 36px;
+    padding-left: 0;
+    padding-right: 4rem;
+  }
+
+  .about-us-image-with-text-home .image-with-text__text.rte {
+    padding-left: 0;
+    padding-right: 2rem;
+  }
+
+  .about-us-image-with-text-quality {
+    padding-top: 1rem !important;
+  }
+
+  .about-us-image-with-text-quality .image-with-text__media-item {
+    padding-bottom: 2.4rem;
+  }
+
+  .about-us-image-with-text-quality .image-with-text__text-item {
+    padding: 0 1.5rem;
+  }
+
+  .about-us-image-with-text-quality .image-with-text__heading span {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .about-us-image-with-text-quality .image-with-text__text.rte {
+    padding: 0;
+  }
+
+  .about-us-image-with-text-quality .image-with-text__block-image {
+    max-width: 100%;
+  }
+}
+
+
 @media screen and (min-width: 1024px) {
   .image-with-text__heading {
     display: flex;
