@@ -1671,7 +1671,13 @@ table.order-details tfoot tr:last-child td {
 
   table.order-details tbody tr {
     padding: 1rem 0;
-    background: white;
+    /* background: white; */
+  }
+
+  table.order-details tbody tr:nth-child(odd) {
+    /* Add your styles here */
+    background: #FFF;
+    /* Example: Light gray background for odd rows */
   }
 
   .customer.order {

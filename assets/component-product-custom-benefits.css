@@ -584,3 +584,26 @@
 }
 
 @media screen and (max-width: 750px) {}
+
+@media screen and (max-width: 1024px) and (min-width: 820px) {
+    .image-with-text__grid--reverse {
+        padding-top: 3rem;
+    }
+
+    .image-with-text__grid--reverse .image-with-text__text-item {
+        padding-right: 2rem;
+    }
+
+    .image-with-text__grid--odd {
+        padding-top: 2rem;
+    }
+
+    .image-with-text__grid--odd .image-with-text__text-item {
+        padding-left: 2rem;
+    }
+
+    .image-with-text__content h2 {
+        line-height: 30px;
+        font-size: 26px;
+    }
+}
