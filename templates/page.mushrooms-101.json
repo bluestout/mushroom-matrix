@@ -107,8 +107,8 @@
           "repeater": "{{ page.metafields.custom.mushroom_list.value }}",
           "settings": {
             "image": "{{ block.repeater.image.value }}",
-            "name": "{{ block.repeater.scientific_name.value }}",
-            "sci_name": "{{ block.repeater.name.value }}",
+            "name": "{{ block.repeater.name.value }}",
+            "sci_name": "{{ block.repeater.scientific_name.value }}",
             "benefit": "{{ block.repeater.benefit.value }}",
             "description": "{{ block.repeater.description | metafield_tag }}",
             "btn_text": "{{ block.repeater.button_text.value }}",
