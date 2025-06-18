@@ -7,467 +7,463 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
-  "sections": {
-    "image_banner_aEnrFc": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_GwBU8V": {
-          "type": "heading",
-          "settings": {
-            "heading": "About Us",
-            "heading_size": "h1"
+ {
+    "sections": {
+      "image_banner_aEnrFc": {
+        "type": "image-banner",
+        "blocks": {
+          "heading_GwBU8V": {
+            "type": "heading",
+            "settings": {
+              "heading": "About Us",
+              "heading_size": "h1"
+            }
+          },
+          "text_bJ66VP": {
+            "type": "text",
+            "settings": {
+              "text": "We work tirelessly to make a difference in the lives of horses, pets and people everywhere with our organic mushroom powders.",
+              "text_style": "body"
+            }
           }
         },
-        "text_bJ66VP": {
-          "type": "text",
-          "settings": {
-            "text": "We work tirelessly to make a difference in the lives of horses, pets and people everywhere with our organic mushroom powders.",
-            "text_style": "body"
-          }
+        "block_order": [
+          "heading_GwBU8V",
+          "text_bJ66VP"
+        ],
+        "settings": {
+          "image": "shopify://shop_images/grey_eating_through_fence.jpg",
+          "image_overlay_opacity": 20,
+          "image_height": "small",
+          "desktop_content_position": "middle-left",
+          "show_text_box": false,
+          "desktop_content_alignment": "left",
+          "color_scheme": "inverse",
+          "image_behavior": "none",
+          "mobile_content_alignment": "center",
+          "stack_images_on_mobile": true,
+          "show_text_below": true
         }
       },
-      "block_order": [
-        "heading_GwBU8V",
-        "text_bJ66VP"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify://shop_images/grey_eating_through_fence.jpg",
-        "image_overlay_opacity": 20,
-        "image_height": "small",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-left",
-        "desktop_content_alignment": "left",
-        "show_text_box": false,
-        "color_scheme": "inverse",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
-      }
-    },
-    "e2fb5da9-afdb-4ddb-ae1c-670992951ccf": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--16802351776003__e2fb5da9-afdb-4ddb-ae1c-670992951ccf-1688773706a3177a73-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Our Founders",
-            "heading_size": "h1"
+      "e2fb5da9-afdb-4ddb-ae1c-670992951ccf": {
+        "type": "image-with-text",
+        "blocks": {
+          "template--16802351776003__e2fb5da9-afdb-4ddb-ae1c-670992951ccf-1688773706a3177a73-0": {
+            "type": "heading",
+            "settings": {
+              "heading": "Our Founders",
+              "heading_size": "h1"
+            }
+          },
+          "template--16802351776003__e2fb5da9-afdb-4ddb-ae1c-670992951ccf-1688773706a3177a73-1": {
+            "type": "text",
+            "settings": {
+              "text": "<p>Sandra Carter (M.A. MPH, Ph.D.), a health and wellness expert with a PhD in preventative medicine, and Steve Farrar, a mycologist with over 30 years experience growing mushrooms, both have a deep-rooted passion for mushrooms. Mushroom Matrix grows 11 species of mushrooms in our Certified 100% Organic, BRCGS AA rated Vista, California facility.</p>",
+              "text_style": "body"
+            }
           }
         },
-        "template--16802351776003__e2fb5da9-afdb-4ddb-ae1c-670992951ccf-1688773706a3177a73-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Sandra Carter (M.A. MPH, Ph.D.), a health and wellness expert with a PhD in preventative medicine, and Steve Farrar, a mycologist with over 30 years experience growing mushrooms, both have a deep-rooted passion for mushrooms. Mushroom Matrix grows 11 species of mushrooms in our Certified 100% Organic, BRCGS AA rated Vista, California facility.</p>",
-            "text_style": "body",
-            "reduce_width": false
-          }
+        "block_order": [
+          "template--16802351776003__e2fb5da9-afdb-4ddb-ae1c-670992951ccf-1688773706a3177a73-0",
+          "template--16802351776003__e2fb5da9-afdb-4ddb-ae1c-670992951ccf-1688773706a3177a73-1"
+        ],
+        "settings": {
+          "image": "shopify://shop_images/OM_PG2_CarterFarrar.webp",
+          "height": "medium",
+          "desktop_image_width": "medium",
+          "layout": "image_first",
+          "desktop_content_position": "middle",
+          "desktop_content_alignment": "left",
+          "content_layout": "overlap",
+          "section_color_scheme": "",
+          "color_scheme": "inverse",
+          "image_behavior": "none",
+          "mobile_content_alignment": "left",
+          "padding_top": 36,
+          "padding_bottom": 36
         }
       },
-      "block_order": [
-        "template--16802351776003__e2fb5da9-afdb-4ddb-ae1c-670992951ccf-1688773706a3177a73-0",
-        "template--16802351776003__e2fb5da9-afdb-4ddb-ae1c-670992951ccf-1688773706a3177a73-1"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/OM_PG2_CarterFarrar.webp",
-        "height": "medium",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "overlap",
-        "section_color_scheme": "",
-        "color_scheme": "inverse",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_class": ""
-      }
-    },
-    "7ff87f3d-261d-4211-8ab6-f8196b2ed249": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--16802351776003__7ff87f3d-261d-4211-8ab6-f8196b2ed249-1688775093dbe43c2d-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "From Vista, California to Your Home",
-            "heading_size": "h1"
+      "7ff87f3d-261d-4211-8ab6-f8196b2ed249": {
+        "type": "image-with-text",
+        "blocks": {
+          "template--16802351776003__7ff87f3d-261d-4211-8ab6-f8196b2ed249-1688775093dbe43c2d-0": {
+            "type": "heading",
+            "settings": {
+              "heading": "From Vista, California to Your Home",
+              "heading_size": "h1"
+            }
+          },
+          "template--16802351776003__7ff87f3d-261d-4211-8ab6-f8196b2ed249-1688775093dbe43c2d-1": {
+            "type": "text",
+            "settings": {
+              "text": "<p>Our  state-of-the-art indoor farm in Vista, California, allows our 11 species of mushrooms to grow and flourish under carefully controlled conditions to deliver the best mushroom products available anywhere. Our mushrooms are Certified 100% Organic by Organic Certifiers following Good Manufacturing Practices (cGMP) at our facilities, located in Vista, California.</p>",
+              "text_style": "body"
+            }
           }
         },
-        "template--16802351776003__7ff87f3d-261d-4211-8ab6-f8196b2ed249-1688775093dbe43c2d-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Our  state-of-the-art indoor farm in Vista, California, allows our 11 species of mushrooms to grow and flourish under carefully controlled conditions to deliver the best mushroom products available anywhere. Our mushrooms are Certified 100% Organic by Organic Certifiers following Good Manufacturing Practices (cGMP) at our facilities, located in Vista, California.</p>",
-            "text_style": "body",
-            "reduce_width": false
-          }
+        "block_order": [
+          "template--16802351776003__7ff87f3d-261d-4211-8ab6-f8196b2ed249-1688775093dbe43c2d-0",
+          "template--16802351776003__7ff87f3d-261d-4211-8ab6-f8196b2ed249-1688775093dbe43c2d-1"
+        ],
+        "custom_css": [
+          ".image-with-text__media {z-index: 5;}"
+        ],
+        "settings": {
+          "image": "shopify://shop_images/1500x1000.jpg",
+          "height": "adapt",
+          "desktop_image_width": "medium",
+          "layout": "text_first",
+          "desktop_content_position": "bottom",
+          "desktop_content_alignment": "left",
+          "content_layout": "overlap",
+          "section_color_scheme": "",
+          "color_scheme": "inverse",
+          "image_behavior": "none",
+          "mobile_content_alignment": "left",
+          "padding_top": 0,
+          "padding_bottom": 36
         }
       },
-      "block_order": [
-        "template--16802351776003__7ff87f3d-261d-4211-8ab6-f8196b2ed249-1688775093dbe43c2d-0",
-        "template--16802351776003__7ff87f3d-261d-4211-8ab6-f8196b2ed249-1688775093dbe43c2d-1"
-      ],
-      "custom_css": [
-        ".image-with-text__media {z-index: 5;}"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/1500x1000.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "bottom",
-        "desktop_content_alignment": "left",
-        "content_layout": "overlap",
-        "section_color_scheme": "",
-        "color_scheme": "inverse",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 36,
-        "custom_class": ""
-      }
-    },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
-    "1badb668-11d3-4cd0-9fc8-ad69d34ada8a": {
-      "type": "rich-text",
-      "blocks": {
-        "template--16802351776003__1badb668-11d3-4cd0-9fc8-ad69d34ada8a-16887748306167e196-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Our Mushroom Growing Process",
-            "heading_size": "h1"
+      "main": {
+        "type": "main-page",
+        "disabled": true,
+        "settings": {
+          "padding_top": 28,
+          "padding_bottom": 28
+        }
+      },
+      "1badb668-11d3-4cd0-9fc8-ad69d34ada8a": {
+        "type": "rich-text",
+        "blocks": {
+          "template--16802351776003__1badb668-11d3-4cd0-9fc8-ad69d34ada8a-16887748306167e196-0": {
+            "type": "heading",
+            "settings": {
+              "heading": "Our Mushroom Growing Process",
+              "heading_size": "h1"
+            }
+          },
+          "template--16802351776003__1badb668-11d3-4cd0-9fc8-ad69d34ada8a-16887748306167e196-1": {
+            "type": "text",
+            "settings": {
+              "text": "<p>From our sister brand, Om Mushroom Superfood</p>"
+            }
           }
         },
-        "template--16802351776003__1badb668-11d3-4cd0-9fc8-ad69d34ada8a-16887748306167e196-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>From our sister brand, Om Mushroom Superfood</p>"
-          }
+        "block_order": [
+          "template--16802351776003__1badb668-11d3-4cd0-9fc8-ad69d34ada8a-16887748306167e196-0",
+          "template--16802351776003__1badb668-11d3-4cd0-9fc8-ad69d34ada8a-16887748306167e196-1"
+        ],
+        "settings": {
+          "desktop_content_position": "center",
+          "content_alignment": "center",
+          "color_scheme": "inverse",
+          "full_width": true,
+          "padding_top": 40,
+          "padding_bottom": 0
         }
       },
-      "block_order": [
-        "template--16802351776003__1badb668-11d3-4cd0-9fc8-ad69d34ada8a-16887748306167e196-0",
-        "template--16802351776003__1badb668-11d3-4cd0-9fc8-ad69d34ada8a-16887748306167e196-1"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "inverse",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "98e18401-eb98-4bca-b6c3-d23f24f60765": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https://youtu.be/carFvNK6vWw",
-        "cover_image": "shopify://shop_images/about_video_bg.jpg",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "inverse",
-        "padding_top": 20,
-        "padding_bottom": 28
-      }
-    },
-    "rich_text_6tVNUy": {
-      "type": "rich-text",
-      "blocks": {
-        "button_d7HzLf": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Now",
-            "button_link": "shopify://collections/products-for-you",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
+      "98e18401-eb98-4bca-b6c3-d23f24f60765": {
+        "type": "video",
+        "settings": {
+          "heading": "",
+          "heading_size": "h1",
+          "enable_video_looping": false,
+          "video_url": "https://youtu.be/carFvNK6vWw",
+          "cover_image": "shopify://shop_images/about_video_bg.jpg",
+          "description": "",
+          "full_width": false,
+          "color_scheme": "inverse",
+          "padding_top": 20,
+          "padding_bottom": 28
         }
       },
-      "block_order": [
-        "button_d7HzLf"
-      ],
-      "custom_css": [
-        ".button.button--primary {background-color: #e23f3f; color: #fff;}",
-        ".button:after {box-shadow: none;}"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "inverse",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 52
-      }
-    },
-    "9c900a08-c167-43b7-bb8f-3bdefd8537cd": {
-      "type": "rich-text",
-      "blocks": {
-        "template--16802351776003__9c900a08-c167-43b7-bb8f-3bdefd8537cd-16887750850025b115-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Quality",
-            "heading_size": "h1"
+      "rich_text_6tVNUy": {
+        "type": "rich-text",
+        "blocks": {
+          "button_d7HzLf": {
+            "type": "button",
+            "settings": {
+              "button_label": "Shop Now",
+              "button_link": "shopify://collections/products-for-you",
+              "button_style_secondary": false,
+              "button_label_2": "",
+              "button_link_2": "",
+              "button_style_secondary_2": false
+            }
           }
         },
-        "template--16802351776003__9c900a08-c167-43b7-bb8f-3bdefd8537cd-16887750850025b115-1": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Our quality standards explained – and why it matters.  A lot.</h2><p><br/>Our functional mushrooms give horses, dogs and cats many, if not all, of the same benefits that people have enjoyed for centuries in traditional, natural medicine. As research and practical experience lead us forward, Equine & Canine Mushroom Matrix products continue to define what natural supplements for horses and companion animals can and should be.</p>"
-          }
+        "block_order": [
+          "button_d7HzLf"
+        ],
+        "custom_css": [
+          ".button.button--primary {background-color: #e23f3f; color: #fff;}",
+          ".button:after {box-shadow: none;}"
+        ],
+        "settings": {
+          "desktop_content_position": "center",
+          "content_alignment": "center",
+          "color_scheme": "inverse",
+          "full_width": true,
+          "padding_top": 0,
+          "padding_bottom": 52
         }
       },
-      "block_order": [
-        "template--16802351776003__9c900a08-c167-43b7-bb8f-3bdefd8537cd-16887750850025b115-0",
-        "template--16802351776003__9c900a08-c167-43b7-bb8f-3bdefd8537cd-16887750850025b115-1"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 24
-      }
-    },
-    "4b26a922-1ac5-4ba2-9d49-c3b50e6e065e": {
-      "type": "multicolumn",
-      "blocks": {
-        "fc269dc9-fac9-41b9-ab2a-6edf99a7a9ca": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/5_badge_in_a_line.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "fc269dc9-fac9-41b9-ab2a-6edf99a7a9ca"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn_LcNWXa": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_QkYDJj": {
-          "type": "column",
-          "settings": {
-            "title": "Growing & Testing",
-            "text": "<p>Our mushroom powders adhere to strict FDA standards and are produced in M2 Ingredients certified GMP facility, ensuring that each step is carefully controlled and documented. The exceptional quality is verified by third-party lab testing of each batch of our functional mushrooms. In fact, we DNA test each batch for an added layer of confidence that our mushroom powders are exactly what we say they are.</p><p>Mushrooms are “bio-accumulators” meaning they can absorb and accumulate toxins or heavy metals if they are present during their growing stages. Our clean-room environment, organic process and strict testing ensures that our mushroom powders meet the highest standards of purity.</p>",
-            "link_label": "",
-            "link": ""
+      "9c900a08-c167-43b7-bb8f-3bdefd8537cd": {
+        "type": "rich-text",
+        "blocks": {
+          "template--16802351776003__9c900a08-c167-43b7-bb8f-3bdefd8537cd-16887750850025b115-0": {
+            "type": "heading",
+            "settings": {
+              "heading": "Quality",
+              "heading_size": "h1"
+            }
+          },
+          "template--16802351776003__9c900a08-c167-43b7-bb8f-3bdefd8537cd-16887750850025b115-1": {
+            "type": "text",
+            "settings": {
+              "text": "<h2>Our quality standards explained – and why it matters.  A lot.</h2><p><br/>Our functional mushrooms give horses, dogs and cats many, if not all, of the same benefits that people have enjoyed for centuries in traditional, natural medicine. As research and practical experience lead us forward, Equine & Canine Mushroom Matrix products continue to define what natural supplements for horses and companion animals can and should be.</p>"
+            }
           }
         },
-        "column_ewycLB": {
-          "type": "column",
-          "settings": {
-            "title": "Born, Raised & Packaged in Vista, California",
-            "text": "<p>All the mushrooms in our products are grown, processed and packaged at our Vista, California facility, free from potential contamination that can occur in third party manufacturing facilities.</p><p>No outsourced ingredients from other countries, no fillers, no flavorings, no sugars or molasses, no wheat, no corn, no soy, no additives, no gluten.</p><p>We keep a watchful eye on our products every step of the way to ensure you are getting the best mushroom powders money can buy. Certified Organic by Organic Certifiers.</p>",
-            "link_label": "",
-            "link": ""
-          }
+        "block_order": [
+          "template--16802351776003__9c900a08-c167-43b7-bb8f-3bdefd8537cd-16887750850025b115-0",
+          "template--16802351776003__9c900a08-c167-43b7-bb8f-3bdefd8537cd-16887750850025b115-1"
+        ],
+        "settings": {
+          "desktop_content_position": "center",
+          "content_alignment": "center",
+          "color_scheme": "",
+          "full_width": true,
+          "padding_top": 40,
+          "padding_bottom": 24
         }
       },
-      "block_order": [
-        "column_QkYDJj",
-        "column_ewycLB"
-      ],
-      "custom_css": [
-        "p {margin: 1.2em;}"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "adad74dc-9d71-43b5-b3fd-b5b1d8061072": {
-      "type": "rich-text",
-      "blocks": {
-        "template--16802351776003__adad74dc-9d71-43b5-b3fd-b5b1d8061072-16887750850025b115-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Benefits",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "template--16802351776003__adad74dc-9d71-43b5-b3fd-b5b1d8061072-16887750850025b115-0"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "multicolumn_f8mBRE": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_4rfmNX": {
-          "type": "column",
-          "settings": {
-            "title": "",
-            "text": "<p>Agriculture, farming practices and soil amendments have changed tremendously in the last 100 years.  Many micro- & macro-nutrients that were once abundant in forages and grains may not be present at those levels in the hay and commercial feed products that most horses eat today.  Meat ingredients in pet foods may also be affected. </p>",
-            "link_label": "",
-            "link": ""
+      "4b26a922-1ac5-4ba2-9d49-c3b50e6e065e": {
+        "type": "multicolumn",
+        "blocks": {
+          "fc269dc9-fac9-41b9-ab2a-6edf99a7a9ca": {
+            "type": "column",
+            "settings": {
+              "image": "shopify://shop_images/5_badge_in_a_line.jpg",
+              "title": "",
+              "text": "",
+              "link_label": "",
+              "link": ""
+            }
           }
         },
-        "column_yhxH4j": {
-          "type": "column",
-          "settings": {
-            "title": "",
-            "text": "<p>So how can we help our animals to thrive in this changing environment? As animal owners, we spend a lot of time searching for the best quality hay, feeds and pet foods available.  Let Mushroom Matrix be part of the solution to keep your horse or pet at his best in a changing world.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_EfywLx": {
-          "type": "column",
-          "settings": {
-            "title": "",
-            "text": "<p>Minimally processed, our mushroom powders are carefully grown, harvested, dried, milled and packed to retain the naturally occurring bio-active compounds that can boost your animal’s vitality and immune health.</p>",
-            "link_label": "",
-            "link": ""
-          }
+        "block_order": [
+          "fc269dc9-fac9-41b9-ab2a-6edf99a7a9ca"
+        ],
+        "settings": {
+          "title": "",
+          "heading_size": "h1",
+          "image_width": "full",
+          "image_ratio": "adapt",
+          "columns_desktop": 3,
+          "column_alignment": "left",
+          "background_style": "none",
+          "button_label": "",
+          "button_link": "",
+          "color_scheme": "background-1",
+          "columns_mobile": "1",
+          "swipe_on_mobile": false,
+          "padding_top": 0,
+          "padding_bottom": 36
         }
       },
-      "block_order": [
-        "column_4rfmNX",
-        "column_yhxH4j",
-        "column_EfywLx"
-      ],
-      "settings": {
-        "title": "Why are the mushrooms in Mushroom Matrix Equine & Canine so good for animals?",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+      "multicolumn_LcNWXa": {
+        "type": "multicolumn",
+        "blocks": {
+          "column_QkYDJj": {
+            "type": "column",
+            "settings": {
+              "title": "Growing & Testing",
+              "text": "<p>Our mushroom powders adhere to strict FDA standards and are produced in M2 Ingredients certified GMP facility, ensuring that each step is carefully controlled and documented. The exceptional quality is verified by third-party lab testing of each batch of our functional mushrooms. In fact, we DNA test each batch for an added layer of confidence that our mushroom powders are exactly what we say they are.</p><p>Mushrooms are “bio-accumulators” meaning they can absorb and accumulate toxins or heavy metals if they are present during their growing stages. Our clean-room environment, organic process and strict testing ensures that our mushroom powders meet the highest standards of purity.</p>",
+              "link_label": "",
+              "link": ""
+            }
+          },
+          "column_ewycLB": {
+            "type": "column",
+            "settings": {
+              "title": "Born, Raised & Packaged in Vista, California",
+              "text": "<p>All the mushrooms in our products are grown, processed and packaged at our Vista, California facility, free from potential contamination that can occur in third party manufacturing facilities.</p><p>No outsourced ingredients from other countries, no fillers, no flavorings, no sugars or molasses, no wheat, no corn, no soy, no additives, no gluten.</p><p>We keep a watchful eye on our products every step of the way to ensure you are getting the best mushroom powders money can buy. Certified Organic by Organic Certifiers.</p>",
+              "link_label": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "column_QkYDJj",
+          "column_ewycLB"
+        ],
+        "custom_css": [
+          "p {margin: 1.2em;}"
+        ],
+        "settings": {
+          "title": "",
+          "heading_size": "h1",
+          "image_width": "full",
+          "image_ratio": "adapt",
+          "columns_desktop": 2,
+          "column_alignment": "left",
+          "background_style": "primary",
+          "button_label": "",
+          "button_link": "",
+          "color_scheme": "",
+          "columns_mobile": "1",
+          "swipe_on_mobile": false,
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+      "adad74dc-9d71-43b5-b3fd-b5b1d8061072": {
+        "type": "rich-text",
+        "blocks": {
+          "template--16802351776003__adad74dc-9d71-43b5-b3fd-b5b1d8061072-16887750850025b115-0": {
+            "type": "heading",
+            "settings": {
+              "heading": "Benefits",
+              "heading_size": "h1"
+            }
+          }
+        },
+        "block_order": [
+          "template--16802351776003__adad74dc-9d71-43b5-b3fd-b5b1d8061072-16887750850025b115-0"
+        ],
+        "settings": {
+          "desktop_content_position": "center",
+          "content_alignment": "center",
+          "color_scheme": "",
+          "full_width": true,
+          "padding_top": 40,
+          "padding_bottom": 0
+        }
+      },
+      "multicolumn_f8mBRE": {
+        "type": "multicolumn",
+        "blocks": {
+          "column_4rfmNX": {
+            "type": "column",
+            "settings": {
+              "title": "",
+              "text": "<p>Agriculture, farming practices and soil amendments have changed tremendously in the last 100 years.  Many micro- & macro-nutrients that were once abundant in forages and grains may not be present at those levels in the hay and commercial feed products that most horses eat today.  Meat ingredients in pet foods may also be affected. </p>",
+              "link_label": "",
+              "link": ""
+            }
+          },
+          "column_yhxH4j": {
+            "type": "column",
+            "settings": {
+              "title": "",
+              "text": "<p>So how can we help our animals to thrive in this changing environment? As animal owners, we spend a lot of time searching for the best quality hay, feeds and pet foods available.  Let Mushroom Matrix be part of the solution to keep your horse or pet at his best in a changing world.</p>",
+              "link_label": "",
+              "link": ""
+            }
+          },
+          "column_EfywLx": {
+            "type": "column",
+            "settings": {
+              "title": "",
+              "text": "<p>Minimally processed, our mushroom powders are carefully grown, harvested, dried, milled and packed to retain the naturally occurring bio-active compounds that can boost your animal’s vitality and immune health.</p>",
+              "link_label": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "column_4rfmNX",
+          "column_yhxH4j",
+          "column_EfywLx"
+        ],
+        "settings": {
+          "title": "Why are the mushrooms in Mushroom Matrix Equine & Canine so good for animals?",
+          "heading_size": "h2",
+          "image_width": "full",
+          "image_ratio": "adapt",
+          "columns_desktop": 3,
+          "column_alignment": "left",
+          "background_style": "primary",
+          "button_label": "",
+          "button_link": "",
+          "color_scheme": "",
+          "columns_mobile": "1",
+          "swipe_on_mobile": false,
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+      "bf5d559e-feb6-4f5b-98fa-a634966ec53a": {
+        "type": "multicolumn",
+        "blocks": {
+          "template--16802351776003__bf5d559e-feb6-4f5b-98fa-a634966ec53a-1688773147ec88d4ec-1": {
+            "type": "column",
+            "settings": {
+              "image": "shopify://shop_images/logo.png",
+              "title": "Mushroom Matrix",
+              "text": "<p>We are the leading producer of the highest quality Certified Organic functional mushroom powders that support immune health, sports performance and recovery for horses and pets. Our dedicated team works relentlessly and passionately to bring the transforming benefits of our Organic Mushroom Powders to animals around the world. </p>",
+              "link_label": "Shop Now",
+              "link": "shopify://collections/equine-products"
+            }
+          },
+          "template--16802351776003__bf5d559e-feb6-4f5b-98fa-a634966ec53a-1688773147ec88d4ec-2": {
+            "type": "column",
+            "settings": {
+              "image": "shopify://shop_images/om_logo_transparent.png",
+              "title": "Om Mushroom Superfood",
+              "text": "<p>Our sister brand, Om Mushroom Superfood, uses the same high quality functional mushroom powders to produce mushroom supplements for people. Om Mushrooms is all about amazing, functional, whole food, organic mushrooms with life changing health benefits.</p>",
+              "link_label": "Visit The Site",
+              "link": "shopify://collections/products-for-you"
+            }
+          }
+        },
+        "block_order": [
+          "template--16802351776003__bf5d559e-feb6-4f5b-98fa-a634966ec53a-1688773147ec88d4ec-1",
+          "template--16802351776003__bf5d559e-feb6-4f5b-98fa-a634966ec53a-1688773147ec88d4ec-2"
+        ],
+        "custom_css": [
+          ".title-wrapper-with-link {flex-direction: column;}",
+          "h2 {color: white;}",
+          ".multicolumn-card__image-wrapper {max-width: 300px; padding: 30px;}",
+          ".multicolumn-list__item {border-radius: 10px; background-color: white;}",
+          ".multicolumn {background-color: #242833;}",
+          ".multicolumn-card__info .link {background-color: #242833; color: white; padding: 10px 30px;}",
+          ".icon-wrap {display: none;}",
+          ".multicolumn-list {column-gap: 30px; flex-wrap: nowrap;}"
+        ],
+        "settings": {
+          "title": "Two Brands, One Mission",
+          "heading_size": "h1",
+          "image_width": "full",
+          "image_ratio": "adapt",
+          "columns_desktop": 2,
+          "column_alignment": "left",
+          "background_style": "none",
+          "button_label": "",
+          "button_link": "",
+          "color_scheme": "background-2",
+          "columns_mobile": "1",
+          "swipe_on_mobile": false,
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
       }
     },
-    "bf5d559e-feb6-4f5b-98fa-a634966ec53a": {
-      "type": "multicolumn",
-      "blocks": {
-        "template--16802351776003__bf5d559e-feb6-4f5b-98fa-a634966ec53a-1688773147ec88d4ec-1": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/logo.png",
-            "title": "Mushroom Matrix",
-            "text": "<p>We are the leading producer of the highest quality Certified Organic functional mushroom powders that support immune health, sports performance and recovery for horses and pets. Our dedicated team works relentlessly and passionately to bring the transforming benefits of our Organic Mushroom Powders to animals around the world. </p>",
-            "link_label": "Shop Now",
-            "link": "shopify://collections/equine-products"
-          }
-        },
-        "template--16802351776003__bf5d559e-feb6-4f5b-98fa-a634966ec53a-1688773147ec88d4ec-2": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/om_logo_transparent.png",
-            "title": "Om Mushroom Superfood",
-            "text": "<p>Our sister brand, Om Mushroom Superfood, uses the same high quality functional mushroom powders to produce mushroom supplements for people. Om Mushrooms is all about amazing, functional, whole food, organic mushrooms with life changing health benefits.</p>",
-            "link_label": "Visit The Site",
-            "link": "shopify://collections/products-for-you"
-          }
-        }
-      },
-      "block_order": [
-        "template--16802351776003__bf5d559e-feb6-4f5b-98fa-a634966ec53a-1688773147ec88d4ec-1",
-        "template--16802351776003__bf5d559e-feb6-4f5b-98fa-a634966ec53a-1688773147ec88d4ec-2"
-      ],
-      "custom_css": [
-        ".title-wrapper-with-link {flex-direction: column;}",
-        "h2 {color: white;}",
-        ".multicolumn-card__image-wrapper {max-width: 300px; padding: 30px;}",
-        ".multicolumn-list__item {border-radius: 10px; background-color: white;}",
-        ".multicolumn {background-color: #242833;}",
-        ".multicolumn-card__info .link {background-color: #242833; color: white; padding: 10px 30px;}",
-        ".icon-wrap {display: none;}",
-        ".multicolumn-list {column-gap: 30px; flex-wrap: nowrap;}"
-      ],
-      "settings": {
-        "title": "Two Brands, One Mission",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "background-2",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    }
-  },
-  "order": [
-    "image_banner_aEnrFc",
-    "e2fb5da9-afdb-4ddb-ae1c-670992951ccf",
-    "7ff87f3d-261d-4211-8ab6-f8196b2ed249",
-    "main",
-    "1badb668-11d3-4cd0-9fc8-ad69d34ada8a",
-    "98e18401-eb98-4bca-b6c3-d23f24f60765",
-    "rich_text_6tVNUy",
-    "9c900a08-c167-43b7-bb8f-3bdefd8537cd",
-    "4b26a922-1ac5-4ba2-9d49-c3b50e6e065e",
-    "multicolumn_LcNWXa",
-    "adad74dc-9d71-43b5-b3fd-b5b1d8061072",
-    "multicolumn_f8mBRE",
-    "bf5d559e-feb6-4f5b-98fa-a634966ec53a"
-  ]
-}
+    "order": [
+      "image_banner_aEnrFc",
+      "e2fb5da9-afdb-4ddb-ae1c-670992951ccf",
+      "7ff87f3d-261d-4211-8ab6-f8196b2ed249",
+      "main",
+      "1badb668-11d3-4cd0-9fc8-ad69d34ada8a",
+      "98e18401-eb98-4bca-b6c3-d23f24f60765",
+      "rich_text_6tVNUy",
+      "9c900a08-c167-43b7-bb8f-3bdefd8537cd",
+      "4b26a922-1ac5-4ba2-9d49-c3b50e6e065e",
+      "multicolumn_LcNWXa",
+      "adad74dc-9d71-43b5-b3fd-b5b1d8061072",
+      "multicolumn_f8mBRE",
+      "bf5d559e-feb6-4f5b-98fa-a634966ec53a"
+    ]
+  }
+  
