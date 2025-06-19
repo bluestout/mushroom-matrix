@@ -136,7 +136,7 @@
   }
 
   .stamped-reviews-filter {
-    display: none;
+    display: none !important;
   }
 
   .stamped-review {
@@ -276,6 +276,34 @@
     background: #000;
     color: #fff;
   }
+
+  .stamped-form-actions {
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+  }
+
+  .stamped-file-uploader label[for='stamped-file-uploader-input'] > span {
+    padding: 14px 20px !important;
+  }
+
+  #stamped-button-submit,
+  input.stamped-button.stamped-button-primary.button.button-primary.btn.btn-primary {
+    min-height: unset !important;
+    line-height: unset !important;
+  }
+
+  .stamped-form-label + .stamped-form-input {
+    min-height: 46px !important;
+    border: 1px solid #808080 !important;
+    border-radius: 2px !important;
+    font-size: 16px !important;
+    color: #282828 !important;
+  }
+  .stamped-form-label + .stamped-form-input::placeholder {
+    color: #282828 !important;
+  }
+
   @media screen and (max-width: 768px) {
     div.stamped-container[data-widget-style],
     div[data-widget-style] div.stamped-container {
