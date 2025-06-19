@@ -11,13 +11,35 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "page_faqs_QWEUnL": {
+      "type": "page-faqs",
+      "blocks": {
+        "faq_category_qFeXJU": {
+          "type": "faq_category",
+          "settings": {
+            "tab_title": "Shipping & Delivery"
+          }
+        }
+      },
+      "block_order": [
+        "faq_category_qFeXJU"
+      ],
+      "name": "FAQ Section",
+      "settings": {
+        "title": "Frequently Asked Questions",
+        "mobile_title": "FAQ",
+        "text": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "page_faqs_QWEUnL"
   ]
 }
