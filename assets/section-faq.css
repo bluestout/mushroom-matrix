@@ -6,6 +6,8 @@
     padding: 8rem;
     background: #242833;
     position: relative;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .faq-background {
@@ -20,7 +22,7 @@
 }
 
 .faq-text-content {
-    max-width: 75rem;
+    max-width: 83rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -215,6 +217,7 @@
         background-size: 35px 35px;
         line-height: 35px;
         padding: 10px 14px;
+        padding-left: 0;
     }
 
     .faq-banner-text {
@@ -243,7 +246,7 @@
     }
 
     .faq-content {
-        padding: 0 2rem 3rem 2rem;
+        padding: 0 3rem 3rem 3rem;
     }
 
     .faq-category {
