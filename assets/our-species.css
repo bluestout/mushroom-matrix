@@ -221,7 +221,7 @@
     .our-species__item-description {
         font-size: 1.6rem;
         line-height: 2.6rem;
-        max-width: 80%;
+        max-width: 100%;
     }
 
     .our-species__item-description p {
