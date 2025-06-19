@@ -1,0 +1,168 @@
+.contact-banner {
+    padding: 5rem 6rem;
+    background: #FBF8F4;
+}
+
+.contact-banner--image-wrap {
+    width: 100%;
+    display: flex;
+}
+
+.contact-banner--image-wrap img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.contact-banner--text-content {
+    display: flex;
+    align-items: center;
+    padding: 6rem 7rem;
+    background: var(--3, #F1E7DB);
+}
+
+.contact-banner--text-content-left {
+    flex-basis: 50%;
+}
+
+.contact-banner--text-content-left h1 {
+    margin: 0;
+    color: var(--2, #284734);
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: TT Norms Pro Expanded;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+    background: radial-gradient(50% 50% at 50% 50%, #ff9016 50.4%, #ff901600);
+    padding: 12px 20px;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    text-align: left;
+}
+
+.contact-banner--text-phone {
+    padding-left: 2rem;
+}
+
+.contact-banner--text-phone p {
+    color: var(--2, #284734);
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/body */
+    font-family: "TT Norms Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 26px;
+}
+
+.contact-banner--text-phone p strong {
+    font-family: "TT Norms Pro Expanded";
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.contact-banner--text-content-right {
+    flex-basis: 50%;
+}
+
+.contact-banner--rte p {
+    color: var(--2, #284734);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "TT Norms Pro";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 36px;
+    /* 163.636% */
+}
+
+.contact-banner--rte a,
+.contact-banner--rte a:hover {
+    color: var(--2, #284734);
+}
+
+@media(max-width:1024px) {
+    .contact-banner--text-content {
+        padding: 2rem 2rem;
+        gap: 2rem;
+    }
+
+    .contact-banner--text-content-left h1 {
+        font-size: 38px;
+    }
+
+}
+
+@media(max-width:767px) {
+    .contact-banner {
+        padding: 1rem;
+    }
+
+    .contact-banner--text-content-left,
+    .contact-banner--text-content-right {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .contact-banner--text-content {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .main_contact {
+        flex-direction: column;
+    }
+
+    .contact-banner--text-content-left h1 {
+        font-size: 26px;
+        line-height: 40px;
+        background-size: 35px 35px;
+        padding: 8px 12px;
+    }
+
+    .contact-banner--text-phone {
+        padding: 0;
+
+    }
+
+    .contact-banner--text-phone p strong {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .contact-banner--text-phone p,
+    .contact-banner--rte p {
+        /* margin: 0; */
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 0;
+    }
+
+    .contact-banner--rte p {
+        margin-top: 0;
+    }
+
+    /* Change text color of detected phone numbers */
+    a[href^="tel"] {
+        color: #284734 !important;
+        /* Change to any color */
+        text-decoration: none !important;
+        /* Remove underline */
+        /* font-weight: bold;  */
+    }
+
+    /* Target all auto-detected links */
+    a[href^="tel"]:hover,
+    a[href^="tel"]:focus {
+        color: #284734 !important;
+        /* Change color on hover */
+        text-decoration: none !important;
+        /* Add underline on hover */
+    }
+
+}
