@@ -1,6 +1,6 @@
 .contact-banner {
     padding: 5rem 6rem;
-    background: #FBF8F4;
+    background: #F6F7F8;
 }
 
 .contact-banner--image-wrap {
@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     padding: 6rem 7rem;
-    background: var(--3, #F1E7DB);
+    background: #242833;
 }
 
 .contact-banner--text-content-left {
@@ -27,32 +27,23 @@
 
 .contact-banner--text-content-left h1 {
     margin: 0;
-    color: var(--2, #284734);
-    font-feature-settings: "liga" off, "clig" off;
-    font-family: TT Norms Pro Expanded;
-    font-size: 52px;
+    color: var(--very-light-bg, #FBF8F4);
+    font-family: Anuphan;
+    font-size: 48px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 65px;
     letter-spacing: -1px;
-    position: relative;
-    display: inline-block;
-    background: radial-gradient(50% 50% at 50% 50%, #ff9016 50.4%, #ff901600);
-    padding: 12px 20px;
-    background-size: 50px 50px;
-    background-repeat: no-repeat;
+    text-transform: capitalize;
     text-align: left;
 }
 
 .contact-banner--text-phone {
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
 }
 
 .contact-banner--text-phone p {
-    color: var(--2, #284734);
-    font-feature-settings: 'liga' off, 'clig' off;
-
-    /* Typography/body */
+    color: var(--2, #FBF8F4);
     font-family: "TT Norms Pro";
     font-size: 16px;
     font-style: normal;
@@ -71,19 +62,17 @@
 }
 
 .contact-banner--rte p {
-    color: var(--2, #284734);
-    font-feature-settings: 'liga' off, 'clig' off;
+    color: var(--2, #FBF8F4);
     font-family: "TT Norms Pro";
     font-size: 22px;
     font-style: normal;
     font-weight: 450;
     line-height: 36px;
-    /* 163.636% */
 }
 
 .contact-banner--rte a,
 .contact-banner--rte a:hover {
-    color: var(--2, #284734);
+    color: var(--2, #FBF8F4);
 }
 
 @media(max-width:1024px) {
@@ -123,6 +112,7 @@
         line-height: 40px;
         background-size: 35px 35px;
         padding: 8px 12px;
+        padding-left: 0;
     }
 
     .contact-banner--text-phone {
@@ -149,7 +139,7 @@
 
     /* Change text color of detected phone numbers */
     a[href^="tel"] {
-        color: #284734 !important;
+        color: #FBF8F4 !important;
         /* Change to any color */
         text-decoration: none !important;
         /* Remove underline */
@@ -159,10 +149,19 @@
     /* Target all auto-detected links */
     a[href^="tel"]:hover,
     a[href^="tel"]:focus {
-        color: #284734 !important;
+        color: #FBF8F4 !important;
         /* Change color on hover */
         text-decoration: none !important;
         /* Add underline on hover */
+    }
+
+}
+
+@media screen and (max-width:1024px) and (min-width: 820px) {
+
+    .contact-banner--rte p {
+        font-size: 16px;
+        line-height: 24px;
     }
 
 }

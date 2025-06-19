@@ -1,5 +1,5 @@
 .section-contact-form {
-  background: #FBF8F4 !important;
+  background: #F6F7F8 !important;
 }
 
 .contact img {
@@ -116,13 +116,11 @@
   background: none;
   box-shadow: none;
   border-radius: 2px;
-  border: 1px solid var(--13, #D3B9A9);
+  border: 1px solid var(--13, #808080);
   background: #FFF;
   padding: 1.2rem;
   color: var(--Test-mid, #282828);
-  font-feature-settings: 'liga' off, 'clig' off;
 
-  /* Typography/body */
   font-family: "TT Norms Pro";
   font-size: 16px;
   font-style: normal;
@@ -136,13 +134,10 @@
   background: none;
   box-shadow: none;
   border-radius: 2px;
-  border: 1px solid var(--13, #D3B9A9);
+  border: 1px solid var(--13, #808080);
   background: #FFF;
   padding: 1.2rem;
   color: var(--Test-mid, #282828);
-  font-feature-settings: 'liga' off, 'clig' off;
-
-  /* Typography/body */
   font-family: "TT Norms Pro";
   font-size: 16px;
   font-style: normal;
@@ -218,10 +213,10 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 4px;
-  background: var(--1, #FF8F1C);
-  color: var(--2, #284734);
-  font-feature-settings: 'liga' off, 'clig' off;
+
+  background: #F6F7F8;
+  color: #000;
+
   font-family: "TT Norms Pro Expanded";
   font-size: 13px;
   font-style: normal;
@@ -231,7 +226,22 @@
   text-transform: uppercase;
 }
 
-.contact__button button::before,
+.contact__button button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 4px;
+  padding: 2px;
+  background: linear-gradient(90deg, #209aca, #5aad41, #e79c43);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 0;
+}
+
 .contact__button button::after {
   content: none;
 }
@@ -241,16 +251,13 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  color: var(--2, #284734);
-  font-feature-settings: 'liga' off, 'clig' off;
+  color: #000;
 
-  /* Typography/Heading 4 */
   font-family: "TT Norms Pro Expanded";
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: 19px;
-  /* 135.714% */
   text-transform: uppercase;
 
   margin: 0;
@@ -260,15 +267,12 @@
 .email_text {
   margin: 0;
   color: #232323;
-  font-feature-settings: 'liga' off, 'clig' off;
 
-  /* Typography/body */
   font-family: "TT Norms Pro";
   font-size: 16px;
   font-style: normal;
   font-weight: 450;
   line-height: 26px;
-  /* 162.5% */
 }
 
 .location_text p,
