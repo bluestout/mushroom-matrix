@@ -1,0 +1,274 @@
+{{ 'section-faq.css' | asset_url | stylesheet_tag }}
+
+<section class="faq-section">
+  <div class="faq-header">
+    <div class="faq-background"></div>
+    <div class="faq-text-content">
+      <h2 class="faq-title small-hide medium-hide">{{ section.settings.title }}</h2>
+      <h2 class="faq-title faq-mobile-title large-up-hide">{{ section.settings.mobile_title }}</h2>
+      <div class="faq-banner-text">{{ section.settings.text }}</div>
+    </div>
+  </div>
+
+  <!-- FAQ Tabs (Categories) -->
+  <div class="faq-tabs">
+    {% for tab in section.blocks %}
+      {% if tab.type == 'faq_category' %}
+        <button
+          class="faq-tab {% if forloop.first %}active{% endif %}"
+          data-category="faq-{{ tab.settings.tab_title }}"
+        >
+          {{ tab.settings.tab_title }}
+        </button>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- FAQ Content -->
+  <div class="faq-content">
+    {% for category in section.blocks %}
+      {% if category.type == 'faq_category' %}
+        <div
+          class="faq-category"
+          data-category="faq-{{ category.settings.tab_title }}"
+          {% if forloop.first %}
+            style="display:block;"
+          {% else %}
+            style="display:none;"
+          {% endif %}
+        >
+          {% assign category_name = category.settings.tab_title %}
+
+          <!-- Collect Subcategories -->
+          {% assign subcategories = '' %}
+          {% for question in section.blocks %}
+            {% if question.type == 'faq_question'
+              and question.settings.category == category_name
+              and question.settings.sub_category != ''
+            %}
+              {% unless subcategories contains question.settings.sub_category %}
+                {% assign subcategories = subcategories | append: question.settings.sub_category | append: ',' %}
+              {% endunless %}
+            {% endif %}
+          {% endfor %}
+
+          {% assign subcategories = subcategories | split: ',' %}
+
+          <!-- Display Questions Without a Subcategory -->
+          {% for faq in section.blocks %}
+            {% if faq.type == 'faq_question'
+              and faq.settings.category == category_name
+              and faq.settings.sub_category == ''
+            %}
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h4>{{ faq.settings.question }}</h4>
+                  <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                  <p>{{ faq.settings.answer }}</p>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+
+          <!-- Display Subcategories & Their Questions -->
+          {% for subcategory in subcategories %}
+            {% if subcategory != '' %}
+              <div class="faq-subcategory">
+                <div class="faq-subcategory-title">
+                  <h3>{{ subcategory }}</h3>
+                  <span class="faq-sub-toggle">+</span>
+                </div>
+                <div class="faq-subcategory-content">
+                  {% for faq in section.blocks %}
+                    {% if faq.type == 'faq_question'
+                      and faq.settings.category == category_name
+                      and faq.settings.sub_category == subcategory
+                    %}
+                      <div class="faq-item">
+                        <div class="faq-question">
+                          <h4>{{ faq.settings.question }}</h4>
+                          <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                          <p>{{ faq.settings.answer }}</p>
+                        </div>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // FAQ Question Toggle
+    document.querySelectorAll('.faq-question').forEach((item) => {
+      item.addEventListener('click', function () {
+        let answer = this.nextElementSibling;
+        let toggle = this.querySelector('.faq-toggle');
+
+        // Close all other answers
+        document.querySelectorAll('.faq-answer').forEach((a) => {
+          if (a !== answer) {
+            a.style.display = 'none';
+            a.previousElementSibling.querySelector('.faq-toggle').textContent = '+';
+          }
+        });
+
+        // Toggle current answer
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+          toggle.textContent = '+';
+        } else {
+          answer.style.display = 'block';
+          toggle.textContent = '-';
+        }
+      });
+    });
+
+    // Subcategory Toggle (Collapsed by Default)
+    document.querySelectorAll('.faq-subcategory-title').forEach((subcat) => {
+      let subcontent = subcat.nextElementSibling;
+      subcontent.style.display = 'none'; // Hide subcategory content initially
+
+      subcat.addEventListener('click', function () {
+        let toggle = this.querySelector('.faq-sub-toggle');
+
+        // Close all other subcategories within the same category
+        this.parentElement.querySelectorAll('.faq-subcategory-content').forEach((content) => {
+          if (content !== subcontent) {
+            content.style.display = 'none';
+            content.previousElementSibling.querySelector('.faq-sub-toggle').textContent = '+';
+          }
+        });
+
+        // Toggle current subcategory
+        if (subcontent.style.display === 'block') {
+          subcontent.style.display = 'none';
+          toggle.textContent = '+';
+        } else {
+          subcontent.style.display = 'block';
+          toggle.textContent = '-';
+        }
+      });
+    });
+
+    // FAQ Tabs Logic
+    document.querySelectorAll('.faq-tab').forEach((tab) => {
+      tab.addEventListener('click', function () {
+        document.querySelectorAll('.faq-tab').forEach((t) => t.classList.remove('active'));
+        this.classList.add('active');
+
+        let category = this.getAttribute('data-category');
+
+        document.querySelectorAll('.faq-category').forEach((item) => {
+          if (item.getAttribute('data-category') === category) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    const tabs = document.querySelectorAll('.faq-tab');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', function () {
+        tab.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'center', // Ensures horizontal  centering
+        });
+      });
+    });
+
+    // Activate the first category by default
+    document.querySelector('.faq-tab.active')?.click();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "FAQ Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "text",
+      "id": "mobile_title",
+      "label": "Mobile title",
+      "default": "FAQ"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_category",
+      "name": "FAQ Category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Category Name"
+        }
+      ]
+    },
+    {
+      "type": "faq_question",
+      "name": "FAQ Question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "category",
+          "label": "Category"
+        },
+        {
+          "type": "text",
+          "id": "sub_category",
+          "label": "Sub category"
+        },
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Section",
+      "blocks": [
+        {
+          "type": "faq_category",
+          "settings": {
+            "tab_title": "Shipping & Delivery"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

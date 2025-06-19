@@ -1,0 +1,308 @@
+.faq-header {
+    padding: 8rem;
+    background: #F1E7DB;
+    position: relative;
+}
+
+.faq-background {
+    display: block !important;
+    border-radius: 1057px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 144, 22, 0.26) 50.4%, rgba(255, 144, 22, 0.00) 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -70%;
+    left: -20%;
+}
+
+.faq-text-content {
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-banner-text {
+    padding-left: 2rem;
+}
+
+.faq-banner-text p {
+    color: var(--2, #284734);
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/body */
+    font-family: "TT Norms Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 26px;
+    /* 162.5% */
+    letter-spacing: 0;
+}
+
+.faq-banner-text a,
+.faq-banner-text a:hover {
+    color: var(--2, #284734);
+}
+
+.faq-title {
+    margin: 0 auto;
+    color: var(--2, #284734);
+    font-feature-settings: "liga" off, "clig" off;
+    font-family: TT Norms Pro Expanded;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 65px;
+    letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+    background: radial-gradient(50% 50% at 50% 50%, #ff9016 50.4%, #ff901600);
+    padding: 12px 20px;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.faq-tabs {
+    display: flex;
+    gap: 18px;
+    /* margin-bottom: 55px; */
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 5.5rem;
+
+    background: var(--very-light-bg, #FBF8F4);
+}
+
+.faq-tab {
+    border-radius: 3px;
+    background: rgba(241, 231, 219, 0.33);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+
+    color: var(--2, #284734);
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/Heading 3 */
+    font-family: "TT Norms Pro Medium";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    /* 100% */
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+
+.faq-tab.active {
+    background: #284734;
+    color: #F1E7DB;
+}
+
+.faq-content {
+    background: var(--very-light-bg, #FBF8F4);
+    padding-bottom: 8rem;
+}
+
+.faq-category {
+    display: none;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-subcategory {
+    /* margin-bottom: 10px; */
+    border-bottom: 1px dashed #D3B9A9;
+}
+
+.faq-subcategory-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    /* background: #ddd; */
+    /* padding: 10px;
+    font-weight: bold;
+    border-radius: 5px; */
+}
+
+.faq-sub-toggle {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.faq-subcategory-content {
+    display: none;
+    padding-left: 4rem;
+    /* border-left: 3px solid #1a381e; */
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    /* padding: 10px; */
+    /* background: #f9f9f9; */
+    /* border-radius: 5px; */
+    border-bottom: 1px dashed #D3B9A9;
+}
+
+.faq-subcategory-title h3,
+.faq-question h4 {
+    color: var(--2, #284734);
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/Caption */
+    font-family: "TT Norms Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    /* 150% */
+    margin: 2rem 0;
+}
+
+.faq-sub-toggle,
+.faq-toggle {
+    color: var(--2, #284734);
+    font-size: 2.5rem;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    display: none;
+}
+
+.faq-answer p,
+.faq-answer a {
+
+    /* padding: 10px; */
+    /* background: #fff; */
+    /* border-left: 3px solid #1a381e; */
+    /* margin-top: 5px; */
+    color: var(--2, #284734);
+    font-feature-settings: 'liga' off, 'clig' off;
+
+    /* Typography/body */
+    font-family: "TT Norms Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 26px;
+    /* 162.5% */
+    letter-spacing: 0;
+}
+
+.faq-answer a:hover {
+    color: var(--2, #284734);
+}
+
+@media screen and (max-width: 768px) {
+    .faq-header {
+        padding: 3rem 2rem 4rem 2rem;
+        overflow: hidden;
+    }
+
+    .faq-background {
+        width: 200%;
+        height: 250%;
+        top: -127%;
+        left: -130%;
+        z-index: 0;
+    }
+
+    .faq-text-content {
+        width: 100%;
+        margin: 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .faq-mobile-title {
+        font-size: 26px;
+        background-size: 35px 35px;
+        line-height: 35px;
+        padding: 10px 14px;
+    }
+
+    .faq-banner-text {
+        margin: 0;
+        padding: 0;
+    }
+
+    .faq-banner-text p {
+        margin: 0;
+        letter-spacing: 0;
+    }
+
+    .faq-tabs {
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        gap: 3px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        justify-content: flex-start;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .faq-tab {
+        white-space: nowrap;
+    }
+
+    .faq-content {
+        padding: 0 2rem 3rem 2rem;
+    }
+
+    .faq-category {
+        margin: 0;
+        width: 100%;
+    }
+
+    .faq-subcategory-title h3,
+    .faq-question h4 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .faq-answer p,
+    .faq-answer a {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .faq-subcategory-title {
+        align-items: center;
+    }
+
+    .faq-subcategory-content {
+        padding-left: 2rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .faq-tabs {
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        gap: 3px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        justify-content: flex-start;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .faq-tab {
+        white-space: nowrap;
+    }
+
+    .faq-content {
+        padding: 0 2rem 3rem 2rem;
+    }
+}
