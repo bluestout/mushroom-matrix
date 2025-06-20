@@ -191,9 +191,16 @@
     color: var(--Text-black, #000);
 }
 
+@media screen and (max-width: 820px) {
+    .faq-header {
+        padding: 3rem 5rem 4rem 5rem;
+        overflow: hidden;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .faq-header {
-        padding: 3rem 2rem 4rem 2rem;
+        padding: 3rem 1rem 4rem 2rem;
         overflow: hidden;
     }
 
@@ -294,4 +301,6 @@
     .faq-content {
         padding: 0 5rem 3rem 5rem;
     }
+
+    .faq-header {}
 }
