@@ -1,0 +1,67 @@
+{% style %}
+  .page-banner--image-wrap {
+    display: flex;
+  }
+  .page-banner--image-wrap img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    .page-banner--image-content.page-width {
+      padding: 0;
+    }
+  }
+{% endstyle %}
+
+<section class="page-banner">
+  <div class="page-banner--image-content page-width">
+    {% if section.settings.image %}
+      <div class="page-banner--image-wrap small-hide">
+        {{
+          section.settings.image
+          | image_url: width: master
+          | image_tag: class: 'page-banner--image', format: 'jpg', preload: true
+        }}
+      </div>
+    {% endif %}
+    {% if section.settings.mobile_image %}
+      <div class="page-banner--image-wrap large-up-hide medium-hide">
+        {{
+          section.settings.mobile_image
+          | image_url: width: master
+          | image_tag: class: 'page-banner--mobile-image', format: 'jpg', preload: true
+        }}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Page image banner",
+  "tag": "section",
+  "class": "section section-page-image-banner",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page image banner"
+    }
+  ]
+}
+{% endschema %}
