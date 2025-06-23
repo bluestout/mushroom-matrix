@@ -21,3 +21,63 @@
   width: 52.5rem;
   height: 52.5rem;
 }
+
+.main-page-container {
+  margin: 0 auto;
+}
+
+.main-page-container .main-page-title {
+  color: #242833;
+  font-family: Anuphan;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 65px;
+  /* 135.417% */
+  letter-spacing: -1px;
+  text-transform: capitalize;
+}
+
+.main-page-container h2 {
+  color: #242833;
+  font-family: Anuphan;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 65px;
+  /* 270.833% */
+  letter-spacing: -1px;
+  text-transform: capitalize;
+}
+
+.main-page-container p {
+  color: var(--Text-black, #000);
+  font-family: "TT Norms Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 26px;
+  /* 162.5% */
+}
+
+@media screen and (max-width: 768px) {
+
+  .main-page-container .main-page-title {
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+  }
+
+  .main-page-container h2 {
+    color: var(--Text-black, #000);
+    font-family: "TT Norms Pro Expanded";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+    /* 135% */
+    letter-spacing: -1px;
+  }
+
+  .main-page-container p {}
+
+}

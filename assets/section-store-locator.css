@@ -1,0 +1,94 @@
+#storemapper {
+    padding-bottom: 4rem;
+}
+
+#storemapper #storemapper-list li .storemapper-phone,
+#storemapper #storemapper-list li .storemapper-email {
+    width: 100% !important;
+}
+
+#storemapper .storemapper-scroll-top {
+    top: unset !important;
+    bottom: 1rem !important;
+}
+
+#storemapper #storemapper-form #storemapper-go {
+    border-radius: 4px !important;
+    background-color: var(--1, #000) !important;
+    color: var(--2, #FFF) !important;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "TT Norms Pro Expanded";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    /* 146.154% */
+    text-transform: uppercase;
+}
+
+#storemapper #storemapper-list li h4,
+#storemapper #storemapper-list li .storemapper-address,
+#storemapper #storemapper-list li .storemapper-phone a,
+#storemapper .storemapper-popup-phone a {
+    color: var(--2, #000) !important;
+}
+
+#storemapper #storemapper-list li .storemapper-address svg,
+#storemapper #storemapper-list li .storemapper-phone svg {
+    fill: var(--2, #000) !important;
+}
+
+
+#storemapper #storemapper-list li .storemapper_view a,
+#storemapper #storemapper-list li .storemapper_directions a,
+.strmpr-view-more-stores-button {
+    border-radius: 4px !important;
+    border: 2px solid var(--2, #000) !important;
+    color: var(--2, #000) !important;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "TT Norms Pro Expanded";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    /* 146.154% */
+    text-transform: uppercase;
+
+}
+
+#storemapper #storemapper-list li.storemapper-selected .storemapper-phone a {
+    color: white !important;
+}
+
+#storemapper #storemapper-list li.storemapper-selected .storemapper-address svg,
+#storemapper #storemapper-list li.storemapper-selected .storemapper-phone svg {
+    fill: white !important;
+}
+
+#storemapper #storemapper-list li.storemapper-selected .storemapper_view a,
+#storemapper #storemapper-list li.storemapper-selected .storemapper_directions a {
+    color: white !important;
+    border-color: white !important;
+}
+
+#storemapper #storemapper-list li.storemapper-selected {
+    background-color: var(--2, #000) !important;
+}
+
+#storemapper #storemapper-list li p svg,
+#storemapper.show_icons .storemapper-popup-address svg,
+#storemapper.show_icons .storemapper-popup-phone svg,
+#storemapper.show_icons .storemapper-popup-url svg,
+#storemapper.show_icons .storemapper-popup-email svg {
+    fill: var(--2, #000) !important;
+}
+
+#storemapper a:focus {
+    outline: unset !important;
+    outline-offset: unset !important;
+    text-decoration: unset !important;
+}
+
+a.strmpr-view-more-stores-button {
+    color: var(--2, #000) !important;
+}

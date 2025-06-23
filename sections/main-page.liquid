@@ -1,4 +1,5 @@
 {{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+{{ 'section-store-locator.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -12,9 +13,43 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  {% if page.handle == 'store-locator' %}
+
+    #or-wrap p,
+    #or-wrap h2 {
+      display: none;
+      margin: 0;
+    }
+    #or-wrap h2:last-of-type {
+      display: block;
+      flex-basis: 100%;
+    }
+    .main-page-container .main-page-title{
+      margin-bottom: 0;
+    }
+
+    #or-wrap{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      column-gap: 3.5rem;
+    }
+    #or-wrap .rlogo-wrap{
+      flex-basis: 20%;
+    }
+    #or-wrap .rlogo-wrap img{
+      border: none;
+      box-shadow: none;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+  {% endif %}
 {%- endstyle -%}
 
-<div class="page-width page-width--narrow section-{{ section.id }}-padding">
+<div class="page-width page-width--narrow main-page-container section-{{ section.id }}-padding">
   <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     {{ page.title | escape }}
   </h1>

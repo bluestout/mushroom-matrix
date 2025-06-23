@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "page_banner_DBJi6L": {
+      "type": "page-banner",
+      "name": "Page image banner",
+      "settings": {
+        "image": "shopify://shop_images/page-header-image3.jpg",
+        "mobile_image": "shopify://shop_images/page-header-mobile-image3.jpg"
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -18,6 +26,7 @@
     }
   },
   "order": [
+    "page_banner_DBJi6L",
     "main"
   ]
 }
