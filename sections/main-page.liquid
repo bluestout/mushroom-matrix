@@ -69,14 +69,16 @@
   </div>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const input = document.getElementById('pc--opt-out-email_input');
-    if (input) {
-      input.placeholder = 'Email';
-    }
-  });
-</script>
+{% comment %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const input = document.getElementById('pc--opt-out-email_input');
+      if (input) {
+        input.placeholder = 'Email';
+      }
+    });
+  </script>
+{% endcomment %}
 
 {% schema %}
 {
