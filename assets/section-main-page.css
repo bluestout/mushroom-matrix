@@ -69,14 +69,14 @@
 }
 
 .pc--opt-out-form-wrapper .pc--opt-out-form-field input::placeholder {
-  color: #282828;
+  color: #282828 !important;
   /* Make sure it's visible */
-  opacity: 1;
+  opacity: 1 !important;
   /* Required in some browsers */
 }
 
 .pc--opt-out-form-wrapper .pc--opt-out-form-field input {
-  color: #282828;
+  color: #282828 !important;
   /* Make sure it's visible */
 
 }
