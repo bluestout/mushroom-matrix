@@ -69,6 +69,15 @@
   </div>
 </div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const input = document.getElementById('pc--opt-out-email_input');
+    if (input) {
+      input.placeholder = 'Email';
+    }
+  });
+</script>
+
 {% schema %}
 {
   "name": "t:sections.main-page.name",
