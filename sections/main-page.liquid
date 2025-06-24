@@ -75,7 +75,7 @@
       const input = document.querySelector("#pc--optOutFormContainer input[type='email']");
       if (input && !input.placeholder) {
         input.placeholder = 'Email';
-        observer.disconnect(); // stop watching once placeholder is set
+        observer.disconnect();
       }
     });
 
