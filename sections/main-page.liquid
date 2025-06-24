@@ -69,16 +69,22 @@
   </div>
 </div>
 
-{% comment %}
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const input = document.getElementById('pc--opt-out-email_input');
-      if (input) {
-        input.placeholder = 'Email';
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const observer = new MutationObserver(function () {
+      const input = document.querySelector("#pc--optOutFormContainer input[type='email']");
+      if (input && !input.placeholder) {
+        input.placeholder = 'Enter your email to opt out';
+        observer.disconnect(); // stop watching once placeholder is set
       }
     });
-  </script>
-{% endcomment %}
+
+    observer.observe(document.getElementById('pc--optOutFormContainer'), {
+      childList: true,
+      subtree: true,
+    });
+  });
+</script>
 
 {% schema %}
 {
