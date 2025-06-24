@@ -263,7 +263,7 @@
         "text_xAwUiy": {
           "type": "text",
           "settings": {
-            "text": "<p>Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor.</p>",
+            "text": "<p>We work tirelessly to make a difference in the lives of animals everywhere wth our organic mushroom powders<br/><br/></p>",
             "text_style": "body",
             "reduce_width": true
           }
@@ -295,7 +295,8 @@
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "custom_class": ""
       }
     },
     "text_with_faqs_9DyGAN": {
