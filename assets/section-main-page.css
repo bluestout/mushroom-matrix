@@ -38,7 +38,8 @@
   text-transform: capitalize;
 }
 
-.main-page-container h2 {
+.main-page-container h2,
+.main-page-container h3 {
   color: #242833;
   font-family: Anuphan;
   font-size: 24px;
