@@ -74,7 +74,7 @@
     const observer = new MutationObserver(function () {
       const input = document.querySelector("#pc--optOutFormContainer input[type='email']");
       if (input && !input.placeholder) {
-        input.placeholder = 'Enter your email to opt out';
+        input.placeholder = 'Email';
         observer.disconnect(); // stop watching once placeholder is set
       }
     });
