@@ -68,14 +68,14 @@
   display: none;
 }
 
-#pc--opt-out-email_input::placeholder {
+.pc--opt-out-form-wrapper .pc--opt-out-form-field input::placeholder {
   color: #282828;
   /* Make sure it's visible */
   opacity: 1;
   /* Required in some browsers */
 }
 
-#pc--opt-out-email_input {
+.pc--opt-out-form-wrapper .pc--opt-out-form-field input {
   color: #282828;
   /* Make sure it's visible */
 
