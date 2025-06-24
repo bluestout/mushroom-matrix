@@ -60,6 +60,10 @@
   /* 162.5% */
 }
 
+.main-page-container p a {
+  color: #000 !important;
+}
+
 @media screen and (max-width: 768px) {
 
   .main-page-container .main-page-title {
