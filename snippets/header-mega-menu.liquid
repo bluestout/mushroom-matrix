@@ -46,7 +46,10 @@
                           aria-current="page"
                         {% endif %}
                       >
-                        {% if childlink.type == 'collection_link' or childlink.type == 'product_link' %}
+                        {% if childlink.type == 'collection_link'
+                          or childlink.type == 'product_link'
+                          or childlink.type == 'page_link'
+                        %}
                           {% assign object = childlink.object %}
                           {%- assign img = object.metafields.custom.menu_image -%}
                           {%- if img != blank -%}
@@ -70,6 +73,10 @@
                                 height="231px"
                                 width="271px"
                               >
+                            </div>
+                          {% else %}
+                            <div class="mega-sub-menu-link--image-cover">
+                              {{ 'collection-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
                             </div>
                           {%- endif -%}
                         {% endif %}
