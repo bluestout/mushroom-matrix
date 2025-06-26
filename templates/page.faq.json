@@ -268,8 +268,8 @@
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
-            "question": "When will I receive my order?",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor.</p>"
+            "question": "How do I use Mushroom Matrix mushroom powders for my dog?",
+            "answer": "<p>Simply give one half teaspoon of Mushroom Matrix mushroom powder for every 25lbs of body weight daily – round to the closest amount. We recommend that you double the serving for the first 3 weeks of use to accelerate results- morning & evening. Continue double serving if extra support is desired.</p>"
           }
         },
         "faq_question_icwwt9": {
@@ -277,8 +277,8 @@
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
-            "question": "What are shipping fees for subscription orders?",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor.</p>"
+            "question": "What are Mushroom Matrix products for dogs good for?",
+            "answer": "<p>Mushrooms have been traditionally used for people for thousands of years. Numerous published research articles have established the incredible health benefits of these unique and powerful mushrooms. In addition to immune support, each type of mushroom can offer its own special benefits and we invite you to research them on your own. With our expertly formulated products, your pet can enjoy these benefits as well.</p>"
           }
         },
         "faq_question_GmGMRL": {
@@ -286,8 +286,62 @@
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
-            "question": "How do I receive order updates?",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor.</p>"
+            "question": "What size container is best for my dog or dogs?",
+            "answer": "<p>The 100 g pouches are ideal for first-time users and small dogs. The 200 g jar works well for medium sized dogs. We offer the 450 g container for large dogs and multiple dog households.</p>"
+          }
+        },
+        "faq_question_JU4KzW": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Canine FAQs",
+            "sub_category": "",
+            "question": "Are Mushroom Matrix products flavored?",
+            "answer": "<p>Our Organic Mushroom Powders are unflavored, but most dogs take them readily.</p>"
+          }
+        },
+        "faq_question_YUUkPc": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Canine FAQs",
+            "sub_category": "",
+            "question": "Are there any other ingredients added to Mushroom Matrix products?",
+            "answer": "<p>No, there are no other ingredients or fillers in our powders, only Certified Organic mushroom powders and trace amounts of Organic Myceliated Oats.</p>"
+          }
+        },
+        "faq_question_6TkHmf": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Canine FAQs",
+            "sub_category": "",
+            "question": "Can my pet take this with prescription medication?",
+            "answer": "<p>Please consult with your veterinarian with questions about your pet's health.</p>"
+          }
+        },
+        "faq_question_iK7kb6": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Canine FAQs",
+            "sub_category": "",
+            "question": "Are your products organic?",
+            "answer": "<p>Mushroom Matrix products are Certified 100% Organic by Organic Certifiers.</p>"
+          }
+        },
+        "faq_question_LUDyKD": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Canine FAQs",
+            "sub_category": "",
+            "question": "Where do your mushrooms come from?",
+            "answer": "<p>All of our Certified 100% Organic mushroom powders are grown, processed and packaged in Vista, California, USA.</p>"
+          }
+        },
+        "faq_question_rc43dK": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Canine FAQs",
+            "sub_category": "",
+            "question": "How are the mushrooms grown?",
+            "answer": "<p>Our organic mushrooms are grown through full spectrum lifecycle. Our products contain all the life stages of the mushroom including myceliated biomass, primordia (baby mushrooms), and, in most species, fruit bodies that are grown and processed at our indoor, environmentally-controlled facility at our Vista, CA facility. </p><p>At the completion of the growing process, the mature mushroom material is chopped and steam-cooked. The steam-cooking improves the digestibility of the mushrooms and the bioavailability of nutrients and bioactive compounds. We then carefully dehydrate our mushrooms at moderate temperatures and mill into a fine powder. </p><p>The result is a full spectrum, gluten-free, non-GMO product with naturally-occurring antioxidants, immunomodulating beta glucans, and other bioactive compounds and vital nutrients. We are Certified 100% Organic and a current Good Manufacturing Practices (cGMP) compliant facility to ensure highest quality and efficacy. Additionally, we have BRCGS International Food Safety Certification (AA rating).<br/><br/></p>"
           }
         },
         "faq_question_k6A9eh": {
@@ -341,6 +395,12 @@
         "faq_question_3LeVEf",
         "faq_question_icwwt9",
         "faq_question_GmGMRL",
+        "faq_question_JU4KzW",
+        "faq_question_YUUkPc",
+        "faq_question_6TkHmf",
+        "faq_question_iK7kb6",
+        "faq_question_LUDyKD",
+        "faq_question_rc43dK",
         "faq_question_k6A9eh",
         "faq_question_YXnfNp"
       ],
