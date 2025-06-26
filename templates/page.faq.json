@@ -110,6 +110,60 @@
             "answer": "<p>Yes, absolutely! There are synergies that can be beneficial when combining a variety of mushroom species.</p>"
           }
         },
+        "faq_question_hAKbgb": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Equine FAQs",
+            "sub_category": "",
+            "question": "Are Mushroom Matrix products safe to use in competitions?",
+            "answer": "<p>Our products contain no prohibited substances - just mushroom powder.  Always consult the guidelines of FEI CleanSport, USEF, AQHA or your local governing body for more information.</p>"
+          }
+        },
+        "faq_question_iNB9MP": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Equine FAQs",
+            "sub_category": "",
+            "question": "How should I store my products?",
+            "answer": "<p>Store your products in a cool, dry place.  Seal it up tightly after each use to prevent moisture from getting into the product. DO NOT keep Mushroom Matrix in your car or horse trailer in warm weather as prolonged exposure to extremely high temperatures can degrade the product. Tack rooms, hay rooms and grooming stalls are usually fine.</p>"
+          }
+        },
+        "faq_question_fMWp8i": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Equine FAQs",
+            "sub_category": "",
+            "question": "My horse is taking probiotics. Is it OK to give them along with Mushroom Matrix?",
+            "answer": "<p>Please do. The prebiotics in our products provide a robust platform for probiotics so they work hand-in-hand. Of course, if you have any questions about your horse's supplements, please consult your veterinarian.</p>"
+          }
+        },
+        "faq_question_rTAhKh": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Equine FAQs",
+            "sub_category": "",
+            "question": "Do you test your products for heavy metals?",
+            "answer": "<p>Yes. All our products are subject to in-house testing and 3rd party testing for heavy metals and other contaminants.</p>"
+          }
+        },
+        "faq_question_aC8egN": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Equine FAQs",
+            "sub_category": "",
+            "question": "Are your products certified organic?",
+            "answer": "<p>Our Mushroom Matrix mushroom products are Certified 100% Organic by Organic Certifiers.</p>"
+          }
+        },
+        "faq_question_7bYMBd": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Equine FAQs",
+            "sub_category": "",
+            "question": "Where do your mushrooms come from?",
+            "answer": "<p>All our mushrooms are grown, processed and packaged in our cGMP facilities Vista, California, USA.</p>"
+          }
+        },
         "faq_question_3LeVEf": {
           "type": "faq_question",
           "settings": {
@@ -168,6 +222,12 @@
         "faq_question_P6UVEP",
         "faq_question_Rc4KRU",
         "faq_question_qEHekW",
+        "faq_question_hAKbgb",
+        "faq_question_iNB9MP",
+        "faq_question_fMWp8i",
+        "faq_question_rTAhKh",
+        "faq_question_aC8egN",
+        "faq_question_7bYMBd",
         "faq_question_3LeVEf",
         "faq_question_icwwt9",
         "faq_question_GmGMRL",
