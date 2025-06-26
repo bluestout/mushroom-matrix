@@ -389,15 +389,6 @@
             "answer": "<p>Mushrooms that are toxic to people are also toxic to dogs. For example, while you wouldn’t eat an unidentified mushroom you found on hike, the mushrooms from the grocery store are fine to enjoy as dinner.  We grow 10 species of mushrooms that have been carefully selected for the support they provide based on many years of traditional usage.  They are safe and effective for people, pets and horses.</p>"
           }
         },
-        "faq_question_U99xGX": {
-          "type": "faq_question",
-          "settings": {
-            "category": "Canine FAQs",
-            "sub_category": "",
-            "question": "I have heard that mushrooms are toxic for dogs. Is that true?",
-            "answer": "<p>Mushrooms that are toxic to people are also toxic to dogs. For example, while you wouldn’t eat an unidentified mushroom you found on hike, the mushrooms from the grocery store are fine to enjoy as dinner.  We grow 10 species of mushrooms that have been carefully selected for the support they provide based on many years of traditional usage.  They are safe and effective for people, pets and horses.</p>"
-          }
-        },
         "faq_question_aBRrDL": {
           "type": "faq_question",
           "settings": {
@@ -505,7 +496,6 @@
         "faq_question_fkYNHk",
         "faq_question_i9wQHe",
         "faq_question_GXDAGw",
-        "faq_question_U99xGX",
         "faq_question_aBRrDL",
         "faq_question_K8QBQN",
         "faq_question_k9QmYT",
