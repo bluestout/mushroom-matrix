@@ -209,6 +209,60 @@
             "answer": "<p>Please give us a call or send us an email and we will be happy to send you a replacement scoop.  In the meantime, one scoop is equal to approximately five teaspoons. </p>"
           }
         },
+        "faq_question_qYU8nX": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Equine FAQs",
+            "sub_category": "",
+            "question": "I see \"primordia\" listed in the ingredients. What does that mean?",
+            "answer": "<p>Primordia are basically baby mushrooms.</p>"
+          }
+        },
+        "faq_question_JHkwdL": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Equine FAQs",
+            "sub_category": "",
+            "question": "What is the “Best Used By” date printed on the containers?",
+            "answer": "<p>The Best Used By date refers to the date recommended that you use the product by for best physical quality. It is not an expiration date, but rather the date by which we recommend consumption. This information is located on the bottom of the container.</p>"
+          }
+        },
+        "faq_question_g3eN7y": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Equine FAQs",
+            "sub_category": "",
+            "question": "Are your products extracted? Do you have any products that have standardized beta glucans?",
+            "answer": "<p>Beta glucan standardization can generally only be done with extracted products-- you keep extracting and concentrating until you reach the desired concentration with hot-extraction processes followed by spray-drying or the use of solvents to precipitate the beta glucans out of solution.  Often with \"standardized\" beta glucan mushroom products, the standardization of beta glucan content is achieved by spiking the mushrooms with cheaper- and easier-to-produce yeast-derived beta glucans that cannot be differentiated analytically from the mushroom-derived beta glucans.Using sample preparation steps that are appropriate for our unextracted, whole food mushroom powders, we get beta glucan contents in our mushroom powders that are greater than 20% (DW). Although there is a diversity of opinions, it is generally thought that somewhere between 250 and 500 mg/day of beta glucans is sufficient to trigger the host-mediated immune responses to beta glucans that result in the support and balancing of immune function.  At a 20% beta glucan content, our recommended daily serving does provide sufficient beta glucans to trigger a cascade of host-mediated immune responses and cell-signaling events.  More is not always better.It is important to note that while beta glucans do get the most attention regarding the immune support provided by mushrooms, beta glucans are by no means the only constituents that are present in unextracted, functional mushroom powders that work together to support immune function.  Other immunity-supporting constituents include fungal alpha glucans, prebiotic dietary fibers, antioxidants (glutathione, ergothioneine, polyphenols, SOD), triterpenes, sterols, peptides, vitamins and minerals.</p>"
+          }
+        },
+        "faq_question_tNkiVT": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Equine FAQs",
+            "sub_category": "",
+            "question": "Can I return my product?",
+            "answer": "<p>We always aim to make sure our customers love our products, but if you do need to return an order, we’re happy to help. Just email us directly and we’ll take you through the process.</p>"
+          }
+        },
+        "faq_question_rApWPL": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Equine FAQs",
+            "sub_category": "",
+            "question": "What is the difference between the  Mushroom Matrix products I am familiar with and the Equine Wellbeing?",
+            "answer": "<p>The Equine Wellbeing comes in a 30 serving jar for horse owners wanting to optimize their horse’s health.  If you have multiple horses or horses in competition that may use more than one scoop daily, you may want to consider the foundation Equine Mushroom Matrix products as they are available larger sizes.  Horses under veterinary care or performing at top levels often need the additional support of twice day dosing.  However, horses under ordinary circumstances thrive on one scoop a day and don’t require a loading dose. </p>"
+          }
+        },
+        "faq_question_U6ymAX": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Equine FAQs",
+            "sub_category": "",
+            "question": "I have an event and would like Mushroom Matrix to sponsor it. Do you do that?",
+            "answer": "<p>Send us an email at support@mushroommatrix.com. We will evaluate your request and get back to you.</p>"
+          }
+        },
         "faq_question_3LeVEf": {
           "type": "faq_question",
           "settings": {
@@ -278,6 +332,12 @@
         "faq_question_z7K4nJ",
         "faq_question_EJaacP",
         "faq_question_tdxVqi",
+        "faq_question_qYU8nX",
+        "faq_question_JHkwdL",
+        "faq_question_g3eN7y",
+        "faq_question_tNkiVT",
+        "faq_question_rApWPL",
+        "faq_question_U6ymAX",
         "faq_question_3LeVEf",
         "faq_question_icwwt9",
         "faq_question_GmGMRL",
