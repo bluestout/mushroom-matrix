@@ -43,8 +43,44 @@
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
-            "question": "When will I receive my order?",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor.</p>"
+            "question": "How do I give my horse Mushroom Matrix products?",
+            "answer": "<p>Give one scoop (10 grams) daily. We recommend giving twice daily - morning and evening - for at least two weeks if your horse is not currently on our products. You can then give once a day or continue on the twice daily if additional support is desired.</p>"
+          }
+        },
+        "faq_question_3GJ8BX": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Equine FAQs",
+            "sub_category": "",
+            "question": "Are Mushroom Matrix products flavored?",
+            "answer": "<p>Our Organic Mushroom Powders are unflavored and do not contain any sweeteners, flavoring or other added ingredients.</p>"
+          }
+        },
+        "faq_question_rYPkdU": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Equine FAQs",
+            "sub_category": "",
+            "question": "How long does my horse need Mushroom Matrix Products?",
+            "answer": "<p>Your horse can stay on Mushroom Matrix as long as desired.  Most horses stay on our products year-around for optimum support.</p>"
+          }
+        },
+        "faq_question_F8cTUP": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Equine FAQs",
+            "sub_category": "",
+            "question": "What is the correct serving size for a pony? For a large Warmblood?",
+            "answer": "<p>Our recommended serving of 1 scoop is based on a typical 900-1,000lb horse. Smaller ponies can be given a half scoop. Large horses, such as big Warmbloods, can be given a scoop and a half as indicated.</p>"
+          }
+        },
+        "faq_question_PfiHdE": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Equine FAQs",
+            "sub_category": "",
+            "question": "What size container should I order?",
+            "answer": "<p>*The 45 serving size is recommended for first time users. With a 2-week starting double serving included, the first jar will last for about a month and then 45 days after that. </p>"
           }
         },
         "faq_question_P6UVEP": {
@@ -52,8 +88,8 @@
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
-            "question": "What are shipping fees for subscription orders?",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor.</p>"
+            "question": "How long will it take until I see the results in my horse?",
+            "answer": "<p>Every horse is a bit different.  We find that most horses respond to the support offered by Mushroom Matrix products within 30 days.  The exception to this is our Farrier’s Matrix, as it takes 3-6 months for your horse’s hooves to grow out completely.</p>"
           }
         },
         "faq_question_Rc4KRU": {
@@ -61,8 +97,8 @@
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
-            "question": "How do I receive order updates?",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor.</p>"
+            "question": "My horse is a picky. Any suggestions?",
+            "answer": "<p>You can mix Equine Matrix with applesauce, smashed banana or small mash for a mushroom treat. If needed, Equine Matrix can be mixed with water and administered with a dosing syringe.</p>"
           }
         },
         "faq_question_qEHekW": {
@@ -70,8 +106,8 @@
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
-            "question": "Do you ship outside of the USA?",
-            "answer": "<p>Currently OmMushrooms.com ships within the United States and Canada. To purchase Om Mushroom Superfood products outside of the United States or Canada, you can find us on <a href=\"https://www.iherb.com/c/om-mushrooms\" target=\"_blank\" title=\"https://www.iherb.com/c/om-mushrooms\">iHerb</a>.</p>"
+            "question": "Can I give my horse more than one Mushroom Matrix product at the same time?",
+            "answer": "<p>Yes, absolutely! There are synergies that can be beneficial when combining a variety of mushroom species.</p>"
           }
         },
         "faq_question_3LeVEf": {
@@ -125,6 +161,10 @@
         "faq_category_3rRphJ",
         "faq_category_7eFPPg",
         "faq_question_FaHw6W",
+        "faq_question_3GJ8BX",
+        "faq_question_rYPkdU",
+        "faq_question_F8cTUP",
+        "faq_question_PfiHdE",
         "faq_question_P6UVEP",
         "faq_question_Rc4KRU",
         "faq_question_qEHekW",
