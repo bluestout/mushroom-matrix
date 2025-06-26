@@ -434,21 +434,30 @@
             "answer": "<p>You can find Mushroom Matrix products at many pet food stores and online.  Go to the Store Locator link at the bottom of the page to find a store nearest you. </p>"
           }
         },
+        "faq_question_CiatGb": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Canine FAQs",
+            "sub_category": "",
+            "question": "I have an event and would like Mushroom Matrix to sponsor it, do you do that?",
+            "answer": "<p>Send us an email at support@mushroommatrix.com.  We will evaluate your request and get back to you.</p>"
+          }
+        },
+        "faq_question_pbcBwr": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Canine FAQs",
+            "sub_category": "",
+            "question": "I have a store and would like to carry Mushroom Matrix, how do I do that?",
+            "answer": "<p>Send us an email at support@mushroommatrix.com and we will help you.</p>"
+          }
+        },
         "faq_question_k6A9eh": {
           "type": "faq_question",
           "settings": {
             "category": "Cat FAQ",
             "sub_category": "",
             "question": "When will I receive my order?",
-            "answer": "<p>Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor.</p>"
-          }
-        },
-        "faq_question_YXnfNp": {
-          "type": "faq_question",
-          "settings": {
-            "category": "Cat FAQ",
-            "sub_category": "",
-            "question": "How do I receive order updates?",
             "answer": "<p>Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor.</p>"
           }
         }
@@ -501,8 +510,9 @@
         "faq_question_k9QmYT",
         "faq_question_XMajmV",
         "faq_question_jqt7qC",
-        "faq_question_k6A9eh",
-        "faq_question_YXnfNp"
+        "faq_question_CiatGb",
+        "faq_question_pbcBwr",
+        "faq_question_k6A9eh"
       ],
       "name": "FAQ Section",
       "settings": {
