@@ -380,6 +380,69 @@
             "answer": "<p>Store your products in a cool, dry place, such as a kitchen cabinet. Seal tightly after each use to prevent moisture from getting into the product. Refrigeration is not needed.<br/><br/></p>"
           }
         },
+        "faq_question_GXDAGw": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Canine FAQs",
+            "sub_category": "",
+            "question": "I have heard that mushrooms are toxic for dogs. Is that true?",
+            "answer": "<p>Mushrooms that are toxic to people are also toxic to dogs. For example, while you wouldn’t eat an unidentified mushroom you found on hike, the mushrooms from the grocery store are fine to enjoy as dinner.  We grow 10 species of mushrooms that have been carefully selected for the support they provide based on many years of traditional usage.  They are safe and effective for people, pets and horses.</p>"
+          }
+        },
+        "faq_question_U99xGX": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Canine FAQs",
+            "sub_category": "",
+            "question": "I have heard that mushrooms are toxic for dogs. Is that true?",
+            "answer": "<p>Mushrooms that are toxic to people are also toxic to dogs. For example, while you wouldn’t eat an unidentified mushroom you found on hike, the mushrooms from the grocery store are fine to enjoy as dinner.  We grow 10 species of mushrooms that have been carefully selected for the support they provide based on many years of traditional usage.  They are safe and effective for people, pets and horses.</p>"
+          }
+        },
+        "faq_question_aBRrDL": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Canine FAQs",
+            "sub_category": "",
+            "question": "Do you have any tips for getting my picky dog to take the product?",
+            "answer": "<p>You can mix it with water and administer with an oral syringe. If you are mixing it into dry food, moisten with broth, bone broth or water and mix before feeding. If you are feeding wet or raw food, most dogs will eat it readily if it is mixed well into the food. If you are giving a loading (double) dose split the dose into morning and evening feedings when possible. You can also cut the dose in half and build up to a full dose if necessary. Pets are like people and sometimes have individual food likes and dislikes.  Some dogs that are ill will lose their appetite as well.  In these cases, try mixing it with peanut butter, cottage cheese or some other favored, soft food.  Cats and some dogs frequently enjoy it mixed with crushed sardines packed in oil. </p>"
+          }
+        },
+        "faq_question_K8QBQN": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Canine FAQs",
+            "sub_category": "",
+            "question": "What is the “Best Used By” date printed on the containers?",
+            "answer": "<p>The Best Used By date refers to the date recommended that you use the product by for best physical quality. It is not an expiration date, but rather the date by which we recommend consumption.</p>"
+          }
+        },
+        "faq_question_k9QmYT": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Canine FAQs",
+            "sub_category": "",
+            "question": "If a product is past the Best Used By date, does this mean that I shouldn’t use the product?",
+            "answer": "<p>Not necessarily. Although the product is past our recommended consumption date, if it still looks and smells fine, you may decide to continue consumption. Your decision should depend on several factors, including how the product has been stored and whether or not the product is discolored, rancid, or noticeably changed. For example, if the product kept in a cool dry place, and looks and smells normal this may allow for consumption after the Best Used By date. If any signs of degradation are evident it’s best to discard the product.</p>"
+          }
+        },
+        "faq_question_XMajmV": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Canine FAQs",
+            "sub_category": "",
+            "question": "Your products list \"primordia\" in the ingredient list. What does that mean?",
+            "answer": "<p>Primordia is a fancy word for baby mushrooms.</p>"
+          }
+        },
+        "faq_question_jqt7qC": {
+          "type": "faq_question",
+          "settings": {
+            "category": "Canine FAQs",
+            "sub_category": "",
+            "question": "Where can I find your products?",
+            "answer": "<p>You can find Mushroom Matrix products at many pet food stores and online.  Go to the Store Locator link at the bottom of the page to find a store nearest you. </p>"
+          }
+        },
         "faq_question_k6A9eh": {
           "type": "faq_question",
           "settings": {
@@ -441,6 +504,13 @@
         "faq_question_KrG44H",
         "faq_question_fkYNHk",
         "faq_question_i9wQHe",
+        "faq_question_GXDAGw",
+        "faq_question_U99xGX",
+        "faq_question_aBRrDL",
+        "faq_question_K8QBQN",
+        "faq_question_k9QmYT",
+        "faq_question_XMajmV",
+        "faq_question_jqt7qC",
         "faq_question_k6A9eh",
         "faq_question_YXnfNp"
       ],
