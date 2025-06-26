@@ -84,9 +84,19 @@
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
+            "heading": "Return Policy",
+            "icon": "none",
+            "content": "<p>If you are not satisfied with your purchase for any reason, please contact us within 30 days for a full refund, at our team's discretion. If you purchased from one of our resellers, please return it directly to them.</p>",
+            "page": "",
+            "liquid": ""
+          }
+        },
+        "collapsible_tab_6cxG8d": {
+          "type": "collapsible_tab",
+          "settings": {
             "heading": "Ingredients",
             "icon": "none",
-            "content": "{{ product.metafields.custom.ingredients | metafield_tag }}",
+            "content": "<p>{{ product.metafields.custom.ingredients | metafield_tag }}</p>",
             "page": "",
             "liquid": ""
           }
@@ -141,6 +151,7 @@
         "buy_buttons",
         "description",
         "collapsible-row-0",
+        "collapsible_tab_6cxG8d",
         "collapsible-row-1",
         "collapsible-row-2",
         "share",
@@ -288,7 +299,8 @@
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "custom_class": ""
       }
     },
     "image_with_text_MdDMBL": {
@@ -336,7 +348,8 @@
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "custom_class": ""
       }
     },
     "related-products": {
