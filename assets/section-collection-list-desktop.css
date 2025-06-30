@@ -51,7 +51,8 @@ slider-component {
 
 .collection-list .card__media .media img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 .collection-list .card__inner {
@@ -73,7 +74,7 @@ slider-component {
     /* 95% */
     text-transform: uppercase;
     text-align: left;
-    ;
+    width: 100%;
 }
 
 .collection-list .slick-track {

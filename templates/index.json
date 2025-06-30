@@ -12,8 +12,15 @@
     "collection_list_mobile_kzdi89": {
       "type": "collection-list-mobile",
       "blocks": {
+        "featured_page_ACDAMJ": {
+          "type": "featured_page",
+          "settings": {
+            "page": "for-horses"
+          }
+        },
         "featured_collection_rWN7jt": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "collection": "horsesshop-all"
           }
@@ -32,6 +39,7 @@
         }
       },
       "block_order": [
+        "featured_page_ACDAMJ",
         "featured_collection_rWN7jt",
         "featured_collection_qanpph",
         "featured_collection_aGA8bW"
@@ -39,7 +47,7 @@
       "settings": {
         "title": "",
         "heading_size": "h1",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "columns_desktop": 3,
         "color_scheme": "",
         "show_view_all": false,
@@ -90,8 +98,15 @@
     "collection_list_desktop_CigTqP": {
       "type": "collection-list-desktop",
       "blocks": {
+        "featured_page_kTKKee": {
+          "type": "featured_page",
+          "settings": {
+            "page": "for-horses"
+          }
+        },
         "featured_collection_zDHGCe": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "collection": "horsesshop-all"
           }
@@ -110,6 +125,7 @@
         }
       },
       "block_order": [
+        "featured_page_kTKKee",
         "featured_collection_zDHGCe",
         "featured_collection_yJJtch",
         "featured_collection_X9AqML"
@@ -117,7 +133,7 @@
       "settings": {
         "title": "Mushrooms Work Wonders",
         "heading_size": "h1",
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "columns_desktop": 3,
         "color_scheme": "",
         "show_view_all": false,

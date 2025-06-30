@@ -1,0 +1,60 @@
+{% assign page = block.settings.page %}
+
+{% if page %}
+  {% assign ratio = 1 %}
+  {% assign page_featured_image = page.metafields.custom.featured_image.value %}
+  {% if page_featured_image %}
+    {% comment %} {% assign ratio = page_featured_image.aspect_ratio %} {% endcomment %}
+    {% assign ratio = 1.5333333 %}
+  {% endif %}
+  <div class="card-wrapper animate-arrow collection-card-wrapper">
+    <div
+      class="card card--media card--standard color-{{ section.settings.color_scheme }} gradient"
+      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+    >
+      <div
+        class="card__inner color-scheme-2 gradient ratio"
+        style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+      >
+        {%- if page_featured_image -%}
+          <div class="card__media">
+            <div class="media media--transparent media--hover-effect">
+              <img
+                srcset="
+                  {%- if page_featured_image.width >= 165 -%}{{ page_featured_image | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if page_featured_image.width >= 330 -%}{{ page_featured_image | image_url: width: 330 }} 330w,{%- endif -%}
+                  {%- if page_featured_image.width >= 535 -%}{{ page_featured_image | image_url: width: 535 }} 535w,{%- endif -%}
+                  {%- if page_featured_image.width >= 750 -%}{{ page_featured_image | image_url: width: 750 }} 750w,{%- endif -%}
+                  {%- if page_featured_image.width >= 1000 -%}{{ page_featured_image | image_url: width: 1000 }} 1000w,{%- endif -%}
+                  {%- if page_featured_image.width >= 1500 -%}{{ page_featured_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                  {%- if page_featured_image.width >= 3000 -%}{{ page_featured_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                  {{ page_featured_image | image_url }} {{ page_featured_image.width }}w
+                "
+                src="{{ page_featured_image | image_url: width: 1500 }}"
+                sizes="
+                  (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns }}px,
+                  (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
+                  calc(100vw - 3rem)
+                "
+                alt="{{ page_featured_image.alt | escape }}"
+                height="{{ page_featured_image.height }}"
+                width="{{ page_featured_image.width }}"
+                loading="lazy"
+                class="motion-reduce"
+              >
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+      <div class="card__content">
+        <div class="card__information">
+          <h3 class="card__heading">
+            <a href="{{ page.url }}" class="full-unstyled-link" tabindex="0">
+              {{- page.title | escape -}}
+            </a>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
