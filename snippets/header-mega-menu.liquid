@@ -52,6 +52,9 @@
                         %}
                           {% assign object = childlink.object %}
                           {%- assign img = object.metafields.custom.menu_image -%}
+                          {% if link.title == 'Cat' and object.metafields.custom.menu_image_for_cat %}
+                            {%- assign img = object.metafields.custom.menu_image_for_cat -%}
+                          {% endif %}
                           {%- if img != blank -%}
                             <div class="mega-sub-menu-link--image-cover">
                               <img
