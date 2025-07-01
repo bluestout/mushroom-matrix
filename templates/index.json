@@ -18,31 +18,23 @@
             "page": "for-horses"
           }
         },
-        "featured_collection_rWN7jt": {
-          "type": "featured_collection",
-          "disabled": true,
+        "featured_page_heMcTh": {
+          "type": "featured_page",
           "settings": {
-            "collection": "horsesshop-all"
+            "page": "for-dogs"
           }
         },
-        "featured_collection_qanpph": {
-          "type": "featured_collection",
+        "featured_page_wUxeHH": {
+          "type": "featured_page",
           "settings": {
-            "collection": "for-dogs"
-          }
-        },
-        "featured_collection_aGA8bW": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "for-cats"
+            "page": "for-cats"
           }
         }
       },
       "block_order": [
         "featured_page_ACDAMJ",
-        "featured_collection_rWN7jt",
-        "featured_collection_qanpph",
-        "featured_collection_aGA8bW"
+        "featured_page_heMcTh",
+        "featured_page_wUxeHH"
       ],
       "settings": {
         "title": "",
@@ -104,31 +96,23 @@
             "page": "for-horses"
           }
         },
-        "featured_collection_zDHGCe": {
-          "type": "featured_collection",
-          "disabled": true,
+        "featured_page_KKtqMz": {
+          "type": "featured_page",
           "settings": {
-            "collection": "horsesshop-all"
+            "page": "for-dogs"
           }
         },
-        "featured_collection_yJJtch": {
-          "type": "featured_collection",
+        "featured_page_44eWtz": {
+          "type": "featured_page",
           "settings": {
-            "collection": "for-dogs"
-          }
-        },
-        "featured_collection_X9AqML": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "for-cats"
+            "page": "for-cats"
           }
         }
       },
       "block_order": [
         "featured_page_kTKKee",
-        "featured_collection_zDHGCe",
-        "featured_collection_yJJtch",
-        "featured_collection_X9AqML"
+        "featured_page_KKtqMz",
+        "featured_page_44eWtz"
       ],
       "settings": {
         "title": "Mushrooms Work Wonders",
