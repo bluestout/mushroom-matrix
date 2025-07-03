@@ -241,9 +241,10 @@
         "review_WLnpKt": {
           "type": "review",
           "settings": {
+            "img": "shopify://shop_images/104263_1904572268634.webp",
             "title": "",
-            "text": "",
-            "author": ""
+            "text": "<p>I highly recommend this product. It has changed my cats life. I also take Om Mushroom Master Blend. My family swears by this product</p>",
+            "author": "Vinci K."
           }
         }
       },
