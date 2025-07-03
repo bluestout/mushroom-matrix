@@ -237,12 +237,21 @@
             "text": "<p>Lorem ipsum dolor sit amet consectetur. Quam amet id pharetra varius at maecenas orci at quam. Odio malesuada non massa condimentum at rhoncus. Arcu faucibus id nibh sit tortor.</p>",
             "author": "Alexys A."
           }
+        },
+        "review_WLnpKt": {
+          "type": "review",
+          "settings": {
+            "title": "",
+            "text": "",
+            "author": ""
+          }
         }
       },
       "block_order": [
         "review_YJUhAf",
         "review_GK9yDd",
-        "review_93nxYr"
+        "review_93nxYr",
+        "review_WLnpKt"
       ],
       "settings": {
         "bg_color": "",
