@@ -38,35 +38,9 @@
             "tab_title": "Cat FAQ"
           }
         },
-        "faq_question_FaHw6W": {
-          "type": "faq_question",
-          "settings": {
-            "category": "Equine FAQs",
-            "sub_category": "",
-            "question": "How do I give my horse Mushroom Matrix products?",
-            "answer": "<p>Give one scoop (10 grams) daily. We recommend giving twice daily - morning and evening - for at least two weeks if your horse is not currently on our products. You can then give once a day or continue on the twice daily if additional support is desired.</p>"
-          }
-        },
-        "faq_question_3GJ8BX": {
-          "type": "faq_question",
-          "settings": {
-            "category": "Equine FAQs",
-            "sub_category": "",
-            "question": "Are Mushroom Matrix products flavored?",
-            "answer": "<p>Our Organic Mushroom Powders are unflavored and do not contain any sweeteners, flavoring or other added ingredients.</p>"
-          }
-        },
-        "faq_question_rYPkdU": {
-          "type": "faq_question",
-          "settings": {
-            "category": "Equine FAQs",
-            "sub_category": "",
-            "question": "How long does my horse need Mushroom Matrix Products?",
-            "answer": "<p>Your horse can stay on Mushroom Matrix as long as desired.  Most horses stay on our products year-around for optimum support.</p>"
-          }
-        },
         "faq_question_F8cTUP": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -76,6 +50,7 @@
         },
         "faq_question_PfiHdE": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -85,6 +60,7 @@
         },
         "faq_question_P6UVEP": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -94,6 +70,7 @@
         },
         "faq_question_Rc4KRU": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -103,6 +80,7 @@
         },
         "faq_question_qEHekW": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -112,6 +90,7 @@
         },
         "faq_question_hAKbgb": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -121,6 +100,7 @@
         },
         "faq_question_iNB9MP": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -130,6 +110,7 @@
         },
         "faq_question_fMWp8i": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -139,6 +120,7 @@
         },
         "faq_question_rTAhKh": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -148,6 +130,7 @@
         },
         "faq_question_aC8egN": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -157,6 +140,7 @@
         },
         "faq_question_7bYMBd": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -166,6 +150,7 @@
         },
         "faq_question_wGxVXC": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -175,6 +160,7 @@
         },
         "faq_question_CF6TNY": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -184,6 +170,7 @@
         },
         "faq_question_z7K4nJ": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -193,6 +180,7 @@
         },
         "faq_question_EJaacP": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -202,6 +190,7 @@
         },
         "faq_question_tdxVqi": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -211,6 +200,7 @@
         },
         "faq_question_qYU8nX": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -220,6 +210,7 @@
         },
         "faq_question_JHkwdL": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -229,6 +220,7 @@
         },
         "faq_question_g3eN7y": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -238,6 +230,7 @@
         },
         "faq_question_tNkiVT": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -247,6 +240,7 @@
         },
         "faq_question_rApWPL": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -256,6 +250,7 @@
         },
         "faq_question_U6ymAX": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Equine FAQs",
             "sub_category": "",
@@ -265,6 +260,7 @@
         },
         "faq_question_3LeVEf": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -274,6 +270,7 @@
         },
         "faq_question_icwwt9": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -283,6 +280,7 @@
         },
         "faq_question_GmGMRL": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -292,6 +290,7 @@
         },
         "faq_question_JU4KzW": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -301,6 +300,7 @@
         },
         "faq_question_YUUkPc": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -310,6 +310,7 @@
         },
         "faq_question_6TkHmf": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -319,6 +320,7 @@
         },
         "faq_question_iK7kb6": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -328,6 +330,7 @@
         },
         "faq_question_LUDyKD": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -337,6 +340,7 @@
         },
         "faq_question_rc43dK": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -346,6 +350,7 @@
         },
         "faq_question_tUFeUh": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -355,6 +360,7 @@
         },
         "faq_question_KrG44H": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -364,6 +370,7 @@
         },
         "faq_question_fkYNHk": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -373,6 +380,7 @@
         },
         "faq_question_i9wQHe": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -382,6 +390,7 @@
         },
         "faq_question_GXDAGw": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -391,6 +400,7 @@
         },
         "faq_question_aBRrDL": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -400,6 +410,7 @@
         },
         "faq_question_K8QBQN": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -409,6 +420,7 @@
         },
         "faq_question_k9QmYT": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -418,6 +430,7 @@
         },
         "faq_question_XMajmV": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -427,6 +440,7 @@
         },
         "faq_question_jqt7qC": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -436,6 +450,7 @@
         },
         "faq_question_CiatGb": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -445,6 +460,7 @@
         },
         "faq_question_pbcBwr": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
@@ -454,6 +470,7 @@
         },
         "faq_question_k6A9eh": {
           "type": "faq_question",
+          "disabled": true,
           "settings": {
             "category": "Cat FAQ",
             "sub_category": "",
@@ -466,9 +483,6 @@
         "faq_category_qFeXJU",
         "faq_category_3rRphJ",
         "faq_category_7eFPPg",
-        "faq_question_FaHw6W",
-        "faq_question_3GJ8BX",
-        "faq_question_rYPkdU",
         "faq_question_F8cTUP",
         "faq_question_PfiHdE",
         "faq_question_P6UVEP",

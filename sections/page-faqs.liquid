@@ -25,6 +25,11 @@
   </div>
 
   <!-- FAQ Content -->
+
+  {% assign equine_faqs = page.metafields.custom.equine_faqs.value %}
+  {% assign canine_faqs = page.metafields.custom.canine_faqs.value %}
+  {% assign cat_faqs = page.metafields.custom.cat_faqs.value %}
+
   <div class="faq-content">
     {% for category in section.blocks %}
       {% if category.type == 'faq_category' %}
@@ -67,6 +72,51 @@
                 </div>
                 <div class="faq-answer">
                   <p>{{ faq.settings.answer }}</p>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+
+          <!-- Display Equine Questions Without a Subcategory -->
+          {% for faq in equine_faqs %}
+            {% if faq.category.value == category_name and faq.sub_category.value == blank %}
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h4>{{ faq.question.value }}</h4>
+                  <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                  <p>{{ faq.answer | metafield_text }}</p>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+
+          <!-- Display Canine Questions Without a Subcategory -->
+          {% for faq in canine_faqs %}
+            {% if faq.category.value == category_name and faq.sub_category.value == blank %}
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h4>{{ faq.question.value }}</h4>
+                  <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                  <p>{{ faq.answer | metafield_text }}</p>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+
+          <!-- Display Cat Questions Without a Subcategory -->
+          {% for faq in cat_faqs %}
+            {% if faq.category.value == category_name and faq.sub_category.value == blank %}
+              <div class="faq-item">
+                <div class="faq-question">
+                  <h4>{{ faq.question.value }}</h4>
+                  <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                  <p>{{ faq.answer | metafield_text }}</p>
                 </div>
               </div>
             {% endif %}
