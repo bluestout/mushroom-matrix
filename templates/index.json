@@ -211,15 +211,6 @@
     "reviews_xQyARe": {
       "type": "reviews",
       "blocks": {
-        "review_YJUhAf": {
-          "type": "review",
-          "settings": {
-            "img": "shopify://shop_images/Danielle_R.jpg",
-            "title": "Best thing EVER!",
-            "text": "<p>This is by far one of the best products I've ever used. My veterinarian recommended this product to me and I'll never look back</p>",
-            "author": "Danielle R."
-          }
-        },
         "review_GK9yDd": {
           "type": "review",
           "settings": {
@@ -227,6 +218,15 @@
             "title": "Extremely happy with the MRM product. Used for years for all of my team of show jumpers",
             "text": "<p>I have a tram of 4 fei grand prize show jumpers and I have had my horses on MRM for a few years and am very happy with the results. My horses feel and look great and stay very sounds and healthy</p>",
             "author": "Tracey E."
+          }
+        },
+        "review_YJUhAf": {
+          "type": "review",
+          "settings": {
+            "img": "shopify://shop_images/Danielle_R.jpg",
+            "title": "Best thing EVER!",
+            "text": "<p>This is by far one of the best products I've ever used. My veterinarian recommended this product to me and I'll never look back</p>",
+            "author": "Danielle R."
           }
         },
         "review_93nxYr": {
@@ -249,8 +249,8 @@
         }
       },
       "block_order": [
-        "review_YJUhAf",
         "review_GK9yDd",
+        "review_YJUhAf",
         "review_93nxYr",
         "review_WLnpKt"
       ],

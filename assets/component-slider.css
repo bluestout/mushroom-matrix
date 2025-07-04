@@ -169,7 +169,8 @@ slider-component.slider-component-full-width {
     scroll-padding-left: 1.5rem;
   }
 
-  .slider-component-full-width .slider--desktop .slider__slide:first-child {
+  .slider-component-full-width .slider--desktop .slider__slide:first-child,
+  .slider-component-full-width .contains-card .grid__item:first-child {
     margin-left: 1.5rem;
     scroll-margin-left: 1.5rem;
   }

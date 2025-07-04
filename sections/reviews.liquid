@@ -84,8 +84,10 @@
               {{ block.settings.img | image_url: width: 224, height: 295 | image_tag }}
             </div>
             <div class="species-spotlight__content">
-              <h3 class="species-spotlight__title">{{ block.settings.title | strip }}</h3>
-              <div class="species-spotlight__text">{{ block.settings.text | strip }}</div>
+              <div class="species-spotlight__header-text">
+                <h3 class="species-spotlight__title">{{ block.settings.title | strip }}</h3>
+                <div class="species-spotlight__text">{{ block.settings.text | strip }}</div>
+              </div>
               <div class="species-spotlight__author_reviews">
                 <span class="species-spotlight__author">{{ block.settings.author }}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="85" height="15" viewBox="0 0 85 15" fill="none">

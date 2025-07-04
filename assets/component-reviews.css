@@ -28,7 +28,7 @@
     .species-spotlight__title {
         margin-left: 0;
         margin-bottom: 2rem;
-        margin-top: 3rem;
+        /* margin-top: 3rem; */
     }
 }
 
@@ -71,6 +71,10 @@
     /* 162.5% */
 }
 
+.species-spotlight__text p {
+    margin: 0;
+}
+
 .species-spotlight__author {
     color: var(--Text-black, #000);
     font-feature-settings: 'liga' off, 'clig' off;
@@ -83,7 +87,7 @@
 }
 
 .species-spotlight__author_reviews {
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -134,6 +138,7 @@
     .species-spotlight__card {
         flex-direction: row;
         gap: 3.4rem;
+        align-items: stretch;
     }
 }
 
@@ -159,6 +164,9 @@
 @media screen and (min-width: 1024px) {
     .species-spotlight__content {
         width: 455px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 }
 
