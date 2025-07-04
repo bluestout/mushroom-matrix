@@ -121,6 +121,10 @@
     .species-spotlight__cell {
         width: 58%;
     }
+
+    .species-spotlight__slider {
+        padding-top: 3rem;
+    }
 }
 
 @media screen and (min-width: 2000px) {
@@ -246,11 +250,11 @@
 
     .species-spotlight__title {
         margin: 0;
+        margin-bottom: 1.5rem;
         font-size: 20px;
         font-style: normal;
         font-weight: 600;
-        line-height: 20px;
-        /* 100% */
+        line-height: 26px;
     }
 
     .species-spotlight__text {
