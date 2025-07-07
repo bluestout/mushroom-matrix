@@ -215,7 +215,7 @@
           "type": "review",
           "settings": {
             "img": "shopify://shop_images/Danielle_R.jpg",
-            "title": "Best thing EVER!",
+            "title": "<p>Best thing EVER!</p>",
             "text": "<p>This is by far one of the best products I've ever used. My veterinarian recommended this product to me and I'll never look back</p>",
             "author": "Danielle R."
           }
@@ -224,7 +224,7 @@
           "type": "review",
           "settings": {
             "img": "shopify://shop_images/104263_1899815272538_881fd153_74e6_4d07_84a5_fdde473ef3f3.jpg",
-            "title": "Extremely happy with the MRM product. Used for years for all of my team of show jumpers",
+            "title": "<p>Extremely happy with the MRM product. Used for years for all of my team of show jumpers</p>",
             "text": "<p>I have a tram of 4 fei grand prize show jumpers and I have had my horses on MRM for a few years and am very happy with the results. My horses feel and look great and stay very sounds and healthy</p>",
             "author": "Tracey E."
           }
@@ -233,7 +233,7 @@
           "type": "review",
           "settings": {
             "img": "shopify://shop_images/104263_1904572465242_0e47b01d_6bfb_4bfd_8ff6_56abe60c754e.webp",
-            "title": "Calm, cool, collected",
+            "title": "<p>Calm, cool, collected</p>",
             "text": "<p>Zen is my go to for my pups overall state of being. I have seen significant changes since I started using this product with my rescue Yorkie.</p>",
             "author": "Anonymous"
           }
@@ -242,7 +242,7 @@
           "type": "review",
           "settings": {
             "img": "shopify://shop_images/104263_1904572268634.webp",
-            "title": "Love this!",
+            "title": "<p>💜💜💜💜</p>",
             "text": "<p>I highly recommend this product. It has changed my cats life. I also take Om Mushroom Master Blend. My family swears by this product</p>",
             "author": "Vinci K."
           }
