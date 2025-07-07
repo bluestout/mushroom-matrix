@@ -79,7 +79,6 @@ window.addEventListener("load", function () {
 	}
 });
 
-
 // Theme Editor Events
 document.addEventListener('shopify:section:load', function(event) {
 	if (event.target.querySelector('.species-spotlight__slider')) {
