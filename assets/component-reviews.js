@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// If initialization failed or slider wasn't ready, retry with a small delay
 	if (!initialFlkty) {
-		setTimeout(initSpeciesSlider, 500);
+		setTimeout(initSpeciesSlider, 100);
 	}
 });
 
