@@ -78,3 +78,29 @@ window.addEventListener("load", function () {
 		}, 100);
 	}
 });
+
+
+// Theme Editor Events
+document.addEventListener('shopify:section:load', function(event) {
+	if (event.target.querySelector('.species-spotlight__slider')) {
+	  setTimeout(initSpeciesSlider, 50);
+	}
+  });
+  
+  document.addEventListener('shopify:block:select', function(event) {
+	if (event.target.closest('.species-spotlight')) {
+	  setTimeout(initSpeciesSlider, 50);
+	}
+  });
+  
+  document.addEventListener('shopify:block:deselect', function(event) {
+	if (event.target.closest('.species-spotlight')) {
+	  setTimeout(initSpeciesSlider, 50);
+	}
+  });
+  
+  document.addEventListener('shopify:section:reorder', function(event) {
+	if (event.target.querySelector('.species-spotlight__slider')) {
+	  setTimeout(initSpeciesSlider, 50);
+	}
+  });
