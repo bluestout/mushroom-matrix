@@ -26,9 +26,12 @@
 
   <!-- FAQ Content -->
 
-  {% assign equine_faqs = page.metafields.custom.equine_faqs.value %}
-  {% assign canine_faqs = page.metafields.custom.canine_faqs.value %}
-  {% assign cat_faqs = page.metafields.custom.cat_faqs.value %}
+  {% comment %} {% assign equine_faqs = page.metafields.custom.equine_faqs.value %} {% endcomment %}
+  {% assign equine_faqs = metaobjects.equine_faq.values %}
+  {% comment %} {% assign canine_faqs = page.metafields.custom.canine_faqs.value %} {% endcomment %}
+  {% assign canine_faqs = metaobjects.canine_faq.values %}
+  {% comment %} {% assign cat_faqs = page.metafields.custom.cat_faqs.value %} {% endcomment %}
+  {% assign cat_faqs = metaobjects.cat_faq.values %}
 
   <div class="faq-content">
     {% for category in section.blocks %}
