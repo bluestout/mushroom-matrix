@@ -24,6 +24,10 @@
     letter-spacing: -1px;
 }
 
+.species-spotlight__title p {
+    margin: 0;
+}
+
 @media screen and (min-width: 1024px) {
     .species-spotlight__title {
         margin-left: 0;
