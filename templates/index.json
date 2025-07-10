@@ -52,6 +52,19 @@
     "slideshow_DddfyJ": {
       "type": "slideshow",
       "blocks": {
+        "video_slide_Ak9JWU": {
+          "type": "video-slide",
+          "settings": {
+            "enable_video_looping": true,
+            "video": "shopify://files/videos/videoplayback.mp4",
+            "mobile_video": "shopify://files/videos/Master_Blend_Plant-Based_Protein_Smoothie_d75d27bc-26ad-4278-b6e5-5fc896d255cd.mp4",
+            "video_url": "",
+            "mobile_video_url": "",
+            "description": "MM Banner video",
+            "image": "shopify://shop_images/hero-video-banner-desktop.jpg",
+            "mobile_image": "shopify://shop_images/hero-video-banner-mobile.jpg"
+          }
+        },
         "slide_HjAeDh": {
           "type": "slide",
           "settings": {
@@ -74,12 +87,13 @@
         }
       },
       "block_order": [
+        "video_slide_Ak9JWU",
         "slide_HjAeDh"
       ],
       "settings": {
         "layout": "full_bleed",
         "slide_height": "adapt_image",
-        "slider_visual": "counter",
+        "slider_visual": "dots",
         "auto_rotate": false,
         "change_slides_speed": 5,
         "image_behavior": "none",

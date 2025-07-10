@@ -389,7 +389,8 @@
 
 .banner::after,
 .banner__media::after {
-  content: '';
+  content: none;
+  /*This content prevents to video poster button's action*/
   position: absolute;
   top: 0;
   background: #000000;
