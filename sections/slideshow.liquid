@@ -356,7 +356,7 @@
                       image_size: '1100x',
                       autoplay: true,
                       loop: block.settings.enable_video_looping,
-                      controls: false,
+                      controls: true,
                       muted: false
                   }}
                 {%- endif -%}
@@ -434,7 +434,7 @@
                       image_size: '1100x',
                       autoplay: true,
                       loop: block.settings.enable_video_looping,
-                      controls: false,
+                      controls: true,
                       muted: false
                   }}
                 {%- endif -%}
@@ -456,8 +456,11 @@
         aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}"
         aria-controls="Slider-{{ section.id }}"
       >
-        <span class="svg-wrapper">
-          {{- 'icon-caret.svg' | inline_asset_content -}}
+        <span class="svg-wrapper-arrow">
+          {% comment %} {{- 'icon-caret.svg' | inline_asset_content -}} {% endcomment %}
+          <svg xmlns="http://www.w3.org/2000/svg" width="58" height="32" viewBox="0 0 58 32" fill="none">
+            <path d="M11.1161 15.1161C10.6279 15.6043 10.6279 16.3957 11.1161 16.8839L19.0711 24.8388C19.5592 25.327 20.3507 25.327 20.8388 24.8388C21.327 24.3507 21.327 23.5592 20.8388 23.0711L13.7678 16L20.8388 8.92893C21.327 8.44077 21.327 7.64932 20.8388 7.16116C20.3507 6.67301 19.5592 6.673 19.0711 7.16116L11.1161 15.1161ZM48 16L48 14.75L12 14.75L12 16L12 17.25L48 17.25L48 16Z" fill="#000000"></path>
+          </svg>
         </span>
       </button>
       <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
@@ -491,8 +494,11 @@
         aria-label="{{ 'sections.slideshow.next_slideshow' | t }}"
         aria-controls="Slider-{{ section.id }}"
       >
-        <span class="svg-wrapper">
-          {{- 'icon-caret.svg' | inline_asset_content -}}
+        <span class="svg-wrapper-arrow">
+          {% comment %} {{- 'icon-caret.svg' | inline_asset_content -}} {% endcomment %}
+          <svg xmlns="http://www.w3.org/2000/svg" width="58" height="32" viewBox="0 0 58 32" fill="none">
+            <path d="M46.8839 16.8839C47.3721 16.3957 47.3721 15.6043 46.8839 15.1161L38.929 7.16117C38.4408 6.67302 37.6494 6.67302 37.1612 7.16117C36.673 7.64933 36.673 8.44078 37.1612 8.92894L44.2323 16L37.1612 23.0711C36.673 23.5592 36.673 24.3507 37.1612 24.8388C37.6493 25.327 38.4408 25.327 38.929 24.8388L46.8839 16.8839ZM10 16L10 17.25L46 17.25L46 16L46 14.75L10 14.75L10 16Z" fill="#000000"></path>
+          </svg>
         </span>
       </button>
 
