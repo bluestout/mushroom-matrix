@@ -52,19 +52,6 @@
     "slideshow_DddfyJ": {
       "type": "slideshow",
       "blocks": {
-        "video_slide_Ak9JWU": {
-          "type": "video-slide",
-          "settings": {
-            "enable_video_looping": false,
-            "video": "shopify://files/videos/videoplayback.mp4",
-            "mobile_video": "shopify://files/videos/Master_Blend_Plant-Based_Protein_Smoothie_d75d27bc-26ad-4278-b6e5-5fc896d255cd.mp4",
-            "video_url": "",
-            "mobile_video_url": "",
-            "description": "MM Banner video",
-            "image": "shopify://shop_images/hero-video-banner-desktop.jpg",
-            "mobile_image": "shopify://shop_images/hero-video-banner-mobile.jpg"
-          }
-        },
         "slide_HjAeDh": {
           "type": "slide",
           "settings": {
@@ -84,11 +71,24 @@
             "text_alignment_mobile": "left",
             "color_scheme": ""
           }
+        },
+        "video_slide_Ak9JWU": {
+          "type": "video-slide",
+          "settings": {
+            "enable_video_looping": false,
+            "video": "shopify://files/videos/videoplayback.mp4",
+            "mobile_video": "shopify://files/videos/Master_Blend_Plant-Based_Protein_Smoothie_d75d27bc-26ad-4278-b6e5-5fc896d255cd.mp4",
+            "video_url": "",
+            "mobile_video_url": "",
+            "description": "MM Banner video",
+            "image": "shopify://shop_images/hero-video-banner-desktop.jpg",
+            "mobile_image": "shopify://shop_images/hero-video-banner-mobile.jpg"
+          }
         }
       },
       "block_order": [
-        "video_slide_Ak9JWU",
-        "slide_HjAeDh"
+        "slide_HjAeDh",
+        "video_slide_Ak9JWU"
       ],
       "settings": {
         "layout": "full_bleed",
