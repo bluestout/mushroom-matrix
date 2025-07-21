@@ -75,7 +75,7 @@
 
 .product__accordion .accordion__content .metafield-rich_text_field p,
 .product__accordion .accordion__content .metafield-rich_text_field ul {
-  margin: 0;
+  /* margin: 0; */
 }
 
 .product__accordion details[open] summary svg line:first-child {
