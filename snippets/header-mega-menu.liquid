@@ -37,10 +37,20 @@
                   role="list"
                 >
                   {%- for childlink in link.links -%}
+                    {% liquid
+                      assign product_preselected_variant = childlink.object.metafields.custom.pre_selected_variant.value.url
+                      assign product_url = ''
+                      if product_preselected_variant != blank
+                        assign product_url = product_preselected_variant
+                      else
+                        assign product_url = childlink.url
+                      endif
+                    %}
+
                     <li>
                       <a
                         id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                        href="{{ childlink.url }}"
+                        href="{{ product_url }}"
                         class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
                         {% if childlink.current %}
                           aria-current="page"
