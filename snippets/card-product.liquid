@@ -325,8 +325,8 @@
           </div>
         </div>
         {% liquid
+          assign variant_id = ''
           if page.handle == 'for-cats'
-            assign variant_id = ''
             if product_preselected_variant != blank
               assign product_form_id = 'quick-add-' | append: section_id | append: product_preselected_variant.id
               assign variant_id = product_preselected_variant.id
