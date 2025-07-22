@@ -39,7 +39,7 @@
                   {%- for childlink in link.links -%}
                     {% liquid
                       assign product_url = ''
-                      if link.handle == 'cat'
+                      if link.handle == 'cat' and childlink.object != 'page'
                         assign product_preselected_variant = childlink.object.metafields.custom.pre_selected_variant.value.url
                         if product_preselected_variant != blank
                           assign product_url = product_preselected_variant
