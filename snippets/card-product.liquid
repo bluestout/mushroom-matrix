@@ -149,6 +149,16 @@
         </div>
       </div>
       <div class="card__content">
+        {% liquid
+          assign product_preselected_variant = card_product.metafields.custom.pre_selected_variant.value
+          assign product_url = ''
+          if product_preselected_variant != blank
+            assign product_url = product_preselected_variant.url
+          else
+            assign product_url = card_product.url
+          endif
+        %}
+
         <div class="card__information">
           <h3
             class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
@@ -157,7 +167,7 @@
             {% endif %}
           >
             <a
-              href="{{ card_product.url }}"
+              href="{{ product_url }}"
               id="CardLink-{{ section_id }}-{{ card_product.id }}"
               class="full-unstyled-link"
               aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
@@ -311,7 +321,11 @@
             {%- endif -%}
           </div>
         </div>
-        {% assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id %}
+        {% if product_preselected_variant != blank %}
+          {% assign product_form_id = 'quick-add-' | append: section_id | append: product_preselected_variant.id %}
+        {% else %}
+          {% assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id %}
+        {% endif %}
         {% if quick_add == 'standard' %}
           <div class="quick-add no-js-hidden">
             {%- liquid
@@ -363,7 +377,9 @@
                 </quick-add-modal>
               {%- else -%}
             {% endcomment %}
-            <product-form data-section-id="{{ section.id }}">
+            <product-form
+              data-section-id="{{ section.id }}"
+            >
               {%- form 'product',
                 card_product,
                 id: product_form_id,
@@ -371,10 +387,16 @@
                 novalidate: 'novalidate',
                 data-type: 'add-to-cart-form'
               -%}
+                {% liquid
+                  assign variant_id = card_product.selected_or_first_available_variant.id
+                  if product_preselected_variant != blank
+                    assign variant_id = product_preselected_variant.id
+                  endif
+                %}
                 <input
                   type="hidden"
                   name="id"
-                  value="{{ card_product.selected_or_first_available_variant.id }}"
+                  value="{{ variant_id }}"
                   class="product-variant-id"
                   {% if card_product.selected_or_first_available_variant.available == false %}
                     disabled
