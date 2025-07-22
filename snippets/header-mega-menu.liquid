@@ -38,14 +38,14 @@
                 >
                   {%- for childlink in link.links -%}
                     {% liquid
+                      assign product_url = ''
                       if link.handle == 'cat'
                         assign product_preselected_variant = childlink.object.metafields.custom.pre_selected_variant.value.url
-                        assign product_url = ''
                         if product_preselected_variant != blank
                           assign product_url = product_preselected_variant
-                        else
-                          assign product_url = childlink.url
                         endif
+                      else
+                        assign product_url = childlink.url
                       endif
                     %}
 

@@ -152,10 +152,13 @@
         {% liquid
           assign product_preselected_variant = card_product.metafields.custom.pre_selected_variant.value
           assign product_url = ''
+          assign product_object = ''
           if product_preselected_variant != blank
             assign product_url = product_preselected_variant.url
+            assign product_object = product_preselected_variant
           else
             assign product_url = card_product.url
+            assign product_object = card_product
           endif
         %}
 
@@ -237,7 +240,7 @@
               {% comment %} {% render 'okendo-reviews-product-rating-summary', product: card_product %} {% endcomment %}
             {%- endif -%}
 
-            {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
+            {% render 'price', product: product_object, price_class: '', show_compare_at_price: true %}
             {%- if card_product.quantity_price_breaks_configured? -%}
               {% if card_product.variants.size == 1 and quick_add == 'bulk' %}
                 {% liquid
@@ -321,11 +324,18 @@
             {%- endif -%}
           </div>
         </div>
-        {% if product_preselected_variant != blank %}
-          {% assign product_form_id = 'quick-add-' | append: section_id | append: product_preselected_variant.id %}
-        {% else %}
-          {% assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id %}
-        {% endif %}
+        {% liquid
+          if page.handle == 'for-cats'
+            assign variant_id = ''
+            if product_preselected_variant != blank
+              assign product_form_id = 'quick-add-' | append: section_id | append: product_preselected_variant.id
+              assign variant_id = product_preselected_variant.id
+            endif
+          else
+            assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id
+            assign variant_id = card_product.selected_or_first_available_variant.id
+          endif
+        %}
         {% if quick_add == 'standard' %}
           <div class="quick-add no-js-hidden">
             {%- liquid
@@ -387,12 +397,6 @@
                 novalidate: 'novalidate',
                 data-type: 'add-to-cart-form'
               -%}
-                {% liquid
-                  assign variant_id = card_product.selected_or_first_available_variant.id
-                  if product_preselected_variant != blank
-                    assign variant_id = product_preselected_variant.id
-                  endif
-                %}
                 <input
                   type="hidden"
                   name="id"
