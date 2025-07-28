@@ -148,35 +148,35 @@
           "type": "icon_image",
           "settings": {
             "icon_title": "California Grown",
-            "image": "shopify://shop_images/icon1.svg"
+            "image": "shopify://shop_images/badge_california_layerstyle.svg"
           }
         },
         "icon_image_4CarbA": {
           "type": "icon_image",
           "settings": {
-            "icon_title": "Certified USDA Organic",
-            "image": "shopify://shop_images/icon2.svg"
+            "icon_title": "Non GMO",
+            "image": "shopify://shop_images/badge_non-gmo_layerstyle.svg"
           }
         },
         "icon_image_4iQQna": {
           "type": "icon_image",
           "settings": {
-            "icon_title": "3rd Party Lab Tested",
-            "image": "shopify://shop_images/icon3.svg"
+            "icon_title": "No artificial ingredients",
+            "image": "shopify://shop_images/badge_no-artificial_layerstyle.svg"
           }
         },
         "icon_image_4NzkCj": {
           "type": "icon_image",
           "settings": {
-            "icon_title": "California Grown",
-            "image": "shopify://shop_images/icon1.svg"
+            "icon_title": "Soy & gluten free",
+            "image": "shopify://shop_images/badge_free-of-fillers_layerstyle.svg"
           }
         },
         "icon_image_ecBzMi": {
           "type": "icon_image",
           "settings": {
-            "icon_title": "Certified USDA Organic",
-            "image": "shopify://shop_images/icon2.svg"
+            "icon_title": "Full cycle mushroom",
+            "image": "shopify://shop_images/badge_full-cycle_layerstyle.svg"
           }
         }
       },
