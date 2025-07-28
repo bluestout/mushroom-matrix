@@ -144,6 +144,13 @@
     "icon_bar_zVH9iY": {
       "type": "icon-bar",
       "blocks": {
+        "icon_image_ecBzMi": {
+          "type": "icon_image",
+          "settings": {
+            "icon_title": "Full cycle mushroom",
+            "image": "shopify://shop_images/badge_full-cycle_layerstyle.svg"
+          }
+        },
         "icon_image_9CJKBL": {
           "type": "icon_image",
           "settings": {
@@ -171,21 +178,14 @@
             "icon_title": "Soy & gluten free",
             "image": "shopify://shop_images/badge_free-of-fillers_layerstyle.svg"
           }
-        },
-        "icon_image_ecBzMi": {
-          "type": "icon_image",
-          "settings": {
-            "icon_title": "Full cycle mushroom",
-            "image": "shopify://shop_images/badge_full-cycle_layerstyle.svg"
-          }
         }
       },
       "block_order": [
+        "icon_image_ecBzMi",
         "icon_image_9CJKBL",
         "icon_image_4CarbA",
         "icon_image_4iQQna",
-        "icon_image_4NzkCj",
-        "icon_image_ecBzMi"
+        "icon_image_4NzkCj"
       ],
       "settings": {
         "use_gradient": false,
