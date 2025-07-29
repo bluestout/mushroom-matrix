@@ -188,6 +188,7 @@
         "icon_image_4NzkCj"
       ],
       "settings": {
+        "slideshow_layout": true,
         "use_gradient": false,
         "hide_desktop": false,
         "custom_class": "section-five-icons"
