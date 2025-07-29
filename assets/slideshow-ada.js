@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
   function updateSlideFocus() {
-    console.log("Updating slide focus");
     document.querySelectorAll('.slideshow__slide').forEach(function (slide) {
       var isHidden = slide.getAttribute('aria-hidden') === 'true';
       var focusables = slide.querySelectorAll('a, button, input, textarea, select, [tabindex]');
