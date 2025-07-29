@@ -118,7 +118,7 @@
             "icon": "none",
             "content": "",
             "page": "",
-            "liquid": "<div class=\"directions-wrapper\">\n\n    {% assign variant_metafield = product.variants.first %}\n\n    {% if variant_metafield.metafields.custom.specialized_content != blank %}\n\n      <div class=\"variant-div\" data-variant-id=\"{{ variant_metafield.id }}\" style=\"display: none;\">\n\n        {{ variant_metafield }}\n\n      </div>\n\n    {% endif %}\n\n  \n\n  {% assign product_metafield = product.metafields.custom.directions_for_use %}\n\n  <div class=\"default-div\" style=\"display: block;\">\n\n    {{ product_metafield }}\n\n  </div>\n\n</div>"
+            "liquid": "<div class=\"directions-wrapper\">\n\n    {% assign variant_metafield = product.variants.first %}\n\n    {% if variant_metafield.metafields.custom.specialized_content != blank %}\n\n      <div class=\"variant-div\" data-variant-id=\"{{ variant_metafield.id }}\" style=\"display: none;\">\n\n        {{ variant_metafield.metafields.custom.specialized_content | metafield_tag }}\n\n      </div>\n\n    {% endif %}\n\n  \n\n  {% assign product_metafield = product.metafields.custom.directions_for_use %}\n\n  <div class=\"default-div\" style=\"display: block;\">\n\n    {{ product_metafield | metafield_tag }}\n\n  </div>\n\n</div>"
           }
         },
         "share": {
