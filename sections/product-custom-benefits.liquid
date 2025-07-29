@@ -93,7 +93,9 @@
                 <div class="default-content image-with-text__text rte {% if block_title_lower contains 'description' %}is-description{% endif %}">
                   {{ block.settings.text }}
                 </div>
-                {% if block_title_lower contains 'description' %}
+                {% if block_title_lower contains 'description'
+                  and product.variants.first.metafields.custom.specialized_content != blank
+                %}
                   <div class="variant-content image-with-text__text rte">
                     {{ product.variants.first.metafields.custom.specialized_content | metafield_tag }}
                   </div>

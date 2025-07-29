@@ -16,13 +16,23 @@ document.addEventListener('DOMContentLoaded', function () {
       setupComplete = true;
 
       function toggleContent() {
-        const defaultContents = document.querySelectorAll('.default-content');
+        const defaultContents = document.querySelectorAll('.default-content.is-description');
         const variantContents = document.querySelectorAll('.variant-content');
 
         if (variantInput.value === firstVariantId) {
-          // Show variant content, hide default
-          defaultContents.forEach((el) => el.classList.remove('show'));
-          variantContents.forEach((el) => el.classList.add('show'));
+          // Check if variant content exists and has content
+          const hasVariantContent =
+            variantContents.length > 0 && Array.from(variantContents).some((el) => el.textContent.trim() !== '');
+
+          if (hasVariantContent) {
+            // Show variant content, hide default
+            defaultContents.forEach((el) => el.classList.remove('show'));
+            variantContents.forEach((el) => el.classList.add('show'));
+          } else {
+            // No variant content available, show default
+            defaultContents.forEach((el) => el.classList.add('show'));
+            variantContents.forEach((el) => el.classList.remove('show'));
+          }
         } else {
           // Show default content, hide variant
           defaultContents.forEach((el) => el.classList.add('show'));
