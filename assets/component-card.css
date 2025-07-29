@@ -309,6 +309,11 @@
   margin: 0 auto;
 }
 
+.card__heading a {
+  background-color: #FFF;
+  color: var(--Test-mid, #282828);
+}
+
 .card__heading:last-child {
   margin-bottom: 0;
 }
