@@ -547,9 +547,11 @@ footer.footer {
   padding-left: 0;
 }
 
+
 .copyright__content {
   background-color: #F6F7F8;
-  color: var(--Test-mid, #282828);
+  color: #282828;
+  /* Changed to high-contrast dark color */
   font-family: "TT Norms Pro";
   font-size: 12px;
   font-style: normal;
@@ -559,7 +561,8 @@ footer.footer {
 }
 
 .copyright__content a {
-  color: var(--Test-mid, #282828);
+  color: #282828;
+  /* Match text for contrast */
   text-decoration: none;
 }
 
