@@ -27,6 +27,9 @@ if (!customElements.get('product-info')) {
 
         this.initQuantityHandlers();
         this.dispatchEvent(new CustomEvent('product-info:loaded', { bubbles: true }));
+
+        // Set initial directions visibility on page load
+        this.setInitialVariantDirections();
       }
 
       addPreProcessCallback(callback) {
@@ -456,6 +459,17 @@ if (!customElements.get('product-info')) {
           'quick_order_list'
         );
         return document.querySelector(`quick-order-list[data-id^="${quickOrderListSectionId}"]`);
+      }
+
+      setInitialVariantDirections() {
+        // Get the current variant ID from the variant input
+        const variantInput = document.querySelector('input[name="id"]');
+        const currentVariantId = variantInput?.value;
+
+        // console.log('Initial variant ID:', currentVariantId);
+
+        // Set initial directions visibility
+        this.toggleVariantDirections(currentVariantId);
       }
 
       toggleVariantDirections(variantId) {
