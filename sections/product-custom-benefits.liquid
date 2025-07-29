@@ -12,6 +12,16 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .section-{{ section.id }}-padding .default-content.is-description,
+  .section-{{ section.id }}-padding .variant-content {
+    display: none;
+  }
+
+  .section-{{ section.id }}-padding .default-content.is-description.show,
+  .section-{{ section.id }}-padding .variant-content.show {
+    display: block;
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -22,10 +32,15 @@
   if section.settings.color_scheme == section.settings.section_color_scheme and section.settings.content_layout == 'no-overlap'
     assign remove_color_classes = true
   endif
+
+  assign first_variant_id = product.variants.first.id
 -%}
 
 {% if section.blocks.size > 0 %}
-  <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }} section-image-with-text pdp-custom-benefits-section">
+  <div
+    class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }} section-image-with-text pdp-custom-benefits-section"
+    data-first-variant-id="{{ first_variant_id }}"
+  >
     {% for block in section.blocks %}
       <div class="image-with-text-container page-width">
         <div class="image-with-text image-with-text--{{ section.settings.content_layout }} isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == section.settings.section_color_scheme and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -74,11 +89,15 @@
                   {{ block.settings.title }}
                 </h2>
 
-                <div
-                  class="image-with-text__text rte "
-                >
+                {% assign block_title_lower = block.settings.title | downcase %}
+                <div class="default-content image-with-text__text rte {% if block_title_lower contains 'description' %}is-description{% endif %}">
                   {{ block.settings.text }}
                 </div>
+                {% if block_title_lower contains 'description' %}
+                  <div class="variant-content image-with-text__text rte">
+                    {{ product.variants.first.metafields.custom.specialized_content | metafield_tag }}
+                  </div>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -86,6 +105,8 @@
       </div>
     {% endfor %}
   </div>
+
+  <script src="{{ 'product-custom-benefits.js' | asset_url }}" defer="defer"></script>
 {% endif %}
 
 {% schema %}
