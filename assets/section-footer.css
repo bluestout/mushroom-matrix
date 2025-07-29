@@ -548,6 +548,7 @@ footer.footer {
 }
 
 .copyright__content {
+  background-color: #F6F7F8;
   color: var(--Test-mid, #282828);
   font-family: "TT Norms Pro";
   font-size: 12px;
@@ -563,6 +564,7 @@ footer.footer {
 }
 
 .copyright__txt {
+  background-color: #F6F7F8;
   color: var(--Text-black, #000);
   font-feature-settings: 'liga' off, 'clig' off;
 
