@@ -312,6 +312,7 @@
 .card__heading a {
   background-color: #FFF;
   color: #282828;
+  /* High-contrast dark color for accessibility */
 }
 
 .card__heading:last-child {
