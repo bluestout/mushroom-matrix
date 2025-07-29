@@ -224,6 +224,15 @@
   </div>
 </div>
 
+<script>
+  // ADA PATCH: Add role="img" to stamped-badge spans with aria-label
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('span.stamped-badge[aria-label]:not([role])').forEach(function (badge) {
+      badge.setAttribute('role', 'img');
+    });
+  });
+</script>
+
 {% schema %}
 {
   "name": "t:sections.featured-collection.name",

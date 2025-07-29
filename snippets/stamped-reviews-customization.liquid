@@ -448,12 +448,6 @@
       return;
     }
 
-    // ADA PATCH: Add role="img" to stamped-badge spans with aria-label
-    document.querySelectorAll('span.stamped-badge[aria-label]:not([role])').forEach(function (badge) {
-      console.log("stamped review badge's role has been updated");
-      badge.setAttribute('role', 'img');
-    });
-
     reviews.forEach((review) => {
       const stars = review.querySelector('.stamped-review-header-starratings');
       const title = review.querySelector('.stamped-review-header-title');
