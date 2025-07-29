@@ -116,7 +116,7 @@
           "settings": {
             "heading": "Directions for Use",
             "icon": "none",
-            "content": "{{ product.metafields.custom.directions_for_use | metafield_tag }}",
+            "content": "",
             "page": "",
             "liquid": "{{ product.variants.first.metafields.custom.specialized_content | metafield_tag }}"
           }
