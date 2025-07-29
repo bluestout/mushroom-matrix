@@ -118,7 +118,7 @@
             "icon": "none",
             "content": "{{ product.metafields.custom.directions_for_use | metafield_tag }}",
             "page": "",
-            "liquid": ""
+            "liquid": "{{ product.variants.first.metafields.custom.specialized_content | metafield_tag }}"
           }
         },
         "share": {
