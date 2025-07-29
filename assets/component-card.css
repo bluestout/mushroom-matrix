@@ -291,6 +291,7 @@
   margin-top: 0;
   margin-bottom: 0;
 
+  background: #FFF;
   background-color: #FFF;
   color: #282828;
   text-align: center;
@@ -310,6 +311,7 @@
 }
 
 .card__heading a {
+  background: #FFF;
   background-color: #FFF;
   color: #282828;
   /* High-contrast dark color for accessibility */
