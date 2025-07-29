@@ -118,7 +118,7 @@
             "icon": "none",
             "content": "",
             "page": "",
-            "liquid": "{% liquid\n  assign variant_metafield = product.variants.first.metafields.custom.specialized_content\n  assign product_metafield = product.metafields.custom.directions_for_use\n  \n  if variant_metafield != blank\n    echo variant_metafield | metafield_tag\n  elsif product_metafield != blank\n    echo product_metafield | metafield_tag\n  endif\n%}"
+            "liquid": "{% assign variant_metafield = current_variant.metafields.custom.specialized_content %}\n{% assign product_metafield = product.metafields.custom.directions_for_use %}\n\n  {{ variant_metafield | metafield_tag }}\n\n {{ product_metafield | metafield_tag }}"
           }
         },
         "share": {
