@@ -225,12 +225,40 @@
 </div>
 
 <script>
-  // ADA PATCH: Add role="img" to stamped-badge spans with aria-label
-  document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('span.stamped-badge[aria-label]:not([role])').forEach(function (badge) {
-      badge.setAttribute('role', 'img');
+  // ADA PATCH: MutationObserver for .stamped-product-reviews-badge .stamped-badge
+  (function () {
+    function patchBadges(root) {
+      root
+        .querySelectorAll('.stamped-product-reviews-badge .stamped-badge[aria-label]:not([role])')
+        .forEach(function (badge) {
+          badge.setAttribute('role', 'img');
+        });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function () {
+        patchBadges(document);
+      });
+    } else {
+      patchBadges(document);
+    }
+
+    var observer = new MutationObserver(function (mutations) {
+      mutations.forEach(function (mutation) {
+        mutation.addedNodes.forEach(function (node) {
+          if (node.nodeType === 1) {
+            // If the node itself is a badge
+            if (node.matches && node.matches('.stamped-product-reviews-badge .stamped-badge[aria-label]:not([role])')) {
+              node.setAttribute('role', 'img');
+            }
+            // Or if it contains badges
+            patchBadges(node);
+          }
+        });
+      });
     });
-  });
+    observer.observe(document.body, { childList: true, subtree: true });
+  })();
 </script>
 
 {% schema %}
