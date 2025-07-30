@@ -506,6 +506,54 @@
   });
 </script>
 
+<script>
+  // ADA PATCH: Only patch when stamped badge structure is present
+  (function () {
+    function patchBadgeIfPresent() {
+      var badge = document.querySelector('.stamped-product-reviews-badge > .stamped-badge[aria-label]:not([role])');
+      if (badge) {
+        badge.setAttribute('role', 'img');
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', patchBadgeIfPresent);
+    } else {
+      patchBadgeIfPresent();
+    }
+
+    var observer = new MutationObserver(function (mutations) {
+      mutations.forEach(function (mutation) {
+        mutation.addedNodes.forEach(function (node) {
+          if (node.nodeType === 1) {
+            // If the node is the badge structure
+            var badge = null;
+            if (
+              node.matches &&
+              node.matches('.stamped-product-reviews-badge > .stamped-badge[aria-label]:not([role])')
+            ) {
+              badge = node;
+            } else {
+              badge =
+                node.querySelector &&
+                node.querySelector('.stamped-product-reviews-badge > .stamped-badge[aria-label]:not([role])');
+            }
+            if (badge) {
+              badge.setAttribute('role', 'img');
+            }
+          }
+        });
+      });
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+    // Also patch after Stamped events if available
+    if (window.StampedFn && typeof window.StampedFn.on === 'function') {
+      window.StampedFn.on('reviews:loaded', patchBadgeIfPresent);
+      window.StampedFn.on('reviews:updated', patchBadgeIfPresent);
+    }
+  })();
+</script>
+
 {% schema %}
 {
   "name": "t:sections.main-search.name",
