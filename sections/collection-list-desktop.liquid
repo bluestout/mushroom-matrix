@@ -51,8 +51,7 @@
     <slider-component class="slider-mobile-gutter slider-component-full-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} slider-component-desktop">
       <div
         class="collection-list collection-list-slider contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down slider slider--desktop {% if section.settings.swipe_on_mobile %} slider slider--tablet grid--peek{% endif %} collection-list--{{ section.blocks.size }}-items"
-        id="Slider-{{ section.id }}"
-        role="list"
+        id="Slider-{{ section.id }}"        
       >
         {%- liquid
           assign columns = section.blocks.size
