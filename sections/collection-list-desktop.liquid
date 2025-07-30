@@ -49,7 +49,7 @@
     {%- endunless -%}
 
     <slider-component class="slider-mobile-gutter slider-component-full-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} slider-component-desktop">
-      <ul
+      <div
         class="collection-list collection-list-slider contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down slider slider--desktop {% if section.settings.swipe_on_mobile %} slider slider--tablet grid--peek{% endif %} collection-list--{{ section.blocks.size }}-items"
         id="Slider-{{ section.id }}"
         role="list"
@@ -61,7 +61,7 @@
           endif
         -%}
         {%- for block in section.blocks -%}
-          <li
+          <div
             id="Slide-{{ section.id }}-{{ forloop.index }}"
             class="collection-list__item grid__item slider__slide {% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {{ block.shopify_attributes }}
@@ -82,9 +82,9 @@
             {% elsif block.type == 'featured_page' %}
               {% render 'card-page', block: block %}
             {% endif %}
-          </li>
+          </div>
         {%- endfor -%}
-      </ul>
+      </div>
       {% comment %}
         {%- if show_mobile_slider -%}
           <div class="slider-buttons">
