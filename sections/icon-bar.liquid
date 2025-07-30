@@ -8,9 +8,9 @@
 >
   <div class="page-width icon_bar_head">
     {% if section.blocks.size > 0 %}
-      <ul class="icon-bar-slider icon-bar">
+      <div class="icon-bar-slider icon-bar">
         {% for block in section.blocks %}
-          <li class="icon-bar__item">
+          <div class="icon-bar__item">
             <div class="image-wrapper mx-auto">
               {% if block.settings.image != blank %}
                 <div class="abs-wrap">
@@ -27,9 +27,9 @@
             {% if block.settings.icon_title != blank %}
               <p class="h6 expanded">{{ block.settings.icon_title | newline_to_br }}</p>
             {% endif %}
-          </li>
+          </div>
         {% endfor %}
-      </ul>
+      </div>
     {% endif %}
   </div>
 </div>
