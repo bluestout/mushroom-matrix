@@ -361,7 +361,12 @@
                 </quick-add-modal>
               {%- else -%}
             {% endcomment %}
-            <product-form data-section-id="{{ section.id }}">
+            <product-form
+              data-section-id="{{ section.id }}"
+              {% if card_product.selected_or_first_available_selling_plan_allocation %}
+                data-selling-plan-id="{{ card_product.selected_or_first_available_selling_plan_allocation.selling_plan.id }}"
+              {% endif %}
+            >
               {%- form 'product',
                 card_product,
                 id: product_form_id,
