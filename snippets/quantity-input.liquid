@@ -32,11 +32,14 @@
     {% endif %}
     step="{{ variant.quantity_rule.increment }}"
     {% # theme-check-enable %}
-    aria-label="{{ 'products.product.quantity.input_label' | t: product: variant.title | escape }}"
+    aria-labelledby="QuantityLabel-{{ variant.id }}"
     id="Quantity-{{ variant.id }}"
     data-index="{{ variant.id }}"
     data-target="quantity-input-{{ variant.id }}"
   >
+  <label class="field__label visually-hidden" id="QuantityLabel-{{ variant.id }}" for="Quantity-{{ variant.id }}">
+    {{ 'products.product.quantity.input_label' | t: product: variant.title | escape }}
+  </label>
   <button class="quantity__button" name="plus" type="button" data-target="increment-{{ variant.id }}">
     <span class="visually-hidden">
       {{- 'products.product.quantity.increase' | t: product: variant.title | escape -}}
