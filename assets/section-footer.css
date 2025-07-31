@@ -361,6 +361,8 @@ footer.footer {
   margin-top: 1.5rem;
 
   /* background-color: #F6F7F8; */
+  background-color: transparent;
+  background: none;
   color: #282828;
 }
 
