@@ -291,8 +291,8 @@
   margin-top: 0;
   margin-bottom: 0;
 
-  background: #FFF;
-  background-color: #FFF;
+  background-color: transparent;
+  background: none;
   color: #282828;
   text-align: center;
   font-feature-settings: 'liga' off, 'clig' off;
@@ -313,6 +313,8 @@
 .card__heading a {
   /* background: #FFF;
   background-color: #FFF; */
+  background-color: transparent;
+  background: none;
   color: #282828 !important;
   /* High-contrast dark color for accessibility */
 }
