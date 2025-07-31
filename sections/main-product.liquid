@@ -289,7 +289,15 @@
                         step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
                         value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
                         form="{{ product_form_id }}"
+                        aria-labelledby="QuantityLabel-{{ section.id }}"
                       >
+                      <label
+                        class="field__label visually-hidden"
+                        id="QuantityLabel-{{ section.id }}"
+                        for="Quantity-{{ section.id }}"
+                      >
+                        {{ 'products.product.quantity.input_label' | t: product: product.title | escape }}
+                      </label>
                       <button class="quantity__button" name="plus" type="button">
                         <span class="visually-hidden">
                           {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
