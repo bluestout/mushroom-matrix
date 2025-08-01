@@ -2950,9 +2950,10 @@ details-disclosure>details {
 }
 
 .gradient {
-  background: rgb(var(--color-background));
+  /* Fixed contrast ADA issue */
+  /* background: rgb(var(--color-background));
   background: var(--gradient-background);
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 
 @media screen and (forced-colors: active) {
