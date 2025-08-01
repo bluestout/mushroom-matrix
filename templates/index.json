@@ -230,6 +230,7 @@
       "blocks": {
         "icon_image_VmFkNe": {
           "type": "icon_image",
+          "disabled": true,
           "settings": {
             "icon_title": "Full cycle mushroom",
             "image": "shopify://shop_images/badge_full-cycle_layerstyle.svg"
@@ -237,6 +238,7 @@
         },
         "icon_image_Jfw8Fx": {
           "type": "icon_image",
+          "disabled": true,
           "settings": {
             "icon_title": "California Grown",
             "image": "shopify://shop_images/badge_california_layerstyle.svg"
@@ -252,7 +254,6 @@
         },
         "icon_image_DUBFry": {
           "type": "icon_image",
-          "disabled": true,
           "settings": {
             "icon_title": "No artificial ingredients",
             "image": "shopify://shop_images/badge_no-artificial_layerstyle.svg"
@@ -260,7 +261,6 @@
         },
         "icon_image_b4hpc9": {
           "type": "icon_image",
-          "disabled": true,
           "settings": {
             "icon_title": "Soy & gluten free",
             "image": "shopify://shop_images/badge_free-of-fillers_layerstyle.svg"
