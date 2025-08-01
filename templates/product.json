@@ -40,6 +40,12 @@
             "text_style": "body"
           }
         },
+        "richtext_JAdA7V": {
+          "type": "richtext",
+          "settings": {
+            "richtext": "{{ product.metafields.custom.recommended_support_for | metafield_tag }}"
+          }
+        },
         "caption": {
           "type": "text",
           "disabled": true,
@@ -103,6 +109,7 @@
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Recommended Support for",
             "icon": "none",
@@ -143,6 +150,7 @@
         "title",
         "stamped_reviews_star_rating_badge_mKnMAb",
         "text_azteUE",
+        "richtext_JAdA7V",
         "caption",
         "price",
         "variant_picker",
