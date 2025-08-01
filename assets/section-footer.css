@@ -580,8 +580,8 @@ footer.footer {
 }
 
 .copyright__txt {
-  background-color: transparent;
-  background: none;
+  /* background-color: transparent; */
+  background: inherit;
   color: var(--Text-black, #000);
   font-feature-settings: 'liga' off, 'clig' off;
 
