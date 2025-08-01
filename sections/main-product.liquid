@@ -241,6 +241,10 @@
                     </div>
                   </details>
                 </div>
+              {%- when 'richtext' -%}
+                <div class="product__text rte" {{ block.shopify_attributes }}>
+                  {{ block.settings.richtext }}
+                </div>
               {%- when 'quantity_selector' -%}
                 <div
                   id="Quantity-Form-{{ section.id }}"
@@ -816,6 +820,17 @@
           "type": "inline_richtext",
           "id": "text",
           "label": "Review"
+        }
+      ]
+    },
+    {
+      "type": "richtext",
+      "name": "Richtext",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "richtext",
+          "label": "Richtext"
         }
       ]
     },

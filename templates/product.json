@@ -40,6 +40,12 @@
             "text_style": "body"
           }
         },
+        "richtext_TizbTG": {
+          "type": "richtext",
+          "settings": {
+            "richtext": "{{ product.metafields.custom.recommended_support_for | metafield_tag }}"
+          }
+        },
         "caption": {
           "type": "text",
           "disabled": true,
@@ -143,6 +149,7 @@
         "title",
         "stamped_reviews_star_rating_badge_mKnMAb",
         "text_azteUE",
+        "richtext_TizbTG",
         "caption",
         "price",
         "variant_picker",
