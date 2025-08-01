@@ -313,8 +313,8 @@
 .card__heading a {
   /* background: #FFF;
   background-color: #FFF; */
-  background-color: transparent;
-  background: none;
+  /* background-color: transparent; */
+  background: inherit;
   color: #282828 !important;
   /* High-contrast dark color for accessibility */
 }
@@ -359,6 +359,7 @@
 }
 
 .card__heading a::after {
+  background: inherit;
   bottom: 0;
   content: '';
   left: 0;

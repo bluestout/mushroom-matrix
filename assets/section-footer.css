@@ -1,6 +1,6 @@
 small.copyright__content {
-  background-color: transparent;
-  background: none;
+  /* background-color: transparent; */
+  background: inherit;
   color: #282828 !important;
   /* High-contrast dark color for accessibility */
 }
@@ -364,8 +364,8 @@ footer.footer {
   margin-top: 1.5rem;
 
   /* background-color: #F6F7F8; */
-  background-color: transparent;
-  background: none;
+  /* background-color: transparent; */
+  background: inherit;
   color: #282828;
 }
 
