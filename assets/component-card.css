@@ -291,8 +291,8 @@
   margin-top: 0;
   margin-bottom: 0;
 
-  background-color: transparent;
-  background: none;
+  /* background-color: transparent; */
+  background: inherit;
   color: #282828;
   text-align: center;
   font-feature-settings: 'liga' off, 'clig' off;
@@ -486,17 +486,20 @@
 
 .card-information>* {
   line-height: calc(1 + 0.4 / var(--font-body-scale));
-  background-color: #FFF;
+  /* background-color: #FFF; */
+  background: inherit;
   color: #282828;
 }
 
 .card-information>.price {
-  background-color: #FFF;
+  /* background-color: #FFF; */
+  background: inherit;
   color: #282828;
 }
 
 .card--horizontal .card-information>.price {
-  background-color: #FFF;
+  /* background-color: #FFF; */
+  background: inherit;
   color: #282828;
 }
 
