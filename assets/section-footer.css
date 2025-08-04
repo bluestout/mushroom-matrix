@@ -109,6 +109,7 @@ footer.footer {
 .footer__content-bottom-wrapper {
   display: flex;
   width: 100%;
+  background-color: #f6f7f8;
 }
 
 @media screen and (max-width: 749px) {
