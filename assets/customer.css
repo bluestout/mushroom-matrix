@@ -1167,7 +1167,7 @@ a.account_head_item {
   justify-content: space-between;
 }
 
-.acnt_h .h4.account-section-title,
+.acnt_h .account-section-title,
 .account_detail.myaccount__order-history h2,
 .grid__item.account_detail .inner_subscription h2,
 .account-orders-section .acnt_order h2 {
