@@ -4,8 +4,8 @@
   <div class="faq-header">
     <div class="faq-background"></div>
     <div class="faq-text-content">
-      <h2 class="faq-title small-hide medium-hide">{{ section.settings.title }}</h2>
-      <h2 class="faq-title faq-mobile-title large-up-hide">{{ section.settings.mobile_title }}</h2>
+      <h1 class="faq-title small-hide medium-hide">{{ section.settings.title }}</h1>
+      <h1 class="faq-title faq-mobile-title large-up-hide">{{ section.settings.mobile_title }}</h1>
       <div class="faq-banner-text">{{ section.settings.text }}</div>
     </div>
   </div>
@@ -71,7 +71,7 @@
             %}
               <div class="faq-item">
                 <div class="faq-question">
-                  <h4>{{ faq.settings.question }}</h4>
+                  <h2>{{ faq.settings.question }}</h2>
                   <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
@@ -86,7 +86,7 @@
             {% if faq.category.value == category_name and faq.sub_category.value == blank %}
               <div class="faq-item">
                 <div class="faq-question">
-                  <h4>{{ faq.question.value }}</h4>
+                  <h2>{{ faq.question.value }}</h2>
                   <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
@@ -101,7 +101,7 @@
             {% if faq.category.value == category_name and faq.sub_category.value == blank %}
               <div class="faq-item">
                 <div class="faq-question">
-                  <h4>{{ faq.question.value }}</h4>
+                  <h2>{{ faq.question.value }}</h2>
                   <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
@@ -116,7 +116,7 @@
             {% if faq.category.value == category_name and faq.sub_category.value == blank %}
               <div class="faq-item">
                 <div class="faq-question">
-                  <h4>{{ faq.question.value }}</h4>
+                  <h2>{{ faq.question.value }}</h2>
                   <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
