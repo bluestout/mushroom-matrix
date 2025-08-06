@@ -74,6 +74,7 @@
         },
         "video_slide_Ak9JWU": {
           "type": "video-slide",
+          "disabled": true,
           "settings": {
             "enable_video_looping": false,
             "video": "shopify://files/videos/videoplayback.mp4",
