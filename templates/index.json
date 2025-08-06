@@ -150,11 +150,14 @@
         "icon_image_4iQQna",
         "icon_image_4NzkCj"
       ],
+      "custom_css": [
+        ".top-icon-bar {margin-top: 20px;}"
+      ],
       "settings": {
         "slideshow_layout": true,
         "use_gradient": false,
         "hide_desktop": false,
-        "custom_class": "section-five-icons"
+        "custom_class": "top-icon-bar"
       }
     },
     "collection_list_desktop_CigTqP": {
