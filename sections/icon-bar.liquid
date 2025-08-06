@@ -1,16 +1,16 @@
 {{ 'section-logo-bar.css' | asset_url | stylesheet_tag }}
 
 <div
-  class="icon_bar_main {% if section.settings.hide_desktop %} large-up-hide {% endif %} {{ section.settings.custom_class }}"
+  class="icon_bar_main{% if section.settings.slideshow_layout %} is-grid{% endif %} {% if section.settings.hide_desktop %} large-up-hide {% endif %} {{ section.settings.custom_class }}"
   {% if section.settings.use_gradient %}
     style="background: linear-gradient(180deg, #FBF8F4 0%, #FFF 100%);"
   {% endif %}
 >
-  <div class="page-width icon_bar_head">
+  <div class="page-width{% unless section.settings.slideshow_layout %} icon_bar_head{% endunless %}">
     {% if section.blocks.size > 0 %}
-      <div class="icon-bar-slider icon-bar">
+      <ul class="{% if section.settings.slideshow_layout %}icon-bar-grid{% else %}icon-bar-slider{% endif %} icon-bar">
         {% for block in section.blocks %}
-          <div class="icon-bar__item">
+          <li class="icon-bar__item">
             <div class="image-wrapper mx-auto">
               {% if block.settings.image != blank %}
                 <div class="abs-wrap">
@@ -27,9 +27,9 @@
             {% if block.settings.icon_title != blank %}
               <p class="h6 expanded">{{ block.settings.icon_title | newline_to_br }}</p>
             {% endif %}
-          </div>
+          </li>
         {% endfor %}
-      </div>
+      </ul>
     {% endif %}
   </div>
 </div>
@@ -39,115 +39,165 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box; /* Include padding and border in width calculation */
-    padding: 0; /* Remove any default padding */
-    margin: 0; /* Margins will be dynamically calculated */
-    white-space: nowrap; /* Prevent content from wrapping */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
     gap: 2rem;
   }
+
+  .icon-bar-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .icon-bar-grid .icon-bar__item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+    flex: 0 0 calc(33.333% - 8px);
+    gap: 1rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .icon-bar-grid {
+      gap: 50px;
+    }
+
+    .icon-bar-grid .icon-bar__item {
+      flex: 0 0 calc(33.333% - 34px);
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .icon-bar-grid .icon-bar__item{
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  /* Slideshow layout styles */
+  .icon-bar-slider .icon-bar__item {
+    margin-right: 3rem;
+  }
+
   @media screen and (max-width: 820px) {
-    .icon-bar__item {
+    .icon-bar-slider .icon-bar__item {
       margin-right: 3rem !important;
     }
   }
+
   @media screen and (max-width: 1024px) and (min-width: 821px) {
-    .icon-bar__item {
+    .icon-bar-slider .icon-bar__item {
       gap: 2rem;
       margin-right: 3rem !important;
     }
   }
 </style>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const sliders = document.querySelectorAll('.icon-bar-slider');
+{% unless section.settings.slideshow_layout %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sliders = document.querySelectorAll('.icon-bar-slider');
 
-    function adjustItemMargins() {
-      sliders.forEach((slider) => {
-        const items = slider.querySelectorAll('.icon-bar__item');
-        const sliderWidth = slider.offsetWidth;
-        let totalItemsWidth = 0;
+      function adjustItemMargins() {
+        sliders.forEach((slider) => {
+          const items = slider.querySelectorAll('.icon-bar__item');
+          const sliderWidth = slider.offsetWidth;
+          let totalItemsWidth = 0;
 
-        // Reset margins before recalculating
-        items.forEach((item) => {
-          item.style.marginLeft = '0';
-          item.style.marginRight = '0';
-        });
-
-        // Calculate the total width of all items
-        items.forEach((item) => {
-          totalItemsWidth += item.offsetWidth;
-        });
-
-        // Calculate the remaining space in the slider
-        const remainingSpace = sliderWidth - totalItemsWidth;
-
-        if (remainingSpace > 0 && items.length > 1) {
-          // Calculate the margin for each item
-          const margin = remainingSpace / (items.length - 1); // Divide by (items.length - 1) for gaps between items
-
-          // Apply the calculated margin to each item except the last one
-          items.forEach((item, index) => {
-            if (index < items.length - 1) {
-              item.style.marginRight = `${margin}px`;
-            }
+          // Reset margins before recalculating
+          items.forEach((item) => {
+            item.style.marginLeft = '0';
+            item.style.marginRight = '0';
           });
 
-          // Add margin to the last item to ensure spacing between the last and first items
-          items[items.length - 1].style.marginRight = `${margin}px`;
-        } else if (items.length === 1) {
-          // Center the single item if there's only one
-          items[0].style.margin = '0 auto';
-        }
-      });
-    }
+          // Calculate the total width of all items
+          items.forEach((item) => {
+            totalItemsWidth += item.offsetWidth;
+          });
 
-    // Initial adjustment
-    adjustItemMargins();
+          // Calculate the remaining space in the slider
+          const remainingSpace = sliderWidth - totalItemsWidth;
 
-    // Recalculate item margins on window resize
-    window.addEventListener('resize', adjustItemMargins);
-  });
+          if (remainingSpace > 0 && items.length > 1) {
+            // Calculate the margin for each item
+            const margin = remainingSpace / (items.length - 1);
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const sliders = document.querySelectorAll('.icon-bar-slider');
+            // Apply the calculated margin to each item except the last one
+            items.forEach((item, index) => {
+              if (index < items.length - 1) {
+                item.style.marginRight = `${margin}px`;
+              }
+            });
 
-    sliders.forEach((slider) => {
-      new Flickity(slider, {
-        cellAlign: 'left', // Align cells to the left
-        contain: true, // Keep items inside the container
-        wrapAround: true, // Enable infinite scroll
-        autoPlay: 5000, // Autoplay every 5 seconds
-        pauseAutoPlayOnHover: false,
-        prevNextButtons: false, // Hide arrows
-        pageDots: false, // Hide pagination dots
-        draggable: true, // Enable touch/mouse dragging
-        groupCells: 1, // Scroll one item at a time
-        freeScroll: false, // Disable free scrolling
-        percentPosition: true, // Ensure proper positioning of items
-      });
-    });
-
-    // Check if the viewport width is less than 750px (mobile view)
-    if (window.matchMedia('(max-width: 820px)').matches) {
-      // Select the elements
-      const iconBarSection = document.querySelector('.shopify-section.icon-bar');
-      const featuredCollectionSection = document.querySelector('.shopify-section.featured-collection');
-
-      // Ensure both elements exist
-      if (iconBarSection && featuredCollectionSection) {
-        // Move the icon-bar section to be after the featured-collection section
-        featuredCollectionSection.parentNode.insertBefore(iconBarSection, featuredCollectionSection.nextSibling);
+            // Add margin to the last item to ensure spacing between the last and first items
+            items[items.length - 1].style.marginRight = `${margin}px`;
+          } else if (items.length === 1) {
+            // Center the single item if there's only one
+            items[0].style.margin = '0 auto';
+          }
+        });
       }
-    }
-  });
-</script>
+
+      // Initial adjustment
+      adjustItemMargins();
+
+      // Recalculate item margins on window resize
+      window.addEventListener('resize', adjustItemMargins);
+
+      // Initialize Flickity for slideshow
+      sliders.forEach((slider) => {
+        new Flickity(slider, {
+          cellAlign: 'left',
+          contain: true,
+          wrapAround: true,
+          autoPlay: 5000,
+          pauseAutoPlayOnHover: false,
+          prevNextButtons: false,
+          pageDots: false,
+          draggable: true,
+          groupCells: 1,
+          freeScroll: false,
+          percentPosition: true,
+        });
+      });
+
+      // Check if the viewport width is less than 750px (mobile view)
+      if (window.matchMedia('(max-width: 820px)').matches) {
+        // Select the elements
+        const iconBarSection = document.querySelector('.shopify-section.icon-bar');
+        const featuredCollectionSection = document.querySelector('.shopify-section.featured-collection');
+
+        // Ensure both elements exist
+        if (iconBarSection && featuredCollectionSection) {
+          // Move the icon-bar section to be after the featured-collection section
+          featuredCollectionSection.parentNode.insertBefore(iconBarSection, featuredCollectionSection.nextSibling);
+        }
+      }
+    });
+  </script>
+{% endunless %}
 {% schema %}
 {
   "name": "Icon bar",
   "class": "icon-bar",
   "max_blocks": 20,
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "slideshow_layout",
+      "label": "Grid layout",
+      "info": "When enabled, displays icons in a 3-column grid instead of a slideshow",
+      "default": false
+    },
     {
       "type": "checkbox",
       "id": "use_gradient",
