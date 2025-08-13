@@ -135,7 +135,7 @@
             {% endcomment %}
           {%- else -%}
             {{ settings.nonsubscriber_text }}
-            <h2 class="text-center">{{ settings.subscribe_why_title }}</h2>
+            {% comment %} <h2 class="text-center">{{ settings.subscribe_why_title }}</h2> {% endcomment %}
             {% comment %}
               <div class="grid text-center">
                 {%- for i in (1..3) -%}
