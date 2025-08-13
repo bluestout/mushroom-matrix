@@ -1745,6 +1745,11 @@ details[open]>.share-button__fallback {
   line-height: 1.5;
 }
 
+.newsletter-form__field-wrapper .field__label {
+  background-color: transparent;
+  background: #FFF;
+}
+
 .field__input:focus~.field__label,
 .field__input:not(:placeholder-shown)~.field__label,
 .field__input:-webkit-autofill~.field__label,
