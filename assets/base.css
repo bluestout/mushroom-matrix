@@ -1738,7 +1738,7 @@ details[open]>.share-button__fallback {
   pointer-events: none;
   position: absolute;
   transition: top var(--duration-short) ease, font-size var(--duration-short) ease;
-  background-color: transparent;
+  background-color: none;
   background: inherit;
   color: rgba(var(--color-foreground), 0.75);
   letter-spacing: 0.1rem;
@@ -1746,7 +1746,7 @@ details[open]>.share-button__fallback {
 }
 
 .newsletter-form__field-wrapper .field__label {
-  background-color: transparent;
+  background-color: none;
   background: #FFF;
 }
 
