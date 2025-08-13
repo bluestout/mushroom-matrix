@@ -1739,7 +1739,7 @@ details[open]>.share-button__fallback {
   position: absolute;
   transition: top var(--duration-short) ease, font-size var(--duration-short) ease;
   background-color: none;
-  background: inherit;
+  background: transparent;
   color: rgba(var(--color-foreground), 0.75);
   letter-spacing: 0.1rem;
   line-height: 1.5;
