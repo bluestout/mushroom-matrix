@@ -8,9 +8,9 @@
 >
   <div class="page-width{% unless section.settings.slideshow_layout %} icon_bar_head{% endunless %}">
     {% if section.blocks.size > 0 %}
-      <ul class="{% if section.settings.slideshow_layout %}icon-bar-grid{% else %}icon-bar-slider{% endif %} icon-bar">
+      <div class="{% if section.settings.slideshow_layout %}icon-bar-grid{% else %}icon-bar-slider{% endif %} icon-bar">
         {% for block in section.blocks %}
-          <li class="icon-bar__item">
+          <div class="icon-bar__item">
             <div class="image-wrapper mx-auto">
               {% if block.settings.image != blank %}
                 <div class="abs-wrap">
@@ -27,9 +27,9 @@
             {% if block.settings.icon_title != blank %}
               <p class="h6 expanded">{{ block.settings.icon_title | newline_to_br }}</p>
             {% endif %}
-          </li>
+          </div>
         {% endfor %}
-      </ul>
+      </div>
     {% endif %}
   </div>
 </div>
@@ -76,7 +76,7 @@
   }
 
   @media screen and (min-width: 1280px) {
-    .icon-bar-grid .icon-bar__item{
+    .icon-bar-grid .icon-bar__item {
       flex-direction: row;
       justify-content: center;
       align-items: center;
