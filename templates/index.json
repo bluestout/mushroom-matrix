@@ -74,6 +74,7 @@
         },
         "video_slide_Ak9JWU": {
           "type": "video-slide",
+          "disabled": true,
           "settings": {
             "enable_video_looping": false,
             "video": "shopify://files/videos/videoplayback.mp4",
@@ -99,6 +100,64 @@
         "image_behavior": "none",
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "icon_bar_zVH9iY": {
+      "type": "icon-bar",
+      "blocks": {
+        "icon_image_ecBzMi": {
+          "type": "icon_image",
+          "settings": {
+            "icon_title": "Human-grade",
+            "image": "shopify://shop_images/Group_1097.svg"
+          }
+        },
+        "icon_image_9CJKBL": {
+          "type": "icon_image",
+          "settings": {
+            "icon_title": "California Grown",
+            "image": "shopify://shop_images/badge_california_layerstyle.svg"
+          }
+        },
+        "icon_image_4CarbA": {
+          "type": "icon_image",
+          "settings": {
+            "icon_title": "Non GMO",
+            "image": "shopify://shop_images/badge_non-gmo_layerstyle.svg"
+          }
+        },
+        "icon_image_4iQQna": {
+          "type": "icon_image",
+          "disabled": true,
+          "settings": {
+            "icon_title": "No artificial ingredients",
+            "image": "shopify://shop_images/badge_no-artificial_layerstyle.svg"
+          }
+        },
+        "icon_image_4NzkCj": {
+          "type": "icon_image",
+          "disabled": true,
+          "settings": {
+            "icon_title": "Soy & gluten free",
+            "image": "shopify://shop_images/badge_free-of-fillers_layerstyle.svg"
+          }
+        }
+      },
+      "block_order": [
+        "icon_image_ecBzMi",
+        "icon_image_9CJKBL",
+        "icon_image_4CarbA",
+        "icon_image_4iQQna",
+        "icon_image_4NzkCj"
+      ],
+      "custom_css": [
+        ".top-icon-bar {margin-top: 20px;}"
+      ],
+      "settings": {
+        "slideshow_layout": true,
+        "use_gradient": false,
+        "hide_desktop": false,
+        "custom_class": "top-icon-bar"
       }
     },
     "collection_list_desktop_CigTqP": {
@@ -141,58 +200,6 @@
         "padding_bottom": 36
       }
     },
-    "icon_bar_zVH9iY": {
-      "type": "icon-bar",
-      "blocks": {
-        "icon_image_ecBzMi": {
-          "type": "icon_image",
-          "settings": {
-            "icon_title": "Full cycle mushroom",
-            "image": "shopify://shop_images/badge_full-cycle_layerstyle.svg"
-          }
-        },
-        "icon_image_9CJKBL": {
-          "type": "icon_image",
-          "settings": {
-            "icon_title": "California Grown",
-            "image": "shopify://shop_images/badge_california_layerstyle.svg"
-          }
-        },
-        "icon_image_4CarbA": {
-          "type": "icon_image",
-          "settings": {
-            "icon_title": "Non GMO",
-            "image": "shopify://shop_images/badge_non-gmo_layerstyle.svg"
-          }
-        },
-        "icon_image_4iQQna": {
-          "type": "icon_image",
-          "settings": {
-            "icon_title": "No artificial ingredients",
-            "image": "shopify://shop_images/badge_no-artificial_layerstyle.svg"
-          }
-        },
-        "icon_image_4NzkCj": {
-          "type": "icon_image",
-          "settings": {
-            "icon_title": "Soy & gluten free",
-            "image": "shopify://shop_images/badge_free-of-fillers_layerstyle.svg"
-          }
-        }
-      },
-      "block_order": [
-        "icon_image_ecBzMi",
-        "icon_image_9CJKBL",
-        "icon_image_4CarbA",
-        "icon_image_4iQQna",
-        "icon_image_4NzkCj"
-      ],
-      "settings": {
-        "use_gradient": false,
-        "hide_desktop": false,
-        "custom_class": "section-five-icons"
-      }
-    },
     "featured_collection_tfGwa9": {
       "type": "featured-collection",
       "settings": {
@@ -220,6 +227,62 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "icon_bar_Dg4NDj": {
+      "type": "icon-bar",
+      "blocks": {
+        "icon_image_VmFkNe": {
+          "type": "icon_image",
+          "disabled": true,
+          "settings": {
+            "icon_title": "Full cycle mushroom",
+            "image": "shopify://shop_images/badge_full-cycle_layerstyle.svg"
+          }
+        },
+        "icon_image_Jfw8Fx": {
+          "type": "icon_image",
+          "disabled": true,
+          "settings": {
+            "icon_title": "California Grown",
+            "image": "shopify://shop_images/badge_california_layerstyle.svg"
+          }
+        },
+        "icon_image_WiKriT": {
+          "type": "icon_image",
+          "disabled": true,
+          "settings": {
+            "icon_title": "Non GMO",
+            "image": "shopify://shop_images/badge_non-gmo_layerstyle.svg"
+          }
+        },
+        "icon_image_DUBFry": {
+          "type": "icon_image",
+          "settings": {
+            "icon_title": "No artificial ingredients",
+            "image": "shopify://shop_images/badge_no-artificial_layerstyle.svg"
+          }
+        },
+        "icon_image_b4hpc9": {
+          "type": "icon_image",
+          "settings": {
+            "icon_title": "Soy & gluten free",
+            "image": "shopify://shop_images/badge_free-of-fillers_layerstyle.svg"
+          }
+        }
+      },
+      "block_order": [
+        "icon_image_VmFkNe",
+        "icon_image_Jfw8Fx",
+        "icon_image_WiKriT",
+        "icon_image_DUBFry",
+        "icon_image_b4hpc9"
+      ],
+      "settings": {
+        "slideshow_layout": true,
+        "use_gradient": false,
+        "hide_desktop": false,
+        "custom_class": "section-five-icons"
       }
     },
     "reviews_xQyARe": {
@@ -364,9 +427,10 @@
   "order": [
     "collection_list_mobile_kzdi89",
     "slideshow_DddfyJ",
-    "collection_list_desktop_CigTqP",
     "icon_bar_zVH9iY",
+    "collection_list_desktop_CigTqP",
     "featured_collection_tfGwa9",
+    "icon_bar_Dg4NDj",
     "reviews_xQyARe",
     "image_with_text_AQ34mb",
     "text_with_faqs_9DyGAN"
