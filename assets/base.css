@@ -1738,6 +1738,7 @@ details[open]>.share-button__fallback {
   pointer-events: none;
   position: absolute;
   transition: top var(--duration-short) ease, font-size var(--duration-short) ease;
+  background-color: transparent;
   color: rgba(var(--color-foreground), 0.75);
   letter-spacing: 0.1rem;
   line-height: 1.5;
@@ -3295,7 +3296,7 @@ details-disclosure>details {
 
   .scroll-trigger.animate--fade-in,
   .scroll-trigger.animate--slide-in {
-     opacity: 0.01;
+    opacity: 0.01;
   }
 
   .scroll-trigger.animate--slide-in {
