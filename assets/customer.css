@@ -589,6 +589,8 @@
 } */
 
 .customer .field input {
+  border: 1px solid var(--Text-Light, #808080);
+  margin: 0;
   color: var(--Test-mid, #282828);
   font-feature-settings: 'liga' off, 'clig' off;
 
