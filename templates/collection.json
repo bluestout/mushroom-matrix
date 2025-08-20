@@ -42,7 +42,7 @@
       "type": "generic-collection-product-grid",
       "name": "Generic Product Grid",
       "settings": {
-        "products_per_page": 16,
+        "products_per_page": 8,
         "columns_desktop": 4,
         "columns_mobile": "2",
         "color_scheme": "",
