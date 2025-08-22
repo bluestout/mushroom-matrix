@@ -400,7 +400,6 @@
         },
         "faq_question_aBRrDL": {
           "type": "faq_question",
-          "disabled": true,
           "settings": {
             "category": "Canine FAQs",
             "sub_category": "",
