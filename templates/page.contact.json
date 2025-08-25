@@ -39,14 +39,14 @@
         "color_scheme": "scheme-1",
         "padding_top": 4,
         "padding_bottom": 100,
-        "location_title": "<p>Om Mushroom Superfood</p>",
+        "location_title": "<p>Mushroom Matrix</p>",
         "location_text": "<p>1395 Park Center Drive<br/>Vista, CA 92081</p>",
         "email1_title": "<p>Product & Order</p>",
-        "email1_address": "<p><a href=\"mailto:hello@ommushrooms.com\" title=\"mailto:hello@ommushrooms.com\">hello@ommushrooms.com</a></p>",
+        "email1_address": "<p>Support@mushroommatrix.com</p>",
         "email2_title": "<p>Marketing & Affiliate</p>",
-        "email2_address": "<p><a href=\"mailto:marketing@ommushrooms.com\" title=\"mailto:marketing@ommushrooms.com\">marketing@ommushrooms.com</a></p>",
-        "email3_title": "<p>Wholesale Sales</p>",
-        "email3_address": "<p><a href=\"mailto:sales@ommushrooms.com\" title=\"mailto:sales@ommushrooms.com\">sales@ommushrooms.com</a></p>"
+        "email2_address": "<p>Support@mushroommatrix.com</p>",
+        "email3_title": "",
+        "email3_address": ""
       }
     }
   },
