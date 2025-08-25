@@ -17,6 +17,16 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  quantity-input::before{
+    content: none;
+  }
+  quantity-input::after{
+    content: none;
+  }
+  quantity-input.quantity{
+    border: 2px solid black;
+  }
 {%- endstyle -%}
 
 {%- unless settings.cart_type == 'drawer' -%}
