@@ -9,16 +9,6 @@
  */
 {
   "sections": {
-    "page_header_about_us_cFhTzJ": {
-      "type": "page-header-about-us",
-      "name": "About Us Page Header",
-      "settings": {
-        "heading": "About Us",
-        "intro_text": "We work tirelessly to make a difference in the lives of horses and pets with our organic mushroom powders.",
-        "image": "shopify://shop_images/founder-image.jpg",
-        "founders_text": "<p>Sandra Carter (M.A. MPH, Ph.D.), a health and wellness expert with a PhD in preventative medicine, and Steve Farrar, a mycologist with over 30 years experience growing mushrooms, both have a deep-rooted passion for mushrooms. Mushroom Matrix grows 10 species of mushrooms in our Certified 100% Organic, BRCGS AA rated Vista, California facility.</p>"
-      }
-    },
     "image_banner_aEnrFc": {
       "type": "image-banner",
       "blocks": {
@@ -190,6 +180,16 @@
         "custom_class": "about-us-image-with-text-quality"
       }
     },
+    "page_header_about_us_cFhTzJ": {
+      "type": "page-header-about-us",
+      "name": "About Us Page Header",
+      "settings": {
+        "heading": "About Us",
+        "intro_text": "We work tirelessly to make a difference in the lives of horses and pets with our organic mushroom powders.",
+        "image": "shopify://shop_images/founder-image.jpg",
+        "founders_text": "<p>Sandra Carter (M.A. MPH, Ph.D.), a health and wellness expert with a PhD in preventative medicine, and Steve Farrar, a mycologist with over 30 years experience growing mushrooms, both have a deep-rooted passion for mushrooms. Mushroom Matrix grows 10 species of mushrooms in our Certified 100% Organic, BRCGS AA rated Vista, California facility.</p>"
+      }
+    },
     "multicolumn_LcNWXa": {
       "type": "multicolumn",
       "blocks": {
@@ -280,7 +280,6 @@
     }
   },
   "order": [
-    "page_header_about_us_cFhTzJ",
     "image_banner_aEnrFc",
     "7ff87f3d-261d-4211-8ab6-f8196b2ed249",
     "main",
@@ -288,6 +287,7 @@
     "98e18401-eb98-4bca-b6c3-d23f24f60765",
     "image_with_text_F9V8tF",
     "multicolumn_LcNWXa",
+    "page_header_about_us_cFhTzJ",
     "text_with_faqs_YtQ7JW"
   ]
 }
