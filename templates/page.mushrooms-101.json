@@ -58,7 +58,7 @@
         "text_zEwqqP": {
           "type": "text",
           "settings": {
-            "text": "<p>Mushrooms have been used in eastern cultures for thousands of years. We emphasize the nature of functional mushrooms to help keep you, your horse and your pets at their best.                             </p><p>Science continues to discover new and exciting ways that mushrooms are good for us and our animals.  </p><ul><li>Beta glucans and other bioactive compounds in mushrooms can help activate the immune system.</li><li>Our products promote a balanced Immune response – not an overactive response which can cause the body to recognize its own cells as foreign invaders nor underactive which can leave your horse, your pet or you susceptible.</li><li>Our products retain bioactivity of the mushrooms through our careful growing and processing methods.</li><li>The amino acid L ergothioneine is a unique antioxidant that may be therapeutic on a cellular level. “Ergo” helps you or your animal deal with oxidative stress which may support a healthy inflammatory response.</li><li>Our mushroom powders support normal digestion and gut health.  As we know, gut health is key to overall well-being in horses, pets and people.</li></ul><p>Each species of mushroom that we grow has its own unique benefits naturally aiding wellness and immune function. By encompassing the full lifecycle of the mushroom, our products contain the bioactive compounds in a balance created by nature.</p>"
+            "text": "<p>Mushrooms have been used in eastern cultures for thousands of years. We emphasize the nature of functional mushrooms to help keep you, your horse and your pets at their best.                             </p><p>Science continues to discover new and exciting ways that mushrooms are good for us and our animals.  </p><ul><li>Beta glucans and other bioactive compounds in mushrooms can help activate the immune system.</li><li>Our products promote a balanced Immune response – not an overactive response which can cause the body to recognize its own cells as foreign invaders nor underactive which can leave your horse, your pet or you susceptible.</li><li>Our products retain bioactivity of the mushrooms through our careful growing and processing methods.</li><li>The amino acid L ergothioneine is a unique antioxidant that may be beneficial on a cellular level. “Ergo” can help you or your animal deal with oxidative stress which may support a healthy inflammatory response.</li><li>Our mushroom powders help support normal digestion and gut health.  As we know, gut health is key to overall well-being in horses, pets and people.</li></ul><p>Each species of mushroom that we grow has its own unique benefits naturally aiding wellness and immune function. By encompassing the full lifecycle of the mushroom, our products contain the bioactive compounds in a balance created by nature.</p>"
           }
         }
       },
@@ -86,7 +86,7 @@
           "settings": {
             "image": "shopify://shop_images/Antrodia.jpg",
             "title": "Antrodia (Antrodia camphorata)",
-            "text": "<h5>LIVER SUPPORT</h5><p>Native to Taiwan, Antrodia has an abundance of research related to its liver protective and immunity-enhancing qualities. *</p>",
+            "text": "<h5>LIVER SUPPORT</h5><p>Native to Taiwan, Antrodia has an abundance of research related to its liver protective and immunity-supporting qualities.*</p>",
             "link_label": "Shop Products with Antrodia",
             "link": "https://mushroommatrix.com/collections/all?filter.p.tag=Antrodia+Camphorata"
           }
@@ -167,7 +167,7 @@
           "settings": {
             "image": "shopify://shop_images/Maitake.jpg",
             "title": "MAITAKE (Grifola frondosa)",
-            "text": "<h5>SUPPORTS BALANCED BLOOD SUGAR, IMMUNE FUNCTION</h5><p>Maitake contains an array of 1,3/1,6 beta-D glucan compounds that have a positive impact on immune function. Maitake has also been shown to help support healthy blood sugar levels and support for insulin resistance. *</p>",
+            "text": "<h5>SUPPORTS BALANCED BLOOD SUGAR, IMMUNE FUNCTION</h5><p>Maitake contains an array of 1,3/1,6 beta-D glucan compounds that have a positive impact on immune function. Maitake has also been shown to help support healthy blood sugar levels. *</p>",
             "link_label": "Shop Products with Maitake",
             "link": "https://mushroommatrix.com/collections/all?filter.p.tag=Maitake"
           }
