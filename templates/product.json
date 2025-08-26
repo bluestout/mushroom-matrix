@@ -310,6 +310,29 @@
         "include_margins": true
       }
     },
+    "rich_text_gCyA3P": {
+      "type": "rich-text",
+      "blocks": {
+        "text_wmwDfG": {
+          "type": "text",
+          "settings": {
+            "text": "<h6>Disclaimer: Reviews are for information purposes only. These testimonials are written by customers who are reporting their own experience. These observations are not medically substantiated, are not guaranteed and may not be typical for you or your animals. Reviews are subject to minor modifications to comply with Federal, State and NASC requirements. These reviews do not replace professional medical and/or veterinary care.</h6>"
+          }
+        }
+      },
+      "block_order": [
+        "text_wmwDfG"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "related-products": {
       "type": "related-products",
       "custom_css": [
@@ -455,6 +478,7 @@
     "9b2f83a6-9f5f-4329-8b30-48f0cd808df2",
     "rich_text_ACxAQG",
     "16886599360a9c3922",
+    "rich_text_gCyA3P",
     "related-products",
     "dff6fae6-69d5-40db-9d6c-77b8910bf027",
     "fbdee013-96ae-48f2-88d4-feb8b8390659",
