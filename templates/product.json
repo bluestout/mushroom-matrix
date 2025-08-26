@@ -46,7 +46,8 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
+            "picker_type": "button",
+            "swatch_shape": "circle"
           }
         },
         "368d9a62-1b6f-4b52-b2c0-356a3a5e94f4": {
@@ -159,6 +160,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
+        "color_scheme": "",
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
@@ -342,7 +344,7 @@
         "e1ac785b-bb67-47eb-ad8f-2d32916be99b": {
           "type": "text",
           "settings": {
-            "text": "<p>Our state-of-the-art indoor farm in Vista, California, allows our 11 species of mushrooms to grow and flourish under carefully controlled conditions to deliver the best mushroom products available anywhere. </p><p>Our mushrooms are Certified 100% Organic by Organic Certifiers following Good Manufacturing Practices (cGMP) at our facilities, located in Vista, California.</p>",
+            "text": "<p>Our state-of-the-art indoor farm in Vista, California, allows our 10 species of mushrooms to grow and flourish under carefully controlled conditions to deliver the best mushroom products available anywhere. </p><p>Our mushrooms are Certified 100% Organic by Organic Certifiers following Good Manufacturing Practices (cGMP) at our facilities, located in Vista, California.</p>",
             "text_style": "body"
           }
         }
@@ -362,6 +364,7 @@
         "desktop_content_position": "bottom",
         "desktop_content_alignment": "left",
         "content_layout": "overlap",
+        "section_color_scheme": "",
         "color_scheme": "inverse",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
