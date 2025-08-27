@@ -297,15 +297,6 @@
             "author": "Danielle R."
           }
         },
-        "review_GK9yDd": {
-          "type": "review",
-          "settings": {
-            "img": "shopify://shop_images/104263_1899815272538_881fd153_74e6_4d07_84a5_fdde473ef3f3.jpg",
-            "title": "<p>Extremely happy with the MRM product. Used for years for all of my team of show jumpers</p>",
-            "text": "<p>I have a tram of 4 fei grand prize show jumpers and I have had my horses on MRM for a few years and am very happy with the results. My horses feel and look great and stay very sounds and healthy</p>",
-            "author": "Tracey E."
-          }
-        },
         "review_93nxYr": {
           "type": "review",
           "settings": {
@@ -313,6 +304,15 @@
             "title": "<p>Calm, cool, collected</p>",
             "text": "<p>Zen is my go to for my pups overall state of being. I have seen significant changes since I started using this product with my rescue Yorkie.</p>",
             "author": "Anonymous"
+          }
+        },
+        "review_GK9yDd": {
+          "type": "review",
+          "settings": {
+            "img": "shopify://shop_images/104263_1899815272538_881fd153_74e6_4d07_84a5_fdde473ef3f3.jpg",
+            "title": "<p>Extremely happy with the MRM product. Used for years for all of my team of show jumpers</p>",
+            "text": "<p>I have a tram of 4 fei grand prize show jumpers and I have had my horses on MRM for a few years and am very happy with the results. My horses feel and look great and stay very sounds and healthy</p>",
+            "author": "Tracey E."
           }
         },
         "review_WLnpKt": {
@@ -327,8 +327,8 @@
       },
       "block_order": [
         "review_YJUhAf",
-        "review_GK9yDd",
         "review_93nxYr",
+        "review_GK9yDd",
         "review_WLnpKt"
       ],
       "settings": {
@@ -370,7 +370,7 @@
         "button_C6HRLz"
       ],
       "settings": {
-        "image": "shopify://shop_images/ChatGPT_Image_Jul_30_2025_05_08_47_PM.png",
+        "image": "shopify://shop_images/f16b542d-f6a8-49ab-b8aa-a216625dc21b.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
