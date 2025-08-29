@@ -144,9 +144,13 @@
     {{ heading | escape }}
   </h1>
   <div class="generic-collection-header__description">
-    <div class="generic-collection-header__image">
-      {% assign featured_image = section.settings.image %}
-      {% if featured_image %}
+    {% assign featured_image = section.settings.image %}
+    {% if featured_image != blank %}
+      {% assign image_ratio = featured_image.aspect_ratio | times: 100 %}
+      <div
+        class="generic-collection-header__image"
+        style="padding-bottom: {{ image_ratio }}%;"
+      >
         {% assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio %}
         <div class="generic-collection-header__image-wrapper">
           {{
@@ -159,8 +163,8 @@
               fetchpriority: fetch_priority
           }}
         </div>
-      {% endif %}
-    </div>
+      </div>
+    {% endif %}
     <div class="generic-collection-header__text">
       {{ description }}
     </div>
