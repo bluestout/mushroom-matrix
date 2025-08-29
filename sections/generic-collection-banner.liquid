@@ -147,11 +147,11 @@
     {% assign featured_image = section.settings.image %}
     {% if featured_image != blank %}
       {% assign image_ratio = featured_image.aspect_ratio | times: 100 %}
+      {% assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio %}
       <div
         class="generic-collection-header__image"
-        style="padding-bottom: {{ 1 | divided_by: image_ratio | times: 100 }}%;"
+        style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
       >
-        {% assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio %}
         <div class="generic-collection-header__image-wrapper">
           {{
             featured_image
