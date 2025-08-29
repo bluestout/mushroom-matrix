@@ -21,7 +21,7 @@
                 %}
                   {% assign object = sub_link.object %}
                   {%- assign img = object.metafields.custom.menu_image -%}
-                  {% if sub_menu.title == 'Cat' and object.metafields.custom.menu_image_for_cat %}
+                  {% if sub_menu.title == 'Cats' and object.metafields.custom.menu_image_for_cat %}
                     {%- assign img = object.metafields.custom.menu_image_for_cat -%}
                   {% endif %}
                   {%- if img != blank -%}
