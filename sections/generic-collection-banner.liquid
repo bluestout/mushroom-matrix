@@ -146,8 +146,11 @@
   <div class="generic-collection-header__description">
     {% assign featured_image = section.settings.image %}
     {% if featured_image != blank %}
-      {% assign image_height = featured_image.width | divided_by: featured_image.aspect_ratio %}
-      {% assign image_ratio = 1 | divided_by: featured_image.aspect_ratio | times: 100 %}
+      {% comment %} Calculate aspect ratio manually to ensure accuracy {% endcomment %}
+      {% assign image_width = featured_image.width %}
+      {% assign image_height = featured_image.height %}
+      {% assign image_ratio = image_height | times: 100 | divided_by: image_width %}
+
       <div
         class="generic-collection-header__image"
         style="padding-bottom: {{ image_ratio }}%; position: relative;"
@@ -156,11 +159,7 @@
           {{
             featured_image
             | image_url: width: 1080
-            | image_tag:
-              width: featured_image.width,
-              height: image_height,
-              widths: widths,
-              fetchpriority: fetch_priority
+            | image_tag: width: image_width, height: image_height, widths: widths, fetchpriority: fetch_priority
           }}
         </div>
       </div>
