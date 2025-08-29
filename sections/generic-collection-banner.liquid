@@ -146,7 +146,7 @@
   <div class="generic-collection-header__description">
     {% assign featured_image = section.settings.image %}
     {% if featured_image != blank %}
-      {% assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio %}
+      {% assign image_height = featured_image.width | divided_by: featured_image.aspect_ratio %}
       {% assign image_ratio = 1 | divided_by: featured_image.aspect_ratio | times: 100 %}
       <div
         class="generic-collection-header__image"
@@ -157,7 +157,7 @@
             featured_image
             | image_url: width: 1080
             | image_tag:
-              width: section.settings.image.width,
+              width: featured_image.width,
               height: image_height,
               widths: widths,
               fetchpriority: fetch_priority
