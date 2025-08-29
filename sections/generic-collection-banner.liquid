@@ -150,7 +150,7 @@
       {% assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio %}
       <div
         class="generic-collection-header__image"
-        style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
+        style="padding-bottom: {{image_height}}px;"
       >
         <div class="generic-collection-header__image-wrapper">
           {{
