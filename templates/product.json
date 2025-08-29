@@ -35,6 +35,7 @@
         },
         "text_azteUE": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "{{ product.metafields.custom.featured_review.value }}",
             "text_style": "body"
@@ -229,6 +230,7 @@
       ],
       "name": "Logo bar",
       "settings": {
+        "slideshow_layout": false,
         "use_gradient": false,
         "hide_desktop": false,
         "custom_class": "section-five-icons"
