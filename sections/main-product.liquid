@@ -1,4 +1,6 @@
-{% render 'breadcrumb' %}
+{% if section.settings.enable_breadcrumbs %}
+  {% render 'breadcrumb' %}
+{% endif %}
 
 <product-info
   id="MainProduct-{{ section.id }}"
@@ -2190,6 +2192,12 @@
     }
   ],
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_breadcrumbs",
+      "default": false,
+      "label": "Show breadcrumbs"
+    },
     {
       "type": "checkbox",
       "id": "enable_sticky_info",
