@@ -71,7 +71,7 @@
     display: flex;
     gap: 18px;
     /* margin-bottom: 55px; */
-    justify-content: flex-start;
+    justify-content: center;
     padding-top: 3rem;
     padding-bottom: 5.5rem;
     max-width: 83rem;
@@ -86,7 +86,7 @@
     cursor: pointer;
     color: #000;
     font-family: "TT Norms Pro";
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 14px;
@@ -250,6 +250,7 @@
 
     .faq-tab {
         white-space: nowrap;
+        font-size: 14px;
     }
 
     .faq-content {
