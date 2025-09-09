@@ -418,7 +418,7 @@
         "text_fQwJc9"
       ],
       "custom_css": [
-        ".rich-text__wrapper{width: 100%;}",
+        ".rich-text__wrapper {width: 100%;}",
         ".rich-text__text.rte {font-size: 12px; line-height: 20px; color: #414143;}",
         "@media screen and (min-width: 750px) {.rich-text__wrapper {width: 100%; justify-content: flex-start; margin-left: 40%; padding: 0; }}"
       ],
@@ -428,7 +428,7 @@
         "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 44,
+        "padding_top": 0,
         "padding_bottom": 44
       }
     },
