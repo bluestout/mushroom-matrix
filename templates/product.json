@@ -167,6 +167,7 @@
         "rebuy_personalization_engine_rebuy_widget_FEjHp4"
       ],
       "settings": {
+        "enable_breadcrumbs": false,
         "enable_sticky_info": true,
         "color_scheme": "",
         "media_size": "medium",
@@ -403,6 +404,29 @@
         "include_margins": true
       }
     },
+    "rich_text_B8kXhM": {
+      "type": "rich-text",
+      "blocks": {
+        "text_fQwJc9": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>These reviews are for informational purposes only. The information is not a substitute for expert veterinary care. Reviews are written by actual customers and represent their own observations. These observations are not guaranteed, are not medically substantiated, and may not be typical for other pets.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_fQwJc9"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "right",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 44,
+        "padding_bottom": 44
+      }
+    },
     "text_with_faqs_GrKthn": {
       "type": "text-with-faqs",
       "blocks": {
@@ -450,6 +474,7 @@
     "image_with_text_MdDMBL",
     "related-products",
     "1749049680ad1608d5",
+    "rich_text_B8kXhM",
     "text_with_faqs_GrKthn"
   ]
 }
