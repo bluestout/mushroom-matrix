@@ -34,9 +34,8 @@
         },
         "a8f59e11-ccf1-42c0-afc1-40ef36d63e6e": {
           "type": "slide",
+          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/OM_Web-Carosel_MM_DESKTOP_2.jpg",
-            "image_mobile": "shopify://shop_images/OM_Web-Carosel_MM_MOBILE_2.jpg",
             "image_link": "/collections/all",
             "heading": "",
             "heading_size": "h1",
@@ -54,9 +53,8 @@
         },
         "962a3305-66fe-4c95-850c-7c6d349f0e13": {
           "type": "slide",
+          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/OM_Web-Carosel_MM_Canine_DESKTOP_2.jpg",
-            "image_mobile": "shopify://shop_images/OM_Web-Carosel_MM_Canine_MOBILE_2.jpg",
             "image_link": "shopify://collections/canine-products",
             "heading": "",
             "heading_size": "h1",
@@ -74,9 +72,8 @@
         },
         "14e5eeb9-4b2a-4587-b891-44cd0f98887a": {
           "type": "slide",
+          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/OM_Web-Carosel_MM_Equine_DESKTOP_2.jpg",
-            "image_mobile": "shopify://shop_images/OM_Web-Carosel_MM_Equine_MOBILE_2-2.jpg",
             "image_link": "shopify://collections/equine-products",
             "heading": "",
             "heading_size": "h1",
