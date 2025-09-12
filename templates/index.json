@@ -334,7 +334,8 @@
       "settings": {
         "bg_color": "",
         "title": "What Our Customers Say",
-        "subtitle": ""
+        "subtitle": "",
+        "disclaimer": "<p>These reviews are for informational purposes only. The information is not a substitute for expert veterinary care. Reviews are written by actual customers and represent their own observations. These observations are not guaranteed, are not medically substantiated, and may not be typical for other pets.</p>"
       }
     },
     "image_with_text_AQ34mb": {
