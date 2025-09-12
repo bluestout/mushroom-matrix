@@ -160,6 +160,17 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    // Select all <header-menu> elements
+    const headerMenus = document.querySelectorAll('header-menu');
+
+    headerMenus.forEach((menu) => {
+      menu.addEventListener('click', (event) => {
+        event.preventDefault(); // stop default action (e.g., link navigation)
+        event.stopPropagation(); // optional: stop bubbling
+        console.log('Click prevented on', menu);
+      });
+    });
+
     const items = document.querySelectorAll('.mega-menu');
 
     items.forEach((item) => {
