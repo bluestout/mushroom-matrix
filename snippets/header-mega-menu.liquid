@@ -163,22 +163,25 @@
     // Select all <header-menu> elements
     const headerMenus = document.querySelectorAll('header-menu');
 
-    headerMenus.forEach((menu) => {
-      menu.addEventListener('click', (event) => {
-        event.preventDefault(); // stop default action (e.g., link navigation)
-        event.stopPropagation(); // optional: stop bubbling
-        console.log('Click prevented on', menu);
+    headerMenus.forEach(menu => {
+      menu.addEventListener('click', event => {
+        // If the click target is NOT an <a> (or inside one), prevent it
+        if (!event.target.closest('a')) {
+          event.preventDefault();
+          event.stopPropagation();
+          console.log('Click prevented on non-link element inside header-menu');
+        }
       });
     });
 
     const items = document.querySelectorAll('.mega-menu');
 
     items.forEach((item) => {
-      item.addEventListener('click', (event) => {
+      {% comment %} item.addEventListener('click', (event) => {
         event.preventDefault(); // stops the default action (e.g., following a link)
         event.stopPropagation(); // optional: stops the event from bubbling up
         console.log('Click prevented on', item);
-      });
+      }); {% endcomment %}
 
       const content = item.querySelector('.mega-menu__content');
       const overlay = item.querySelector('.mega-menu__content-overlay');
