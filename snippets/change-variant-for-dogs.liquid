@@ -1,27 +1,20 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     // Only run on product pages
-    if (!window.location.pathname.includes('/products/')) {
-      return;
-    }
-    console.log('Referrer:', document.referrer);
-    // Check if the referrer contains "for-dogs"
-    if (document.referrer.includes('for-dogs')) {
-      // Wait for the variant-selects element to be ready
-      const variantSelects = document.querySelector('variant-selects');
-      console.log('Variant selects:', variantSelects);
+    if (!document.body.classList.contains('template-product')) return;
 
-      if (variantSelects) {
-        const selectEl = variantSelects.querySelector('select[name="id"]');
+    // Only run if referrer contains "for-dogs"
+    if (!document.referrer.includes('for-dogs')) return;
 
-        if (selectEl && selectEl.options.length > 1) {
-          // Select the second variant
-          selectEl.selectedIndex = 1;
+    // Find all variant radio inputs inside <variant-selects>
+    const variantRadios = document.querySelectorAll('variant-selects input[type="radio"][name^="Size"]');
 
-          // Trigger Dawn's variant change logic
-          selectEl.dispatchEvent(new Event('change', { bubbles: true }));
-        }
-      }
+    if (variantRadios.length > 1) {
+      // Select the second variant
+      variantRadios[1].checked = true;
+
+      // Trigger change event so Dawn updates the PDP
+      variantRadios[1].dispatchEvent(new Event('change', { bubbles: true }));
     }
   });
 </script>
