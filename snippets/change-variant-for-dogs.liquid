@@ -1,0 +1,24 @@
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Only run on product pages
+    if (!document.body.classList.contains('template-product')) return;
+
+    // Check if the referrer contains "for-dogs"
+    if (document.referrer.includes('for-dogs')) {
+      // Wait for the variant-selects element to be ready
+      const variantSelects = document.querySelector('variant-selects');
+
+      if (variantSelects) {
+        const selectEl = variantSelects.querySelector('select[name="id"]');
+
+        if (selectEl && selectEl.options.length > 1) {
+          // Select the second variant
+          selectEl.selectedIndex = 1;
+
+          // Trigger Dawn's variant change logic
+          selectEl.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+      }
+    }
+  });
+</script>
