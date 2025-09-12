@@ -40,6 +40,7 @@ class HeaderMenu extends DetailsDisclosure {
   }
 
   onToggle() {
+    return;
     if (!this.header) return;
     console.log("HeaderMenu onToggle....");
     this.header.preventHide = this.mainDetailsToggle.open;
