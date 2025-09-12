@@ -9,6 +9,7 @@
 @media screen and (min-width: 1024px) {
     .species-spotlight__container {
         padding: 5.792rem 0 6.4rem 4.304rem;
+        padding-bottom: 3.2rem;
     }
 }
 
@@ -317,7 +318,24 @@
     margin-top: 43px;
 }
 
+.species-spotlight__disclaimer p {
+    max-width: 735px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0;
+}
+
+
 @media screen and (max-width: 750px) {
+    .species-spotlight__disclaimer {
+        margin-top: 27px;
+    }
+
+    .species-spotlight__disclaimer p {
+        max-width: 370px;
+    }
+
+
     .species-spotlight__container .flickity-prev-next-button.next {
         right: -5%;
 
