@@ -306,6 +306,17 @@
     }
 }
 
+.species-spotlight__disclaimer {
+    color: #414143;
+    text-align: center;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 20px;
+    /* 166.667% */
+    margin-top: 43px;
+}
+
 @media screen and (max-width: 750px) {
     .species-spotlight__container .flickity-prev-next-button.next {
         right: -5%;
