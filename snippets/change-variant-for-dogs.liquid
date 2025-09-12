@@ -7,7 +7,8 @@
     if (document.referrer.includes('for-dogs')) {
       // Wait for the variant-selects element to be ready
       const variantSelects = document.querySelector('variant-selects');
-
+      console.log('Variant selects:', variantSelects);
+      
       if (variantSelects) {
         const selectEl = variantSelects.querySelector('select[name="id"]');
 
