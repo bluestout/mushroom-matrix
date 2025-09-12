@@ -172,6 +172,7 @@
 
         // Open the current mega menu
         item.setAttribute('open', true);
+        document.body.classList.add('overflow-hidden');
       });
 
       item.addEventListener('mouseleave', () => {
@@ -190,6 +191,7 @@
         setTimeout(() => {
           if (close) {
             item.removeAttribute('open');
+            document.body.classList.remove('overflow-hidden');
           }
         }, 300);
       });
@@ -198,12 +200,14 @@
         overlay.addEventListener('mouseover', () => {
           // Close the menu when hovering over the overlay
           item.removeAttribute('open');
+          document.body.classList.remove('overflow-hidden');
         });
       }
 
       if (content) {
         content.addEventListener('mouseleave', () => {
           item.removeAttribute('open');
+          document.body.classList.remove('overflow-hidden');
         });
       }
     });
