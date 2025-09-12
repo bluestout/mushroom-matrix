@@ -37,12 +37,9 @@ class HeaderMenu extends DetailsDisclosure {
   constructor() {
     super();
     this.header = document.querySelector('.header-wrapper');
-    this.mainDetailsToggle.removeEventListener('toggle', this.onToggle);
-    this.mainDetailsToggle.removeEventListener('focusout', this.onFocusOut);
   }
 
   onToggle() {
-    return;
     if (!this.header) return;
     console.log("HeaderMenu onToggle....");
     this.header.preventHide = this.mainDetailsToggle.open;
