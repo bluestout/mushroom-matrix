@@ -2592,6 +2592,12 @@ input[type='checkbox'] {
   background: rgba(var(--color-foreground), 0.5);
 }
 
+@media screen and (max-width: 750px) {
+  .header__icon--menu[aria-expanded='true']::before {
+    display: none;
+  }
+}
+
 .header__icon--account shop-user-avatar {
   --shop-avatar-size: 2.8rem;
 }
