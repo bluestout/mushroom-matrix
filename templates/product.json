@@ -420,7 +420,7 @@
       "custom_css": [
         ".rich-text__wrapper {width: 100%;}",
         ".rich-text__text.rte {font-size: 12px; line-height: 20px; color: #414143;}",
-        "@media screen and (min-width: 750px) {.rich-text__wrapper {width: 100%; justify-content: flex-start; margin-left: 40%; padding: 0; }}"
+        "@media screen and (min-width: 750px) {.rich-text__wrapper {width: auto; justify-content: flex-start; margin-left: 40%; padding: 0; }}"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
