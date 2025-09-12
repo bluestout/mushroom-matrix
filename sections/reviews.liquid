@@ -18,6 +18,11 @@
       "type": "text",
       "id": "subtitle",
       "label": "Subtitle"
+    },
+    {
+      "type": "richtext",
+      "id": "disclaimer",
+      "label": "Disclaimer Text"
     }
   ],
   "blocks": [
@@ -103,5 +108,8 @@
         </div>
       {% endfor %}
     </div>
+    {% if section.settings.disclaimer != blank %}
+      <div class="species-spotlight__disclaimer rte">{{ section.settings.disclaimer }}</div>
+    {% endif %}
   </div>
 </section>
