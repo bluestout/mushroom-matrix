@@ -1,7 +1,7 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     // Only run on product pages
-    if (!document.body.classList.contains('template-product')) return;
+    if (!window.location.pathname.includes('/products/')) return;
 
     // Only run if referrer contains "for-dogs"
     if (!document.referrer.includes('for-dogs')) return;
