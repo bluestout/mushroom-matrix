@@ -163,6 +163,12 @@
     const items = document.querySelectorAll('.mega-menu');
 
     items.forEach((item) => {
+      item.addEventListener('click', (event) => {
+        event.preventDefault(); // stops the default action (e.g., following a link)
+        event.stopPropagation(); // optional: stops the event from bubbling up
+        console.log('Click prevented on', item);
+      });
+
       const content = item.querySelector('.mega-menu__content');
       const overlay = item.querySelector('.mega-menu__content-overlay');
 
