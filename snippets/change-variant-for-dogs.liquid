@@ -14,7 +14,7 @@
       variantRadios[1].checked = true;
 
       // Trigger change event so Dawn updates the PDP
-      variantRadios[1].dispatchEvent(new Event('change', { bubbles: true }));
+      variantRadios[1].dispatchEvent(new Event('change', { bubbles: false }));
     }
   });
 </script>
