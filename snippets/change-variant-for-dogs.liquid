@@ -3,18 +3,17 @@
     // Only run on product pages
     if (!window.location.pathname.includes('/products/')) return;
 
-    // Only run if referrer contains "for-dogs"
-    if (!document.referrer.includes('for-dogs')) return;
-
     // Find all variant radio inputs inside <variant-selects>
     const variantRadios = document.querySelectorAll('variant-selects input[type="radio"][name^="Size"]');
+    // Run only if referrer has "for-dogs" OR product is flagged as canine
+    const cameFromDogs = document.referrer.includes('for-dogs');
+    const isCanineProduct = document.querySelector('variant-selects[data-is-canine-product]');
 
-    if (variantRadios.length > 1) {
-      // Select the second variant
-      variantRadios[1].checked = true;
-
-      // Trigger change event so Dawn updates the PDP
-      variantRadios[1].dispatchEvent(new Event('change', { bubbles: true }));
+    if (cameFromDogs || isCanineProduct) {
+      if (variantRadios.length > 1) {
+        variantRadios[1].checked = true;
+        variantRadios[1].dispatchEvent(new Event('change', { bubbles: true }));
+      }
     }
   });
 </script>

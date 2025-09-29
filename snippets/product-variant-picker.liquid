@@ -8,10 +8,21 @@
   Usage:
   {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 {% endcomment %}
+{% liquid
+  for _collection in product.collections
+    # Check if the product is in the Dogs & Cats collection
+    if _collection.handle == 'canine-products'
+      assign is_canine_product = true
+    endif
+  endfor
+%}
 {%- unless product.has_only_default_variant -%}
   <variant-selects
     id="variant-selects-{{ section.id }}"
     data-section="{{ section.id }}"
+    {% if is_canine_product %}
+      data-is-canine-product
+    {% endif %}
     {{ block.shopify_attributes }}
   >
     {%- for option in product.options_with_values -%}
