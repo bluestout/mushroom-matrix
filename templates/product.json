@@ -80,7 +80,8 @@
           "settings": {
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false,
-            "text": "30-day money back guarantee"
+            "discount_callout_text": "",
+            "text_below_button": "30-day money back guarantee"
           }
         },
         "description": {
