@@ -80,7 +80,7 @@
           "settings": {
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": false,
-            "discount_callout_text": "",
+            "discount_callout_text": "<p>Buy 2 → Get 10% off all 200g Pet Products</p>",
             "text_below_button": "30-day money back guarantee"
           }
         },
