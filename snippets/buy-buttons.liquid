@@ -182,24 +182,47 @@
 
       <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    <div class="buy-button-text-below">
-      <div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="17"
-          height="18"
-          viewBox="0 0 17 18"
-          fill="none"
-        >
-          <path
-            d="M14.2646 9.61034L8.5 16.801L2.73534 9.61034L0.921628 3.56538L8.5 0.798429L16.0784 3.56538L14.2646 9.61034Z"
-            stroke="#284734"
-            stroke-width="1.5" />
-        </svg>
-      </div>
-      <p>30-Day Money Back Guarantee</p>
-    </div>
+    <script src="{{ 'discount-callout.js' | asset_url }}" defer="defer"></script>
+    {%- liquid
+      assign variant_discount = product.selected_or_first_available_variant.metafields.custom.discount_callout
+      assign show_discount = false
+      assign discount_text = ''
+      assign any_variant_has_metafield = false
 
+      # Check if any variant has the discount_callout metafield
+      for variant in product.variants
+        if variant.metafields.custom.discount_callout != blank
+          assign any_variant_has_metafield = true
+          break
+        endif
+      endfor
+
+      # If any variant has the metafield, only use metafield values (no fallback)
+      if any_variant_has_metafield
+        if variant_discount != blank
+          assign show_discount = true
+          assign discount_text = variant_discount
+        endif
+      # Otherwise, use the fallback block setting
+      elsif block.settings.discount_callout_text != blank
+        assign show_discount = true
+        assign discount_text = block.settings.discount_callout_text
+      endif
+    -%}
+    <discount-callout data-section="{{ section.id }}" data-use-metafields="{{ any_variant_has_metafield }}">
+      {% if show_discount %}
+        <div class="buy-button-discount-callout">
+          <span class="icon-tag">{% render 'icon-tag' %}</span>
+          {{ discount_text | strip }}
+        </div>
+      {% endif %}
+    </discount-callout>
+    {% if block.settings.text_below_button != blank %}
+      <div class="buy-button-text-below">
+        <div>{% render 'icon-shield' %}</div>
+        <p>{{ block.settings.text_below_button | strip }}</p>
+      </div>
+    {% endif %}
     <div class="selling-points mobile-show tighter-lineheight" {{ block.shopify_attributes }}>
       {{
         product.metafields.custom_fields.selling_points
