@@ -20,10 +20,18 @@
             "text": "Subscribe and save $ plus FREE U.S. shipping* on every order",
             "link": "https://mushroommatrix.com/collections/all"
           }
+        },
+        "announcement_fi3eym": {
+          "type": "announcement",
+          "settings": {
+            "text": "STARTS NOW! 20% off everything, no coupon required. Ends Mon Dec 1st at 12;59 pm.",
+            "link": "https://mushroommatrix.com/collections/all"
+          }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement_fi3eym"
       ],
       "settings": {
         "color_scheme": "accent-1",
