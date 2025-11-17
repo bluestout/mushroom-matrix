@@ -23,6 +23,7 @@
         },
         "announcement_fi3eym": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "STARTS NOW! 20% off everything, no coupon required. Ends Mon Dec 1st at 12;59 pm.",
             "link": "https://mushroommatrix.com/collections/all"
