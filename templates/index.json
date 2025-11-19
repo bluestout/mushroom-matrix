@@ -36,7 +36,9 @@
           "type": "slide",
           "disabled": true,
           "settings": {
-            "image_link": "/collections/all",
+            "image": "shopify://shop_images/MM_Black_Friday_Site_Banner_25.png",
+            "image_mobile": "shopify://shop_images/MM_Black_Friday_Site_Banner_25_MOBILE.png",
+            "image_link": "shopify://collections/all",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
