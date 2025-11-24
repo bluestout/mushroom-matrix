@@ -16,6 +16,7 @@
       "blocks": {
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "Subscribe and save $ plus FREE U.S. shipping* on every order",
             "link": "https://mushroommatrix.com/collections/all"
@@ -25,7 +26,7 @@
           "type": "announcement",
           "disabled": true,
           "settings": {
-            "text": "STARTS NOW! 20% off everything, no coupon required. Ends Mon Dec 1st at 12;59 pm.",
+            "text": "Black Friday: 20% Off Sitewide Now through 12/1",
             "link": "https://mushroommatrix.com/collections/all"
           }
         }
