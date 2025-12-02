@@ -14,7 +14,6 @@
       "blocks": {
         "template--16801229144323__384163bb-2548-4b80-973a-354d94799a87-1688591609807b8610-0": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Revised_Mushroom-Matrix-Hero_Desktop_V1.jpg",
             "image_mobile": "shopify://shop_images/Revised_Mushroom-Matrix-Mobile_V1.jpg",
@@ -35,6 +34,7 @@
         },
         "a8f59e11-ccf1-42c0-afc1-40ef36d63e6e": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/MM_Black_Friday_Site_Banner_25.png",
             "image_mobile": "shopify://shop_images/MM_Black_Friday_Site_Banner_25_MOBILE.png",
