@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 0
@@ -30,7 +31,7 @@
             "background_color": "#ffffff",
             "text_color": "#212529",
             "border_radius": "8px",
-            "max_width": "700px",
+            "max_width": "72.6rem",
             "show_order_lookup": true,
             "require_order_number": true,
             "hide_order_notes": false,
