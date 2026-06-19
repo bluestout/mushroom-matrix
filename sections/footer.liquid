@@ -314,6 +314,18 @@
     </div>
   </div>
 </footer>
+<script>
+  {% comment %} Remove EU withdrawal app class so we can have consistent styling for footer links {% endcomment %}
+  document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const withdrawalFormLink = document.querySelector('footer a.wl-btn-link');
+    console.log('form link', withdrawalFormLink);
+    if(withdrawalFormLink){
+      withdrawalFormLink.classList.remove('wl-btn-link');
+    }
+  }, 500);
+});
+</script>
 
 {% schema %}
 {
