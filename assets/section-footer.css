@@ -347,6 +347,7 @@
 
 @media screen and (min-width: 750px) {
   .footer-block__details-content .list-menu__item--link:hover,
+  .footer-block__details-content .list-menu__item--link.wl-btn-link,
   .copyright__content a:hover {
     color: rgb(var(--color-foreground));
     text-decoration: underline;
@@ -366,7 +367,8 @@
 }
 
 @media screen and (min-width: 750px) {
-  .footer-block__details-content .list-menu__item--link {
+  .footer-block__details-content .list-menu__item--link,
+  .footer-block__details-content .list-menu__item--link.wl-btn-link {
     display: inline-block;
     font-size: 1.4rem;
   }
