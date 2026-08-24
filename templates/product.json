@@ -96,6 +96,7 @@
         },
         "custom_liquid_xhFeFk": {
           "type": "custom_liquid",
+          "name": "Certification Badges",
           "settings": {
             "custom_liquid": "<img style=\"width:100%\" src='{{ \"Trust_badges.png\" | file_img_url: \"large\"}}' alt=\"Badges with text reading: Free of soy, gluten and added fillers, non-GMO, USDA Organic, Grown and processed in California, and Full cycle mycelium and fruit body\">"
           }
