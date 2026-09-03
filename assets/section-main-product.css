@@ -210,6 +210,36 @@ product-info {
   }
 }
 
+.buy-button-discount-callout {
+  display: flex;
+  gap: 0.96rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.3rem;
+  padding: 0.8rem 3.4rem;
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  text-transform: capitalize;
+  background-color: #FFE1BE;
+  color: #000;
+  font-weight: 500;
+  border-radius: 0.4rem;
+}
+
+.buy-button-discount-callout .icon-tag {
+  display: inline-flex;
+}
+
+.buy-button-discount-callout p {
+  margin: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .buy-button-discount-callout {
+    padding: 1.2rem 2.7rem;
+  }
+}
+
 /* Overrides */
 .shopify-payment-button__more-options {
   color: rgb(var(--color-foreground));
