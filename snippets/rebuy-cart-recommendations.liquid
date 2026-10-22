@@ -196,7 +196,7 @@
                                       aria-label="subscription frequency"
                                       v-model="product.subscription_frequency"
                                       v-on:change="updateSubscriptionFrequency(product)">
-                                      <option v-for="frequency in product.subscription_frequencies" v-bind:value="frequency">{{ frequencyLabel(frequency, product.subscription_interval) }}</option>
+                                      <option v-for="frequency in product.subscription_frequencies" v-bind:value="frequency">{{ frequencyLabel.frequency }}</option>
                                   </select>
                               </div>
 
@@ -414,7 +414,7 @@
                                       aria-label="subscription frequency"
                                       v-model="product.subscription_frequency"
                                       v-on:change="updateSubscriptionFrequency(product)">
-                                      <option v-for="frequency in product.subscription_frequencies" v-bind:value="frequency">{{ frequencyLabel(frequency, product.subscription_interval) }}</option>
+                                      <option v-for="frequency in product.subscription_frequencies" v-bind:value="frequency">{{ frequencyLabel.frequency }}</option>
                                   </select>
                               </div>
 
@@ -493,3 +493,16 @@
       </div>
   </div>
 </script>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{{ frequencyLabel(frequency, product.subscription_interval) }}"
+  to: "{{ frequencyLabel.frequency }}"
+  position: 10614..10644
+- from: "{{ frequencyLabel(frequency, product.subscription_interval) }}"
+  to: "{{ frequencyLabel.frequency }}"
+  position: 24415..24445
+{% endcomment %}
